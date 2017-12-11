@@ -1,5 +1,0 @@
-control.forever(() => {
-    light.showRing(
-    ,,,,,,,,,
-    )
-})

@@ -1,9 +1,0 @@
-<xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="pxt-on-start" id=":{!jKJD@1o1ajS.fD:Ev" x="0" y="0">
-    <statement name="HANDLER">
-      <block type="neopixel_show_ring_colors" id="}Q=ylq0{LYcT[F2ug#L`">
-        <field name="array"></field>
-      </block>
-    </statement>
-  </block>
-</xml>

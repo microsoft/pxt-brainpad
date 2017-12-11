@@ -1,6 +1,0 @@
-<xml xmlns="http://www.w3.org/1999/xhtml">
-  <variables></variables>
-  <block type="neopixel_draw_animation_frame" id="*H!Z`EjpFzs{iqq})f$k" disabled="true" x="20" y="20"></block>
-  <block type="pxt-on-start" id="Ahs6@M!{o([=eK9*M=OR" x="36" y="20"></block>
-  <block type="forever" id="Hu2,:z8@p5.,Wv!H]OcE" x="212" y="20"></block>
-</xml>

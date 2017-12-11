@@ -1,9 +1,0 @@
-<xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="forever" id="[gkv(G{TO#=*hHX^KhST" x="20" y="20">
-    <statement name="HANDLER">
-      <block type="neopixel_show_ring_colors" id="39ezNt,[Ga)9SX?1gMC!">
-        <field name="array"></field>
-      </block>
-    </statement>
-  </block>
-</xml>

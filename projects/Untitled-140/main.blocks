@@ -1,7 +1,0 @@
-<xml xmlns="http://www.w3.org/1999/xhtml">
-  <variables></variables>
-  <block type="forever" id="2a*;_[EPYg8!D=75XIqW" x="1623" y="0"></block>
-  <block type="neopixel_show_ring_colors" id="K?BXs*z/g)ND@^23O)DY" disabled="true" x="1613" y="10">
-    <field name="colors">"red red red red red red red red red red"</field>
-  </block>
-</xml>

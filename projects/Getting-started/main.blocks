@@ -1,7 +1,0 @@
-<xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="buttonEvent" id="%m0spcUO?^zs(`r2eQ8{" x="20" y="20">
-    <field name="button">input.buttonA</field>
-    <field name="event">ButtonEvent.Click</field>
-  </block>
-  <block type="forever" id="#mH;tgc6Q~X~@;bIZCRo" x="20" y="99"></block>
-</xml>
