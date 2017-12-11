@@ -1,0 +1,15 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="qs.*M$nz5%RCx/BJ?|g0" x="20" y="20">
+    <statement name="HANDLER">
+      <block type="neopixel_show_ring_colors" id="bYr1e|6Fb9H)8[@8s.k^">
+        <mutation showing="true"></mutation>
+        <field name="array"></field>
+        <value name="__instance__">
+          <block type="typescript_expression" id="6(ti4.3p3xPC8Bt~KUR%" editable="false">
+            <field name="EXPRESSION">[0,0,0,0,0,0,0,0,0]</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

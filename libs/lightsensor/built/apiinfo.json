@@ -1,0 +1,204 @@
+{
+ "byQName": {
+  "input": {
+   "kind": 5,
+   "namespace": "",
+   "name": "input",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "color": "#B4009E",
+    "weight": 98,
+    "icon": "",
+    "groups": [
+     "other",
+     "More"
+    ],
+    "paramHelp": {},
+    "jsDoc": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
+    "block": "input"
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "input"
+  },
+  "input.onLightConditionChanged": {
+   "kind": 3,
+   "namespace": "input",
+   "name": "onLightConditionChanged",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "help": "input/on-light-condition-changed",
+    "blockId": "input_on_light_condition_changed",
+    "block": "on light %condition",
+    "parts": "lightsensor",
+    "weight": 84,
+    "blockGap": "12",
+    "shim": "input::onLightConditionChanged",
+    "paramHelp": {
+     "condition": "the condition that event triggers on"
+    },
+    "jsDoc": "Register an event that runs when light conditions (darker or brighter) change.",
+    "_name": "onLightConditionChanged"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "condition",
+     "description": "the condition that event triggers on",
+     "type": "LightCondition",
+     "options": {},
+     "isEnum": true
+    },
+    {
+     "name": "handler",
+     "description": "",
+     "type": "() => void",
+     "handlerParameters": [],
+     "options": {},
+     "isEnum": false
+    }
+   ],
+   "snippet": "onLightConditionChanged(null, function () {})",
+   "qName": "input.onLightConditionChanged"
+  },
+  "input.lightLevel": {
+   "kind": 3,
+   "namespace": "input",
+   "name": "lightLevel",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "help": "input/light-level",
+    "blockId": "device_get_light_level",
+    "block": "light level",
+    "parts": "lightsensor",
+    "weight": 30,
+    "blockGap": "8",
+    "shim": "input::lightLevel",
+    "paramHelp": {},
+    "jsDoc": "Read the light level applied to the LED screen in a range from 0 (dark) to 255 (bright).",
+    "_name": "lightLevel"
+   },
+   "pkg": null,
+   "retType": "number",
+   "parameters": [],
+   "snippet": "lightLevel()",
+   "qName": "input.lightLevel"
+  },
+  "input.setLightThreshold": {
+   "kind": 3,
+   "namespace": "input",
+   "name": "setLightThreshold",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "help": "input/set-light-threshold",
+    "blockId": "lightsensor_set_threshold",
+    "block": "set %condition| light threshold to %value",
+    "parts": "lightsensor",
+    "paramMin": {
+     "value": "1"
+    },
+    "paramMax": {
+     "value": "255"
+    },
+    "group": "More",
+    "weight": 13,
+    "blockGap": "8",
+    "shim": "input::setLightThreshold",
+    "paramHelp": {},
+    "jsDoc": "Set the threshold value for the light condition event.",
+    "_name": "setLightThreshold"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "condition",
+     "description": "",
+     "type": "LightCondition",
+     "options": {},
+     "isEnum": true
+    },
+    {
+     "name": "value",
+     "description": "",
+     "type": "number",
+     "options": {
+      "min": {
+       "value": "1"
+      },
+      "max": {
+       "value": "255"
+      }
+     },
+     "isEnum": false
+    }
+   ],
+   "snippet": "setLightThreshold(null, null)",
+   "qName": "input.setLightThreshold"
+  },
+  "LightCondition": {
+   "kind": 6,
+   "namespace": "",
+   "name": "LightCondition",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "LightCondition"
+   },
+   "pkg": null,
+   "retType": "LightCondition",
+   "parameters": null,
+   "qName": "LightCondition"
+  },
+  "LightCondition.Dark": {
+   "kind": 7,
+   "namespace": "LightCondition",
+   "name": "Dark",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "dark",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Dark"
+   },
+   "pkg": null,
+   "retType": "LightCondition",
+   "parameters": null,
+   "qName": "LightCondition.Dark"
+  },
+  "LightCondition.Bright": {
+   "kind": 7,
+   "namespace": "LightCondition",
+   "name": "Bright",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "bright",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Bright"
+   },
+   "pkg": null,
+   "retType": "LightCondition",
+   "parameters": null,
+   "qName": "LightCondition.Bright"
+  }
+ },
+ "jres": {}
+}

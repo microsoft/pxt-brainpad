@@ -1,0 +1,134 @@
+{
+ "byQName": {
+  "network": {
+   "kind": 5,
+   "namespace": "",
+   "name": "network",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "color": "#E3008C",
+    "weight": 89,
+    "icon": "",
+    "groups": [
+     "Infrared",
+     "Cable"
+    ],
+    "paramHelp": {},
+    "jsDoc": "Communication between devices",
+    "block": "network"
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "network"
+  },
+  "network.cableSendPacket": {
+   "kind": 3,
+   "namespace": "network",
+   "name": "cableSendPacket",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "parts": "cable",
+    "shim": "network::cableSendPacket",
+    "paramHelp": {},
+    "jsDoc": "Send data over cable.",
+    "_name": "cableSendPacket"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "buf",
+     "description": "",
+     "type": "Buffer",
+     "options": {},
+     "isEnum": false
+    }
+   ],
+   "snippet": "cableSendPacket(null)",
+   "qName": "network.cableSendPacket"
+  },
+  "network.cablePacket": {
+   "kind": 3,
+   "namespace": "network",
+   "name": "cablePacket",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "parts": "cable",
+    "shim": "network::cablePacket",
+    "paramHelp": {},
+    "jsDoc": "Get most recent packet received over cable.",
+    "_name": "cablePacket"
+   },
+   "pkg": null,
+   "retType": "Buffer",
+   "parameters": [],
+   "snippet": "cablePacket()",
+   "qName": "network.cablePacket"
+  },
+  "network.onCablePacket": {
+   "kind": 3,
+   "namespace": "network",
+   "name": "onCablePacket",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "parts": "cable",
+    "shim": "network::onCablePacket",
+    "paramHelp": {},
+    "jsDoc": "Run action after a packet is recieved over cable.",
+    "_name": "onCablePacket"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "body",
+     "description": "",
+     "type": "() => void",
+     "handlerParameters": [],
+     "options": {},
+     "isEnum": false
+    }
+   ],
+   "snippet": "onCablePacket(function () {})",
+   "qName": "network.onCablePacket"
+  },
+  "network.onCableError": {
+   "kind": 3,
+   "namespace": "network",
+   "name": "onCableError",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "shim": "network::onCableError",
+    "paramHelp": {},
+    "jsDoc": "Run action after there's an error reciving packet over cable.",
+    "_name": "onCableError"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "body",
+     "description": "",
+     "type": "() => void",
+     "handlerParameters": [],
+     "options": {},
+     "isEnum": false
+    }
+   ],
+   "snippet": "onCableError(function () {})",
+   "qName": "network.onCableError"
+  }
+ },
+ "jres": {}
+}

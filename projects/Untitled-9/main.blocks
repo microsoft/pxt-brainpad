@@ -1,0 +1,11 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="pxt-on-start" id="pF6]!cI2XlYO9Bc7v%bK" x="20" y="20"></block>
+  <block type="forever" id="!WqB)r,F]ndck/);C*8?" x="248" y="68">
+    <statement name="HANDLER">
+      <block type="neopixel_draw_animation_frame" id="+hHS.|.AEVGUa/E;B_:K">
+        <mutation showing="false"></mutation>
+        <field name="type">NeoPixelAnimationType.RunningLights</field>
+      </block>
+    </statement>
+  </block>
+</xml>

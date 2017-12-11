@@ -1,0 +1,30 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="buttonEvent" id="A+7+qzC:$,z,nC%GHoc%" x="67" y="-22">
+    <field name="button">input.pinA6</field>
+    <field name="event">ButtonEvent.Up</field>
+    <statement name="HANDLER">
+      <block type="device_set_tempo" id="BP5J.mApD7}YmF.!Zml]">
+        <value name="value">
+          <shadow type="math_number_minmax" id="3]NU;j`EZ)N@}!jA-!WB">
+            <field name="SLIDER">120</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="music_play_note" id="3w7.?Zln}GMwa#cH)46~">
+            <value name="note">
+              <shadow type="device_note" id="LXcKL}A#iE$8$CHP*ZJt">
+                <field name="note">262</field>
+              </shadow>
+            </value>
+            <value name="duration">
+              <shadow type="device_beat" id="*22DGQ]vq`Pb`f2r^v%w">
+                <field name="fraction">BeatFraction.Whole</field>
+              </shadow>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="forever" id="DNbu^/],P3LzINJ`5[8*" x="113" y="248"></block>
+</xml>

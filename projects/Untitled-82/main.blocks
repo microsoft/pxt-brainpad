@@ -1,0 +1,12 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="*xX!%#-52*{*$#e)3(W*" x="20" y="20">
+    <statement name="HANDLER">
+      <block type="neopixel_show_ring_colors" id="Gb{Efa/^VZ.T)]RWw+zN">
+        <field name="array">[
+Colors.Red,Colors.Orange,Colors.Purple,Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Yellow
+]
+        </field>
+      </block>
+    </statement>
+  </block>
+</xml>

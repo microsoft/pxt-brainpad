@@ -1,0 +1,12 @@
+{
+    "name": "Untitled",
+    "dependencies": {
+        "brainpad": "*"
+    },
+    "description": "",
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ]
+}

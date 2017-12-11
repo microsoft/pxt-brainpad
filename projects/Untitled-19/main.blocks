@@ -1,0 +1,13 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="neopixel_color_wheel" id="-0xCE1tPD;GPbbDD83B5" disabled="true" x="20" y="20"></block>
+  <block type="forever" id="|O%G+PLM|Gwz!%]Y^@_B" x="36" y="20"></block>
+  <block type="device_gesture_event" id="L8t_C3G}0]rL[0whlv%(" x="134" y="20">
+    <field name="NAME">Gesture.Shake</field>
+    <statement name="HANDLER">
+      <block type="neopixel_set_strip_color" id="cRC(:!KkxMheNh6~ooDb">
+        <mutation showing="false"></mutation>
+      </block>
+    </statement>
+  </block>
+</xml>

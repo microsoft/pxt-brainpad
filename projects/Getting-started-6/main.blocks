@@ -1,0 +1,48 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="qZ`?*V~:85^9+);wpdV[" x="20" y="20">
+    <statement name="HANDLER">
+      <block type="neopixel_show_animation" id="voma)q/.pL`YwmL5@cH_">
+        <mutation showing="false"></mutation>
+        <field name="animation">LightAnimation.Rainbow</field>
+        <value name="duration">
+          <shadow type="math_number" id="pdxrGNWQ_%!H[.wo#E!L">
+            <field name="NUM">500</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="device_gesture_event" id="-7;l^w{E#l}?C4b0,x|)" x="30" y="230">
+    <field name="NAME">Gesture.Shake</field>
+    <statement name="HANDLER">
+      <block type="synth_set_volume" id="tup}|kzydO|!]Uf9=_Py">
+        <value name="volume">
+          <shadow type="math_number_minmax" id="i;=ZyTk}kF~}d0sx/]gv">
+            <mutation min="0" max="256"></mutation>
+            <field name="NUM">18</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="music_play_sound" id="K+~tKRQF6:7{c$@%7*i{">
+            <value name="sound">
+              <shadow type="music_sounds" id="t1KRtAL~w5jw1ig}Y,=~">
+                <field name="name">Sounds.MagicWand</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="neopixel_show_animation" id="8RLEE}Xf,^v8eV20(T2Q">
+                <mutation showing="false"></mutation>
+                <field name="animation">LightAnimation.Sparkle</field>
+                <value name="duration">
+                  <shadow type="math_number" id="_-G2:`@ch7YI?LOP^-/@">
+                    <field name="NUM">1500</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

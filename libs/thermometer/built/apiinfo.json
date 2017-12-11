@@ -1,0 +1,232 @@
+{
+ "byQName": {
+  "input": {
+   "kind": 5,
+   "namespace": "",
+   "name": "input",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "color": "#B4009E",
+    "weight": 98,
+    "icon": "",
+    "groups": [
+     "other",
+     "More"
+    ],
+    "paramHelp": {},
+    "jsDoc": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
+    "block": "input"
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "input"
+  },
+  "input.onTemperatureConditionChanged": {
+   "kind": 3,
+   "namespace": "input",
+   "name": "onTemperatureConditionChanged",
+   "attributes": {
+    "paramDefl": {
+     "temperature": "15"
+    },
+    "callingConvention": 0,
+    "_source": null,
+    "blockId": "input_on_temperature_condition_changed",
+    "block": "on temperature %condition|at %temperature|%unit",
+    "parts": "thermometer",
+    "help": "input/on-temperature-condition-changed",
+    "blockExternalInputs": "0",
+    "group": "More",
+    "weight": 76,
+    "shim": "input::onTemperatureConditionChanged",
+    "inlineInputMode": "external",
+    "paramHelp": {
+     "condition": "the condition, hot or cold, the event triggers on",
+     "temperature": "the temperature at which this event happens, eg: 15",
+     "unit": "the unit of the temperature"
+    },
+    "jsDoc": "Run some code when the temperature changes from hot to cold, or from cold to hot.",
+    "_name": "onTemperatureConditionChanged"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "condition",
+     "description": "the condition, hot or cold, the event triggers on",
+     "type": "TemperatureCondition",
+     "options": {},
+     "isEnum": true
+    },
+    {
+     "name": "temperature",
+     "description": "the temperature at which this event happens, eg: 15",
+     "type": "number",
+     "initializer": "15",
+     "default": "15",
+     "options": {},
+     "isEnum": false
+    },
+    {
+     "name": "unit",
+     "description": "the unit of the temperature",
+     "type": "TemperatureUnit",
+     "options": {},
+     "isEnum": true
+    },
+    {
+     "name": "handler",
+     "description": "",
+     "type": "() => void",
+     "handlerParameters": [],
+     "options": {},
+     "isEnum": false
+    }
+   ],
+   "snippet": "onTemperatureConditionChanged(null, 15, null, function () {})",
+   "qName": "input.onTemperatureConditionChanged"
+  },
+  "input.temperature": {
+   "kind": 3,
+   "namespace": "input",
+   "name": "temperature",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "help": "input/temperature",
+    "blockId": "device_temperature",
+    "block": "temperature in %unit",
+    "parts": "thermometer",
+    "weight": 26,
+    "shim": "input::temperature",
+    "paramHelp": {},
+    "jsDoc": "Get the temperature in Celsius or Fahrenheit degrees.",
+    "_name": "temperature"
+   },
+   "pkg": null,
+   "retType": "number",
+   "parameters": [
+    {
+     "name": "unit",
+     "description": "",
+     "type": "TemperatureUnit",
+     "options": {},
+     "isEnum": true
+    }
+   ],
+   "snippet": "temperature(null)",
+   "qName": "input.temperature"
+  },
+  "TemperatureCondition": {
+   "kind": 6,
+   "namespace": "",
+   "name": "TemperatureCondition",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "TemperatureCondition"
+   },
+   "pkg": null,
+   "retType": "TemperatureCondition",
+   "parameters": null,
+   "qName": "TemperatureCondition"
+  },
+  "TemperatureCondition.Hot": {
+   "kind": 7,
+   "namespace": "TemperatureCondition",
+   "name": "Hot",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "hot",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Hot"
+   },
+   "pkg": null,
+   "retType": "TemperatureCondition",
+   "parameters": null,
+   "qName": "TemperatureCondition.Hot"
+  },
+  "TemperatureCondition.Cold": {
+   "kind": 7,
+   "namespace": "TemperatureCondition",
+   "name": "Cold",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "cold",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Cold"
+   },
+   "pkg": null,
+   "retType": "TemperatureCondition",
+   "parameters": null,
+   "qName": "TemperatureCondition.Cold"
+  },
+  "TemperatureUnit": {
+   "kind": 6,
+   "namespace": "",
+   "name": "TemperatureUnit",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "TemperatureUnit"
+   },
+   "pkg": null,
+   "retType": "TemperatureUnit",
+   "parameters": null,
+   "qName": "TemperatureUnit"
+  },
+  "TemperatureUnit.Celsius": {
+   "kind": 7,
+   "namespace": "TemperatureUnit",
+   "name": "Celsius",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "°C",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Celsius"
+   },
+   "pkg": null,
+   "retType": "TemperatureUnit",
+   "parameters": null,
+   "qName": "TemperatureUnit.Celsius"
+  },
+  "TemperatureUnit.Fahrenheit": {
+   "kind": 7,
+   "namespace": "TemperatureUnit",
+   "name": "Fahrenheit",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "°F",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Fahrenheit"
+   },
+   "pkg": null,
+   "retType": "TemperatureUnit",
+   "parameters": null,
+   "qName": "TemperatureUnit.Fahrenheit"
+  }
+ },
+ "jres": {}
+}

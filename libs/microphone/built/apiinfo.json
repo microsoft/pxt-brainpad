@@ -1,0 +1,188 @@
+{
+ "byQName": {
+  "input": {
+   "kind": 5,
+   "namespace": "",
+   "name": "input",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "color": "#B4009E",
+    "weight": 98,
+    "icon": "",
+    "groups": [
+     "other",
+     "More"
+    ],
+    "paramHelp": {},
+    "jsDoc": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
+    "block": "input"
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "input"
+  },
+  "LoudnessCondition": {
+   "kind": 6,
+   "namespace": "",
+   "name": "LoudnessCondition",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "LoudnessCondition"
+   },
+   "pkg": null,
+   "retType": "LoudnessCondition",
+   "parameters": null,
+   "qName": "LoudnessCondition"
+  },
+  "LoudnessCondition.Loud": {
+   "kind": 7,
+   "namespace": "LoudnessCondition",
+   "name": "Loud",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "loud",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Loud"
+   },
+   "pkg": null,
+   "retType": "LoudnessCondition",
+   "parameters": null,
+   "qName": "LoudnessCondition.Loud"
+  },
+  "LoudnessCondition.Quiet": {
+   "kind": 7,
+   "namespace": "LoudnessCondition",
+   "name": "Quiet",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "quiet",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Quiet"
+   },
+   "pkg": null,
+   "retType": "LoudnessCondition",
+   "parameters": null,
+   "qName": "LoudnessCondition.Quiet"
+  },
+  "input.onLoudSound": {
+   "kind": 3,
+   "namespace": "input",
+   "name": "onLoudSound",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "help": "input/on-loud-sound",
+    "blockId": "input_on_loud_sound",
+    "block": "on loud sound",
+    "parts": "microphone",
+    "weight": 88,
+    "blockGap": "12",
+    "shim": "input::onLoudSound",
+    "paramHelp": {},
+    "jsDoc": "Registers an event that runs when a lound sound is detected",
+    "_name": "onLoudSound"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "handler",
+     "description": "",
+     "type": "() => void",
+     "handlerParameters": [],
+     "options": {},
+     "isEnum": false
+    }
+   ],
+   "snippet": "onLoudSound(function () {})",
+   "qName": "input.onLoudSound"
+  },
+  "input.soundLevel": {
+   "kind": 3,
+   "namespace": "input",
+   "name": "soundLevel",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "help": "input/sound-level",
+    "blockId": "device_get_sound_level",
+    "block": "sound level",
+    "parts": "microphone",
+    "weight": 34,
+    "blockGap": "8",
+    "shim": "input::soundLevel",
+    "paramHelp": {},
+    "jsDoc": "Reads the loudness through the microphone from 0 (silent) to 255 (loud)",
+    "_name": "soundLevel"
+   },
+   "pkg": null,
+   "retType": "number",
+   "parameters": [],
+   "snippet": "soundLevel()",
+   "qName": "input.soundLevel"
+  },
+  "input.setLoudSoundThreshold": {
+   "kind": 3,
+   "namespace": "input",
+   "name": "setLoudSoundThreshold",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "help": "input/set-loud-sound-threshold",
+    "blockId": "input_set_loud_sound_threshold",
+    "block": "set loud sound threshold %value",
+    "parts": "microphone",
+    "paramMin": {
+     "value": "1"
+    },
+    "paramMax": {
+     "value": "100"
+    },
+    "group": "More",
+    "weight": 14,
+    "blockGap": "8",
+    "shim": "input::setLoudSoundThreshold",
+    "paramHelp": {},
+    "jsDoc": "Sets the minimum threshold for a loud sound",
+    "_name": "setLoudSoundThreshold"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "value",
+     "description": "",
+     "type": "number",
+     "options": {
+      "min": {
+       "value": "1"
+      },
+      "max": {
+       "value": "100"
+      }
+     },
+     "isEnum": false
+    }
+   ],
+   "snippet": "setLoudSoundThreshold(null)",
+   "qName": "input.setLoudSoundThreshold"
+  }
+ },
+ "jres": {}
+}

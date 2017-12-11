@@ -1,0 +1,18 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="B.Z]j%6:`i6T;x)NK6y6" x="-247" y="23">
+    <statement name="HANDLER">
+      <block type="neopixel_show_ring_colors" id="dPBC-ze~+dY)}b^1-.bt">
+        <mutation showing="true"></mutation>
+        <field name="array">[Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Red]</field>
+        <value name="__instance__">
+          <block type="typescript_expression" id="ec18V(%z#hc{3B%4/Ek@" editable="false">
+            <field name="EXPRESSION">
+    [255,Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Red,Colors.Red]
+            
+            </field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

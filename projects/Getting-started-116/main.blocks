@@ -1,0 +1,31 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="x=x%PB}(i+65o=sxVmjM" x="20" y="20">
+    <statement name="HANDLER">
+      <block type="neopixel_show_animation" id=";[eAw2I9lT5piRtpXeOl">
+        <mutation showing="false"></mutation>
+        <value name="animation">
+          <shadow type="light_animation" id="hPqty_)L5J+`@p_g^hAb">
+            <field name="kind">LightAnimation.Rainbow</field>
+          </shadow>
+        </value>
+        <value name="duration">
+          <shadow type="math_number" id="HuZ92@5vo.4`D:4v:ypj">
+            <field name="NUM">500</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="device_gesture_event" id=",+SEO/BWC~Hbad*%lu`W" x="30" y="170">
+    <field name="NAME">Gesture.Shake</field>
+    <statement name="HANDLER">
+      <block type="music_play_sound" id="m0IZGQa`Pu-HRbWL@O7!">
+        <value name="sound">
+          <shadow type="music_sounds" id="ZwA).N}vL+ZSZ@_mWhzB">
+            <field name="name">Sounds.PowerUp</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

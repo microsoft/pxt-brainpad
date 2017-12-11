@@ -1,0 +1,14 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="2Nb*sUH@/;6LG29=Qv}(" x="-22" y="68">
+    <statement name="HANDLER">
+      <block type="neopixel_show_ring_colors" id="hIHJK*3kY1Bk5vun1sKX">
+        <field name="array">'red red red red red red red red red red'</field>
+        <next>
+          <block type="neopixel_show_ring_colors" id="y{HI$q4h-8g6xRj-A!*H">
+            <field name="array">'red green blue red green blue red green blue'</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

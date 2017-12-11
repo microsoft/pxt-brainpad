@@ -1,0 +1,33 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="C]2t^,=5[a0:t8!_Y_xI" x="187" y="-4">
+    <statement name="HANDLER">
+      <block type="controls_if" id="A6hH`a0#nAg-R$#83~ZB">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <shadow type="logic_boolean" id="=sIyFSo#Pu~{,-j`Jam~">
+            <field name="BOOL">TRUE</field>
+          </shadow>
+          <block type="logic_compare" id="w1CGV=(l2}3m)/,Jn%G=">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <shadow type="math_number" id="E)JE[Ppq;)B,vLf]xb!,">
+                <field name="NUM">0</field>
+              </shadow>
+              <block type="variables_get" id="Cr_#CNBAFv1VyAP]@S1D">
+                <field name="VAR">item</field>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="H~+3rAn?#5C:e5:{=Vmu">
+                <field name="NUM">0</field>
+              </shadow>
+              <block type="device_get_digital_pin" id="PeF/yTE(ZFl!|WX:0X7T">
+                <field name="name">pins.A0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

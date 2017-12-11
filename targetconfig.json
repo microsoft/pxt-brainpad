@@ -1,0 +1,15 @@
+{
+    "packages": {
+        "approvedOrgs": [
+            "Microsoft",
+            "ghi-electronics"
+        ],
+        "approvedRepos": [
+        ]
+    },
+    "languages": [
+        "en"
+    ],
+    "galleries": {
+    }
+}

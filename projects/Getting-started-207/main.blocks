@@ -1,0 +1,13 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="]k#HrkH$R{uJw4;HM%I-" x="0" y="0">
+    <statement name="HANDLER">
+      <block type="music_play_sound_until_done" id="%7PhDh40Qo#:ntIe@jyf">
+        <value name="sound">
+          <shadow type="music_sounds" id=":ks80r|O#)UddiTF:1f6">
+            <field name="name">Sounds.Siren</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

@@ -1,0 +1,20 @@
+{
+  "Colors": "Well known colors for the RGB Led",
+  "lightbulb": "Outputs.",
+  "lightbulb.clear": "Clear the on-board RGB LED, turning it off.",
+  "lightbulb.colors": "Get the RGB value of a known color",
+  "lightbulb.dim": "Dim an RGB color to make a new color.",
+  "lightbulb.dim|param|level": "dim level between 0 and 5 eg: 1",
+  "lightbulb.dim|param|rgb": "RGB color of the LED",
+  "lightbulb.rgb": "Convert the red, green, blue color channels into an RGB color",
+  "lightbulb.rgb|param|blue": "value of the blue channel between 0 and 255. eg: 255",
+  "lightbulb.rgb|param|green": "value of the green channel between 0 and 255. eg: 255",
+  "lightbulb.rgb|param|red": "value of the red channel between 0 and 255. eg: 255",
+  "lightbulb.setBrightness": "Set the brightness of the LED. This change the brightness for the next operation.",
+  "lightbulb.setBrightness|param|brightness": "a measure of LED brightness in 0-100. eg: 15",
+  "lightbulb.setColor": "Make the on-board RGB LED show an RGB color (range 0-255 for r, g, b).",
+  "lightbulb.setColor|param|rgb": "RGB color of the LED, eg: Colors.Red",
+  "lightbulb.setRGBLed": "Set the rgb led to a specific red, green, blue color.",
+  "lightbulb.wheel": "Converts wheel position into an RGB color",
+  "lightbulb.wheel|param|wheelPos": "value between 0 to 255 to get a color value, eg: 99"
+}

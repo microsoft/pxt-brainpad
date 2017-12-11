@@ -1,0 +1,21 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="CxW^VFh=}|rWSjl/qI4n" x="20" y="20"></block>
+  <block type="buttonEvent" id="bi9,7@#_gENFpuHJ4:DN" x="70" y="150">
+    <field name="button">input.buttonA</field>
+    <field name="event">ButtonEvent.Click</field>
+    <statement name="HANDLER">
+      <block type="music_set_output" id="t.llpn#)6d~L85[t=sP?">
+        <field name="out">SoundOutputDestination.Pin</field>
+        <next>
+          <block type="music_play_sound" id=":w0nukHjk6@2y`{CKlb;">
+            <value name="sound">
+              <shadow type="music_sounds" id="#PgZxMr0*K/5EVx%]jm6">
+                <field name="name">Sounds.PowerUp</field>
+              </shadow>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

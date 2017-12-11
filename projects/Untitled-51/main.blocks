@@ -1,0 +1,16 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="+2Dki0-O[wSv,YVSB^k~" x="20" y="20">
+    <statement name="HANDLER">
+      <block type="neopixel_show_ring_colors" id="$3y[$r%p-~BK[b=5@E!7">
+        <mutation showing="false"></mutation>
+        <field name="array">{}</field>
+        <next>
+          <block type="neopixel_show_ring_colors" id="X[JK[xE9@tSmFbZp3ek?">
+            <mutation showing="false"></mutation>
+            <field name="array">{"0":"#ff00ff","1":"#ff00ff","2":"#000000","3":"#ffffff","4":"#ffa500","6":"#404040","7":"#ff0000","8":"#ff00ff","9":"#ff0000"}</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

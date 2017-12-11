@@ -1,0 +1,12 @@
+{
+    "name": "circuit-spider",
+    "dependencies": {
+        "circuit-playground": "*"
+    },
+    "description": "",
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ]
+}

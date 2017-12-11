@@ -1,0 +1,20 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="pxt-on-start" id="5k.(oH~RM6Zt#DAHp}5A" x="0" y="0">
+    <statement name="HANDLER">
+      <block type="neopixel_set_strip_color" id="MutfJ@LA6_:FE%OV.O_e">
+        <mutation showing="false"></mutation>
+        <value name="rgb">
+          <block type="neopixel_colors" id="1S#f!Gc$3b7)AC|{q6;p">
+            <field name="color">Colors.Red</field>
+          </block>
+        </value>
+        <next>
+          <block type="neopixel_show_ring_colors" id="|%mU[94rO#X]Y#a1m=:~">
+            <mutation showing="false"></mutation>
+            <field name="array"></field>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

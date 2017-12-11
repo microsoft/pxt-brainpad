@@ -1,0 +1,28 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="0Fg8+3sb,Y4eJ-E)U`%V" x="10" y="30">
+    <statement name="HANDLER">
+      <block type="neopixel_set_strip_color" id="OfuuI*k3/2r=5QF)4o?T">
+        <mutation showing="false"></mutation>
+        <value name="rgb">
+          <shadow type="neopixel_colors" id="ZW~b?HZhMY@*jCgRpcK=">
+            <field name="color">Colors.Yellow</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="forever" id="gIFyqm#/}#hPtw)==cH." x="10" y="150">
+    <statement name="HANDLER">
+      <block type="neopixel_set_brightness" id="V}71c?IkPsP`Cr^e=NM~">
+        <mutation showing="false"></mutation>
+        <value name="brightness">
+          <shadow type="math_number_minmax" id="E^_gm0C^PV.WmebJ}jbz">
+            <mutation min="0" max="255"></mutation>
+            <field name="SLIDER">0</field>
+          </shadow>
+          <block type="device_get_sound_level" id="3qN3jA6tLT.M`@u8;u.M"></block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

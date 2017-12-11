@@ -1,0 +1,78 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="./*iX=oovf;vH-,|0Kz," x="20" y="20">
+    <statement name="HANDLER">
+      <block type="neopixel_show_ring_colors" id="WH$7}JgB+Q9u%U|DLF6]">
+        <field name="array">`red red red red red red red red red red`</field>
+        <next>
+          <block type="music_play_note" id="*Itf((pH,t7Eyt5r-Ftc">
+            <value name="note">
+              <shadow type="device_note" id="GO;U|{._9o)t0}yuBLLl">
+                <field name="note">262</field>
+              </shadow>
+            </value>
+            <value name="duration">
+              <shadow type="device_beat" id="ZuK=-+oc5W-WXZkaxFX9">
+                <field name="fraction">BeatFraction.Half</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="neopixel_show_ring_colors" id="Afn|s5?lt`0J|iM/kuMf">
+                <field name="array">`red red red red red red red red red red`</field>
+                <next>
+                  <block type="music_play_note" id=")r@X2@E0x*$~=FDs)OPg">
+                    <value name="note">
+                      <shadow type="device_note" id="9dTGCBG?+oHrIZ5Qxl)#">
+                        <field name="note">587</field>
+                      </shadow>
+                    </value>
+                    <value name="duration">
+                      <shadow type="device_beat" id="dg1nQ(+FtW%MG`{%:[ep">
+                        <field name="fraction">BeatFraction.Half</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="typescript_statement" id="K2@q1QTv2SEwyf%(vtc8" disabled="true" editable="false" x="490" y="30">
+    <mutation line0="light.showRing(" line1="        `blue blue blue blue blue red red red red red`" line2="        , 20)" numlines="3"></mutation>
+    <next>
+      <block type="music_play_note" id="GaqB}_2)WnuP~(rPz@G=" disabled="true">
+        <value name="note">
+          <shadow type="device_note" id=":O{f8fqu;lct8Tm^]+~2">
+            <field name="note">440</field>
+          </shadow>
+        </value>
+        <value name="duration">
+          <block type="device_beat" id="g+nyDffF@}cX8fqIA+*#">
+            <field name="fraction">BeatFraction.Whole</field>
+          </block>
+        </value>
+        <next>
+          <block type="typescript_statement" id="d~5q?Il7W$}qVkKHowa#" disabled="true" editable="false">
+            <mutation line0="light.showRing(" line1="        `red red red red red blue blue blue blue blue`" line2="        , 20)" numlines="3"></mutation>
+            <next>
+              <block type="music_play_note" id="e^nw@CUg]iy}{y!lWl:d" disabled="true">
+                <value name="note">
+                  <shadow type="device_note" id="sZR0U(}oBd4^/8bGW[~E">
+                    <field name="note">587</field>
+                  </shadow>
+                </value>
+                <value name="duration">
+                  <block type="device_beat" id="dxFs5zT:nVkBL/eR3P*)">
+                    <field name="fraction">BeatFraction.Whole</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

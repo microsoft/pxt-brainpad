@@ -1,0 +1,12 @@
+light.showRing([
+    Colors.Blue,
+    Colors.Blue,
+    Colors.Blue,
+    Colors.Blue,
+    Colors.Blue,
+    Colors.Blue,
+    Colors.Blue,
+    Colors.Blue,
+    Colors.Blue,
+    Colors.Blue
+]) 

@@ -1,0 +1,13 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="pxt-on-start" id="x21FjlgfX!yjG|ySYFg1" x="50" y="70">
+    <statement name="HANDLER">
+      <block type="device_play_melody" id="b_oNOTd6`Swi{0XLH2?A">
+        <value name="melody">
+          <shadow type="device_builtin_melody" id="%G*oPHUex_9qFi:0Te2Z">
+            <field name="melody">Melodies.PowerUp</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

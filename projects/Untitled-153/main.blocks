@@ -1,0 +1,22 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="forever" id="DeLj^*Gq~NFVxERWfyx;" x="20" y="20">
+    <statement name="HANDLER">
+      <block type="console_log_value" id="A$!$KC3@ac[Hc9}F]=UG">
+        <value name="name">
+          <shadow type="text" id="byCo#}1w)Ar1aAS|WT:@">
+            <field name="TEXT">x</field>
+          </shadow>
+        </value>
+        <value name="value">
+          <shadow type="math_number" id="~wU0l(UuU%se])4)+=kk">
+            <field name="NUM">0</field>
+          </shadow>
+          <block type="device_acceleration" id="SY.o5CN4xun[OC5LGoc(">
+            <field name="NAME">Dimension.X</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

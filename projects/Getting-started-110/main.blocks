@@ -1,0 +1,162 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="r#x{4,l{qW[9bY*062z$" x="20" y="20">
+    <statement name="HANDLER">
+      <block type="neopixel_show_animation" id="?Ur7pACWaLK;~R*eVO9M">
+        <mutation showing="false"></mutation>
+        <value name="animation">
+          <block type="light_animation" id="_hAo!uOK4%bvpx2g~%J!">
+            <field name="kind">LightAnimation.Rainbow</field>
+          </block>
+        </value>
+        <value name="duration">
+          <shadow type="math_number" id="E*Xux-K4)@t0Fi2YWaEm">
+            <field name="NUM">500</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="device_gesture_event" id="K1N%S]Q@nv@snaj?uHzW" x="488" y="20">
+    <field name="NAME">Gesture.Shake</field>
+  </block>
+  <block type="forever" id=";_98?Z~Db/W:zB}G?HtV" x="613" y="20">
+    <statement name="HANDLER">
+      <block type="neopixel_show_animation" id="/YknLeA_!K5zsQ?!9a6,">
+        <mutation showing="false"></mutation>
+        <value name="animation">
+          <block type="light_animation" id="1~4Mw1Oe6NFKKo#Cp8v2">
+            <field name="kind">LightAnimation.Rainbow</field>
+          </block>
+        </value>
+        <value name="duration">
+          <shadow type="math_number" id="_8XpCgB!qg.FvE[2vU}G">
+            <field name="NUM">500</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="device_gesture_event" id="0YY(P^?11#fS#=LZTpaQ" disabled="true" x="20" y="115">
+    <field name="NAME">Gesture.Shake</field>
+    <statement name="HANDLER">
+      <block type="neopixel_show_animation" id="S/kBl2-34qSGln7^Pj_9">
+        <mutation showing="false"></mutation>
+        <value name="animation">
+          <block type="light_animation" id="PH+]}?TPJJC]LpWEW8sn">
+            <field name="kind">LightAnimation.Sparkle</field>
+          </block>
+        </value>
+        <value name="duration">
+          <shadow type="math_number" id="#?{Q$5@|r)ji:p,kp8M7">
+            <field name="NUM">1500</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="forever" id="8*Fts0k1tWc_3k=*wi`;" x="497" y="115">
+    <statement name="HANDLER">
+      <block type="neopixel_show_animation" id="I8Qn6+45LDIJ[TNgMBH.">
+        <mutation showing="false"></mutation>
+        <value name="animation">
+          <block type="light_animation" id="bQr:*B(P?#l@vt^bY$JY">
+            <field name="kind">LightAnimation.Rainbow</field>
+          </block>
+        </value>
+        <value name="duration">
+          <shadow type="math_number" id="6sgXZc%Qig9fQP%tDzLk">
+            <field name="NUM">500</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="device_gesture_event" id=";{JfY^#:)13mxJ-M,,.F" disabled="true" x="20" y="210">
+    <field name="NAME">Gesture.Shake</field>
+    <statement name="HANDLER">
+      <block type="music_play_sound" id=")kM,j756hfNj$)5F?l6U">
+        <value name="sound">
+          <block type="music_sounds" id="4W1[l6ZXX7AV^!iVvj[J">
+            <field name="name">Sounds.PowerUp</field>
+          </block>
+        </value>
+        <next>
+          <block type="neopixel_show_animation" id="-bLV7dgY|v^gf^=Xfb`r">
+            <mutation showing="false"></mutation>
+            <value name="animation">
+              <block type="light_animation" id="KI]tPio9@b!P4iDuR-i7">
+                <field name="kind">LightAnimation.Sparkle</field>
+              </block>
+            </value>
+            <value name="duration">
+              <shadow type="math_number" id="/ggDl8$1ojKM+?SMO!GQ">
+                <field name="NUM">1500</field>
+              </shadow>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="forever" id="~w~1L){B.k,eONVr2J+q" x="497" y="210">
+    <statement name="HANDLER">
+      <block type="neopixel_show_animation" id="7l]ICgv6p(oz@SDz[?S}">
+        <mutation showing="false"></mutation>
+        <value name="animation">
+          <block type="light_animation" id="Fw[++7d6c(Dr*Y!@qmpQ">
+            <field name="kind">LightAnimation.Rainbow</field>
+          </block>
+        </value>
+        <value name="duration">
+          <shadow type="math_number" id="u~K[Q1}rE2%;rF^297cw">
+            <field name="NUM">500</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="device_gesture_event" id="s-`gxQvE$Qu)MVVNIi(3" disabled="true" x="20" y="342">
+    <field name="NAME">Gesture.Shake</field>
+    <statement name="HANDLER">
+      <block type="music_play_sound" id="-F2O,=-voJkk8n*2FIM;">
+        <value name="sound">
+          <block type="music_sounds" id="1xiyA,xw4)-VXP^nz@6F">
+            <field name="name">Sounds.MagicWand</field>
+          </block>
+        </value>
+        <next>
+          <block type="neopixel_show_animation" id="{R=EZ!Bc6noD2]L9Rc.8">
+            <mutation showing="false"></mutation>
+            <value name="animation">
+              <block type="light_animation" id="H-c+L2(`!OpS}ivdwfA*">
+                <field name="kind">LightAnimation.Sparkle</field>
+              </block>
+            </value>
+            <value name="duration">
+              <shadow type="math_number" id="yXDKx),Fn!3+AgU2$9x(">
+                <field name="NUM">1500</field>
+              </shadow>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="forever" id="3E:;CxJI1{)J`H}4dP[J" x="497" y="342">
+    <statement name="HANDLER">
+      <block type="neopixel_show_animation" id="FV`6${$%:J_W,JqU99R+">
+        <mutation showing="false"></mutation>
+        <value name="animation">
+          <block type="light_animation" id="UtWHjH0~UM_|l#_g[WZb">
+            <field name="kind">LightAnimation.Rainbow</field>
+          </block>
+        </value>
+        <value name="duration">
+          <shadow type="math_number" id="zC`K4R7V!m5JPm,n,?TL">
+            <field name="NUM">500</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

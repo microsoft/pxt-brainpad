@@ -1,0 +1,120 @@
+/* Import all components */
+@import 'semantic';
+@import 'pxt';
+@import 'themes/default/globals/site.variables';
+@import 'themes/pxt/globals/site.variables';
+@import 'site/globals/site.variables';
+@import 'themes/default/collections/menu.variables';
+
+/* Reference import */
+@import (reference) "semantic.less";
+
+@font-face  {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+         data-uri('../docs/static/fonts/Open_Sans/OpenSans-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         data-uri('../docs/static/fonts/Open_Sans/OpenSans-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/*******************************
+    Add your custom CSS here
+*******************************/
+
+.ui.button.download-button {
+    &:extend(.ui.secondary.button all);
+}
+
+.ui.button.editortools-btn {
+    &:extend(.ui.blue.button all);
+}
+
+.ui.button.getting-started-btn {
+    &:extend(.ui.green.button all);
+}
+
+.ui.button.exit-tutorial-btn {
+    &:extend(.ui.blue.button all);
+}
+
+.simtoolbar .ui.button, .collapse-button.ui.button {
+    &:extend(.ui.grey.button all);
+}
+
+/* Editor menu toggle */
+.ui.menu .item.editor-menuitem .ui.grid {
+    background: fade(@black, 20%) !important;
+}
+
+.sandboxfooter a:not(.thin) {
+    color:white !important;
+}
+
+/* Home screen */
+.ui.home.projectsdialog {
+    .tabsegment  {
+        padding-top: 0 !important;
+    }
+    .ui.inverted.menu {
+        background: @blue;
+        background: linear-gradient(to bottom, @blue, lighten(@blue, 30%));
+    }
+    .getting-started-segment {
+        margin-top: 3rem !important;
+        background-position: 50% 75%;
+        background-color: lighten(@blue, 30%);
+        background-size: contain;
+    }
+}
+
+/* Layout */
+/*#maineditor {
+    left: 0 !important;
+    right: 0 !important; 
+    top: 50% !important;
+}
+
+#filelist {
+    max-width: 100%;
+    bottom: 50%;
+    padding-left: 30%;
+    padding-right: 30%;
+}*/
+
+/* PXT Json */
+#pxtJsonEditor {
+    .ui.header {
+        color: @invertedTextColor;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: @largestMobileScreen) {
+    #filelist {
+        background: transparent;
+    }
+    .ui.home.projectsdialog {
+        .getting-started-segment {
+            background-size: cover;
+        }
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
+}
+
+/* Small Monitor */
+@media only screen and (min-width: @computerBreakpoint) and (max-width: @largestSmallMonitor) {
+}
+
+/* Large Monitor */
+@media only screen and (min-width: @largeMonitorBreakpoint) {
+}
+/* Mobile, Tablet AND thin screen */
+@media only screen and (max-width: @largestTabletScreen) and (max-height: @thinEditorBreakpoint) {
+    .sandboxfooter a:not(.thin) {
+        color: @black !important;
+    }
+}

@@ -1,0 +1,749 @@
+{
+ "byQName": {
+  "lightbulb": {
+   "kind": 5,
+   "namespace": "",
+   "name": "lightbulb",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "groups": [
+     "other",
+     "Colors"
+    ],
+    "color": "#0078d7",
+    "weight": 97,
+    "icon": "",
+    "block": "Light bulb",
+    "paramHelp": {},
+    "jsDoc": "Outputs."
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "lightbulb"
+  },
+  "lightbulb.setColor": {
+   "kind": 3,
+   "namespace": "lightbulb",
+   "name": "setColor",
+   "attributes": {
+    "paramDefl": {
+     "rgb": "Colors.Red"
+    },
+    "callingConvention": 0,
+    "_source": null,
+    "blockId": "rgb_set_color",
+    "block": "set light bulb to %rgb=colorNumberPicker",
+    "weight": 90,
+    "help": "rgb/set-color",
+    "paramHelp": {
+     "rgb": "RGB color of the LED, eg: Colors.Red"
+    },
+    "jsDoc": "Make the on-board RGB LED show an RGB color (range 0-255 for r, g, b).",
+    "_name": "setColor"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "rgb",
+     "description": "RGB color of the LED, eg: Colors.Red",
+     "type": "number",
+     "initializer": "Colors.Red",
+     "default": "Colors.Red",
+     "options": {},
+     "isEnum": false
+    }
+   ],
+   "snippet": "setColor(Colors.Red)",
+   "qName": "lightbulb.setColor"
+  },
+  "lightbulb.clear": {
+   "kind": 3,
+   "namespace": "lightbulb",
+   "name": "clear",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "blockId": "rgb_clear",
+    "block": "clear light bulb",
+    "weight": 89,
+    "help": "rgb/clear",
+    "paramHelp": {},
+    "jsDoc": "Clear the on-board RGB LED, turning it off.",
+    "_name": "clear"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [],
+   "snippet": "clear()",
+   "qName": "lightbulb.clear"
+  },
+  "lightbulb.setBrightness": {
+   "kind": 3,
+   "namespace": "lightbulb",
+   "name": "setBrightness",
+   "attributes": {
+    "paramDefl": {
+     "brightness": "15"
+    },
+    "callingConvention": 0,
+    "_source": null,
+    "blockId": "rgb_set_brightness",
+    "block": "set brightness %brightness",
+    "weight": 1,
+    "blockGap": "8",
+    "paramMin": {
+     "brightness": "0"
+    },
+    "paramMax": {
+     "brightness": "100"
+    },
+    "help": "rgb/set-brightness",
+    "paramHelp": {
+     "brightness": "a measure of LED brightness in 0-100. eg: 15"
+    },
+    "jsDoc": "Set the brightness of the LED. This change the brightness for the next operation.",
+    "_name": "setBrightness"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "brightness",
+     "description": "a measure of LED brightness in 0-100. eg: 15",
+     "type": "number",
+     "initializer": "15",
+     "default": "15",
+     "options": {
+      "min": {
+       "value": "0"
+      },
+      "max": {
+       "value": "100"
+      }
+     },
+     "isEnum": false
+    }
+   ],
+   "snippet": "setBrightness(15)",
+   "qName": "lightbulb.setBrightness"
+  },
+  "lightbulb.dim": {
+   "kind": 3,
+   "namespace": "lightbulb",
+   "name": "dim",
+   "attributes": {
+    "paramDefl": {
+     "level": "1"
+    },
+    "callingConvention": 0,
+    "_source": null,
+    "blockId": "rgb_dim",
+    "block": "dim %rgb=rgb_colors |%level",
+    "paramMin": {
+     "level": "0"
+    },
+    "paramMax": {
+     "level": "5"
+    },
+    "weight": 80,
+    "help": "rgb/dim",
+    "paramHelp": {
+     "rgb": "RGB color of the LED",
+     "level": "dim level between 0 and 5 eg: 1"
+    },
+    "jsDoc": "Dim an RGB color to make a new color.",
+    "_name": "dim"
+   },
+   "pkg": null,
+   "retType": "number",
+   "parameters": [
+    {
+     "name": "rgb",
+     "description": "RGB color of the LED",
+     "type": "number",
+     "options": {},
+     "isEnum": false
+    },
+    {
+     "name": "level",
+     "description": "dim level between 0 and 5 eg: 1",
+     "type": "number",
+     "initializer": "1",
+     "default": "1",
+     "options": {
+      "min": {
+       "value": "0"
+      },
+      "max": {
+       "value": "5"
+      }
+     },
+     "isEnum": false
+    }
+   ],
+   "snippet": "dim(0, 1)",
+   "qName": "lightbulb.dim"
+  },
+  "lightbulb.rgb": {
+   "kind": 3,
+   "namespace": "lightbulb",
+   "name": "rgb",
+   "attributes": {
+    "paramDefl": {
+     "red": "255",
+     "green": "255",
+     "blue": "255"
+    },
+    "callingConvention": 0,
+    "_source": null,
+    "blockId": "rgb_rgbcolor",
+    "block": "red %red|green %green|blue %blue",
+    "paramMin": {
+     "red": "0",
+     "green": "0",
+     "blue": "0"
+    },
+    "paramMax": {
+     "red": "255",
+     "green": "255",
+     "blue": "255"
+    },
+    "weight": 20,
+    "help": "rgb/rgb",
+    "blockGap": "8",
+    "group": "Colors",
+    "paramShadowOptions": {
+     "red": {
+      "color": "#FF6680"
+     },
+     "green": {
+      "color": "#59C059"
+     },
+     "blue": {
+      "color": "#4C97FF"
+     }
+    },
+    "paramHelp": {
+     "red": "value of the red channel between 0 and 255. eg: 255",
+     "green": "value of the green channel between 0 and 255. eg: 255",
+     "blue": "value of the blue channel between 0 and 255. eg: 255"
+    },
+    "jsDoc": "Convert the red, green, blue color channels into an RGB color",
+    "_name": "rgb"
+   },
+   "pkg": null,
+   "retType": "number",
+   "parameters": [
+    {
+     "name": "red",
+     "description": "value of the red channel between 0 and 255. eg: 255",
+     "type": "number",
+     "initializer": "255",
+     "default": "255",
+     "options": {
+      "fieldEditorOptions": {
+       "value": {
+        "color": "#FF6680"
+       }
+      },
+      "min": {
+       "value": "0"
+      },
+      "max": {
+       "value": "255"
+      }
+     },
+     "isEnum": false
+    },
+    {
+     "name": "green",
+     "description": "value of the green channel between 0 and 255. eg: 255",
+     "type": "number",
+     "initializer": "255",
+     "default": "255",
+     "options": {
+      "fieldEditorOptions": {
+       "value": {
+        "color": "#59C059"
+       }
+      },
+      "min": {
+       "value": "0"
+      },
+      "max": {
+       "value": "255"
+      }
+     },
+     "isEnum": false
+    },
+    {
+     "name": "blue",
+     "description": "value of the blue channel between 0 and 255. eg: 255",
+     "type": "number",
+     "initializer": "255",
+     "default": "255",
+     "options": {
+      "fieldEditorOptions": {
+       "value": {
+        "color": "#4C97FF"
+       }
+      },
+      "min": {
+       "value": "0"
+      },
+      "max": {
+       "value": "255"
+      }
+     },
+     "isEnum": false
+    }
+   ],
+   "snippet": "rgb(255, 255, 255)",
+   "qName": "lightbulb.rgb"
+  },
+  "lightbulb.wheel": {
+   "kind": 3,
+   "namespace": "lightbulb",
+   "name": "wheel",
+   "attributes": {
+    "paramDefl": {
+     "wheelPos": "99"
+    },
+    "callingConvention": 0,
+    "_source": null,
+    "blockId": "rgb_wheel",
+    "block": "color slider %wheelPos=colorWheelPicker",
+    "group": "Colors",
+    "weight": 19,
+    "help": "rgb/wheel",
+    "blockGap": "8",
+    "paramHelp": {
+     "wheelPos": "value between 0 to 255 to get a color value, eg: 99"
+    },
+    "jsDoc": "Converts wheel position into an RGB color",
+    "_name": "wheel"
+   },
+   "pkg": null,
+   "retType": "number",
+   "parameters": [
+    {
+     "name": "wheelPos",
+     "description": "value between 0 to 255 to get a color value, eg: 99",
+     "type": "number",
+     "initializer": "99",
+     "default": "99",
+     "options": {},
+     "isEnum": false
+    }
+   ],
+   "snippet": "wheel(99)",
+   "qName": "lightbulb.wheel"
+  },
+  "lightbulb.colors": {
+   "kind": 3,
+   "namespace": "lightbulb",
+   "name": "colors",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "weight": 10,
+    "blockGap": "8",
+    "blockId": "rgb_colors",
+    "block": "%color",
+    "help": "rgb/colors",
+    "shim": "TD_ID",
+    "group": "Colors",
+    "paramHelp": {},
+    "jsDoc": "Get the RGB value of a known color",
+    "_name": "colors"
+   },
+   "pkg": null,
+   "retType": "number",
+   "parameters": [
+    {
+     "name": "color",
+     "description": "",
+     "type": "Colors",
+     "options": {},
+     "isEnum": true
+    }
+   ],
+   "snippet": "colors(null)",
+   "qName": "lightbulb.colors"
+  },
+  "lightbulb.setRGBLed": {
+   "kind": 3,
+   "namespace": "lightbulb",
+   "name": "setRGBLed",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "parts": "rgbled",
+    "shim": "lightbulb::setRGBLed",
+    "paramHelp": {
+     "red": "the red color",
+     "green": "the green color",
+     "blue": "the blue color"
+    },
+    "jsDoc": "Set the rgb led to a specific red, green, blue color.",
+    "_name": "setRGBLed"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "r",
+     "description": "",
+     "type": "number",
+     "options": {},
+     "isEnum": false
+    },
+    {
+     "name": "g",
+     "description": "",
+     "type": "number",
+     "options": {},
+     "isEnum": false
+    },
+    {
+     "name": "b",
+     "description": "",
+     "type": "number",
+     "options": {},
+     "isEnum": false
+    }
+   ],
+   "snippet": "setRGBLed(null, null, null)",
+   "qName": "lightbulb.setRGBLed"
+  },
+  "Colors": {
+   "kind": 6,
+   "namespace": "",
+   "name": "Colors",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "Well known colors for the RGB Led",
+    "_name": "Colors"
+   },
+   "pkg": null,
+   "retType": "Colors",
+   "parameters": null,
+   "qName": "Colors"
+  },
+  "Colors.Red": {
+   "kind": 7,
+   "namespace": "Colors",
+   "name": "Red",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "red",
+    "blockIdentity": "rgb.colors",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Red"
+   },
+   "pkg": null,
+   "retType": "Colors",
+   "parameters": null,
+   "qName": "Colors.Red"
+  },
+  "Colors.Orange": {
+   "kind": 7,
+   "namespace": "Colors",
+   "name": "Orange",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "orange",
+    "blockIdentity": "rgb.colors",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Orange"
+   },
+   "pkg": null,
+   "retType": "Colors",
+   "parameters": null,
+   "qName": "Colors.Orange"
+  },
+  "Colors.Yellow": {
+   "kind": 7,
+   "namespace": "Colors",
+   "name": "Yellow",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "yellow",
+    "blockIdentity": "rgb.colors",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Yellow"
+   },
+   "pkg": null,
+   "retType": "Colors",
+   "parameters": null,
+   "qName": "Colors.Yellow"
+  },
+  "Colors.Green": {
+   "kind": 7,
+   "namespace": "Colors",
+   "name": "Green",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "green",
+    "blockIdentity": "rgb.colors",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Green"
+   },
+   "pkg": null,
+   "retType": "Colors",
+   "parameters": null,
+   "qName": "Colors.Green"
+  },
+  "Colors.Blue": {
+   "kind": 7,
+   "namespace": "Colors",
+   "name": "Blue",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "blue",
+    "blockIdentity": "rgb.colors",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Blue"
+   },
+   "pkg": null,
+   "retType": "Colors",
+   "parameters": null,
+   "qName": "Colors.Blue"
+  },
+  "Colors.Indigo": {
+   "kind": 7,
+   "namespace": "Colors",
+   "name": "Indigo",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "indigo",
+    "blockIdentity": "rgb.colors",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Indigo"
+   },
+   "pkg": null,
+   "retType": "Colors",
+   "parameters": null,
+   "qName": "Colors.Indigo"
+  },
+  "Colors.Violet": {
+   "kind": 7,
+   "namespace": "Colors",
+   "name": "Violet",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "violet",
+    "blockIdentity": "rgb.colors",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Violet"
+   },
+   "pkg": null,
+   "retType": "Colors",
+   "parameters": null,
+   "qName": "Colors.Violet"
+  },
+  "Colors.Purple": {
+   "kind": 7,
+   "namespace": "Colors",
+   "name": "Purple",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "purple",
+    "blockIdentity": "rgb.colors",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Purple"
+   },
+   "pkg": null,
+   "retType": "Colors",
+   "parameters": null,
+   "qName": "Colors.Purple"
+  },
+  "Colors.Pink": {
+   "kind": 7,
+   "namespace": "Colors",
+   "name": "Pink",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "pink",
+    "blockIdentity": "rgb.colors",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Pink"
+   },
+   "pkg": null,
+   "retType": "Colors",
+   "parameters": null,
+   "qName": "Colors.Pink"
+  },
+  "Colors.White": {
+   "kind": 7,
+   "namespace": "Colors",
+   "name": "White",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "white",
+    "blockIdentity": "rgb.colors",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "White"
+   },
+   "pkg": null,
+   "retType": "Colors",
+   "parameters": null,
+   "qName": "Colors.White"
+  },
+  "Colors.Black": {
+   "kind": 7,
+   "namespace": "Colors",
+   "name": "Black",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "black",
+    "blockIdentity": "rgb.colors",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Black"
+   },
+   "pkg": null,
+   "retType": "Colors",
+   "parameters": null,
+   "qName": "Colors.Black"
+  },
+  "lightbulb.__colorNumberPicker": {
+   "kind": 3,
+   "namespace": "lightbulb",
+   "name": "__colorNumberPicker",
+   "attributes": {
+    "paramDefl": {
+     "color": "0xFF0000"
+    },
+    "callingConvention": 0,
+    "_source": null,
+    "blockId": "colorNumberPicker",
+    "block": "%color",
+    "blockHidden": true,
+    "shim": "TD_ID",
+    "colorSecondary": "#FFFFFF",
+    "paramFieldEditor": {
+     "color": "colornumber"
+    },
+    "paramFieldEditorOptions": {
+     "color": {
+      "decompileLiterals": "true",
+      "colours": "[\"#FF0000\", \"#ff8000\", \"#ffff00\", \"#00ff00\", \"#00ffff\", \"#007fff\", \"#0000ff\", \"#7f00ff\", \"#ff0080\", \"#ff00ff\", \"#ffffff\", \"#999999\"]",
+      "columns": "3",
+      "className": "rgbColorPicker"
+     }
+    },
+    "paramHelp": {
+     "color": "color, eg: 0xFF0000"
+    },
+    "jsDoc": "Get the color picker field editor",
+    "_name": "___colorNumberPicker"
+   },
+   "pkg": null,
+   "retType": "number",
+   "parameters": [
+    {
+     "name": "color",
+     "description": "color, eg: 0xFF0000",
+     "type": "number",
+     "initializer": "0xFF0000",
+     "default": "0xFF0000",
+     "options": {},
+     "isEnum": false
+    }
+   ],
+   "snippet": "__colorNumberPicker(0xFF0000)",
+   "qName": "lightbulb.__colorNumberPicker"
+  },
+  "lightbulb.__colorWheelPicker": {
+   "kind": 3,
+   "namespace": "lightbulb",
+   "name": "__colorWheelPicker",
+   "attributes": {
+    "paramDefl": {
+     "value": "10"
+    },
+    "callingConvention": 0,
+    "_source": null,
+    "blockId": "colorWheelPicker",
+    "block": "%color",
+    "blockHidden": true,
+    "shim": "TD_ID",
+    "colorSecondary": "#FFFFFF",
+    "paramFieldEditor": {
+     "color": "colorwheel"
+    },
+    "paramFieldEditorOptions": {
+     "color": {
+      "decompileLiterals": "true",
+      "sliderWidth": "200",
+      "channel": "hsvfast",
+      "min": "0",
+      "max": "255"
+     }
+    },
+    "paramHelp": {
+     "value": "value between 0 to 255 to get a color value, eg: 10"
+    },
+    "jsDoc": "Get the color wheel field editor",
+    "_name": "___colorWheelPicker"
+   },
+   "pkg": null,
+   "retType": "number",
+   "parameters": [
+    {
+     "name": "color",
+     "description": "",
+     "type": "number",
+     "options": {},
+     "isEnum": false
+    }
+   ],
+   "snippet": "__colorWheelPicker(0)",
+   "qName": "lightbulb.__colorWheelPicker"
+  }
+ },
+ "jres": {}
+}

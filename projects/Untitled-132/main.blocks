@@ -1,0 +1,8 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="forever" id="Ea`nyD4JeRIGv~]o@r$y" x="20" y="20"></block>
+  <block type="buttonEvent" id="#DP^{[e)P18R1;*lFe@~" x="170" y="70">
+    <field name="button">input.buttonA</field>
+    <field name="event">ButtonEvent.Click</field>
+  </block>
+</xml>

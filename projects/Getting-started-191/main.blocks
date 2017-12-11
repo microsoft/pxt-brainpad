@@ -1,0 +1,19 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="`xA7FTpi%e/~mrL}ULI$" x="-310" y="30">
+    <statement name="HANDLER">
+      <block type="neopixel_show_animation" id="29e-ku{5N=*;DhwY3:q6">
+        <mutation showing="false"></mutation>
+        <value name="animation">
+          <shadow type="light_animation" id="Tm0u?$,p3!$eOL/[3K@m">
+            <field name="kind">LightAnimation.Rainbow</field>
+          </shadow>
+        </value>
+        <value name="duration">
+          <shadow type="math_number" id="22=^GBSR9ybYUG7J5!8Y">
+            <field name="NUM">500</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

@@ -1,0 +1,293 @@
+{
+ "byQName": {
+  "DigitalPin": {
+   "kind": 9,
+   "namespace": "",
+   "name": "DigitalPin",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "noRefCounting": "true",
+    "fixedInstances": "true",
+    "paramHelp": {},
+    "jsDoc": ""
+   },
+   "pkg": null,
+   "extendsTypes": [
+    "DigitalPin"
+   ],
+   "retType": "DigitalPin",
+   "parameters": null,
+   "qName": "DigitalPin"
+  },
+  "DigitalPin.pushButton": {
+   "kind": 1,
+   "namespace": "DigitalPin",
+   "name": "pushButton",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "shim": "DigitalPinMethods::pushButton",
+    "paramHelp": {},
+    "jsDoc": "Get the push button (connected to GND) for given pin",
+    "_name": "pushButton"
+   },
+   "pkg": null,
+   "retType": "Button",
+   "parameters": [],
+   "snippet": "pushButton()",
+   "qName": "DigitalPin.pushButton"
+  },
+  "Button": {
+   "kind": 9,
+   "namespace": "",
+   "name": "Button",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "noRefCounting": "true",
+    "fixedInstances": "true",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Button"
+   },
+   "pkg": null,
+   "extendsTypes": [],
+   "retType": "Button",
+   "parameters": null,
+   "qName": "Button"
+  },
+  "Button.onEvent": {
+   "kind": 1,
+   "namespace": "Button",
+   "name": "onEvent",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "help": "input/button/on-event",
+    "blockId": "buttonEvent",
+    "block": "on %button|%event",
+    "parts": "buttons",
+    "blockNamespace": "input",
+    "paramFieldEditor": {
+     "button": "gridpicker"
+    },
+    "paramFieldEditorOptions": {
+     "button": {
+      "width": "220",
+      "columns": "3"
+     }
+    },
+    "weight": 96,
+    "blockGap": "12",
+    "trackArgs": [
+     0
+    ],
+    "shim": "ButtonMethods::onEvent",
+    "paramHelp": {
+     "button": "the button that needs to be clicked or used",
+     "event": "the kind of button gesture that needs to be detected",
+     "body": "code to run when the event is raised"
+    },
+    "jsDoc": "Do something when a button (`A`, `B` or both `A` + `B`) is clicked, double clicked, etc...",
+    "_name": "onEvent"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "ev",
+     "description": "",
+     "type": "ButtonEvent",
+     "options": {},
+     "isEnum": true
+    },
+    {
+     "name": "body",
+     "description": "code to run when the event is raised",
+     "type": "() => void",
+     "handlerParameters": [],
+     "options": {},
+     "isEnum": false
+    }
+   ],
+   "snippet": "onEvent(null, function () {})",
+   "qName": "Button.onEvent"
+  },
+  "Button.isPressed": {
+   "kind": 1,
+   "namespace": "Button",
+   "name": "isPressed",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "help": "input/button/is-pressed",
+    "block": "%button|is pressed",
+    "blockId": "buttonIsPressed",
+    "parts": "buttons",
+    "blockNamespace": "input",
+    "paramFieldEditor": {
+     "button": "gridpicker"
+    },
+    "paramFieldEditorOptions": {
+     "button": {
+      "width": "220",
+      "columns": "3"
+     }
+    },
+    "weight": 50,
+    "blockGap": "8",
+    "trackArgs": [
+     0
+    ],
+    "shim": "ButtonMethods::isPressed",
+    "paramHelp": {
+     "button": "the button to query the request"
+    },
+    "jsDoc": "Check if a button is pressed or not.",
+    "_name": "isPressed"
+   },
+   "pkg": null,
+   "retType": "boolean",
+   "parameters": [],
+   "snippet": "isPressed()",
+   "qName": "Button.isPressed"
+  },
+  "Button.wasPressed": {
+   "kind": 1,
+   "namespace": "Button",
+   "name": "wasPressed",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "help": "input/button/was-pressed",
+    "block": "%button|was pressed",
+    "blockId": "buttonWasPressed",
+    "parts": "buttons",
+    "blockNamespace": "input",
+    "paramFieldEditor": {
+     "button": "gridpicker"
+    },
+    "paramFieldEditorOptions": {
+     "button": {
+      "width": "220",
+      "columns": "3"
+     }
+    },
+    "group": "More",
+    "weight": 46,
+    "blockGap": "8",
+    "trackArgs": [
+     0
+    ],
+    "shim": "ButtonMethods::wasPressed",
+    "paramHelp": {
+     "button": "the button to query the request"
+    },
+    "jsDoc": "See if the button was pressed again since the last time you checked.",
+    "_name": "wasPressed"
+   },
+   "pkg": null,
+   "retType": "boolean",
+   "parameters": [],
+   "snippet": "wasPressed()",
+   "qName": "Button.wasPressed"
+  },
+  "ButtonEvent": {
+   "kind": 6,
+   "namespace": "",
+   "name": "ButtonEvent",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "User interaction on buttons",
+    "_name": "ButtonEvent"
+   },
+   "pkg": null,
+   "retType": "ButtonEvent",
+   "parameters": null,
+   "qName": "ButtonEvent"
+  },
+  "ButtonEvent.Click": {
+   "kind": 7,
+   "namespace": "ButtonEvent",
+   "name": "Click",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "click",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Click"
+   },
+   "pkg": null,
+   "retType": "ButtonEvent",
+   "parameters": null,
+   "qName": "ButtonEvent.Click"
+  },
+  "ButtonEvent.LongClick": {
+   "kind": 7,
+   "namespace": "ButtonEvent",
+   "name": "LongClick",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "long click",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "LongClick"
+   },
+   "pkg": null,
+   "retType": "ButtonEvent",
+   "parameters": null,
+   "qName": "ButtonEvent.LongClick"
+  },
+  "ButtonEvent.Up": {
+   "kind": 7,
+   "namespace": "ButtonEvent",
+   "name": "Up",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "up",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Up"
+   },
+   "pkg": null,
+   "retType": "ButtonEvent",
+   "parameters": null,
+   "qName": "ButtonEvent.Up"
+  },
+  "ButtonEvent.Down": {
+   "kind": 7,
+   "namespace": "ButtonEvent",
+   "name": "Down",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "down",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Down"
+   },
+   "pkg": null,
+   "retType": "ButtonEvent",
+   "parameters": null,
+   "qName": "ButtonEvent.Down"
+  }
+ },
+ "jres": {}
+}

@@ -1,0 +1,10 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="forever" id="i!O`^6pR^gdB:DUZ=.,~" x="20" y="20">
+    <statement name="HANDLER">
+      <block type="neopixel_show_ring_colors" id="2,4d-!SJ5Wq12y04:NDu">
+        <field name="colors">`green green red red red red red red red red`</field>
+      </block>
+    </statement>
+  </block>
+</xml>

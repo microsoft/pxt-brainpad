@@ -1,0 +1,13 @@
+{
+    "name": "Untitled",
+    "dependencies": {
+        "core": "*",
+        "light": "*"
+    },
+    "description": "",
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ]
+}

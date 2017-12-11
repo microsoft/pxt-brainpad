@@ -1,0 +1,19 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="forever" id="R|pz@k37Vln]`7,}eqd0" x="20" y="20">
+    <statement name="HANDLER">
+      <block type="music_play_note" id="H.8%B)FZB6C#/ya#i5VG">
+        <value name="note">
+          <shadow type="device_note" id="R7k}hMA]jzVxdvF!*83C">
+            <field name="note">587</field>
+          </shadow>
+        </value>
+        <value name="duration">
+          <shadow type="device_beat" id="pd%nrXGebwEk23f#j6rV">
+            <field name="fraction">BeatFraction.Half</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

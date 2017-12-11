@@ -1,0 +1,23 @@
+{
+  "Colors.Black|block": "black",
+  "Colors.Blue|block": "blue",
+  "Colors.Green|block": "green",
+  "Colors.Indigo|block": "indigo",
+  "Colors.Orange|block": "orange",
+  "Colors.Pink|block": "pink",
+  "Colors.Purple|block": "purple",
+  "Colors.Red|block": "red",
+  "Colors.Violet|block": "violet",
+  "Colors.White|block": "white",
+  "Colors.Yellow|block": "yellow",
+  "lightbulb.clear|block": "clear light bulb",
+  "lightbulb.colors|block": "%color",
+  "lightbulb.dim|block": "dim %rgb=rgb_colors |%level",
+  "lightbulb.rgb|block": "red %red|green %green|blue %blue",
+  "lightbulb.setBrightness|block": "set brightness %brightness",
+  "lightbulb.setColor|block": "set light bulb to %rgb=colorNumberPicker",
+  "lightbulb.wheel|block": "color slider %wheelPos=colorWheelPicker",
+  "lightbulb|block": "Light bulb",
+  "{id:category}Lightbulb": "Lightbulb",
+  "{id:group}Colors": "Colors"
+}

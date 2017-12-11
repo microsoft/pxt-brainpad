@@ -1,0 +1,13 @@
+{
+    "name": "Untitled",
+    "dependencies": {
+        "circuit-playground": "*",
+        "neoanim": "github:microsoft/pxt-neoanim#v0.1.1"
+    },
+    "description": "",
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ]
+}

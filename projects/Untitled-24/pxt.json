@@ -1,0 +1,19 @@
+{
+    "name": "Untitled",
+    "dependencies": {
+        "core": "*",
+        "lightsensor": "*",
+        "temperature": "*",
+        "accelerometer": "*",
+        "music": "*",
+        "microphone": "*",
+        "adafruit": "*",
+        "light": "*"
+    },
+    "description": "",
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ]
+}

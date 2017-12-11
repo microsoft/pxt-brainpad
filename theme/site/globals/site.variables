@@ -1,0 +1,87 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+@importGoogleFonts: false;
+@fontName  : 'Open Sans';
+
+@primaryColor: @blue;
+@secondaryColor: @blue;
+
+
+@red:#E81123;
+@yellow:#FFB900;
+@green:#107C10;
+@violet:#B4009E;
+@purple:#5C2D91;
+@pink:#E2008C;
+@teal:#00979C;
+@orange: #F47A20;
+@brown: #BCAC99;
+
+/* GHI Electronics colors */
+@grey: #6E6E6E;
+@blue: #3486BA;
+
+@pageBackground: #fff;
+
+/*******************************
+         PXT Overrides
+*******************************/
+
+/*-------------------
+   Menu
+--------------------*/
+
+@mainMenuInvertedBackground: @grey;
+@mainMenuTutorialBackground: @orange;
+
+@mainMenuBlocksJsToggleColor: @black;
+
+@tutorialSelectedMenuColor: @blue;
+
+/*-------------------
+   Layout
+--------------------*/
+
+@sideBarWidth: 22rem;
+@simulatorWidth: 28rem;
+@simulatorWidthSmall: 23rem;
+
+/*-------------------
+   Background
+--------------------*/
+
+@simulatorBackground: @white;
+@editorToolsBackground: @white;
+@blocklySvgColor: #E4E4E4;
+
+/*-------------------
+   Full screen
+--------------------*/
+
+@fullscreenBackgroundGradientStart: @mainMenuInvertedBackground;
+@fullscreenBackgroundGradientEnd: #fff;
+
+/*-------------------
+   Side Docs
+--------------------*/
+
+@sidedocsButtonsTop: (@mainMenuHeight + 1rem);
+@sidedocsButtonsRight: 4.25rem;
+
+/*-------------------
+   Editor
+--------------------*/
+
+@blocklyToolboxColor: white;
+@trashIconColor: @primaryColor;
+
+/*-------------------
+   Flyout
+--------------------*/
+
+@flyoutLabelColor: white;
+@blocklyFlyoutColor: #000;
+@blocklyFlyoutColorOpacity: 0.7;
+@monacoFlyoutColor: fade(@blocklyFlyoutColor, 70%);

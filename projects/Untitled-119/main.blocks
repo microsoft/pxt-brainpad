@@ -1,0 +1,22 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="yRlj1^y2U0i~2[1{2Plk">receivedNumber</variable>
+  </variables>
+  <block type="ir_on_packet_received" id="$^k4{|jn@m[(gNa4!o|9" x="-130" y="-170">
+    <mutation callbackproperties="receivedNumber" renamemap="{}"></mutation>
+    <field name="receivedNumber" id="yRlj1^y2U0i~2[1{2Plk" variabletype="">receivedNumber</field>
+  </block>
+  <block type="forever" id="xht8W]SL(!tfr#HTVmAj" x="-210" y="-90"></block>
+  <block type="procedures_defnoreturn" id=",Yr)`m8zH}r{y!3tB!A-" x="330" y="110">
+    <field name="NAME">testst</field>
+    <statement name="STACK">
+      <block type="ir_send_number" id=")Ez+1p=dP21jubu%kCdr">
+        <value name="value">
+          <shadow type="math_number" id="=UU,4h7sb|TWE`2=YWP-">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

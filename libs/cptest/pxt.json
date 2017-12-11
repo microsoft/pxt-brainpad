@@ -1,0 +1,11 @@
+{
+    "name": "CPX Test",
+    "dependencies": {
+        "brainpad": "file:../brainpad"
+    },
+    "description": "",
+    "files": [
+        "main.ts",
+        "README.md"
+    ]
+}

@@ -1,0 +1,33 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="pxt-on-start" id="S(Bq?}3YpegG^YwC62b;" x="0" y="0">
+    <statement name="HANDLER">
+      <block type="variables_set" id="Bc(l;H3o^sWVF+H.V@vS">
+        <field name="VAR">i</field>
+        <value name="VALUE">
+          <shadow type="math_number" id="l#E)=3b0[iSO6lw;$3h@">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="forever" id="c!+EW:lb!yZ]VKmdxt)b" x="68" y="113">
+    <statement name="HANDLER">
+      <block type="neopixel_show_ring_colors" id="%/25A_~U@vF,Frt.cA{S">
+        <field name="array">[
+Colors.Red,
+Colors.Red,
+Colors.Red,
+Colors.Red,
+Colors.Red,
+Colors.Red,
+Colors.Red,
+Colors.Red,
+Colors.Red,
+Colors.Red
+]
+        </field>
+      </block>
+    </statement>
+  </block>
+</xml>

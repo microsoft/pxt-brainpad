@@ -1,0 +1,1530 @@
+{
+ "byQName": {
+  "loops": {
+   "kind": 5,
+   "namespace": "",
+   "name": "loops",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "color": "#40bf4a",
+    "paramHelp": {},
+    "jsDoc": ""
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "loops"
+  },
+  "control": {
+   "kind": 5,
+   "namespace": "",
+   "name": "control",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "weight": 10,
+    "color": "#1B998B",
+    "icon": "",
+    "advanced": true,
+    "paramHelp": {},
+    "jsDoc": "Program controls and events."
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "control"
+  },
+  "serial": {
+   "kind": 5,
+   "namespace": "",
+   "name": "serial",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "weight": 2,
+    "color": "#006E90",
+    "icon": "",
+    "advanced": true,
+    "paramHelp": {},
+    "jsDoc": "Reading and writing data over a serial connection."
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "serial"
+  },
+  "input": {
+   "kind": 5,
+   "namespace": "",
+   "name": "input",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "color": "#d65cd6",
+    "weight": 98,
+    "icon": "",
+    "groups": [
+     "other",
+     "More"
+    ],
+    "paramHelp": {},
+    "jsDoc": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
+    "block": "input"
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "input"
+  },
+  "console": {
+   "kind": 5,
+   "namespace": "",
+   "name": "console",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "weight": 12,
+    "color": "#006E90",
+    "icon": "",
+    "advanced": true,
+    "paramHelp": {},
+    "jsDoc": "Reading and writing data to the console output."
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "console"
+  },
+  "pins": {
+   "kind": 5,
+   "namespace": "",
+   "name": "pins",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "color": "#EF2D56",
+    "weight": 85,
+    "icon": "",
+    "advanced": true,
+    "groups": [
+     "other",
+     "Servo",
+     "i2c"
+    ],
+    "paramHelp": {},
+    "jsDoc": "Control currents in Pins for analog/digital signals, servos, i2c, ..."
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "pins"
+  },
+  "lightbulb": {
+   "kind": 5,
+   "namespace": "",
+   "name": "lightbulb",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "groups": [
+     "other",
+     "Colors"
+    ],
+    "color": "#0078d7",
+    "weight": 97,
+    "icon": "",
+    "block": "Light bulb",
+    "paramHelp": {},
+    "jsDoc": "Outputs."
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "lightbulb"
+  },
+  "music": {
+   "kind": 5,
+   "namespace": "",
+   "name": "music",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "color": "#F55D3E",
+    "weight": 90,
+    "icon": "",
+    "paramHelp": {},
+    "jsDoc": "Generation of music tones."
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "music"
+  },
+  "pins.A0": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "A0",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A0)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "A0"
+   },
+   "pkg": null,
+   "retType": "PwmPin",
+   "parameters": null,
+   "qName": "pins.A0"
+  },
+  "pins.A1": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "A1",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A1)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "A1"
+   },
+   "pkg": null,
+   "retType": "PwmPin",
+   "parameters": null,
+   "qName": "pins.A1"
+  },
+  "pins.A2": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "A2",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A2)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "A2"
+   },
+   "pkg": null,
+   "retType": "PwmPin",
+   "parameters": null,
+   "qName": "pins.A2"
+  },
+  "pins.A3": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "A3",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A3)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "A3"
+   },
+   "pkg": null,
+   "retType": "PwmPin",
+   "parameters": null,
+   "qName": "pins.A3"
+  },
+  "pins.A4": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "A4",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A4)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "A4"
+   },
+   "pkg": null,
+   "retType": "PwmPin",
+   "parameters": null,
+   "qName": "pins.A4"
+  },
+  "pins.A5": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "A5",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A5)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "A5"
+   },
+   "pkg": null,
+   "retType": "PwmPin",
+   "parameters": null,
+   "qName": "pins.A5"
+  },
+  "pins.A6": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "A6",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A6)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "A6"
+   },
+   "pkg": null,
+   "retType": "PwmPin",
+   "parameters": null,
+   "qName": "pins.A6"
+  },
+  "pins.A7": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "A7",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A7)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "A7"
+   },
+   "pkg": null,
+   "retType": "PwmPin",
+   "parameters": null,
+   "qName": "pins.A7"
+  },
+  "pins.SCL": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "SCL",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A4)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "SCL"
+   },
+   "pkg": null,
+   "retType": "DigitalPin",
+   "parameters": null,
+   "qName": "pins.SCL"
+  },
+  "pins.SDA": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "SDA",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A5)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "SDA"
+   },
+   "pkg": null,
+   "retType": "DigitalPin",
+   "parameters": null,
+   "qName": "pins.SDA"
+  },
+  "pins.RX": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "RX",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A6)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "RX"
+   },
+   "pkg": null,
+   "retType": "DigitalPin",
+   "parameters": null,
+   "qName": "pins.RX"
+  },
+  "pins.TX": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "TX",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A7)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "TX"
+   },
+   "pkg": null,
+   "retType": "DigitalPin",
+   "parameters": null,
+   "qName": "pins.TX"
+  },
+  "pins.A8": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "A8",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A8)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "A8"
+   },
+   "pkg": null,
+   "retType": "PwmPin",
+   "parameters": null,
+   "qName": "pins.A8"
+  },
+  "pins.A9": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "A9",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A9)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "A9"
+   },
+   "pkg": null,
+   "retType": "PwmPin",
+   "parameters": null,
+   "qName": "pins.A9"
+  },
+  "pins.D4": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "D4",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_D4)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "D4"
+   },
+   "pkg": null,
+   "retType": "DigitalPin",
+   "parameters": null,
+   "qName": "pins.D4"
+  },
+  "pins.D5": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "D5",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_D5)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "D5"
+   },
+   "pkg": null,
+   "retType": "DigitalPin",
+   "parameters": null,
+   "qName": "pins.D5"
+  },
+  "pins.D7": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "D7",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_D7)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "D7"
+   },
+   "pkg": null,
+   "retType": "DigitalPin",
+   "parameters": null,
+   "qName": "pins.D7"
+  },
+  "pins.D8": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "D8",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_D8)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "D8"
+   },
+   "pkg": null,
+   "retType": "DigitalPin",
+   "parameters": null,
+   "qName": "pins.D8"
+  },
+  "pins.D13": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "D13",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_D13)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "D13"
+   },
+   "pkg": null,
+   "retType": "DigitalPin",
+   "parameters": null,
+   "qName": "pins.D13"
+  },
+  "pins.LED": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "LED",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_D13)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "LED"
+   },
+   "pkg": null,
+   "retType": "DigitalPin",
+   "parameters": null,
+   "qName": "pins.LED"
+  },
+  "pins.A10": {
+   "kind": 4,
+   "namespace": "pins",
+   "name": "A10",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "fixedInstance": "true",
+    "shim": "pxt::getPin(PIN_A10)",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "A10"
+   },
+   "pkg": null,
+   "retType": "PwmPin",
+   "parameters": null,
+   "qName": "pins.A10"
+  },
+  "input.buttonL": {
+   "kind": 4,
+   "namespace": "input",
+   "name": "buttonL",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "indexedInstanceNS": "input",
+    "indexedInstanceShim": "pxt::getButton",
+    "block": "button Left",
+    "weight": 95,
+    "fixedInstance": "true",
+    "shim": "pxt::getButton(0)",
+    "paramHelp": {},
+    "jsDoc": "Left button.",
+    "_name": "buttonL"
+   },
+   "pkg": null,
+   "retType": "Button",
+   "parameters": null,
+   "qName": "input.buttonL"
+  },
+  "input.buttonU": {
+   "kind": 4,
+   "namespace": "input",
+   "name": "buttonU",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "button Up",
+    "weight": 94,
+    "fixedInstance": "true",
+    "shim": "pxt::getButton(1)",
+    "paramHelp": {},
+    "jsDoc": "Up button.",
+    "_name": "buttonU"
+   },
+   "pkg": null,
+   "retType": "Button",
+   "parameters": null,
+   "qName": "input.buttonU"
+  },
+  "input.buttonD": {
+   "kind": 4,
+   "namespace": "input",
+   "name": "buttonD",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "button Down",
+    "weight": 94,
+    "fixedInstance": "true",
+    "shim": "pxt::getButton(1)",
+    "paramHelp": {},
+    "jsDoc": "Down button.",
+    "_name": "buttonD"
+   },
+   "pkg": null,
+   "retType": "Button",
+   "parameters": null,
+   "qName": "input.buttonD"
+  },
+  "input.buttonR": {
+   "kind": 4,
+   "namespace": "input",
+   "name": "buttonR",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "button Right",
+    "weight": 94,
+    "fixedInstance": "true",
+    "shim": "pxt::getButton(1)",
+    "paramHelp": {},
+    "jsDoc": "Right button.",
+    "_name": "buttonR"
+   },
+   "pkg": null,
+   "retType": "Button",
+   "parameters": null,
+   "qName": "input.buttonR"
+  },
+  "input.pinA1": {
+   "kind": 4,
+   "namespace": "input",
+   "name": "pinA1",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "pin A1",
+    "fixedInstance": "true",
+    "shim": "pxt::getTouchButton(PIN_A1)",
+    "paramHelp": {},
+    "jsDoc": "Capacitive pin A1",
+    "_name": "pinA1"
+   },
+   "pkg": null,
+   "retType": "TouchButton",
+   "parameters": null,
+   "qName": "input.pinA1"
+  },
+  "input.pinA2": {
+   "kind": 4,
+   "namespace": "input",
+   "name": "pinA2",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "pin A2",
+    "fixedInstance": "true",
+    "shim": "pxt::getTouchButton(PIN_A2)",
+    "paramHelp": {},
+    "jsDoc": "Capacitive pin A2",
+    "_name": "pinA2"
+   },
+   "pkg": null,
+   "retType": "TouchButton",
+   "parameters": null,
+   "qName": "input.pinA2"
+  },
+  "input.pinA3": {
+   "kind": 4,
+   "namespace": "input",
+   "name": "pinA3",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "pin A3",
+    "fixedInstance": "true",
+    "shim": "pxt::getTouchButton(PIN_A3)",
+    "paramHelp": {},
+    "jsDoc": "Capacitive pin A3",
+    "_name": "pinA3"
+   },
+   "pkg": null,
+   "retType": "TouchButton",
+   "parameters": null,
+   "qName": "input.pinA3"
+  },
+  "input.pinA4": {
+   "kind": 4,
+   "namespace": "input",
+   "name": "pinA4",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "pin A4",
+    "fixedInstance": "true",
+    "shim": "pxt::getTouchButton(PIN_A4)",
+    "paramHelp": {},
+    "jsDoc": "Capacitive pin A4",
+    "_name": "pinA4"
+   },
+   "pkg": null,
+   "retType": "TouchButton",
+   "parameters": null,
+   "qName": "input.pinA4"
+  },
+  "input.pinA5": {
+   "kind": 4,
+   "namespace": "input",
+   "name": "pinA5",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "pin A5",
+    "fixedInstance": "true",
+    "shim": "pxt::getTouchButton(PIN_A5)",
+    "paramHelp": {},
+    "jsDoc": "Capacitive pin A5",
+    "_name": "pinA5"
+   },
+   "pkg": null,
+   "retType": "TouchButton",
+   "parameters": null,
+   "qName": "input.pinA5"
+  },
+  "input.pinA6": {
+   "kind": 4,
+   "namespace": "input",
+   "name": "pinA6",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "pin A6",
+    "fixedInstance": "true",
+    "shim": "pxt::getTouchButton(PIN_A6)",
+    "paramHelp": {},
+    "jsDoc": "Capacitive pin A6",
+    "_name": "pinA6"
+   },
+   "pkg": null,
+   "retType": "TouchButton",
+   "parameters": null,
+   "qName": "input.pinA6"
+  },
+  "input.pinA7": {
+   "kind": 4,
+   "namespace": "input",
+   "name": "pinA7",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "pin A7",
+    "fixedInstance": "true",
+    "shim": "pxt::getTouchButton(PIN_A7)",
+    "paramHelp": {},
+    "jsDoc": "Capacitive pin A7",
+    "_name": "pinA7"
+   },
+   "pkg": null,
+   "retType": "TouchButton",
+   "parameters": null,
+   "qName": "input.pinA7"
+  },
+  "config": {
+   "kind": 5,
+   "namespace": "",
+   "name": "config",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "config"
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "config"
+  },
+  "config.NUM_NEOPIXELS": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "NUM_NEOPIXELS",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "NUM_NEOPIXELS"
+   },
+   "pkg": null,
+   "retType": "number",
+   "parameters": null,
+   "qName": "config.NUM_NEOPIXELS"
+  },
+  "config.DEFAULT_BUTTON_MODE": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "DEFAULT_BUTTON_MODE",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "DEFAULT_BUTTON_MODE"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.DEFAULT_BUTTON_MODE"
+  },
+  "config.PIN_FLASH_MISO": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_FLASH_MISO",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_FLASH_MISO"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_FLASH_MISO"
+  },
+  "config.PIN_FLASH_MOSI": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_FLASH_MOSI",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_FLASH_MOSI"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_FLASH_MOSI"
+  },
+  "config.PIN_FLASH_SCK": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_FLASH_SCK",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_FLASH_SCK"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_FLASH_SCK"
+  },
+  "config.PIN_FLASH_CS": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_FLASH_CS",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_FLASH_CS"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_FLASH_CS"
+  },
+  "config.PIN_MIC_DATA": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_MIC_DATA",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_MIC_DATA"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_MIC_DATA"
+  },
+  "config.PIN_MIC_CLOCK": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_MIC_CLOCK",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_MIC_CLOCK"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_MIC_CLOCK"
+  },
+  "config.PIN_BTN_SLIDE": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_BTN_SLIDE",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_BTN_SLIDE"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_BTN_SLIDE"
+  },
+  "config.PIN_NEOPIXEL": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_NEOPIXEL",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_NEOPIXEL"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_NEOPIXEL"
+  },
+  "config.PIN_SPEAKER_AMP": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_SPEAKER_AMP",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_SPEAKER_AMP"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_SPEAKER_AMP"
+  },
+  "config.PIN_MICROPHONE": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_MICROPHONE",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_MICROPHONE"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_MICROPHONE"
+  },
+  "config.PIN_LIGHT": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_LIGHT",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_LIGHT"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_LIGHT"
+  },
+  "config.PIN_ACCELEROMETER_SDA": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_ACCELEROMETER_SDA",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_ACCELEROMETER_SDA"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_ACCELEROMETER_SDA"
+  },
+  "config.PIN_ACCELEROMETER_SCL": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_ACCELEROMETER_SCL",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_ACCELEROMETER_SCL"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_ACCELEROMETER_SCL"
+  },
+  "config.PIN_ACCELEROMETER_INT": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_ACCELEROMETER_INT",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_ACCELEROMETER_INT"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_ACCELEROMETER_INT"
+  },
+  "config.PIN_TEMPERATURE": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_TEMPERATURE",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_TEMPERATURE"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_TEMPERATURE"
+  },
+  "config.PIN_IR_OUT": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_IR_OUT",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_IR_OUT"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_IR_OUT"
+  },
+  "config.PIN_IR_IN": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_IR_IN",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_IR_IN"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_IR_IN"
+  },
+  "config.PIN_BTN_A": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_BTN_A",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_BTN_A"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_BTN_A"
+  },
+  "config.PIN_BTN_B": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_BTN_B",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_BTN_B"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_BTN_B"
+  },
+  "config.PIN_A0": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_A0",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_A0"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_A0"
+  },
+  "config.PIN_A1": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_A1",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_A1"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_A1"
+  },
+  "config.PIN_A2": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_A2",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_A2"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_A2"
+  },
+  "config.PIN_A3": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_A3",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_A3"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_A3"
+  },
+  "config.PIN_A4": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_A4",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_A4"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_A4"
+  },
+  "config.PIN_A5": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_A5",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_A5"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_A5"
+  },
+  "config.PIN_A6": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_A6",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_A6"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_A6"
+  },
+  "config.PIN_A7": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_A7",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_A7"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_A7"
+  },
+  "config.PIN_SCL": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_SCL",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_SCL"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_SCL"
+  },
+  "config.PIN_SDA": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_SDA",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_SDA"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_SDA"
+  },
+  "config.PIN_RX": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_RX",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_RX"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_RX"
+  },
+  "config.PIN_TX": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_TX",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_TX"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_TX"
+  },
+  "config.PIN_A8": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_A8",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_A8"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_A8"
+  },
+  "config.PIN_A9": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_A9",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_A9"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_A9"
+  },
+  "config.PIN_D4": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_D4",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_D4"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_D4"
+  },
+  "config.PIN_D5": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_D5",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_D5"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_D5"
+  },
+  "config.PIN_D7": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_D7",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_D7"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_D7"
+  },
+  "config.PIN_D8": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_D8",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_D8"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_D8"
+  },
+  "config.PIN_D13": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_D13",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_D13"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_D13"
+  },
+  "config.PIN_LED": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_LED",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_LED"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_LED"
+  },
+  "config.PIN_A10": {
+   "kind": 4,
+   "namespace": "config",
+   "name": "PIN_A10",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "PIN_A10"
+   },
+   "pkg": null,
+   "retType": "DAL",
+   "parameters": null,
+   "qName": "config.PIN_A10"
+  }
+ },
+ "jres": {}
+}

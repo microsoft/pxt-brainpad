@@ -1,0 +1,9 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="v}2y@qjCF0jxxACF?p`c" x="20" y="20">
+    <statement name="HANDLER">
+      <block type="neopixel_show_ring_colors" id="cpQ9A(8J8_I:+gjH1wVB">
+        <field name="array">"red green red red red red red red red red"</field>
+      </block>
+    </statement>
+  </block>
+</xml>

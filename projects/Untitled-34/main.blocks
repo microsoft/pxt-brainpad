@@ -1,0 +1,10 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="tnn?:e`F3,x.:VbCRHF+" x="20" y="20">
+    <statement name="HANDLER">
+      <block type="neopixel_show_ring_colors" id="eI=3wJPY|t[B{;`eZ^7q">
+        <mutation showing="false"></mutation>
+        <field name="array">{"0":"#ff0000","1":"#0000ff","2":"#ff00ff","3":"#404040","4":"#0000ff","5":"#0000ff","7":"#ff0000","8":"#0000ff","9":"#000000"}</field>
+      </block>
+    </statement>
+  </block>
+</xml>

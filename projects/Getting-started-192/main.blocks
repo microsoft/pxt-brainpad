@@ -1,0 +1,15 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="forever" id="fM#--oE9OH=Lg(+g$-:S" x="0" y="0"></block>
+  <block type="forever" id="YyrC$D];IY6trA^uxw-9" x="180" y="0">
+    <statement name="HANDLER">
+      <block type="neopixel_show_ring_colors" id="s.5Z2YB}ZB3g0cN+`hRN">
+        <field name="colors">`red red red red red green green green green blue`</field>
+        <next>
+          <block type="neopixel_show_ring_colors" id="V$x_~czB@aW16C)]).8K">
+            <field name="colors">`red red red red red green green green green blue`</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

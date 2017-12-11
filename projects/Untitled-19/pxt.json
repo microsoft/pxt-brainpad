@@ -1,0 +1,17 @@
+{
+    "name": "Untitled",
+    "dependencies": {
+        "core": "*",
+        "accelerometer": "*",
+        "music": "*",
+        "microphone": "*",
+        "light": "*",
+        "circuit-playground": "*"
+    },
+    "description": "",
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ]
+}
