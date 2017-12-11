@@ -199,12 +199,12 @@
     "compileService": {
         "buildEngine": "codal",
         "codalTarget": {
-            "name": "codal-circuit-playground",
-            "url": "https://github.com/lancaster-university/codal-circuit-playground",
-            "branch": "v1.2.8",
+            "name": "codal-brainpad",
+            "url": "https://github.com/lancaster-university/codal-brainpad",
+            "branch": "master",
             "type": "git"
         },
-        "codalBinary": "CIRCUIT_PLAYGROUND",
+        "codalBinary": "BRAINPAD",
         "yottaConfig": {
             "pxt": {
                 "board": {
@@ -213,7 +213,7 @@
             }
         },
         "githubCorePackage": "lancaster-university/codal",
-        "gittag": "v0.2.2",
+        "gittag": "master",
         "serviceId": "codal2cp"
     },
     "appTheme": {
