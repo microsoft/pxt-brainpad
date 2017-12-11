@@ -3717,10 +3717,10 @@
    "parameters": null,
    "qName": "input"
   },
-  "loops.timePicker": {
+  "loops.__timePicker": {
    "kind": 3,
    "namespace": "loops",
-   "name": "timePicker",
+   "name": "__timePicker",
    "attributes": {
     "paramDefl": {
      "ms": "500"
@@ -3745,7 +3745,7 @@
      "ms": "time duration in milliseconds, eg: 500, 1000"
     },
     "jsDoc": "Get the time field editor",
-    "_name": "timePicker"
+    "_name": "___timePicker"
    },
    "pkg": null,
    "retType": "number",
@@ -3760,8 +3760,8 @@
      "isEnum": false
     }
    ],
-   "snippet": "timePicker(500)",
-   "qName": "loops.timePicker"
+   "snippet": "__timePicker(500)",
+   "qName": "loops.__timePicker"
   },
   "control.panic": {
    "kind": 3,

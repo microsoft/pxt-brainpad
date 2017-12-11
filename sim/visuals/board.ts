@@ -148,6 +148,7 @@ namespace pxsim.visuals {
 
 
         .sim-sound-stroke {
+            stroke-width: 10px;
             animation-name: sim-sound-stroke-animation;
             animation-duration: 0.4s;
         }
@@ -413,7 +414,7 @@ namespace pxsim.visuals {
             // this.updateRedLED();
             // this.updateNeoPixels();
             // this.updateSwitch();
-            // this.updateSound();
+            this.updateSound();
             // this.updateLightLevel();
             // this.updateSoundLevel();
             // this.updateButtonAB();
@@ -587,13 +588,12 @@ namespace pxsim.visuals {
             if (!state || !state.audioState) return;
             let audioState = state.audioState;
 
-            // FIXME
-            // let soundBoard = this.element.getElementById('g4656') as SVGGElement;
-            // if (audioState.isPlaying()) {
-            //     svg.addClass(soundBoard, "sim-sound-stroke");
-            // } else {
-            //     svg.removeClass(soundBoard, "sim-sound-stroke");
-            // }
+            let soundBoard = this.element.getElementById('rect1264') as SVGGElement;
+            if (audioState.isPlaying()) {
+                svg.addClass(soundBoard, "sim-sound-stroke");
+            } else {
+                svg.removeClass(soundBoard, "sim-sound-stroke");
+            }
         }
 
         private updatePins() {

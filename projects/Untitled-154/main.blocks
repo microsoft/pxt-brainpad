@@ -1,6 +1,6 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <variables></variables>
-  <block type="buttonEvent" id="_+R*2KTi2l2v_sxZlaWE" x="20" y="20">
+  <block type="buttonEvent" id="_+R*2KTi2l2v_sxZlaWE" x="0" y="0">
     <field name="button">input.buttonL</field>
     <field name="event">ButtonEvent.Click</field>
     <statement name="HANDLER">
@@ -13,12 +13,12 @@
       </block>
     </statement>
   </block>
-  <block type="buttonEvent" id="3(fE7bH{#/Xqd~jOw`Nu" x="325" y="20">
+  <block type="buttonEvent" id="3(fE7bH{#/Xqd~jOw`Nu" x="305" y="0">
     <field name="button">input.buttonR</field>
     <field name="event">ButtonEvent.Click</field>
     <statement name="HANDLER">
       <block type="rgb_clear" id="(fwSXd#E#WcR,Z;V.Kq_"></block>
     </statement>
   </block>
-  <block type="forever" id="]iL$,Yl93OJ?m9)+`gAf" x="20" y="164"></block>
+  <block type="forever" id="]iL$,Yl93OJ?m9)+`gAf" x="0" y="144"></block>
 </xml>
