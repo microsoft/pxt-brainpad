@@ -25,6 +25,8 @@
 
 //#define PlatformDMAC SAMD21DMAC
 
+#define CODAL_MBED codal::_mbed
+
 // The parameters below needs tuning!
 
 /*
