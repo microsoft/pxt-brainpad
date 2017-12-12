@@ -1,4 +1,5 @@
 // http://files.ghielectronics.com/downloads/Schematics/FEZ/BrainPad%20BP2%20Schematic.pdf
+// Chip used: STM32F401RE
 
 namespace config {
     export const DEFAULT_BUTTON_MODE = DAL.BUTTON_ACTIVE_LOW_PULL_UP;
