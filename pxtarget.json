@@ -9,15 +9,6 @@
     "bundleddirs": [
         "libs/base",
         "libs/core",
-        "libs/buttons",
-        "libs/accelerometer",
-        "libs/music",
-        "libs/microphone",
-        "libs/lightsensor",
-        "libs/thermometer",
-        "libs/touch",
-        "libs/switch",
-        "libs/pulse",
         "libs/lightbulb",
         "libs/brainpad"
     ],
