@@ -74,11 +74,13 @@ namespace pxsim {
 
             //components
             this.builtinParts["neopixel"] = this.neopixelState(CPlayPinName.D8);
+
+            // The IDs don't realy matter; we just reuse some that are unused on the C++ side
             this.builtinParts["buttonpair"] = this.buttonState = new CommonButtonState([
-                new CommonButton(DAL.DEVICE_ID_BUTTON_L),
-                new CommonButton(DAL.DEVICE_ID_BUTTON_R),
-                new CommonButton(DAL.DEVICE_ID_BUTTON_U),
-                new CommonButton(DAL.DEVICE_ID_BUTTON_D)
+                new CommonButton(DAL.DEVICE_ID_BUTTON_A),
+                new CommonButton(DAL.DEVICE_ID_BUTTON_B),
+                new CommonButton(DAL.DEVICE_ID_BUTTON_AB),
+                new CommonButton(DAL.DEVICE_ID_BUTTON_SLIDE),
             ]);
             this.builtinParts["lightbulb"] = this.lightBulbState = new LightBulbState();
 
