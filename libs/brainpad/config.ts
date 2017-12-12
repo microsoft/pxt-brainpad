@@ -20,11 +20,4 @@ namespace config {
     export const PIN_ACCELEROMETER_SDA = PIN_SDA;
     export const PIN_ACCELEROMETER_SCL = PIN_SCL;
     //export const PIN_ACCELEROMETER_INT = NC;
-
-    /*
-    export const PIN_LED_R = DAL.PC_9; // pwm
-    export const PIN_LED_G = DAL.PC_8; // pwm 
-    export const PIN_LED_B = DAL.PC_6; // pwm
-    export const PIN_BUZZER = DAL.PB_8; // pwm
-    */
 }
