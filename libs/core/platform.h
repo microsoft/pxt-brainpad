@@ -1,7 +1,6 @@
 #ifndef __PXT_PLATFORM_H
 #define __PXT_PLATFORM_H
 
-//#include "CapTouchButton.h"
 #include "Image.h"
 #include "MbedTimer.h"
 #include "MbedI2C.h"
@@ -10,7 +9,19 @@
 
 //#include "SAMD21DMAC.h"
 
-#define PAGE_SIZE 256 //??
+#define PAGE_SIZE 256 // doesn't really apply
+
+// 3 ports times 16 pins in each; there are bigger packages with 4 or 5 ports
+#define DEV_NUM_PINS 48
+
+// Table 8 in STM32F401xE Product Spec.
+// PA0-3 PA5-12 PA15 PB0-1 PB10 PB12-15 PC6-9
+#define DEV_PWM_PINS 0x03c0f4039fefULL
+// PA0-7 PB0-1 PC0-5
+#define DEV_AIN_PINS 0x001f000300ffULL
+
+// Codal doesn't yet distinguish between PWM and AIN
+#define DEV_ANALOG_PINS (DEV_PWM_PINS | DEV_AIN_PINS)
 
 //#define PlatformDMAC SAMD21DMAC
 
