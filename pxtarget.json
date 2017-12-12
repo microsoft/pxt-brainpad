@@ -9,6 +9,10 @@
     "bundleddirs": [
         "libs/base",
         "libs/core",
+        "libs/lightsensor",
+        "libs/music",
+        "libs/thermometer",
+        "libs/buttons",
         "libs/lightbulb",
         "libs/brainpad"
     ],
