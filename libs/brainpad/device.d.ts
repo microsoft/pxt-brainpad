@@ -1,56 +1,28 @@
 declare namespace pins {
-    // pin-pads
-    //% fixedInstance shim=pxt::getPin(PIN_A0)
-    const A0: PwmPin;
-    //% fixedInstance shim=pxt::getPin(PIN_A1)
-    const A1: PwmPin;
-    //% fixedInstance shim=pxt::getPin(PIN_A2)
-    const A2: PwmPin;
-    //% fixedInstance shim=pxt::getPin(PIN_A3)
-    const A3: PwmPin;
+    //% fixedInstance shim=pxt::getPin(PIN_SCL)
+    const SCL: PwmOnlyPin;
+    //% fixedInstance shim=pxt::getPin(PIN_SDA)
+    const SDA: PwmOnlyPin;
+    //% fixedInstance shim=pxt::getPin(PIN_RX)
+    const RX: PwmOnlyPin;
+    //% fixedInstance shim=pxt::getPin(PIN_TX)
+    const TX: PwmOnlyPin;
 
-    //% fixedInstance shim=pxt::getPin(PIN_A4)
-    const A4: PwmPin;
-    //% fixedInstance shim=pxt::getPin(PIN_A5)
-    const A5: PwmPin;
-    //% fixedInstance shim=pxt::getPin(PIN_A6)
-    const A6: PwmPin;
-    //% fixedInstance shim=pxt::getPin(PIN_A7)
-    const A7: PwmPin;
+    //% fixedInstance shim=pxt::getPin(PA_7)
+    const AN: AnalogPin;
+    //% fixedInstance shim=pxt::getPin(PA_6)
+    const RST: AnalogPin;
+    //% fixedInstance shim=pxt::getPin(PC_3)
+    const CS: AnalogPin;
+    //% fixedInstance shim=pxt::getPin(PA_8)
+    const PWM: PwmOnlyPin;
+    //% fixedInstance shim=pxt::getPin(PA_2)
+    const INT: PwmPin;
 
-    // Define aliases, as Digital Pins
-
-    //% fixedInstance shim=pxt::getPin(PIN_A4)
-    const SCL: DigitalPin;
-    //% fixedInstance shim=pxt::getPin(PIN_A5)
-    const SDA: DigitalPin;
-    //% fixedInstance shim=pxt::getPin(PIN_A6)
-    const RX: DigitalPin;
-    //% fixedInstance shim=pxt::getPin(PIN_A7)
-    const TX: DigitalPin;
-
-    // Aliases for built-in components
-
-    //% fixedInstance shim=pxt::getPin(PIN_A8)
-    const A8: PwmPin; // light
-    //% fixedInstance shim=pxt::getPin(PIN_A9)
-    const A9: PwmPin;
-    //% fixedInstance shim=pxt::getPin(PIN_D4)
-    const D4: DigitalPin; // A
-    //% fixedInstance shim=pxt::getPin(PIN_D5)
-    const D5: DigitalPin; // B
-    //% fixedInstance shim=pxt::getPin(PIN_D7)
-    const D7: DigitalPin; // Slide
-    //% fixedInstance shim=pxt::getPin(PIN_D8)
-    const D8: DigitalPin; // Neopixel
-
-    //% fixedInstance shim=pxt::getPin(PIN_D13)
-    const D13: DigitalPin;
-    //% fixedInstance shim=pxt::getPin(PIN_D13)
-    const LED: DigitalPin;
-
-    //% fixedInstance shim=pxt::getPin(PIN_A10)
-    const A10: PwmPin; // mic
+    //% fixedInstance shim=pxt::getPin(PA_3)
+    const SERVO1: PwmPin;
+    //% fixedInstance shim=pxt::getPin(PA_0)
+    const SERVO2: PwmPin;
 }
 
 
@@ -58,73 +30,28 @@ declare namespace input {
     /**
      * Left button.
      */
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
     //% block="button Left" weight=95 fixedInstance
-    //% shim=pxt::getButton(0)
+    //% shim=pxt::getButtonByPin(PA_15,BUTTON_ACTIVE_LOW_PULL_UP)
     const buttonL: Button;
 
     /**
      * Up button.
      */
     //% block="button Up" weight=94 fixedInstance
-    //% shim=pxt::getButton(1)
+    //% shim=pxt::getButtonByPin(PA_5,BUTTON_ACTIVE_LOW_PULL_UP)
     const buttonU: Button;
 
     /**
      * Down button.
      */
     //% block="button Down" weight=94 fixedInstance
-    //% shim=pxt::getButton(1)
+    //% shim=pxt::getButtonByPin(PB_10,BUTTON_ACTIVE_LOW_PULL_UP)
     const buttonD: Button;
 
     /**
      * Right button.
      */
     //% block="button Right" weight=94 fixedInstance
-    //% shim=pxt::getButton(1)
+    //% shim=pxt::getButtonByPin(PC_13,BUTTON_ACTIVE_LOW_PULL_UP)
     const buttonR: Button;
-}
-
-declare namespace input {
-    /**
-     * Capacitive pin A1
-     */
-    //% block="pin A1" fixedInstance shim=pxt::getTouchButton(PIN_A1)
-    const pinA1: TouchButton;
-
-    /**
-     * Capacitive pin A2
-     */
-    //% block="pin A2" fixedInstance shim=pxt::getTouchButton(PIN_A2)
-    const pinA2: TouchButton;
-
-    /**
-     * Capacitive pin A3
-     */
-    //% block="pin A3" fixedInstance shim=pxt::getTouchButton(PIN_A3)
-    const pinA3: TouchButton;
-
-    /**
-     * Capacitive pin A4
-     */
-    //% block="pin A4" fixedInstance shim=pxt::getTouchButton(PIN_A4)
-    const pinA4: TouchButton;
-
-    /**
-     * Capacitive pin A5
-     */
-    //% block="pin A5" fixedInstance shim=pxt::getTouchButton(PIN_A5)
-    const pinA5: TouchButton;
-
-    /**
-     * Capacitive pin A6
-     */
-    //% block="pin A6" fixedInstance shim=pxt::getTouchButton(PIN_A6)
-    const pinA6: TouchButton;
-
-    /**
-     * Capacitive pin A7
-     */
-    //% block="pin A7" fixedInstance shim=pxt::getTouchButton(PIN_A7)
-    const pinA7: TouchButton;
 }
