@@ -1,8 +1,8 @@
 # GHI Electronics Brain Pad target for PXT
 
-[![Build Status](https://travis-ci.org/Microsoft/pxt-brainpad.svg?branch=master)](https://travis-ci.org/Microsoft/pxt-brainpad)
-
-This repo contains the editor hosted at https://makecode.brainpad.com .
+## Build and hosted editor
+Hosted website: https://5ecba313-4436-4d40-809e-0a7e8abc99de.pxt.io</br>
+Jenkins build: https://ci2.dot.net/job/Private/job/pxt_project_blue/job/master/
 
 ## Local Dev setup
 
