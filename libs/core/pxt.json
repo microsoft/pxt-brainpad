@@ -1,18 +1,3 @@
 {
-    "name": "core",
-    "description": "The core library",
-    "files": [
-        "README.md",
-        "pxt.h",
-        "pxtcore.h",
-        "ns.ts"
-    ],
-    "testFiles": [
-        "test.ts"
-    ],
-    "npmDependencies": {},
-    "public": true,
-    "dependencies": {
-        "base": "file:../base"
-    }
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/core"
 }
