@@ -20,7 +20,6 @@ In a common folder,
 
 ```
 npm install
-typings install
 jake
 ```
 
