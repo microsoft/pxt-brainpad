@@ -208,7 +208,7 @@
         },
         "githubCorePackage": "lancaster-university/codal",
         "gittag": "master",
-        "serviceId": "codal2cp"
+        "serviceId": "brainpad"
     },
     "appTheme": {
         "accentColor": "#0089BF",
