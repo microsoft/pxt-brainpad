@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Microsoft/pxt-brainpad.svg?branch=master)](https://travis-ci.org/Microsoft/pxt-brainpad)
 
-This repo contains the editor hosted at https://makecode.ghielectronics.com .
+This repo contains the editor hosted at https://makecode.brainpad.com .
 
 ## Local Dev setup
 
