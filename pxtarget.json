@@ -6,6 +6,7 @@
     "title": "GHI Brain Pad - Blocks / Javascript editor",
     "description": "A Blocks / JavaScript code editor for the GHI Brain Pad.",
     "corepkg": "brainpad",
+    "ignoreDocsErrors": true,
     "bundleddirs": [
         "libs/base",
         "libs/core",
