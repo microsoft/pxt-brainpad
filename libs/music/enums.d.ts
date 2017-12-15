@@ -2,8 +2,8 @@
 
 
     declare const enum SoundOutputDestination {
-    //% block="pin"
-    Pin = 1,
+    //% block="pin PWM"
+    PinPWM = 1,
     //% block="speaker"
     Speaker = 0,
     }
