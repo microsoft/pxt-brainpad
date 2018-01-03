@@ -137,7 +137,7 @@
         "hasHex": true,
         "deployDrives": ".*",
         "deployFileMarker": "INFO_UF2.TXT",
-        "driveName": "CPLAYBOOT",
+        "driveName": "BRAINPAD",
         "openocdScript": "source [find interface/cmsis-dap.cfg]; source [find target/stm32f4x.cfg]",
         "flashCodeAlign": 256,
         "floatingPoint": true,
