@@ -47,6 +47,13 @@ cd pxt-brainpad
 pxt serve --cloud
 ```
 
+If you are editing C++, we strongly recommend to [setup your machine for building CODAL](https://github.com/lancaster-university/codal)
+and use the following command line
+
+```
+pxt serve
+``` 
+
 ## to build and deploy a single package via command line
 
 ```
