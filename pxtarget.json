@@ -8,6 +8,7 @@
     "corepkg": "brainpad",
     "ignoreDocsErrors": true,
     "bundleddirs": [
+	    "libs/accelerometer",
         "libs/base",
         "libs/core",
         "libs/lightsensor",
@@ -15,6 +16,7 @@
         "libs/thermometer",
         "libs/buttons",
         "libs/lightbulb",
+		"libs/touch",
         "libs/brainpad"
     ],
     "serial": {
@@ -30,7 +32,7 @@
         "autoRun": true,
         "streams": false,
         "aspectRatio": 1.8,
-        "parts": false,
+        "parts": true,
         "enableTrace": true,
         "boardDefinition": {
             "visual": "brainpad",
@@ -137,7 +139,7 @@
         "hasHex": true,
         "deployDrives": ".*",
         "deployFileMarker": "INFO_UF2.TXT",
-        "driveName": "BRAINPAD",
+        "driveName": "CPLAYBOOT",
         "openocdScript": "source [find interface/cmsis-dap.cfg]; source [find target/stm32f4x.cfg]",
         "flashCodeAlign": 256,
         "floatingPoint": true,
@@ -250,7 +252,7 @@
             }
         ],
         "showHomeScreen": true,
-        "homeScreenHero": "./static/getting-started/getting-started.png",
+        "homeScreenHero": "./static/hero.png",
         "invertedMenu": true,
         "invertedToolbox": false,
         "invertedMonaco": false,
