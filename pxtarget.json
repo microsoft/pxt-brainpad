@@ -133,7 +133,7 @@
     },
     "compile": {
         "isNative": true,
-        "useUF2": true,
+        "useUF2": false,
         "hasHex": true,
         "deployDrives": ".*",
         "deployFileMarker": "INFO_UF2.TXT",
@@ -252,7 +252,7 @@
         "showHomeScreen": true,
         "homeScreenHero": "./static/hero.png",
         "invertedMenu": true,
-        "invertedToolbox": false,
+        "invertedToolbox": true,
         "invertedMonaco": false,
         "monacoToolbox": true,
         "selectLanguage": true,

@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\docs"
+    "\\docs",
+    "\\docs\\tutorials"
   ],
-  "SelectedNode": "\\docs",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
