@@ -1,7 +1,8 @@
 # GHI Electronics Brain Pad target for PXT
 
 ## Build and hosted editor
-Hosted website: https://5ecba313-4436-4d40-809e-0a7e8abc99de.pxt.io</br>
+Hosted website: https://5ecba313-4436-4d40-809e-0a7e8abc99de.pxt.io
+
 Jenkins build: https://ci2.dot.net/job/Private/job/pxt_project_blue/job/master/
 
 ## Local Dev setup

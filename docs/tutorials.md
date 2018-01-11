@@ -27,6 +27,17 @@ Step by step guide to coding your @boardname@.
   
 } 
 
+,
+{
+  "name": "Buzzer",
+  "description": "In this tutorial, we will use the BrainPad's buzzer to create different sounds",
+  "cardType": "tutorial",
+  "label": "Play a Song",
+  "labelClass": "pink ribbon large",
+  "url":"/tutorials/buzzer",
+  "imageUrl":"/static/cp/projects/thumb/buzzer.jpg"
+  
+} 
 
 
 
