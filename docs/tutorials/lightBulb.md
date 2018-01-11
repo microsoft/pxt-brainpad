@@ -3,8 +3,8 @@
 
 ## Step 1  @fullscreen
 
-Let's start by doing something simple. Let's light up the  on the BrainPad. You'll notice the project begins with a
-``||loops:forever||`` block. Anything we place inside this block will keep running as long as the device has power.
+Let's start by doing something simple. Let's light up the Light Bulb on the BrainPad. You'll notice the project begins with a
+``||loops:forever||`` block. Anything we place inside this block will keep running forever in our program.
 
 ```blocks
 loops.forever(function () {
