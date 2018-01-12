@@ -15,12 +15,10 @@ Let's drag the ``||loops:on start||`` block from the LOOPS section into our stag
 
 ![drag in on start block](/images/onstart.gif)
  
-
 ## Step 4 @fullscreen
 To demonstrate how the ``||loops:on start||`` block works. Start by dragging in the ``||lightbulb:setColor||`` block into the ``||loops:on Start||`` block
 
 ![drag in on start block](/images/setColor_Onstart.gif)
-
 
 ## Step 5 @fullscreen
 Next will add the ``||loops:pause||`` block followed by the ``||lightbulb:clear light bulb||`` block into the ``||loops:on start||`` block. Just below the first ``||lightbulb:set light bulb to||`` block we just added. 
@@ -36,7 +34,6 @@ The Light Bulb turns ON then OFF after just 1/2 a second. If you missed it, refr
 The ``||loops:forever||`` block is different then the ``||loops:on start||`` block, because the code inside runs forever. Once the last block inside your ``||loops:forever||`` block is executed, the program will go back to the first block in the ``||loops:forever||`` block and start again.
 
 ![on Start and forever blocks](/images/forever.jpg)
-
 
 ## Step 8 @fullscreen
 Next will put the exact same blocks inside the ``||loops:forever||`` block. Except will change the LightBulb Color to Blue, and we will add another ``||loops:pause||`` block to the end,  to determine how long the LightBulb remains off. Before looping back to the beginning of the forever block.  
