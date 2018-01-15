@@ -42,6 +42,6 @@ music.playTone(262, music.beat(BeatFraction.Half))
 ```
 
 ## Step 7 @fullscreen 
-Your final project should look like this and play the melody once. If you wanted to continuiuosly play the song, you could put it inside a ``||loops:forever||`` block.
+Your final project should look like this and play the melody once. If you wanted to continuiuosly play the song, you could put all the notes inside a ``||loops:forever||`` block.
 
 ![Adding notes](/images/finalSong.jpg)

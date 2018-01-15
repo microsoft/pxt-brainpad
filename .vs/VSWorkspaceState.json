@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\docs",
-    "\\docs\\tutorials"
+    "\\libs",
+    "\\libs\\accelerometer",
+    "\\libs\\lightbulb"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\libs\\lightbulb\\extension.ts",
   "PreviewInSolutionExplorer": false
 }
