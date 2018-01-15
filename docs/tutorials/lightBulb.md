@@ -1,5 +1,4 @@
 # Light Bulb
-# Light Bulb
 
 ## Step 1  @fullscreen
 
@@ -12,16 +11,12 @@ loops.forever(function () {
 })
 ```
 
-
 ## Step 2  @fullscreen
 
 Let's drag a new block into the ``||loops:forever||`` block. Under Light Bulb, grab the ``||lightbulb:setColor||`` block and drag it into the ``||loops:forever||`` block.
 
 ```block
 lightbulb.setColor(0xFF0000)
-
-
-
 ```
 
 ## Step 4 @fullscreen
@@ -43,8 +38,6 @@ lightbulb.setColor(0xFF0000)
 ![Set color](/images/setColorRGB.gif)
 
 
-
-
 ## Step 6  @fullscreen
 Let's suppose we wanted to make our LED blink every second. To do this we will need to add a ``||loops:pause||`` inside our ``||loops:forever||`` block. We'll also need to change the parameters value inside the block to 1000 ms, but Light Bulb still won't blink. Can you guess why?
 
@@ -52,8 +45,6 @@ Let's suppose we wanted to make our LED blink every second. To do this we will n
  
 loops.pause(1000)
 ```
-
-
 
 ## Step 7 @fullscreen
 Our Light Bulb doesn't blink because we never turn off the Light Bulb anywhere in our ``||loops:forever||`` block. We can accomplish this by adding a ``||lightbulb:clear light bulb||`` block right after our ``||loops:pause||`` block.
@@ -63,14 +54,22 @@ Our Light Bulb doesn't blink because we never turn off the Light Bulb anywhere i
 lightbulb.clear()
 ```
 
+## Step 8 @fullscreen
+Our Light Bulb still doesn't blink properly. That's because we never tell the BrainPad how long to leave the light off. So right after ``||lightbulb:clear light bulb||`` block. We need to add another ``||loops:pause||`` block
 
-## Step 7 @fullscreen
-Depending on the color parameters you selected, our final program should look something like this. We can add our Light Bulb to many different code examples or to work with other sensors or inputs the BrainPad. 
+```block
+ 
+loops.pause(1000)
+```
+
+## Step 9 @fullscreen
+Depending on the color parameters you selected, our final program should look something like this. We can add our Light Bulb to many different code examples or to work with other sensors or inputs found on the BrainPad. 
 
 ```block
 loops.forever(function () {
     lightbulb.setColor(lightbulb.rgb(255, 0, 0))
     loops.pause(1000)
     lightbulb.clear()
+    loops.pause(1000)
 })
 ```

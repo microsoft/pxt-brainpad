@@ -2,7 +2,7 @@
 
 ## Step 1 @fullscreen
 
-The Brain Pad is equipped with a buzzer that is capable of playing many different notes. It can even be programmed to play a song. 
+The BrainPad is equipped with a buzzer that is capable of playing many different notes. It can even be programmed to play a song. 
  
 ![BrainPad buzzer image](/images/buzzer.jpg)
 
