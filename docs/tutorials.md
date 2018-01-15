@@ -26,7 +26,6 @@ Step by step guide to coding your @boardname@.
   "imageUrl":"/static/cp/projects/thumb/onStart.jpg"
   
 } 
-
 ,
 {
   "name": "Buzzer",
@@ -38,8 +37,17 @@ Step by step guide to coding your @boardname@.
   "imageUrl":"/static/cp/projects/thumb/buzzer.jpg"
   
 } 
-
-
+,
+{
+  "name": "Sensing Temperatures",
+  "description": "Using the Temp Sensor to Change Light Bulb Color",
+  "cardType": "tutorial",
+  "label": "Temperature Sensor",
+  "labelClass": "pink ribbon large",
+  "url":"/tutorials/temperature",
+  "imageUrl":"/static/cp/projects/thumb/temperature.jpg"
+  
+} 
 
 ]
 ```
