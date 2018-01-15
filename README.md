@@ -21,7 +21,12 @@ In a common folder,
 
 ```
 npm install
-jake
+npm install -g jake
+```
+Install the pxt commandline tool, you only have to run this once. 
+
+```
+npm install -g pxt
 ```
 
 * go to ``pxt-common-packages`` and run
