@@ -133,7 +133,7 @@
     },
     "compile": {
         "isNative": true,
-        "useUF2": true,
+        "useUF2": false,
         "hasHex": true,
         "deployDrives": ".*",
         "deployFileMarker": "INFO_UF2.TXT",

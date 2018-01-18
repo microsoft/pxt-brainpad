@@ -1,15 +1,15 @@
-# Projects
+# Advanced
 
-## Projects
+## Advanced
 
-Here are some cool projects that you can build with your @boardname@!
+Here are some cool advanced projects that you can build with your @boardname@ Using Visual Studio
 
 ```codecard
 [{
-  "name": "BrainPad Robot",
-  "description": "Building a simple robot using the BrainPad",
+  "name": "Using Visual Studio",
+  "description": "Setting up the BrainPad to program with Visual Studio",
   "cardType": "tutorial",
-  "label": "Base Robot",
+  "label": "C# or Visual Basic",
   "labelClass": "pink ribbon large",
   "url":"/projectsToMake/test",
   "imageUrl":"/static/cp/projects/thumb/brainbot.jpg"
@@ -17,10 +17,10 @@ Here are some cool projects that you can build with your @boardname@!
 }
 ,
 {
-  "name": "Adv. BrainPad Robot",
+  "name": "Using Mbed",
   "description": "Adding a Sensor to our BrainPad robot",
   "cardType": "tutorial",
-  "label": "Adding a Sensor",
+  "label": "Using Mbed",
   "labelClass": "pink ribbon large",
   "url":"/projectsToMake/test",
   "imageUrl":"/static/cp/projects/thumb/added_sensor.jpg"
@@ -28,10 +28,10 @@ Here are some cool projects that you can build with your @boardname@!
 }
 ,
 {
-  "name": "BrainPad Snap Circuits Project",
+  "name": "Using MicroPython",
   "description": "Connect the BrainPad to a Snap Circuit Kit",
   "cardType": "tutorial",
-  "label": "BrainPad & Snap Circuits",
+  "label": "Using MicroPython",
   "labelClass": "pink ribbon large",
   "url":"/projectsToMake/test",
   "imageUrl":"/static/cp/projects/thumb/snapCircuit_BrainPad.jpg"
