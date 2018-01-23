@@ -85,3 +85,11 @@
 @blocklyFlyoutColor: #000;
 @blocklyFlyoutColorOpacity: 0.7;
 @monacoFlyoutColor: fade(@blocklyFlyoutColor, 70%);
+
+/*-------------------
+   Docs
+--------------------*/
+
+@avatarUrlPath: "../docs/static/avatar.png";
+@avatarImageUrl: "../docs/static/avatar.png";
+@docsAvatarImageUrl: "../docs/static/avatar-inverted.svg";

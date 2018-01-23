@@ -2,9 +2,9 @@
     "id": "brainpad",
     "platformid": "codal",
     "nickname": "brainpad",
-    "name": "GHI Brain Pad",
-    "title": "GHI Brain Pad - Blocks / Javascript editor",
-    "description": "A Blocks / JavaScript code editor for the GHI Brain Pad.",
+    "name": "GHI BrainPad",
+    "title": "GHI BrainPad - Blocks / Javascript editor",
+    "description": "A Blocks / JavaScript code editor for the GHI BrainPad.",
     "corepkg": "brainpad",
     "ignoreDocsErrors": true,
     "bundleddirs": [
@@ -229,8 +229,8 @@
         "githubUrl": "https://github.com/Microsoft/pxt-brainpad",
         "betaUrl": "https://www.makecode.com",
         "crowdinProject": "kindscript",
-        "boardName": "Brain Pad",
-        "driveDisplayName": "CPLAYBOOT",
+        "boardName": "BrainPad",
+        "driveDisplayName": "BRAINPAD",
         "docMenu": [
             {
                 "name": "Blocks",

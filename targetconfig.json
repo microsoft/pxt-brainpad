@@ -12,6 +12,8 @@
     ],
     "galleries": {
         
-		 "Tutorials": "tutorials"
+		 "Tutorials": "tutorials",
+		 "Projects": "projects",
+		 "Advanced Programming": "advanced"
     }
 }
