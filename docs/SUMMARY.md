@@ -3,6 +3,8 @@
 ## Projects #projects
 
 * [Projects](/projects)
+* [Advanced Programming](/advanced)
+
 
 ## Examples #examples
 

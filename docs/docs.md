@@ -8,6 +8,8 @@ for the [Brain Pad](https://old.ghielectronics.com/catalog/product/536).
 ## Documentation
 
 * [About](/about)
+* [Advanced](/advanced)
+* [Projects](/projects)
 * [Examples](/examples)
 * [Blocks](/blocks)
 * [JavaScript](/javascript)
