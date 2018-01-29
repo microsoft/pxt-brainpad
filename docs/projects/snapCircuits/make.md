@@ -1,94 +1,120 @@
-# Making the Dandelion
-## @description Maker Project for Dandelion for @boardname@
-
-## ~avatar avatar
-
-Make the Dandelion for your @boardname@
+# Elenco's Snap Circuits Kit connected to the BrainPad
+## @description Maker Project using Elenco's Snap Circuits and @boardname@
 
 ## ~
+
+![Elenco Snap Circuits SC300 kit](/static/cp/projects/snapCircuits/kit.jpg)
 
 ## Duration: ~20 minutes
 
 ## Materials
-  * Pipe cleaners
-  * Tape (masking, duct tape, and/or packing tape)
-  * A Wooden craft stick / paint stirrer stick
+  * Elenco Snap Circuits Kit (we used [Model: SC300](https://www.elenco.com/brand/snap-circuits/ "Elenco website"))
+  * BrainPad ([www.brainpad.com](https://www.brainpad.com "BrainPad website")) 
+  * 3 - 6 inch Wires with Aligator Clips
 
-![Materials: pipe cleaners, tape, wooden craft stick](/static/cp/projects/dandelion/materials.jpg)
+## Step 1: Base Grid
 
-## Step 1: Make the stem
+First, place the Base Grid (#6SCBG) onto a flat surface. We will connect all the components to this base. 
 
-Place a group of green pipe cleaners over a wooden craft stick and use some tape to attach them to the bottom of the stick. 
+![Step 1](/static/cp/projects/snapCircuits/step1.jpg)
 
-![Stem 1.1](/static/cp/projects/dandelion/step1.1.jpg)
+## Step 2: Mount the BrainPad to the Base Grid
 
-![Stem 1.2](/static/cp/projects/dandelion/step1.2.jpg)
+Next, we will mount the BrainPad to our Base Grid. Place the BrainPad on the 2nd Row at the 5th Hexigon, as pictured. 
 
-## Step 2: Make the petals
+![Step 2](/static/cp/projects/snapCircuits/step2.jpg)
 
-Take a yellow pipe cleaner and thread it through the different connector pins creating the shape of a flower.
-You might need more then one to complete the full circle.
+## Step 3: Add the Motor for our Fan
 
-![Petals 2.1](/static/cp/projects/dandelion/step2.1.jpg)
+Find the M1 Motor Module (#6SCM1). Attach the module to the Base Grid on the 5th snap at the top of the grid, as pictured. 
 
-![Petals 2.2](/static/cp/projects/dandelion/step2.2.jpg)
+![Step 3](/static/cp/projects/snapCircuits/step3.jpg)
 
-![Petals 2.3](/static/cp/projects/dandelion/step2.3.jpg)
+## Step 4: Add the battery holder
 
-![Petals 2.4](/static/cp/projects/dandelion/step2.4.jpg)
+Next, we'll add a Battery Holder - B1 (#6SCL1) to power our the BrainPad and our Snap Circuit. Place the first Battery Module on the 5th row/5th column of the Base Grid. 
 
-## Step 3: Put them together
+![Step 4](/static/cp/projects/snapCircuits/step4.jpg)
 
-Use a small piece of tape and roll it inside out so that the sticky side on the outside.
-Place the tape at the top of the wooden stick and use it to stick the @boardname@ onto your dandelion. 
+## Step 5: Connect a 2nd battery holder
 
-![Put together 3.1](/static/cp/projects/dandelion/step3.1.jpg)
+Snap in the 2nd battery pack on the same 5th Row next to the other battery pack on the 8th column, as pictured.  
 
-![Put together 3.2](/static/cp/projects/dandelion/step3.2.jpg)
+![Step 5](/static/cp/projects/snapCircuits/step5.jpg)
 
-![Put together 3.3](/static/cp/projects/dandelion/step3.3.jpg)
+## Step 6: Connect 5-Snap Wire
 
-![Put together 3.4](/static/cp/projects/dandelion/step3.4.jpg)
+Now we will connect our first 5-Snap Wire (#6SC05) labelled '5' to our circuit. We will also need a 1-Snap Wire (#6SC01) spacer labelled '1'. Snap in the spacer at the top right cornor of the Base Grid. Next connect the 5-Snap Wire to the spacer and the top left snap of our 2nd Battery holder as shown in the picture. 
 
-### ~hint
-**Important**
+![Step 6](/static/cp/projects/snapCircuits/step6.jpg)
 
-Make sure the @boardname@ is placed so that the battery connector is at the top, and the USB connector is at the bottom. This is necessary to connect the battery pack later.
+## Step 7: Connect 4-Snap Wire
 
-### ~
+Next, we will connect a 4-Snap Wire (#6SC04) labelled '4' to our circuit. First place another 1-Snap spacer on the right side of our Motor module - M1. Next snap the 4-Snap Wire onto the spacer we just added to the M1 module. Connect the other end to the 5-Snap Wire we placed in the previous step. Connecting the the two Snap Wires together.  
 
-## Step 4: Add a battery pack
+![Step 7](/static/cp/projects/snapCircuits/step7.jpg)
 
-Cut a piece of tape to attach the battery pack to the back of the dandelion.
-Place it around the middle of the stick so there's enough room for the cable to reach the @boardname@.
+## Step 8: Connect Battery Holders
 
-![Battery pack 4.1](/static/cp/projects/dandelion/step4.1.jpg)
+Now we will use a 2-Snap Wire (#6SC02) labelled '2' and connect both Battery Holders together as shown below. 
 
-![Battery pack 4.2](/static/cp/projects/dandelion/step4.2.jpg)
+![Step 8](/static/cp/projects/snapCircuits/step8.jpg)
 
-![Battery pack 4.3](/static/cp/projects/dandelion/step4.3.jpg)
+## Step 9: Connect a Transistor
 
-![Battery pack 4.4](/static/cp/projects/dandelion/step4.4.jpg)
+Next we will place the NPN Transistor Q2 (#6SCQ2) We can place it in the 4th row and 3rd column. Place in the direction shown in image below.   
 
-## Step 5: Connect the battery
+![Step 9](/static/cp/projects/snapCircuits/step9.jpg)
 
-Connect the battery pack to your @boardname@ using the cable. 
+## Step 10: Connect 2-Snap Wire
 
-![Connect 5.1](/static/cp/projects/dandelion/step5.1.jpg)
+Snap in a 2-Snap Wire (#6SC02) labelled '2' to left side of the 'M1' Motor Module. Also add a 1-Snap spacer to the bottom of the 2-Snap Wire. As shown below. We will leave the other end unconnected for the moment. 
 
-![Connect 5.2](/static/cp/projects/dandelion/step5.2.jpg)
+![Step 10](/static/cp/projects/snapCircuits/step10.jpg)
+
+## Step 11: Connect 3-Snap Wire
+
+Next we will connect a 3-Snap Wire (#6SC03) labelled '3' to the 2-Snap Wire we just placed, then connect a 1-Snap spacer to the other end of the 3-Snap Wire. Connect it to the top of the Transistor Module 'Q2'.
+
+![Step 11](/static/cp/projects/snapCircuits/step11.jpg)
+
+## Step 12: Connect the Resistor Module
+
+Connect the Resistor Module (#6SCR1) labelled 'R1' to the far left snap on our Transistor Module 'Q2'. As demonstrated in the image below. 
+
+![Step 12](/static/cp/projects/snapCircuits/step12.jpg)
+
+
+## Step 13: Connect 2-Snap Wire
+
+Connect a 2-Snap Wire (#6SC02) labelled '2' to the bottom snap on our Transistor Module 'Q2'. As demonstrated in the image below. Connect the other end to the nearby battery module. 
+
+![Step 13](/static/cp/projects/snapCircuits/step13.jpg)
+
+
+
+
+## Step 14: Connect a wire to the BrainPad Expansion header
+
+Find a wire with an Aligator clip on one side and a bare wire on the other end. 
+Connect the bare wire end into the 'AN' pin of the BrainPad's expansion header.  
+
+![Step 13](/static/cp/projects/snapCircuits/step14.jpg)
+
+## Step 15: Connect the Wire to Resistor
+
+Connect the Aligator clip end of our wire to the end of the 'R2' Resistor modules, as shown below. 
+
+![Step 14](/static/cp/projects/snapCircuits/step15.jpg)
 
 ## Complete
 
-Congratulations! You have completed the dandelion make challenge. 
-
-![Complete](/static/cp/projects/dandelion/complete.jpg)
+Congratulations! You have completed the Snap Circuit project. 
 
 Ready to do some coding?
 
 Connect the @boardname@ to your computer to get started.
 
-![Connect your computer](/static/cp/projects/dandelion/connect.jpg)
 
 ### ~button /projects/dandelion/code
 NEXT: Start coding!
