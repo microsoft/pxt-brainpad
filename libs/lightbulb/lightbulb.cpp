@@ -13,8 +13,10 @@ namespace lightbulb {
         auto gp = lookupPin(PC_8);
         auto bp = lookupPin(PC_6);
 #define SCALE(x) min(max(0, x), 255) * 4
-        rp->setAnalogValue(SCALE(r));
-        gp->setAnalogValue(SCALE(g));
+        rp->setAnalogValue(SCALE(r));  
+		
+        gp->setAnalogValue(SCALE(g)); 
+		
         bp->setAnalogValue(SCALE(b));
     }
 }

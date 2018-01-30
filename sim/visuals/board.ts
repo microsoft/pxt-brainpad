@@ -384,7 +384,7 @@ namespace pxsim.visuals {
             //     svg.fill(this.shakeButtonGroup, this.props.theme.gestureButtonOff);
             // }
 
-            // svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
+           svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
 
             svg.setGradientColors(this.thermometerGradient, theme.ledOff, theme.ledOn);
             // svg.setGradientColors(this.soundLevelGradient, theme.soundLevelOn, theme.soundLevelOff);
@@ -415,7 +415,7 @@ namespace pxsim.visuals {
             // this.updateNeoPixels();
             // this.updateSwitch();
             this.updateSound();
-            // this.updateLightLevel();
+            this.updateLightLevel();
             // this.updateSoundLevel();
             // this.updateButtonAB();
             this.updateTemperature();
@@ -630,10 +630,10 @@ namespace pxsim.visuals {
             if (!this.lightLevelButton) {
                 let gid = "gradient-light-level";
                 this.lightLevelGradient = svg.linearGradient(this.defs, gid)
-                let cy = 15;
-                let r = 10;
+                let cy = 590;
+                let r = 50;
                 this.lightLevelButton = svg.child(this.g, "circle", {
-                    cx: `12px`, cy: `${cy}px`, r: `${r}px`,
+                    cx: `100px`, cy: `${cy}px`, r: `${r}px`,
                     class: 'sim-light-level-button no-drag',
                     fill: `url(#${gid})`
                 }) as SVGCircleElement;
@@ -672,7 +672,7 @@ namespace pxsim.visuals {
                             this.applyLightLevel();
                         }
                     });
-                this.lightLevelText = svg.child(this.g, "text", { x: 23, y: cy + r - 15, text: '', class: 'sim-text' }) as SVGTextElement;
+                this.lightLevelText = svg.child(this.g, "text", { x: 70, y: cy + r - 130, text: '', class: 'sim-text' }) as SVGTextElement;
                 this.updateTheme();
 
                 accessibility.makeFocusable(this.lightLevelButton);

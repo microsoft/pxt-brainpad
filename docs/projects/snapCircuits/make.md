@@ -91,21 +91,30 @@ Connect a 2-Snap Wire (#6SC02) labelled '2' to the bottom snap on our Transistor
 
 ![Step 13](/static/cp/projects/snapCircuits/step13.jpg)
 
-
-
-
 ## Step 14: Connect a wire to the BrainPad Expansion header
 
 Find a wire with an Aligator clip on one side and a bare wire on the other end. 
-Connect the bare wire end into the 'AN' pin of the BrainPad's expansion header.  
+Connect the bare wire end into the 'AN' pin of the left side of the BrainPad's expansion header.  
 
-![Step 13](/static/cp/projects/snapCircuits/step14.jpg)
+![Step 14](/static/cp/projects/snapCircuits/step14.jpg)
 
 ## Step 15: Connect the Wire to Resistor
 
 Connect the Aligator clip end of our wire to the end of the 'R2' Resistor modules, as shown below. 
 
-![Step 14](/static/cp/projects/snapCircuits/step15.jpg)
+![Step 15](/static/cp/projects/snapCircuits/step15.jpg)
+
+## Step 16: Connect Ground Wire to 2-Snap Wire
+
+Connect the 2nd Aligator clipped bare wire to Ground (GND) pin on the left BrainPad's expansion header. Then connect to the 2-Snap Wire that is connected at the bottom of the NPN Transistor module 'Q2', the 2-Snap Wire, that is connected to the left battery module. 
+
+![Step 16](/static/cp/projects/snapCircuits/step16.jpg)
+
+## Step 17: Connect a wire from the BrainPad Expansion header
+
+Connect our 3rd Aligator clipped bare wire to the 5V pin on the right side of the BrainPad's expansion slot, connect the clip end to the far right Snap on the right battery module. 
+
+![Step 17](/static/cp/projects/snapCircuits/step17.jpg)
 
 ## Complete
 

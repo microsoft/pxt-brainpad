@@ -12,8 +12,11 @@
     ],
     "galleries": {
         
-		 "Tutorials": "tutorials",
+		 "MakeCode Tutorials": "tutorials",
 		 "Projects": "projects",
-		 "Advanced Programming": "advanced"
+		 "Advanced Programming": "advanced",
+		 "BrainPad Expansion Header": "expansion",
+		 "Game Programming": "games"
+
     }
 }
