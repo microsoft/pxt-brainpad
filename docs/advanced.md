@@ -5,13 +5,25 @@
 Here are some cool advanced projects that you can build with your @boardname@ Using Visual Studio
 
 ```codecard
-[{
+[
+{
+  "name": "Adv Program Bootloader",
+  "description": "Changing the Bootloader to program in other languages",
+  
+  "label": "Bootloader Modification",
+  "labelClass": "pink ribbon large",
+  "url":"/advanced/bootloader",
+  "imageUrl":"/static/cp/projects/thumb/bootloader.jpg"
+  
+}
+,
+{
   "name": "Using Visual Studio",
   "description": "Setting up the BrainPad to program with Visual Studio",
   
   "label": "C# or Visual Basic",
   "labelClass": "pink ribbon large",
-  "url":"/projects/advance",
+  "url":"/advanced/visualStudio",
   "imageUrl":"/static/cp/projects/thumb/code.jpg"
   
 }
@@ -22,7 +34,7 @@ Here are some cool advanced projects that you can build with your @boardname@ Us
   
   "label": "C/C++",
   "labelClass": "pink ribbon large",
-  "url":"/advanced/advanced",
+  "url":"/advanced/advance",
   "imageUrl":"/static/cp/projects/thumb/mbed.jpg"
   
 }
@@ -33,7 +45,7 @@ Here are some cool advanced projects that you can build with your @boardname@ Us
   
   "label": "Using MicroPython",
   "labelClass": "pink ribbon large",
-  "url":"/advanced/advanced",
+  "url":"/advanced/advance",
   "imageUrl":"/static/cp/projects/thumb/microPython.jpg"
   
 }

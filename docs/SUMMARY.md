@@ -2,13 +2,11 @@
 
 ## Projects #projects
 
+* [MakeCode Tutorials](/tutorials)
 * [Projects](/projects)
 * [Advanced Programming](/advanced)
-
-
-## Examples #examples
-
-* [Examples](/examples)
+* [BrainPad Expansion](/expansion)
+* [Game Programming](/games)
 
 ## Reference #reference
 

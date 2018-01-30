@@ -212,8 +212,8 @@
         "serviceId": "brainpad"
     },
     "appTheme": {
-        "accentColor": "#0089BF",
-        "logoUrl": "https://old.ghielectronics.com/catalog/product/536",
+        "accentColor": "#5C005C",
+        "logoUrl": "https://www.brainpad.com",
         "logo": "./static/logo.png",
         "docsLogo": "./static/logo.square.png",
         "portraitLogo": "./static/logo.square.png",
@@ -246,14 +246,14 @@
             },
             {
                 "name": "Buy",
-                "path": "https://old.ghielectronics.com/catalog/product/536"
+                "path": "https://www.brainpad.com"
             }
         ],
         "showHomeScreen": true,
         "homeScreenHero": "./static/hero.png",
         "invertedMenu": true,
         "invertedToolbox": true,
-        "invertedMonaco": false,
+        "invertedMonaco": true,
         "monacoToolbox": true,
         "selectLanguage": true,
         "simAnimationEnter": "fly right in",
@@ -273,7 +273,7 @@
             }
         },
         "blocklyColors": {
-            "insertionMarker": "#000000",
+            "insertionMarker": "#FFFFFF",
             "insertionMarkerOpacity": 0.5
         },
         "blockColors": {

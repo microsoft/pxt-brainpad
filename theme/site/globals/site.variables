@@ -19,11 +19,28 @@
 @orange: #F47A20;
 @brown: #BCAC99;
 
+@grey: #3C444A; /*#4c4b4d;*/ /*#1e1e1e;*/
+@darkGrey: #a9b0b8; /*#2F2F2F;*/ /*#313638;*/
+
 /* GHI Electronics colors */
 @grey: #6E6E6E;
 @blue: #3486BA;
 
 @pageBackground: #fff;
+
+/*--------------
+   Form Input
+---------------*/
+
+/* This adjusts the default form input across all elements */
+@inputBackground        : #333940;
+
+/* Input Text Color */
+@inputColor: white;
+@highlightColor: @grey;
+@inputHighlightColor: @inputColor;
+
+@linkColor: #3eb1d0;
 
 /*******************************
          PXT Overrides
@@ -52,9 +69,9 @@
    Background
 --------------------*/
 
-@simulatorBackground: @white;
-@editorToolsBackground: @white;
-@blocklySvgColor: #E4E4E4;
+@simulatorBackground: #777777;
+@editorToolsBackground: @simulatorBackground;
+@blocklySvgColor: #ffffff;
 
 /*-------------------
    Full screen
@@ -74,7 +91,7 @@
    Editor
 --------------------*/
 
-@blocklyToolboxColor: white;
+@blocklyToolboxColor: #a9b0b8; 
 @trashIconColor: @primaryColor;
 
 /*-------------------
@@ -93,3 +110,4 @@
 @avatarUrlPath: "../docs/static/avatar.png";
 @avatarImageUrl: "../docs/static/avatar.png";
 @docsAvatarImageUrl: "../docs/static/avatar-inverted.svg";
+

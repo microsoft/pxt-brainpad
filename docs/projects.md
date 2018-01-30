@@ -5,7 +5,18 @@
 Here are some cool projects that you can build with your @boardname@!
 
 ```codecard
-[{
+[
+{
+  "name": "BrainPad Snap Circuits Project",
+  "description": "Connect the BrainPad to a Snap Circuits Kit",
+  "label": "BrainPad & Snap Circuits",
+  "labelClass": "pink ribbon large",
+  "url":"/projects/snapCircuits",
+  "imageUrl":"/static/cp/projects/thumb/snapCircuit_BrainPad.jpg"
+  
+}
+,
+{
   "name": "BrainPad Robot",
   "description": "Building a simple robot using the BrainPad",
     "label": "Base Robot",
@@ -22,16 +33,6 @@ Here are some cool projects that you can build with your @boardname@!
   "labelClass": "pink ribbon large",
   "url":"/projects/advbrainbot",
   "imageUrl":"/static/cp/projects/thumb/added_sensor.jpg"
-  
-}
-,
-{
-  "name": "BrainPad Snap Circuits Project",
-  "description": "Connect the BrainPad to a Snap Circuits Kit",
-  "label": "BrainPad & Snap Circuits",
-  "labelClass": "pink ribbon large",
-  "url":"/projects/snapCircuits",
-  "imageUrl":"/static/cp/projects/thumb/snapCircuit_BrainPad.jpg"
   
 }
 ]

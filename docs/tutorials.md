@@ -47,7 +47,18 @@ Step by step guide to coding your @boardname@.
   "url":"/tutorials/temperature",
   "imageUrl":"/static/cp/projects/thumb/temperature.jpg"
   
-} 
+}
+,
+{
+  "name": "Sensing Light",
+  "description": "Using the Light Sensor to Change Light Bulb Color",
+  "cardType": "tutorial",
+  "label": "Light Sensor",
+  "labelClass": "pink ribbon large",
+  "url":"/tutorials/lightsense",
+  "imageUrl":"/static/cp/projects/thumb/light.jpg"
+  
+}  
 
 ]
 ```
