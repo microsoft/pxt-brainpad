@@ -7,6 +7,7 @@
 * [Advanced Programming](/advanced)
 * [BrainPad Expansion](/expansion)
 * [Game Programming](/games)
+* [Language Tutorials](/languages)
 
 ## Reference #reference
 
