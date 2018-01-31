@@ -39,7 +39,7 @@ lightbulb.setColor(0xFF0000)
 
 
 ## Step 6  @fullscreen
-Let's suppose we wanted to make our LED blink every second. To do this we will need to add a ``||loops:pause||`` inside our ``||loops:forever||`` block. We'll also need to change the parameters value inside the block to 1000 ms, but Light Bulb still won't blink. Can you guess why?
+Let's suppose we wanted to make our LED blink every second. To do this we will need to add a ``||loops:pause||`` inside our ``||loops:forever||`` block. We'll also need to change the parameters value inside the block to 1000 ms, but the Light Bulb still won't blink. Can you guess why?
 
 ```block
  
@@ -63,7 +63,7 @@ loops.pause(1000)
 ```
 
 ## Step 9 @fullscreen
-Depending on the color parameters you selected, our final program should look something like this. We can add our Light Bulb to many different code examples or to work with other sensors or inputs found on the BrainPad. 
+Depending on the color parameters you selected, our final program should look something like this. We can add our Light Bulb to many different code examples or use it to work with other sensors or inputs found on the BrainPad. 
 
 ```block
 loops.forever(function () {
