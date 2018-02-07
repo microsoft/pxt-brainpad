@@ -1,0 +1,9 @@
+{
+  "display.DisplayInit|block": "DisplayInit",
+  "display.DrawCircle|block": "draw circle at x %x| y %y| r %r",
+  "display.DrawRectangle|block": "draw rectangle at x %x| y %y| width %width| height %height",
+  "display.SetPixel|block": "set pixel at x %x| y %y",
+  "display.WriteScreenBuffer|block": "Draw Buffer",
+  "display|block": "display",
+  "{id:category}Display": "Display"
+}

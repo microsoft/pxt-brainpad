@@ -4843,8 +4843,14 @@ namespace pxsim.visuals {
          x="1173.9"
          y="118.3"
          width="415.39999"
-         height="283.29999"
-         id="rect2046" /><path
+         height="207.29999"
+         id="rect2046" /><rect
+         x="1173.9"
+         y="325.3"
+         width="415.39999"
+         height="70.29999"
+         id="rect3046"
+         style="fill:gray"/><path
          d="m 369,858.3 c 0,0.1 0,0.2 0,0.4 l 38.5,-26.9 c -12.9,8.6 -25.8,17.3 -38.5,26.5 z"
          id="path2048"
          inkscape:connector-curvature="0" /><path
