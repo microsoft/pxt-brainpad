@@ -15,6 +15,8 @@ namespace config {
     export const PIN_SCK = DAL.PB_3; //
     export const PIN_MISO = DAL.PB_4; //
     export const PIN_MOSI = DAL.PB_5; // 
+
+//    export const PIN_BUTTON_LEFT = DAL.PA_15;
     
     // accelerometer and screen are on the same I2C as external
     export const PIN_ACCELEROMETER_SDA = PIN_SDA;

@@ -52,6 +52,13 @@ namespace pxsim.visuals {
             stroke:#555;
             stroke-width: 1px;
         }
+          
+         .sim-drawcircle {
+           
+            stroke:#42c5f4;
+            stroke-width: 6px;
+           
+        }
 
         .sim-light-level-button {
             stroke:#f1c40f;
@@ -223,8 +230,8 @@ namespace pxsim.visuals {
         { 'name': "PWR_1", 'touch': 0, 'text': null, tooltip: "+3.3V" },
         { 'name': "PWR_2", 'touch': 0, 'text': null, tooltip: "+3.3V" }
     ];
-    const MB_WIDTH = 1695.6;
-    const MB_HEIGHT = 927.79999;
+    const MB_WIDTH = 1795.6;
+    const MB_HEIGHT = 1027.79999;
     export interface IBoardTheme {
         accent?: string;
         display?: string;
@@ -297,6 +304,7 @@ namespace pxsim.visuals {
         private irReceiver: SVGElement;
         private irTransmitter: SVGElement;
         private redLED: SVGRectElement;
+        private lcd: SVGRectElement;
         private slideSwitch: SVGGElement;
         private lightLevelButton: SVGCircleElement;
         private lightLevelGradient: SVGLinearGradientElement;
@@ -384,7 +392,7 @@ namespace pxsim.visuals {
             //     svg.fill(this.shakeButtonGroup, this.props.theme.gestureButtonOff);
             // }
 
-            // svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
+            svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
 
             svg.setGradientColors(this.thermometerGradient, theme.ledOff, theme.ledOn);
             // svg.setGradientColors(this.soundLevelGradient, theme.soundLevelOn, theme.soundLevelOff);
@@ -415,7 +423,8 @@ namespace pxsim.visuals {
             // this.updateNeoPixels();
             // this.updateSwitch();
             this.updateSound();
-            // this.updateLightLevel();
+            this.updateLightLevel();
+            this.updateLCD();
             // this.updateSoundLevel();
             // this.updateButtonAB();
             this.updateTemperature();
@@ -458,16 +467,6 @@ namespace pxsim.visuals {
             }
         }
 
-        private updateInfrared() {
-            const state = this.board;
-            if (!state) return;
-
-            if (state.irState.packetReceived) {
-                state.irState.packetReceived = false;
-                this.flashIrReceiver();
-            }
-        }
-
         private updateRedLED() {
             let state = this.board;
             if (!state) return;
@@ -479,10 +478,41 @@ namespace pxsim.visuals {
             svg.fill(this.redLED, fillColor);
         }
 
+        private updateLCD() {
+            let state = this.board;
+            const tranformDisplay = 3.24; //according device display size
+            let shapes = new Array();
+            const display = state.displayState;
+            if (!state || !display) return;
+            if (display.Init()) {
+                display.inited == true;
+                svg.fill(this.lcd, `#1F73D1`);
+                console.log(display.inited);
+            }
+            if (display.GetCircle()) {
+                const circle = state.displayState.GetCircle();
+                <SVGCircleElement>svg.child(this.g, "circle", { class: "sim-drawcircle", cx: 1130 + circle[0] * tranformDisplay, cy: 105 + circle[1] * tranformDisplay, r: circle[2] * tranformDisplay });
+                
+            }
+            if (display.GetRectangle()) {
+                const rectangle = state.displayState.GetRectangle();
+                <SVGRectElement>svg.child(this.g, "rect", {
+                    class: "sim-drawcircle",
+                    x: 1130 + rectangle[0] * tranformDisplay,
+                    y: 105 + rectangle[1] * tranformDisplay,
+                    width: rectangle[2] * tranformDisplay,
+                    height: rectangle[3] * tranformDisplay,
+                   });
+
+            }
+
+                //svg.child(this.g, "text", { x: 100, y: 50, text: 'Hello!', class: 'sim-text' }) as SVGTextElement;
+         }
+
         private updateRgbLed() {
             let state = this.board;
             if (!state) return;
-
+           
             const rgb = state.lightBulbState.getColor();
 
             if (this.rgbLed) {
@@ -502,6 +532,7 @@ namespace pxsim.visuals {
                     this.rgbLed.style.strokeWidth = "1.5";
                     svg.fill(this.rgbLed, `hsl(${h}, ${s}%, ${lx}%)`)
                     svg.filter(this.rgbLed, `url(#neopixelglow)`);
+                    
                     // let transform = l / 100 * 0.5;
                     // this.rgbLed.style.transform = `scale(${0.9 + transform})`;
                     // this.rgbLed.style.transformOrigin = "211.30725px 43.049255px";
@@ -598,7 +629,7 @@ namespace pxsim.visuals {
 
         private updatePins() {
             let state = this.board;
-            if (!state || !state.edgeConnectorState || !state.capacitiveSensorState) return;
+            if (!state || !state.edgeConnectorState) return;
             state.edgeConnectorState.pins.forEach((pin, i) => this.updatePin(pin, i));
         }
 
@@ -630,10 +661,10 @@ namespace pxsim.visuals {
             if (!this.lightLevelButton) {
                 let gid = "gradient-light-level";
                 this.lightLevelGradient = svg.linearGradient(this.defs, gid)
-                let cy = 15;
-                let r = 10;
+                let cy = 590;
+                let r = 50;
                 this.lightLevelButton = svg.child(this.g, "circle", {
-                    cx: `12px`, cy: `${cy}px`, r: `${r}px`,
+                    cx: `100px`, cy: `${cy}px`, r: `${r}px`,
                     class: 'sim-light-level-button no-drag',
                     fill: `url(#${gid})`
                 }) as SVGCircleElement;
@@ -672,7 +703,7 @@ namespace pxsim.visuals {
                             this.applyLightLevel();
                         }
                     });
-                this.lightLevelText = svg.child(this.g, "text", { x: 23, y: cy + r - 15, text: '', class: 'sim-text' }) as SVGTextElement;
+                this.lightLevelText = svg.child(this.g, "text", { x: 70, y: cy + r - 130, text: '', class: 'sim-text' }) as SVGTextElement;
                 this.updateTheme();
 
                 accessibility.makeFocusable(this.lightLevelButton);
@@ -692,79 +723,6 @@ namespace pxsim.visuals {
             svg.setGradientValue(this.lightLevelGradient, Math.min(100, Math.max(0, Math.floor(lv * 100 / 255))) + '%')
             this.lightLevelText.textContent = lv.toString();
             this.lightLevelButton.setAttribute("aria-valuenow", lv.toString());
-            accessibility.setLiveContent(lv.toString());
-        }
-
-        private updateSoundLevel() {
-            let state = this.board;
-            if (!state || !state.microphoneState.sensorUsed) return;
-
-            if (!this.soundLevelButton) {
-                let gid = "gradient-sound-level";
-                this.soundLevelGradient = svg.linearGradient(this.defs, gid)
-                let cy = 165;
-                let r = 10;
-                this.soundLevelButton = svg.child(this.g, "circle", {
-                    cx: `12px`, cy: `${cy}px`, r: `${r}px`,
-                    class: 'sim-sound-level-button no-drag',
-                    fill: `url(#${gid})`
-                }) as SVGCircleElement;
-
-                let pt = this.element.createSVGPoint();
-                svg.buttonEvents(this.soundLevelButton,
-                    // move
-                    (ev) => {
-                        let pos = svg.cursorPoint(pt, this.element, ev);
-                        let rs = r / 2;
-                        let level = Math.max(0, Math.min(255, Math.floor((pos.y - (cy - rs)) / (2 * rs) * 255)));
-                        if (level != this.board.microphoneState.getLevel()) {
-                            this.board.microphoneState.setLevel(255 - level);
-                            this.applySoundLevel();
-                        }
-                    },
-                    // start
-                    ev => { },
-                    // stop
-                    ev => { },
-                    // keydown
-                    (ev) => {
-                        let charCode = (typeof ev.which == "number") ? ev.which : ev.keyCode
-                        if (charCode === 40 || charCode === 37) { // Down/Left arrow
-                            if (this.board.microphoneState.getLevel() === 0) {
-                                this.board.microphoneState.setLevel(255);
-                            } else {
-                                this.board.microphoneState.setLevel(this.board.microphoneState.getLevel() - 1);
-                            }
-                            this.applySoundLevel();
-                        } else if (charCode === 38 || charCode === 39) { // Up/Right arrow
-                            if (this.board.microphoneState.getLevel() === 255) {
-                                this.board.microphoneState.setLevel(0);
-                            } else {
-                                this.board.microphoneState.setLevel(this.board.microphoneState.getLevel() + 1);
-                            }
-                            this.applySoundLevel();
-                        }
-                    });
-                this.soundLevelText = svg.child(this.g, "text", { x: 23, y: cy + r - 3, text: '', class: 'sim-text' }) as SVGTextElement;
-                this.updateTheme();
-
-                accessibility.makeFocusable(this.soundLevelButton);
-                accessibility.setAria(this.soundLevelButton, "slider", "Noise level");
-                this.soundLevelButton.setAttribute("aria-valuemin", "0");
-                this.soundLevelButton.setAttribute("aria-valuemax", "255");
-                this.soundLevelButton.setAttribute("aria-orientation", "vertical");
-                this.soundLevelButton.setAttribute("aria-valuenow", "128");
-            }
-
-            svg.setGradientValue(this.soundLevelGradient, Math.min(100, Math.max(0, Math.floor((255 - state.microphoneState.getLevel()) * 100 / 255))) + '%')
-            this.soundLevelText.textContent = state.microphoneState.getLevel().toString();
-        }
-
-        private applySoundLevel() {
-            let lv = this.board.microphoneState.getLevel();
-            svg.setGradientValue(this.soundLevelGradient, Math.min(100, Math.max(0, Math.floor((255 - lv) * 100 / 255))) + '%')
-            this.soundLevelText.textContent = lv.toString();
-            this.soundLevelButton.setAttribute("aria-valuenow", lv.toString());
             accessibility.setLiveContent(lv.toString());
         }
 
@@ -939,6 +897,7 @@ namespace pxsim.visuals {
             svg.child(neopixelmerge, "feMergeNode", { in: "SourceGraphic" })
 
             this.rgbLed = this.element.getElementById("light_bulb") as SVGCircleElement;
+            this.lcd = this.element.getElementById("rect2046") as SVGRectElement;
 
             const btnids = ["BTN_L", "BTN_R", "BTN_U", "BTN_D"];
             const btnlabels = ["Left", "Right", "Up", "Down"];

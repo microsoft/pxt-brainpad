@@ -20,6 +20,7 @@ namespace pxsim {
         export let D7 = -1;
         export let D8 = -1;
         export let D13 = -1;
+        export let BUTTON_LEFT = -1;
 
         export function init() {
             let v = CPlayPinName as any
@@ -37,12 +38,11 @@ namespace pxsim {
         CommonBoard,
         LightBoard,
         LightSensorBoard,
-        MicrophoneBoard,
         MusicBoard,
+        DisplayBoard,
         SlideSwitchBoard,
-        TemperatureBoard,
-        InfraredBoard,
-        CapTouchBoard {
+        TemperatureBoard
+        {
         // state & update logic for component services
         _neopixelState: pxt.Map<CommonNeoPixelState>;
         buttonState: CommonButtonState;
@@ -50,14 +50,10 @@ namespace pxsim {
         lightSensorState: AnalogSensorState;
         thermometerState: AnalogSensorState;
         thermometerUnitState: number;
-        microphoneState: AnalogSensorState;
         edgeConnectorState: EdgeConnectorState;
-        capacitiveSensorState: CapacitiveSensorState;
         accelerometerState: AccelerometerState;
+        displayState: DisplayState;
         audioState: AudioState;
-        touchButtonState: TouchButtonState;
-        irState: InfraredState;
-
         lightBulbState: LightBulbState;
 
         invertAccelerometerYAxis = true;
@@ -72,33 +68,19 @@ namespace pxsim {
             this._neopixelState = {};
             this.bus.setNotify(DAL.DEVICE_ID_NOTIFY, DAL.DEVICE_ID_NOTIFY_ONE);
 
-            //components
-            this.builtinParts["neopixel"] = this.neopixelState(CPlayPinName.D8);
-
-            // The IDs don't realy matter; we just reuse some that are unused on the C++ side
-            this.builtinParts["buttonpair"] = this.buttonState = new CommonButtonState([
-                new CommonButton(DAL.DEVICE_ID_BUTTON_A),
-                new CommonButton(DAL.DEVICE_ID_BUTTON_B),
-                new CommonButton(DAL.DEVICE_ID_BUTTON_AB),
-                new CommonButton(DAL.DEVICE_ID_BUTTON_SLIDE),
+            // IDs do matter!
+            this.buttonState = new CommonButtonState([
+                new CommonButton(15), // left
+                new CommonButton(10), // right
+                new CommonButton(5), // up
+                new CommonButton(13) // down
             ]);
             this.builtinParts["lightbulb"] = this.lightBulbState = new LightBulbState();
-
+            this.builtinParts["display"] = this.displayState = new DisplayState(); 
             this.builtinParts["switch"] = this.slideSwitchState = new SlideSwitchState();
             this.builtinParts["audio"] = this.audioState = new AudioState();
             this.builtinParts["lightsensor"] = this.lightSensorState = new AnalogSensorState(DAL.DEVICE_ID_LIGHT_SENSOR, 0, 255);
             this.builtinParts["thermometer"] = this.thermometerState = new AnalogSensorState(DAL.DEVICE_ID_THERMOMETER, -5, 50);
-            this.builtinParts["soundsensor"] = this.microphoneState = new AnalogSensorState(DAL.DEVICE_ID_TOUCH_SENSOR + 1, 0, 255);
-            this.builtinParts["capacitivesensor"] = this.capacitiveSensorState = new CapacitiveSensorState({
-                0: 0,
-                1: 1,
-                2: 2,
-                3: 3,
-                6: 4,
-                9: 5,
-                10: 6,
-                12: 7
-            });
 
             this.builtinParts["accelerometer"] = this.accelerometerState = new AccelerometerState(runtime);
             this.builtinParts["edgeconnector"] = this.edgeConnectorState = new EdgeConnectorState({
@@ -122,20 +104,8 @@ namespace pxsim {
                 ]
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;
-
             this.builtinVisuals["microservo"] = () => new visuals.MicroServoView();
             this.builtinPartVisuals["microservo"] = (xy: visuals.Coord) => visuals.mkMicroServoPart(xy);
-            this.touchButtonState = new TouchButtonState([
-                pxsim.CPlayPinName.A1,
-                pxsim.CPlayPinName.A2,
-                pxsim.CPlayPinName.A3,
-                pxsim.CPlayPinName.A4,
-                pxsim.CPlayPinName.A5,
-                pxsim.CPlayPinName.A6,
-                pxsim.CPlayPinName.A7
-            ]);
-
-            this.builtinParts["ir"] = this.irState = new InfraredState();
         }
 
         receiveMessage(msg: SimulatorMessage) {
@@ -150,11 +120,6 @@ namespace pxsim {
                 case "serial": {
                     let data = (<SimulatorSerialMessage>msg).data || "";
                     // TODO
-                    break;
-                }
-                case "irpacket": {
-                    let ev = <SimulatorInfraredPacketMessage>msg;
-                    this.irState.receive(new RefBuffer(ev.packet));
                     break;
                 }
             }

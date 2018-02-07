@@ -14,7 +14,7 @@
   "Gesture.TiltLeft": "Raised when the screen is pointing left",
   "Gesture.TiltRight": "Raised when the screen is pointing right",
   "Gesture.TiltUp": "Raised when the device tilts up",
-  "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
+  "input": "Respond to and read data from buttons and sensors.",
   "input.acceleration": "Get the acceleration value in milli-gravitys (when the board is laying flat with the screen up,\nx=0, y=0 and z=-1023)",
   "input.acceleration|param|dimension": "TODO",
   "input.onGesture": "Do something when when a gesture is done (like shaking the board).",

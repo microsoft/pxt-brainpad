@@ -4838,11 +4838,11 @@
          cy="731"
          r="15.8"
          id="circle2044"
-         style="fill:#dcdcdc" /><rect
+         style="fill:yellow" /><rect
          x="1173.9"
          y="118.3"
          width="415.39999"
-         height="283.29999"
+         height="207.29999"
          id="rect2046" /><path
          d="m 369,858.3 c 0,0.1 0,0.2 0,0.4 l 38.5,-26.9 c -12.9,8.6 -25.8,17.3 -38.5,26.5 z"
          id="path2048"
