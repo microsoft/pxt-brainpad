@@ -7,16 +7,18 @@
     "description": "A Blocks / JavaScript code editor for the GHI Brain Pad.",
     "corepkg": "brainpad",
     "ignoreDocsErrors": true,
-    "bundleddirs": [
-        "libs/base",
-        "libs/core",
-        "libs/lightsensor",
-        "libs/music",
-        "libs/thermometer",
-        "libs/buttons",
-        "libs/lightbulb",
-        "libs/brainpad"
-    ],
+  "bundleddirs": [
+    "libs/base",
+    "libs/core",
+    "libs/lightsensor",
+    "libs/accelerometer",
+    "libs/music",
+    "libs/thermometer",
+    "libs/buttons",
+    "libs/lightbulb",
+    "libs/display",
+    "libs/brainpad"
+  ],
     "serial": {
         "useHF2": true,
         "useEditor": true,
@@ -133,7 +135,7 @@
     },
     "compile": {
         "isNative": true,
-        "useUF2": true,
+        "useUF2": false,
         "hasHex": true,
         "deployDrives": ".*",
         "deployFileMarker": "INFO_UF2.TXT",
@@ -191,26 +193,26 @@
         "onStartColor": "#40bf4a",
         "onStartWeight": 100
     },
-    "compileService": {
-        "buildEngine": "codal",
-        "codalTarget": {
-            "name": "codal-brainpad",
-            "url": "https://github.com/lancaster-university/codal-brainpad",
-            "branch": "master",
-            "type": "git"
-        },
-        "codalBinary": "BRAINPAD",
-        "yottaConfig": {
-            "pxt": {
-                "board": {
-                    "id": "BOARD_ID_CPLAY"
-                }
-            }
-        },
-        "githubCorePackage": "lancaster-university/codal",
-        "gittag": "master",
-        "serviceId": "brainpad"
+  "compileService": {
+    "buildEngine": "codal",
+    "codalTarget": {
+      "name": "codal-brainpad",
+      "url": "https://github.com/VictorDuma/codal-brainpad",
+      "branch": "master",
+      "type": "git"
     },
+    "codalBinary": "BRAINPAD",
+    "yottaConfig": {
+      "pxt": {
+        "board": {
+          "id": "BOARD_ID_CPLAY"
+        }
+      }
+    },
+    "githubCorePackage": "VictorDuma/codal",
+    "gittag": "master",
+    "serviceId": "brainpad"
+  },
     "appTheme": {
         "accentColor": "#0089BF",
         "logoUrl": "https://old.ghielectronics.com/catalog/product/536",

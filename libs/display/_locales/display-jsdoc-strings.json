@@ -1,0 +1,7 @@
+{
+  "display.DisplayInit": "Init Display.",
+  "display.DrawCircle": "Draw circle.",
+  "display.DrawRectangle": "Draw rectangle.",
+  "display.SetPixel": "Set Pixel.",
+  "display.WriteScreenBuffer": "Init Display."
+}

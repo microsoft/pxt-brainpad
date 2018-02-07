@@ -7,15 +7,16 @@
         "config.ts",
         "ns.ts"
     ],
-    "dependencies": {
-        "base": "file:../base",
-        "core": "file:../core",
-        "buttons": "file:../buttons",
-        "music": "file:../music",
-        "lightsensor": "file:../lightsensor",
-        "thermometer": "file:../thermometer",
-        "lightbulb": "file:../lightbulb"
-    },
-    "core": true,
+  "dependencies": {
+    "base": "file:../base",
+    "core": "file:../core",
+    "buttons": "file:../buttons",
+    "music": "file:../music",
+    "lightsensor": "file:../lightsensor",
+    "accelerometer": "file:../accelerometer",
+    "display": "file:../display",
+    "thermometer": "file:../thermometer",
+    "lightbulb": "file:../lightbulb"
+  },
     "public": true
 }
