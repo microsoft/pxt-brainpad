@@ -16,5 +16,6 @@
         "thermometer": "file:../thermometer",
         "lightbulb": "file:../lightbulb"
     },
+    "core": true,
     "public": true
 }
