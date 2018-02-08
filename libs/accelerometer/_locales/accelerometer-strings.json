@@ -1,0 +1,8 @@
+{
+  "input.ReadX|block": "read axis X",
+  "input.ReadY|block": "read axis Y",
+  "input.ReadZ|block": "read axis Z",
+  "input.onShake|block": "onShake",
+  "input|block": "input",
+  "{id:category}Input": "Input"
+}

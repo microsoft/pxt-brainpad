@@ -35,6 +35,7 @@ namespace pxsim {
 
     export class DalBoard extends CoreBoard implements
         AccelerometerBoard,
+        AccelBoard,
         CommonBoard,
         LightBoard,
         LightSensorBoard,
@@ -55,6 +56,7 @@ namespace pxsim {
         displayState: DisplayState;
         audioState: AudioState;
         lightBulbState: LightBulbState;
+        accelState: AccelState;
 
         invertAccelerometerYAxis = true;
 
@@ -71,12 +73,13 @@ namespace pxsim {
             // IDs do matter!
             this.buttonState = new CommonButtonState([
                 new CommonButton(15), // left
-                new CommonButton(10), // right
+                new CommonButton(45), // right
                 new CommonButton(5), // up
-                new CommonButton(13) // down
+                new CommonButton(26) // down
             ]);
             this.builtinParts["lightbulb"] = this.lightBulbState = new LightBulbState();
             this.builtinParts["display"] = this.displayState = new DisplayState(); 
+            this.builtinParts["accelerometer"] = this.accelState = new AccelState(); 
             this.builtinParts["switch"] = this.slideSwitchState = new SlideSwitchState();
             this.builtinParts["audio"] = this.audioState = new AudioState();
             this.builtinParts["lightsensor"] = this.lightSensorState = new AnalogSensorState(DAL.DEVICE_ID_LIGHT_SENSOR, 0, 255);

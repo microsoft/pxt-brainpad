@@ -135,7 +135,7 @@
     },
     "compile": {
         "isNative": true,
-        "useUF2": false,
+        "useUF2": true,
         "hasHex": true,
         "deployDrives": ".*",
         "deployFileMarker": "INFO_UF2.TXT",
@@ -197,8 +197,8 @@
     "buildEngine": "codal",
     "codalTarget": {
       "name": "codal-brainpad",
-      "url": "https://github.com/VictorDuma/codal-brainpad",
-      "branch": "master",
+      "url": "https://github.com/VictorDuma/codal-brainpad-1",
+      "branch": "v0.0.7",
       "type": "git"
     },
     "codalBinary": "BRAINPAD",
@@ -209,7 +209,7 @@
         }
       }
     },
-    "githubCorePackage": "VictorDuma/codal",
+    "githubCorePackage": "lancaster-university/codal",
     "gittag": "master",
     "serviceId": "brainpad"
   },
