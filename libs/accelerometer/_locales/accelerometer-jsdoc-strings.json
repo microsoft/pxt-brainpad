@@ -1,7 +1,0 @@
-{
-  "input": "Respond to and read data from buttons and sensors.",
-  "input.ReadX": "Read Axis X.",
-  "input.ReadY": "Read Axis Y.",
-  "input.ReadZ": "Read Axis Z.",
-  "input.onShake": "OnShake."
-}
