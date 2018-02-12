@@ -10,6 +10,9 @@
     "languages": [
         "en"
     ],
-    "galleries": {
-    }
+  "galleries": {
+
+    "Tutorials": "tutorials"
+
+  }
 }
