@@ -3,7 +3,7 @@
 ## Step 1 @fullscreen
 The BrainPad is equipped with an onboard light sensor. We can use this sensor to trigger an action when the light reaches a certain level. 
 
-![BrainPad Temperature Sensor image](/images/light.jpg)
+![BrainPad Temperature Sensor image](/static/images/light.jpg)
 
 ## Step 2 @fullscreen
 In this tutorial, we will start using ``||logic:LOGIC||`` blocks. In this case we will use an ``||logic:If-Then||`` block. Drag an ``||logic:If-Then||`` block into the ``||loops:forever||`` block, as demonstrated in the example below. The ``||logic:If-Then||`` block is found under the ``||logic:LOGIC||`` tab.
@@ -42,7 +42,7 @@ loops.forever(function () {
 ## Step 5 @fullscreen
 If you look at the BrainPad simulator, you'll noticed that a new highlight is revealled on top of the Light Sensor. This is where we control the virtual light levels, within our simulator using the mouse. 
 
-![BrainPad Temperature Sensor image](/images/lightSensor_Gauge.gif)
+![BrainPad Temperature Sensor image](/static/images/lightSensor_Gauge.gif)
 
 ## Step 6 @fullscreen
 Now, Let's make the BrainPad, light up our Light Blub, when the ``||input:light level||`` = ``||logic:0||``. To accomplish this drag in ``||light bulb:setColor||`` inside our ``||logic:If-Then||`` block. 

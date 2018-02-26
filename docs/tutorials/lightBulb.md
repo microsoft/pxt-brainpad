@@ -24,7 +24,7 @@ If you look in the simulator, you'll see that our Light Bulb is now RED.
 
 Click on the RED bubble inside the block we just added. Here you'll be able to change the color of the Light Bulb to any of the colors available on the pallette. 
 
-![Set color](/images/setColorMakeCode.gif)
+![Set color](/static/images/setColorMakeCode.gif)
 
 ## Step 1a @fullscreen
 But what if the exact color you want isn't on the pallette? We can add parameters to change the values. To accomplish this task, we will use two different blocks.
@@ -35,7 +35,7 @@ But what if the exact color you want isn't on the pallette? We can add parameter
 lightbulb.rgb(255, 0, 0)
 lightbulb.setColor(0xFF0000)
 ```
-![Set color](/images/setColorRGB.gif)
+![Set color](/static/images/setColorRGB.gif)
 
 
 ## Step 6  @fullscreen
