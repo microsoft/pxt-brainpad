@@ -1,0 +1,21 @@
+{
+    "name": "touch",
+    "description": "The capacitive touch library",
+    "files": [
+        "README.md",
+        "touch.h",
+        "touch.cpp",
+        "touch.ts",
+        "shims.d.ts",
+        "enums.d.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/touch",
+    "public": true,
+    "dependencies": {
+        "core": "file:../core",
+        "buttons": "file:../buttons"
+    }
+}

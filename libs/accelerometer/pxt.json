@@ -1,0 +1,17 @@
+{
+  "name": "accelerometer",
+  "description": "A accelerometer driver",
+  "files": [
+    "accelerometer.cpp",
+    "shims.d.ts",
+    "enums.d.ts",
+    "ns.ts"
+  ],
+  "testFiles": [
+    "test.ts"
+  ],
+  "public": true,
+  "dependencies": {
+    "core": "file:../core"
+  }
+}
