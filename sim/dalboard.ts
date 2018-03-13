@@ -33,6 +33,11 @@ namespace pxsim {
         }
     }
 
+    const paletteSrc = [
+        "#000000", // black
+        "#ffffff", // white
+    ];    
+
     export class DalBoard extends CoreBoard implements
         AccelerometerBoard,
         AccelBoard,
@@ -40,9 +45,9 @@ namespace pxsim {
         LightBoard,
         LightSensorBoard,
         MusicBoard,
-        DisplayBoard,
         SlideSwitchBoard,
-        TemperatureBoard
+        TemperatureBoard,
+        ScreenBoard
         {
         // state & update logic for component services
         _neopixelState: pxt.Map<CommonNeoPixelState>;
@@ -53,10 +58,10 @@ namespace pxsim {
         thermometerUnitState: number;
         edgeConnectorState: EdgeConnectorState;
         accelerometerState: AccelerometerState;
-        displayState: DisplayState;
         audioState: AudioState;
         lightBulbState: LightBulbState;
         accelState: AccelState;
+        screenState: ScreenState;
 
         invertAccelerometerYAxis = true;
 
@@ -78,12 +83,12 @@ namespace pxsim {
                 new CommonButton(26) // down
             ]);
             this.builtinParts["lightbulb"] = this.lightBulbState = new LightBulbState();
-            this.builtinParts["display"] = this.displayState = new DisplayState(); 
             this.builtinParts["accelerometer"] = this.accelState = new AccelState(); 
             this.builtinParts["switch"] = this.slideSwitchState = new SlideSwitchState();
             this.builtinParts["audio"] = this.audioState = new AudioState();
             this.builtinParts["lightsensor"] = this.lightSensorState = new AnalogSensorState(DAL.DEVICE_ID_LIGHT_SENSOR, 0, 255);
             this.builtinParts["thermometer"] = this.thermometerState = new AnalogSensorState(DAL.DEVICE_ID_THERMOMETER, -5, 50);
+            this.builtinParts["screen"] = this.screenState = new ScreenState(paletteSrc, 128, 64);
 
             this.builtinParts["accelerometer"] = this.accelerometerState = new AccelerometerState(runtime);
             this.builtinParts["edgeconnector"] = this.edgeConnectorState = new EdgeConnectorState({
