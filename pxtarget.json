@@ -16,7 +16,7 @@
     "libs/thermometer",
     "libs/buttons",
     "libs/lightbulb",
-    "libs/display",
+    "libs/screen",
     "libs/brainpad"
   ],
     "serial": {

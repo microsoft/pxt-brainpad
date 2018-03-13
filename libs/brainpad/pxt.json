@@ -14,7 +14,7 @@
     "music": "file:../music",
     "lightsensor": "file:../lightsensor",
     "accelerometer": "file:../accelerometer",
-    "display": "file:../display",
+    "screen": "file:../screen",
     "thermometer": "file:../thermometer",
     "lightbulb": "file:../lightbulb"
   },
