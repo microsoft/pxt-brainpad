@@ -27,6 +27,8 @@
 
 #define CODAL_MBED codal::_mbed
 
+#define IMAGE_BITS 1
+
 // The parameters below needs tuning!
 
 /*
