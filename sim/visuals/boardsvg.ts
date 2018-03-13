@@ -10,6 +10,7 @@ namespace pxsim.visuals {
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    version="1.1"
    x="0px"
    y="0px"
@@ -4839,7 +4840,7 @@ namespace pxsim.visuals {
          cy="731"
          r="15.8"
          id="circle2044"
-         style="fill:#dcdcdc" /><rect
+         style="fill:#dcdcdc" /><image
          x="1173.9"
          y="118.3"
          width="415.39999"

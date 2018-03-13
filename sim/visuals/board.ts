@@ -304,7 +304,7 @@ namespace pxsim.visuals {
         private irReceiver: SVGElement;
         private irTransmitter: SVGElement;
         private redLED: SVGRectElement;
-        private lcd: SVGRectElement;
+        private lcd: SVGImageElement;
         private slideSwitch: SVGGElement;
         private lightLevelButton: SVGCircleElement;
         private lightLevelGradient: SVGLinearGradientElement;
@@ -318,6 +318,8 @@ namespace pxsim.visuals {
         private antenna: SVGPolylineElement;
         private shakeButtonGroup: SVGElement;
         private shakeText: SVGTextElement;
+        private screenCanvas: HTMLCanvasElement;
+
         public board: pxsim.DalBoard;
         private pinNmToCoord: Map<Coord> = {
         };
@@ -336,6 +338,7 @@ namespace pxsim.visuals {
                 this.board.updateSubscribers.push(() => this.updateState());
                 this.updateState();
                 this.attachEvents();
+                this.initScreen();
             }
         }
 
@@ -345,6 +348,37 @@ namespace pxsim.visuals {
                 if (key != null)
                     pn.id = getConfig(key);
             }
+        }
+
+        private initScreen() {
+            let requested = false;
+            this.board.screenState.onChange = () => {
+                this.screenCanvas.width = this.board.screenState.width
+                this.screenCanvas.height = this.board.screenState.height
+
+                const ctx = this.screenCanvas.getContext("2d")
+                ctx.imageSmoothingEnabled = false
+                const imgdata = ctx.getImageData(0, 0, this.board.screenState.width, this.board.screenState.height)
+                const arr = new Uint32Array(imgdata.data.buffer)
+
+                let flush = () => {
+                    requested = false
+                    ctx.putImageData(imgdata, 0, 0)
+                }
+
+                // after we did one-time setup, redefine ourselves to be quicker
+                this.board.screenState.onChange = () => {
+                    arr.set(this.board.screenState.screen)
+                    // paint rect
+                    this.lcd.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", this.screenCanvas.toDataURL());
+                    if (!requested) {
+                        requested = true
+                        window.requestAnimationFrame(flush)
+                    }
+                }
+                // and finally call the redefined self
+                this.board.screenState.onChange()
+            }                        
         }
 
         public getView(): SVGAndSize<SVGSVGElement> {
@@ -424,7 +458,6 @@ namespace pxsim.visuals {
             // this.updateSwitch();
             this.updateSound();
             this.updateLightLevel();
-            this.updateLCD();
             // this.updateSoundLevel();
             // this.updateButtonAB();
             this.updateTemperature();
@@ -477,37 +510,6 @@ namespace pxsim.visuals {
             let fillColor = ledOn ? "#FF0000" : "#000000";
             svg.fill(this.redLED, fillColor);
         }
-
-        private updateLCD() {
-            let state = this.board;
-            const tranformDisplay = 3.24; //according device display size
-            let shapes = new Array();
-            const display = state.displayState;
-            if (!state || !display) return;
-            if (display.Init()) {
-                display.inited == true;
-                svg.fill(this.lcd, `#1F73D1`);
-                console.log(display.inited);
-            }
-            if (display.GetCircle()) {
-                const circle = state.displayState.GetCircle();
-                <SVGCircleElement>svg.child(this.g, "circle", { class: "sim-drawcircle", cx: 1130 + circle[0] * tranformDisplay, cy: 105 + circle[1] * tranformDisplay, r: circle[2] * tranformDisplay });
-                
-            }
-            if (display.GetRectangle()) {
-                const rectangle = state.displayState.GetRectangle();
-                <SVGRectElement>svg.child(this.g, "rect", {
-                    class: "sim-drawcircle",
-                    x: 1130 + rectangle[0] * tranformDisplay,
-                    y: 105 + rectangle[1] * tranformDisplay,
-                    width: rectangle[2] * tranformDisplay,
-                    height: rectangle[3] * tranformDisplay,
-                   });
-
-            }
-
-                //svg.child(this.g, "text", { x: 100, y: 50, text: 'Hello!', class: 'sim-text' }) as SVGTextElement;
-         }
 
         private updateRgbLed() {
             let state = this.board;
@@ -897,7 +899,7 @@ namespace pxsim.visuals {
             svg.child(neopixelmerge, "feMergeNode", { in: "SourceGraphic" })
 
             this.rgbLed = this.element.getElementById("light_bulb") as SVGCircleElement;
-            this.lcd = this.element.getElementById("rect2046") as SVGRectElement;
+            this.lcd = this.element.getElementById("rect2046") as SVGImageElement;
 
             const btnids = ["BTN_L", "BTN_R", "BTN_U", "BTN_D"];
             const btnlabels = ["Left", "Right", "Up", "Down"];
@@ -910,6 +912,8 @@ namespace pxsim.visuals {
             this.buttonsOuter.forEach(b => svg.addClass(b, "sim-button-outer"));
             this.buttons = btnids.map(n => this.element.getElementById(n + "_INNER") as SVGElement);
             this.buttons.forEach(b => svg.addClass(b, "sim-button"));
+
+            this.screenCanvas = document.createElement("canvas");
 
             // this.pins = pinNames.map((pin, i) => {
             //     const n = pin.name;
