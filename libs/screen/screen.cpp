@@ -7,7 +7,9 @@ namespace pxt {
         BrainPadDisplay lcd;
         WDisplay()
             : lcd(*LOOKUP_PIN(SDA), *LOOKUP_PIN(SCL))
-        {}
+        {
+            lcd.InitScreen();
+        }
     };
 
     SINGLETON(WDisplay);
