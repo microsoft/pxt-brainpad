@@ -18,7 +18,6 @@
     "libs/lightbulb",
     "libs/screen",
     "libs/game",
-    "libs/keys",
     "libs/turtle",
     "libs/brainpad"
   ],

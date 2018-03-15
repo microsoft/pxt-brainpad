@@ -15,7 +15,7 @@ namespace pxt {
     //%
     void updateScreen(RefImage img) {
         auto display = getWDisplay();
-        display->lcd.writeScreenBuffer(img.data());
+        display->lcd.writeScreenBuffer(img.pix());
     }
 
     //%
