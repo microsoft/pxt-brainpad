@@ -459,7 +459,6 @@ namespace pxsim.visuals {
             this.updateSound();
             this.updateLightLevel();
             // this.updateSoundLevel();
-            // this.updateButtonAB();
             this.updateTemperature();
             // this.updateInfrared();
 
@@ -803,15 +802,6 @@ namespace pxsim.visuals {
             this.thermometer.setAttribute("aria-valuenow", t.toString());
             this.thermometer.setAttribute("aria-valuetext", t + unit);
             accessibility.setLiveContent(t + unit);
-        }
-
-        private updateButtonAB() {
-            let state = this.board;
-            if (state.buttonState.usesButtonAB) {
-                (<any>this.buttonsOuter[2]).style.visibility = "visible";
-                (<any>this.buttons[2]).style.visibility = "visible";
-                this.updateTheme();
-            }
         }
 
         private updateGestures() {
