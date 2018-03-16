@@ -1,3 +1,8 @@
 {
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/game"
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/game",
+    "dependencies": {
+        "screen": "file:../screen",
+        "music": "file:../music",
+        "keys": "file:../keys"
+    }
 }
