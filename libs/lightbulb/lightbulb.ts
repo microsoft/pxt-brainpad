@@ -5,7 +5,7 @@
 //% groups='["other", "Colors"]'
 //% color="#0078d7" weight=97 icon="\uf0eb"
 namespace lightbulb {
-    let _brightness: number = 20;
+    let _brightness: number = 16;
     let _color: number = 0;
     /**
      * Make the on-board RGB LED show an RGB color (range 0-255 for r, g, b).
