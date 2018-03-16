@@ -7,8 +7,8 @@ declare namespace lightbulb {
      * @param green the green color
      * @param blue the blue color
      */
-    //% parts="rgbled" shim=lightbulb::setRGBLed
-    function setRGBLed(r: int32, g: int32, b: int32): void;
+    //% shim=lightbulb::__setRGBLed
+    function __setRGBLed(r: int32, g: int32, b: int32): void;
 }
 
 // Auto-generated. Do not edit. Really.

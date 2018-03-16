@@ -7,8 +7,8 @@ namespace lightbulb {
      * @param green the green color
      * @param blue the blue color
      */
-     //% parts="rgbled"
-    void setRGBLed(int r, int g, int b) {
+     //% 
+    void __setRGBLed(int r, int g, int b) {
         auto rp = lookupPin(PC_9);
         auto gp = lookupPin(PC_8);
         auto bp = lookupPin(PC_6);          

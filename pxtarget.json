@@ -20,6 +20,7 @@
     "libs/keys",
     "libs/game",
     "libs/turtle",
+    "libs/display",
     "libs/brainpad"
   ],
     "serial": {

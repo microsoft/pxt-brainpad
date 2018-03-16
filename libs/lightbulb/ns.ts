@@ -38,7 +38,7 @@ namespace lightbulb {
     //% blockHidden=true
     //% shim=TD_ID colorSecondary="#FFFFFF"
     //% color.fieldEditor="colornumber" color.fieldOptions.decompileLiterals=true
-    //% color.fieldOptions.colours='["#FF0000", "#ff8000", "#ffff00", "#00ff00", "#00ffff", "#007fff", "#0000ff", "#7f00ff", "#ff0080", "#ff00ff", "#ffffff", "#999999"]'
+    //% color.fieldOptions.colours='["#FF0000", "#ff8000", "#ffff00", "#00ff00", "#00ffff", "#007fff", "#0000ff", "#7f00ff", "#ff0080", "#ff00ff", "#557714", "#805215", "#ffffff", "#999999", "#000000"]'
     //% color.fieldOptions.columns=3 color.fieldOptions.className='rgbColorPicker'
     export function __colorNumberPicker(color: number): number {
         return color;

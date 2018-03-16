@@ -16,7 +16,8 @@
     "accelerometer": "file:../accelerometer",
     "screen": "file:../screen",
     "thermometer": "file:../thermometer",
-    "lightbulb": "file:../lightbulb"
+    "lightbulb": "file:../lightbulb",
+    "display": "file:../display"
   },
     "public": true
 }

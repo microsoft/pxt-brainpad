@@ -5,9 +5,8 @@
 //% groups='["other", "Colors"]'
 //% color="#0078d7" weight=97 icon="\uf0eb"
 namespace lightbulb {
-
-    let _brightness: number;
-
+    let _brightness: number = 16;
+    let _color: number = 0;
     /**
      * Make the on-board RGB LED show an RGB color (range 0-255 for r, g, b).
      * @param rgb RGB color of the LED, eg: Colors.Red
@@ -15,36 +14,29 @@ namespace lightbulb {
     //% blockId="rgb_set_color" block="set light bulb to %rgb=colorNumberPicker"
     //% weight=90 help="rgb/set-color"
     export function setColor(rgb: number) {
-        if (_brightness == undefined) {
-            _brightness = 20;
-        }
-
-        rgb = fade(rgb, _brightness);
-        let red = unpackR(rgb);
-        let green = unpackG(rgb);
-        let blue = unpackB(rgb);
-
-        setRGBLed(red, green, blue);
+        _color = rgb;
+        update();
     }
-    /**
-     * Clear the on-board RGB LED, turning it off.
-     */
-    //% blockId="rgb_clear" block="clear light bulb"
-    //% weight=89 help="rgb/clear"
-    export function clear() {
-        setRGBLed(0, 0, 0);
+
+    function update() {
+        const c = fade(_color, _brightness);
+        const red = unpackR(c);
+        const green = unpackG(c);
+        const blue = unpackB(c);
+        __setRGBLed(red, green, blue);
     }
 
     /**
      * Set the brightness of the LED. This change the brightness for the next operation.
-     * @param brightness a measure of LED brightness in 0-100. eg: 15
+     * @param brightness a measure of LED brightness in 0-255. eg: 15
      */
     //% blockId="rgb_set_brightness" block="set brightness %brightness"
     //% weight=1 blockGap=8
-    //% brightness.min=0 brightness.max=100
+    //% brightness.min=0 brightness.max=255
     //% help="rgb/set-brightness"
     export function setBrightness(brightness: number): void {
         _brightness = Math.max(0, Math.min(0xff, brightness >> 0));
+        update();
     }
 
     /**
@@ -53,8 +45,9 @@ namespace lightbulb {
      * @param level dim level between 0 and 5 eg: 1
      */
     //% blockId="rgb_dim" block="dim %rgb=rgb_colors |%level"
-    //% level.min=0 level.max=5
+    //% level.min=0 level.max=5 blockGap=8
     //% weight=80 help="rgb/dim"
+    //% group="Colors"
     export function dim(rgb: number, level: number): number {
         if(level < 0)
             level = 0;
@@ -126,8 +119,6 @@ namespace lightbulb {
     }
 
     function fade(color: number, brightness: number): number {
-        brightness = Math.max(0, Math.min(100, brightness >> 0));
-        brightness = Math.map(brightness, 0, 100, 0, 255);
         if (brightness < 255) {
             let red = unpackR(color);
             let green = unpackG(color);

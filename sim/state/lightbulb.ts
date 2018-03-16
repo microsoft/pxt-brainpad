@@ -18,7 +18,7 @@ namespace pxsim {
 }
 
 namespace pxsim.lightbulb {
-    export function setRGBLed(r: number, g: number, b: number): void {
+    export function __setRGBLed(r: number, g: number, b: number): void {
         const led = (board() as DalBoard).lightBulbState;
         led.setColor(r, g, b);
         runtime.queueDisplayUpdate();
