@@ -12,10 +12,22 @@ namespace pxt {
 
     SINGLETON(WDisplay);
 
+    static Image_ lastImg;
     //%
-    void updateScreen(RefImage img) {
-        auto display = getWDisplay();
-        display->lcd.writeScreenBuffer(img.pix());
+    void updateScreen(Image_ img) {
+        if (img && img != lastImg) {
+            decrRC(lastImg);
+            incrRC(img);
+            lastImg = img;
+        }
+
+        if (lastImg && lastImg->isDirty()) {
+            if (lastImg->bpp() != 1 || lastImg->width() != LCD_WIDTH || lastImg->height() != LCD_HEIGHT)
+                target_panic(906);
+            lastImg->clearDirty();
+            auto display = getWDisplay();
+            display->lcd.writeScreenBuffer(lastImg->pix());
+        }
     }
 
     //%

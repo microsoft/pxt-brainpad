@@ -28,6 +28,9 @@
 #define CODAL_MBED codal::_mbed
 
 #define IMAGE_BITS 1
+#define LCD_WIDTH 128
+#define LCD_HEIGHT 64
+
 
 // The parameters below needs tuning!
 
