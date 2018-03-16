@@ -1,12 +1,6 @@
 #include "pxtbase.h"
 
 using namespace std;
-
-
-namespace lightbulb {
-     //% parts="rgbled"
-    void setRGBLed(int r, int g, int b);
-    }
     
 namespace pxt {
 
@@ -536,7 +530,8 @@ void exec_binary(unsigned *pc) {
     // repeat error 4 times and restart as needed
     // microbit_panic_timeout(4);
 
-    lightbulb::setRGBLed(0,255,0);
+    // don't turn on LED
+    // lightbulb::setRGBLed(0,255,0);
 
     unsigned ver = *pc++;
     checkStr(ver == 0x4209, ":( Bad runtime version");

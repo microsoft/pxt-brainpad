@@ -371,6 +371,7 @@ namespace pxsim.visuals {
                     arr.set(this.board.screenState.screen)
                     // paint rect
                     this.lcd.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", this.screenCanvas.toDataURL());
+                    runtime.queueDisplayUpdate();
                     if (!requested) {
                         requested = true
                         window.requestAnimationFrame(flush)
