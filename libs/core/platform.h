@@ -6,6 +6,7 @@
 #include "MbedI2C.h"
 #include "MbedPin.h"
 #include "MultiButton.h"
+#include "BrainPadPin.h"
 
 //#include "SAMD21DMAC.h"
 
@@ -26,6 +27,7 @@
 //#define PlatformDMAC SAMD21DMAC
 
 #define CODAL_MBED codal::_mbed
+#define CODAL_PIN codal::BrainPadPin
 
 #define IMAGE_BITS 1
 #define LCD_WIDTH 128
