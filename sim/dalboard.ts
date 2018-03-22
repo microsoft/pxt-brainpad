@@ -36,7 +36,7 @@ namespace pxsim {
     const paletteSrc = [
         "#000000", // black
         "#00FFFF", // teal
-    ];    
+    ];
 
     export class DalBoard extends CoreBoard implements
         AccelerometerBoard,
@@ -47,8 +47,7 @@ namespace pxsim {
         MusicBoard,
         SlideSwitchBoard,
         TemperatureBoard,
-        ScreenBoard
-        {
+        ScreenBoard {
         // state & update logic for component services
         _neopixelState: pxt.Map<CommonNeoPixelState>;
         buttonState: CommonButtonState;
@@ -83,7 +82,7 @@ namespace pxsim {
                 new CommonButton(26) // down
             ]);
             this.builtinParts["lightbulb"] = this.lightBulbState = new LightBulbState();
-            this.builtinParts["accelerometer"] = this.accelState = new AccelState(); 
+            this.builtinParts["accelerometer"] = this.accelState = new AccelState();
             this.builtinParts["switch"] = this.slideSwitchState = new SlideSwitchState();
             this.builtinParts["audio"] = this.audioState = new AudioState();
             this.builtinParts["lightsensor"] = this.lightSensorState = new AnalogSensorState(DAL.DEVICE_ID_LIGHT_SENSOR, 0, 255);
@@ -158,6 +157,8 @@ namespace pxsim {
 
             document.body.innerHTML = ""; // clear children
             document.body.appendChild(this.view = viewHost.getView() as SVGSVGElement);
+
+            this.accelerometerState.attachEvents(this.view);
 
             return Promise.resolve();
         }

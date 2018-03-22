@@ -453,7 +453,6 @@ namespace pxsim.visuals {
             this.updateGestures();
 
             // this.updatePins();
-            // this.updateTilt();
             // this.updateRedLED();
             // this.updateNeoPixels();
             // this.updateSwitch();
@@ -843,21 +842,6 @@ namespace pxsim.visuals {
             }
         }
 
-        private updateTilt() {
-            if (this.props.disableTilt) return;
-            let state = this.board;
-            if (!state || !state.accelerometerState.accelerometer.isActive) return;
-
-            const x = state.accelerometerState.accelerometer.getX();
-            const y = state.accelerometerState.accelerometer.getY();
-            const af = 8 / 1023;
-            const s = 1 - Math.min(0.1, Math.pow(Math.max(Math.abs(x), Math.abs(y)) / 1023, 2) / 35);
-
-            this.element.style.transform = `perspective(30em) rotateX(${y * af}deg) rotateY(${x * af}deg) scale(${s}, ${s})`
-            this.element.style.perspectiveOrigin = "50% 50% 50%";
-            this.element.style.perspective = "30em";
-        }
-
         private buildDom() {
             this.element = new DOMParser().parseFromString(BOARD_SVG, "image/svg+xml").querySelector("svg") as SVGSVGElement;
             svg.hydrate(this.element, {
@@ -964,52 +948,6 @@ namespace pxsim.visuals {
                     case "irpacket": this.flashIrTransmitter(); break;
                 }
             }
-
-            let tiltDecayer = 0;
-            this.element.addEventListener(pointerEvents.move, (ev: MouseEvent) => {
-                let state = this.board;
-                if (!state.accelerometerState.accelerometer.isActive) return;
-
-                if (tiltDecayer) {
-                    clearInterval(tiltDecayer);
-                    tiltDecayer = 0;
-                }
-
-                let bbox = this.element.getBoundingClientRect();
-                let ax = (ev.clientX - bbox.width / 2) / (bbox.width / 3);
-                let ay = (ev.clientY - bbox.height / 2) / (bbox.height / 3);
-
-                let x = - Math.max(- 1023, Math.min(1023, Math.floor(ax * 1023)));
-                let y = Math.max(- 1023, Math.min(1023, Math.floor(ay * 1023)));
-                let z2 = 1023 * 1023 - x * x - y * y;
-                let z = Math.floor((z2 > 0 ? -1 : 1) * Math.sqrt(Math.abs(z2)));
-
-                state.accelerometerState.accelerometer.update(-x, y, z);
-                this.updateTilt();
-            }, false);
-            this.element.addEventListener(pointerEvents.leave, (ev: MouseEvent) => {
-                let state = this.board;
-                if (!state.accelerometerState.accelerometer.isActive) return;
-
-                if (!tiltDecayer) {
-                    tiltDecayer = setInterval(() => {
-                        let accx = state.accelerometerState.accelerometer.getX(MicroBitCoordinateSystem.RAW);
-                        accx = Math.floor(Math.abs(accx) * 0.85) * (accx > 0 ? 1 : -1);
-                        let accy = state.accelerometerState.accelerometer.getY(MicroBitCoordinateSystem.RAW);
-                        accy = Math.floor(Math.abs(accy) * 0.85) * (accy > 0 ? 1 : -1);
-                        let accz = -Math.sqrt(Math.max(0, 1023 * 1023 - accx * accx - accy * accy));
-                        if (Math.abs(accx) <= 24 && Math.abs(accy) <= 24) {
-                            clearInterval(tiltDecayer);
-                            tiltDecayer = 0;
-                            accx = 0;
-                            accy = 0;
-                            accz = -1023;
-                        }
-                        state.accelerometerState.accelerometer.update(accx, -accy, accz);
-                        this.updateTilt();
-                    }, 50)
-                }
-            }, false);
 
             let bpState = this.board.buttonState;
             let stateButtons = bpState.buttons;
