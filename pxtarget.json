@@ -17,9 +17,6 @@
     "libs/buttons",
     "libs/lightbulb",
     "libs/screen",
-    "libs/keys",
-    "libs/game",
-    "libs/turtle",
     "libs/display",
     "libs/brainpad"
   ],
