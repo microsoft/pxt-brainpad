@@ -220,7 +220,7 @@
   },
     "appTheme": {
         "accentColor": "#0089BF",
-        "logoUrl": "https://old.ghielectronics.com/catalog/product/536",
+        "logoUrl": "https://www.brainpad.com/",
         "logo": "./static/logo.png",
         "docsLogo": "./static/logo.square.png",
         "portraitLogo": "./static/logo.square.png",
@@ -229,8 +229,8 @@
         "organizationUrl": "https://makecode.com/",
         "organizationLogo": "./static/Microsoft-logo_rgb_c-gray-square.png",
         "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
-        "homeUrl": "https://makecode.ghielectronics.com/",
-        "embedUrl": "https://makecode.ghielectronics.com/",
+        "homeUrl": "https://makecode.brainpad.com/",
+        "embedUrl": "https://makecode.brainpad.com/",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
         "githubUrl": "https://github.com/Microsoft/pxt-brainpad",
@@ -253,7 +253,7 @@
             },
             {
                 "name": "Buy",
-                "path": "https://old.ghielectronics.com/catalog/product/536"
+                "path": "https://www.brainpad.com/buy"
             }
         ],
         "showHomeScreen": true,
