@@ -1,0 +1,39 @@
+
+/*******************************
+    Blockly toolbox
+*******************************/
+
+div.blocklyTreeRow {
+    border-left-width: 6px !important;
+}
+
+/* Blockly Text */
+span.blocklyTreeLabel {
+    font-family: "Gotham SSm A","Gotham SSm B","Montserrat","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif  !important;
+    text-transform: uppercase !important;
+    font-size:1rem !important;
+}
+
+/* Toolbox */
+.blocklyToolboxDiv, .monacoToolboxDiv, .blocklyAddPackageDiv {
+    padding: 0.1rem;
+    border-right: solid 1px #EEEEEE;
+}
+/* Search box */
+#blocklySearchArea {
+    margin: 0.5rem;
+    margin-top: 0.1rem;
+}
+
+/* Mobile */
+@media only screen and (max-width: @largestMobileScreen) {
+    div.blocklyTreeRow {
+        padding-left: 0px !important;
+    }
+    #blocklyTrashIcon {
+        margin: 0.2rem;
+    }
+    .blocklyToolboxDiv, .monacoToolboxDiv, .blocklyAddPackageDiv {
+        padding: 0.2rem;
+    }
+}
