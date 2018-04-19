@@ -19,7 +19,7 @@ declare namespace pins {
 }
 
 
-declare interface AnalogPin {
+declare interface AnalogInPin {
     /**
      * Read the connector value as analog, that is, as a value comprised between 0 and 1023.
      * @param name pin to write to
@@ -27,11 +27,15 @@ declare interface AnalogPin {
     //% help=pins/analog-read weight=53
     //% blockId=device_get_analog_pin block="analog read|pin %name" blockGap="8"
     //% blockNamespace=pins
+    //% parts="photocell" trackArgs=0
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
-    //% name.fieldOptions.columns=4 shim=AnalogPinMethods::analogRead
+    //% name.fieldOptions.columns=4 shim=AnalogInPinMethods::analogRead
     analogRead(): int32;
+}
 
+
+declare interface AnalogOutPin {
     /**
      * Set the connector value as analog. Value must be comprised between 0 and 1023.
      * @param name pin name to write to
@@ -40,9 +44,10 @@ declare interface AnalogPin {
     //% help=pins/analog-write weight=52
     //% blockId=device_set_analog_pin block="analog write|pin %name|to %value" blockGap=8
     //% blockNamespace=pins
+    //% parts="analogled" trackArgs=0
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
-    //% name.fieldOptions.columns=4 shim=AnalogPinMethods::analogWrite
+    //% name.fieldOptions.columns=4 shim=AnalogOutPinMethods::analogWrite
     analogWrite(value: int32): void;
 }
 
