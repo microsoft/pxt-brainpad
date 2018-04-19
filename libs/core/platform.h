@@ -28,6 +28,7 @@
 
 #define CODAL_MBED codal::_mbed
 #define CODAL_PIN codal::BrainPadPin
+#define CODAL_ACCELEROMETER codal::MMA8453
 
 #define IMAGE_BITS 1
 #define LCD_WIDTH 128
