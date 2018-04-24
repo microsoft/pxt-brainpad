@@ -35,7 +35,7 @@
         "streams": false,
         "aspectRatio": 1.8,
         "parts": false,
-        "enableTrace": true,
+        "debugger": true,
         "boardDefinition": {
             "visual": "brainpad",
             "gpioPinBlocks": [
