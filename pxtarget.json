@@ -200,7 +200,7 @@
     "codalTarget": {
       "name": "codal-brainpad",
       "url": "https://github.com/ghi-electronics/codal-brainpad",
-      "branch": "v0.0.11",
+      "branch": "v0.0.13",
       "type": "git"
     },
     "codalBinary": "BRAINPAD",
