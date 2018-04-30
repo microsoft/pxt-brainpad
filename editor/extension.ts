@@ -1,7 +1,5 @@
 /// <reference path="../node_modules/pxt-core/built/pxteditor.d.ts" />
 
-import lf = pxt.Util.lf;
-
 namespace pxt.editor {
     initExtensionsAsync = function (opts: pxt.editor.ExtensionOptions): Promise<pxt.editor.ExtensionResult> {
         pxt.debug('loading pxt-brainpad target extensions...')
