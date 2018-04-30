@@ -35,7 +35,7 @@
         "streams": false,
         "aspectRatio": 1.8,
         "parts": false,
-        "enableTrace": true,
+        "debugger": true,
         "boardDefinition": {
             "visual": "brainpad",
             "gpioPinBlocks": [
@@ -200,7 +200,7 @@
     "codalTarget": {
       "name": "codal-brainpad",
       "url": "https://github.com/ghi-electronics/codal-brainpad",
-      "branch": "v0.0.9",
+      "branch": "v0.0.14",
       "type": "git"
     },
     "codalBinary": "BRAINPAD",

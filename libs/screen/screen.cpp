@@ -3,10 +3,12 @@
 
 namespace pxt {
     class WDisplay {
+        CODAL_MBED::I2C i2c; // note that this is different pins than io->i2c
     public:
         BrainPadDisplay lcd;
         WDisplay()
-            : lcd(*LOOKUP_PIN(SDA), *LOOKUP_PIN(SCL))
+            : i2c(*LOOKUP_PIN(SDA), *LOOKUP_PIN(SCL))
+            , lcd(i2c)
         {}
     };
 

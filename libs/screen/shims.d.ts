@@ -21,16 +21,23 @@ declare interface Image {
     isMono: boolean;
 
     /**
+     * Sets all pixels in the current image from the other image, which has to be of the same size and
+     * bpp.
+     */
+    //% shim=ImageMethods::copyFrom
+    copyFrom(from: Image): void;
+
+    /**
      * Set pixel color
      */
-    //% shim=ImageMethods::set
-    set(x: int32, y: int32, c: int32): void;
+    //% shim=ImageMethods::setPixel
+    setPixel(x: int32, y: int32, c: int32): void;
 
     /**
      * Get a pixel color
      */
-    //% shim=ImageMethods::get
-    get(x: int32, y: int32): int32;
+    //% shim=ImageMethods::getPixel
+    getPixel(x: int32, y: int32): int32;
 
     /**
      * Fill entire image with a given color
@@ -55,6 +62,12 @@ declare interface Image {
      */
     //% shim=ImageMethods::flipY
     flipY(): void;
+
+    /**
+     * Returns a transposed image (with X/Y swapped)
+     */
+    //% shim=ImageMethods::transposed
+    transposed(): Image;
 
     /**
      * Every pixel in image is moved by (dx,dy)
