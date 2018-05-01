@@ -34,7 +34,7 @@
         "autoRun": true,
         "streams": false,
         "aspectRatio": 1.8,
-        "parts": true,
+        "parts": false,
         "debugger": true,
         "boardDefinition": {
             "visual": "brainpad",
