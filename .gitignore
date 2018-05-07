@@ -17,6 +17,7 @@ clients/**/bin/**
 clients/**/obj/**
 clients/electron/projects
 _locales
+.vs
 
 videos/**
 
