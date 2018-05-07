@@ -9,7 +9,7 @@ namespace lightbulb {
     let _color: number = 0;
     /**
      * Make the on-board RGB LED show an RGB color (range 0-255 for r, g, b).
-     * @param rgb RGB color of the LED, eg: Colors.Red
+     * @param rgb RGB color of the LED
      */
     //% blockId="rgb_set_color" block="set light bulb to %rgb=colorNumberPicker"
     //% weight=90 help="rgb/set-color"
