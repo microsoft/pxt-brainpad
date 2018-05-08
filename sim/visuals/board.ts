@@ -762,7 +762,7 @@ namespace pxsim.visuals {
 
             this.rgbLed = this.element.getElementById("LIGHTBULB_LED") as SVGCircleElement;
             const lcdRect = this.element.getElementById("DISPLAY_SCREEN") as SVGRectElement;
-            this.lcd = <SVGImageElement>svg.child(lcdRect.parentElement, "image", { x : lcdRect.x, y : lcdRect.y, width: lcdRect.width, height: lcdRect.height })
+            this.lcd = <SVGImageElement>svg.child(lcdRect.parentElement, "image", { x : lcdRect.x.baseVal.value, y : lcdRect.y.baseVal.value, width: lcdRect.width.baseVal.value, height: lcdRect.height.baseVal.value })
 
             const btnids = ["BTN_L", "BTN_R", "BTN_U", "BTN_D"];
             const btnlabels = ["Left", "Right", "Up", "Down"];
