@@ -300,9 +300,7 @@ namespace pxsim.visuals {
         private pins: SVGElement[];
         private pinControls: { [index: number]: AnalogPinControl };
         private rgbLed: SVGCircleElement;
-        private systemLed: SVGCircleElement;
-        private irReceiver: SVGElement;
-        private irTransmitter: SVGElement;
+        private systemLed: SVGElement;
         private redLED: SVGRectElement;
         private lcd: SVGImageElement;
         private slideSwitch: SVGGElement;
@@ -452,15 +450,9 @@ namespace pxsim.visuals {
             this.updateRgbLed();
             this.updateGestures();
 
-            // this.updatePins();
-            // this.updateRedLED();
-            // this.updateNeoPixels();
-            // this.updateSwitch();
             this.updateSound();
             this.updateLightLevel();
-            // this.updateSoundLevel();
             this.updateTemperature();
-            // this.updateInfrared();
 
             if (!runtime || runtime.dead) svg.addClass(this.element, "grayscale");
             else svg.removeClass(this.element, "grayscale");
@@ -469,45 +461,12 @@ namespace pxsim.visuals {
         private lastFlashTime: number = 0;
         private flashSystemLed() {
             if (!this.systemLed)
-                this.systemLed = <SVGCircleElement>svg.child(this.g, "circle", { class: "sim-systemled", cx: 75, cy: MB_HEIGHT - 171, r: 2 })
+                this.systemLed = this.element.getElementById("LED_PWR-2") as SVGElement;
             let now = Date.now();
             if (now - this.lastFlashTime > 150) {
                 this.lastFlashTime = now;
                 svg.animate(this.systemLed, "sim-flash")
             }
-        }
-
-        private lastIrReceiverFlash: number = 0;
-        public flashIrReceiver() {
-            if (!this.irReceiver)
-                this.irReceiver = this.element.getElementById("path2054") as SVGElement;
-            let now = Date.now();
-            if (now - this.lastIrReceiverFlash > 200) {
-                this.lastIrReceiverFlash = now;
-                svg.animate(this.irReceiver, 'sim-flash-stroke')
-            }
-        }
-
-        private lastIrTransmitterFlash: number = 0;
-        public flashIrTransmitter() {
-            if (!this.irTransmitter)
-                this.irTransmitter = this.element.getElementById("path2062") as SVGElement;
-            let now = Date.now();
-            if (now - this.lastIrTransmitterFlash > 200) {
-                this.lastIrTransmitterFlash = now;
-                svg.animate(this.irTransmitter, 'sim-flash-stroke')
-            }
-        }
-
-        private updateRedLED() {
-            let state = this.board;
-            if (!state) return;
-            const ledPin = state.edgeConnectorState.getPin(pxsim.CPlayPinName.D13);
-            let ledOn = ledPin.value > 0;
-            if (!this.redLED)
-                this.redLED = this.element.getElementById("SERIAL_LED") as SVGRectElement;
-            let fillColor = ledOn ? "#FF0000" : "#000000";
-            svg.fill(this.redLED, fillColor);
         }
 
         private updateRgbLed() {
@@ -541,86 +500,12 @@ namespace pxsim.visuals {
             }
         }
 
-        private updateNeoPixels() {
-            const state = this.board;
-            if (!state) return;
-            const neopixelState = state.tryGetNeopixelState(state.defaultNeopixelPin().id);
-            if (!neopixelState) return;
-            const n = neopixelState.length;
-            for (let i = 0; i < n; i++) {
-                let rgb = neopixelState.pixelColor(i);
-                let p_inner = this.element.getElementById(`LED${i}`) as SVGPathElement;
-
-                if (!rgb || (rgb.length == 3 && rgb[0] == 0 && rgb[1] == 0 && rgb[2] == 0)) {
-                    // Clear the pixel
-                    svg.fill(p_inner, `rgb(200,200,200)`);
-                    svg.filter(p_inner, null);
-                    p_inner.style.stroke = `none`
-                    continue;
-                }
-
-                let hsl = visuals.rgbToHsl([rgb[0], rgb[1], rgb[2]]);
-                let [h, s, l] = hsl;
-                let lx = Math.max(l * 1.3, 85);
-                // at least 10% luminosity
-                l = l * 90 / 100 + 10;
-                if (p_inner) {
-                    p_inner.style.stroke = `hsl(${h}, ${s}%, ${Math.min(l * 3, 75)}%)`
-                    p_inner.style.strokeWidth = "1.5";
-                    svg.fill(p_inner, `hsl(${h}, ${s}%, ${lx}%)`)
-                }
-                if (p_inner) svg.filter(p_inner, `url(#neopixelglow)`);
-            }
-        }
-
-        private updateSwitch() {
-            let state = this.board;
-            if (!state || !state.slideSwitchState) return;
-            let slideSwitchState = state.slideSwitchState;
-            if (!this.slideSwitch) {
-                this.slideSwitch = this.element.getElementById(`SLIDE`) as SVGGElement;
-                svg.addClass(this.slideSwitch, "sim-slide-switch")
-                this.slideSwitch.addEventListener(pointerEvents.up, ev => this.slideSwitchHandler())
-
-                accessibility.enableKeyboardInteraction(this.slideSwitch, null, () => this.slideSwitchHandler());
-                accessibility.makeFocusable(this.slideSwitch);
-                this.renderSwitchAria();
-
-                this.element.getElementById(`SLIDE_HOUSING`).addEventListener(pointerEvents.up, ev => this.slideSwitchHandler())
-                this.element.getElementById(`SLIDE_INNER`).addEventListener(pointerEvents.up, ev => this.slideSwitchHandler())
-            }
-        }
-
-        private slideSwitchHandler() {
-            let state = this.board;
-            let slideSwitchState = state.slideSwitchState;
-
-            slideSwitchState.setState(!slideSwitchState.isLeft());
-            let switchSlide = this.element.getElementById(`SLIDE_INNER`) as SVGGElement;
-            svg.addClass(switchSlide, "sim-slide-switch-inner")
-            if (slideSwitchState.isLeft()) {
-                svg.addClass(switchSlide, "on");
-                switchSlide.setAttribute("transform", "translate(-5,0)");
-            } else {
-                svg.removeClass(switchSlide, "on");
-                switchSlide.removeAttribute("transform");
-            }
-
-            this.renderSwitchAria();
-        }
-
-        private renderSwitchAria() {
-            let status = this.board.slideSwitchState.isLeft() ? "On" : "Off";
-            accessibility.setAria(this.slideSwitch, "button", "On/Off Switch. Current state : " + status);
-            this.slideSwitch.setAttribute("aria-pressed", this.board.slideSwitchState.isLeft().toString());
-        }
-
         private updateSound() {
             let state = this.board;
             if (!state || !state.audioState) return;
             let audioState = state.audioState;
 
-            let soundBoard = this.element.getElementById('rect1264') as SVGGElement;
+            let soundBoard = this.element.getElementById('BUZZER-2') as SVGGElement;
             if (audioState.isPlaying()) {
                 svg.addClass(soundBoard, "sim-sound-stroke");
             } else {
@@ -873,8 +758,9 @@ namespace pxsim.visuals {
             svg.child(neopixelmerge, "feMergeNode", { in: "coloredBlur" })
             svg.child(neopixelmerge, "feMergeNode", { in: "SourceGraphic" })
 
-            this.rgbLed = this.element.getElementById("light_bulb") as SVGCircleElement;
-            this.lcd = this.element.getElementById("rect2046") as SVGImageElement;
+            this.rgbLed = this.element.getElementById("LIGHTBULB_LED") as SVGCircleElement;
+            const lcdRect = this.element.getElementById("DISPLAY_SCREEN") as SVGRectElement;
+            this.lcd = <SVGImageElement>svg.child(lcdRect.parentElement, "image", { x : lcdRect.x, y : lcdRect.y, width: lcdRect.width, height: lcdRect.height })
 
             const btnids = ["BTN_L", "BTN_R", "BTN_U", "BTN_D"];
             const btnlabels = ["Left", "Right", "Up", "Down"];
@@ -889,34 +775,6 @@ namespace pxsim.visuals {
             this.buttons.forEach(b => svg.addClass(b, "sim-button"));
 
             this.screenCanvas = document.createElement("canvas");
-
-            // this.pins = pinNames.map((pin, i) => {
-            //     const n = pin.name;
-            //     let p = this.element.getElementById(n) as SVGElement;
-            //     if (p) {
-            //         svg.addClass(p, "sim-pin");
-            //         if (pin.tooltip)
-            //             svg.hydrate(p, { title: pin.tooltip })
-            //     }
-            //     return p;
-            // });
-
-            // this.pinControls = {};
-
-            // // BTN A+B
-            // const outerBtn = (left: number, top: number, label: string) => {
-            //     const button = this.mkBtn(left, top, label);
-            //     this.buttonsOuter.push(button.outer);
-            //     this.buttons.push(button.inner);
-
-            //     return button;
-            // }
-
-            // let ab = outerBtn(165, MB_HEIGHT - 15, "A+B");
-            // let abtext = svg.child(ab.outer, "text", { x: 163, y: MB_HEIGHT - 18, class: "sim-text" }) as SVGTextElement;
-            // abtext.textContent = "A+B";
-            // (<any>this.buttonsOuter[2]).style.visibility = "hidden";
-            // (<any>this.buttons[2]).style.visibility = "hidden";
         }
 
         private mkBtn(left: number, top: number, label: string): { outer: SVGElement, inner: SVGElement } {
@@ -945,7 +803,6 @@ namespace pxsim.visuals {
             Runtime.messagePosted = (msg) => {
                 switch (msg.type || "") {
                     case "serial": this.flashSystemLed(); break;
-                    case "irpacket": this.flashIrTransmitter(); break;
                 }
             }
 
