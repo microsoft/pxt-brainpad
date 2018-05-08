@@ -4,7 +4,6 @@
 
 Let's start by doing something simple. Let's light up the Light Bulb on the BrainPad. 
 
-
 ## Step 2  @fullscreen
 You'll notice the project begins with a ``||loops:forever||`` block. Anything we place inside this block will keep running forever in the program.
 
@@ -37,7 +36,6 @@ forever(function () {
 
 ```
 
-
 ## Step 5 @fullscreen
 But what if the exact color you want isn't on the pallette? We can add parameters to change values, and create our own color. To accomplish this we need to drag a ``||lightbulb:red green blue||`` block inside of the  ``||lightbulb:set light bulb to||``.
 
@@ -47,8 +45,6 @@ forever(function () {
     lightbulb.setColor(lightbulb.rgb(255, 255, 255))
 })
 ```
-
-
 
 ## Step 6  @fullscreen
 Let's suppose we wanted to make our LED blink every second. To do this we will need to add a ``||loops:pause||`` inside our ``||loops:forever||`` block. We'll also need to change the parameters value inside the block to 1000 ms, but the Light Bulb still won't blink. Can you guess why?
@@ -85,7 +81,6 @@ forever(function () {
 ```
 ## Step 8 @fullscreen
 We still need to turn the brightness back up. So we'll add another ``||lightbulb:set brightness||`` block to complete the task, and set it all the way up to 255 (100%). The Light Bulb on the simulator should be blinking, whatever color we created. 
-
 
 ```blocks
  
