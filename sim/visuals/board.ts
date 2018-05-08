@@ -84,6 +84,8 @@ namespace pxsim.visuals {
             font-family:"Lucida Console", Monaco, monospace;
             font-size: 40px;
             fill: #000;
+        }
+        .sim-text, svg.sim text {
             pointer-events: none; user-select: none;
         }
         .sim-text.small {
