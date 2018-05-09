@@ -1,5 +1,5 @@
 {
-    "blockIdentity": "images._image",
+    "blockIdentity": "display.showImage",
     "creator": "image.ofBuffer",
     "star": {
         "namespace": "images",
