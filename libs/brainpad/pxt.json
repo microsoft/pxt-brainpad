@@ -1,12 +1,12 @@
 {
-    "name": "brainpad",
-    "description": "The GHI Electronics Brain Pad library",
-    "files": [
-        "README.md",
-        "device.d.ts",
-        "config.ts",
-        "ns.ts"
-    ],
+  "name": "brainpad",
+  "description": "The GHI Electronics Brain Pad library",
+  "files": [
+    "README.md",
+    "device.d.ts",
+    "config.ts",
+    "ns.ts"
+  ],
   "dependencies": {
     "base": "file:../base",
     "core": "file:../core",
@@ -19,5 +19,9 @@
     "lightbulb": "file:../lightbulb",
     "display": "file:../display"
   },
-    "public": true
+  "palette": [
+    "#ffffff",
+    "#000000"
+  ],
+  "public": true
 }
