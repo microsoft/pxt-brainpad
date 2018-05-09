@@ -22,8 +22,8 @@
     "display": "file:../display"
   },
   "palette": [
-    "#ffffff",
-    "#000000"
+    "#000000",
+    "#ffffff"
   ],
   "public": true
 }
