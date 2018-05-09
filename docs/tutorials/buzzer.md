@@ -2,46 +2,67 @@
 
 ## Step 1 @fullscreen
 
-The BrainPad is equipped with a buzzer that is capable of playing many different notes. It can even be programmed to play a song. 
+The BrainPad is equipped with a buzzer that is capable of playing many different notes. It can even be programmed to play a song. We will use it make a simple 5 note melody, that's out of this world. 
  
 ![BrainPad buzzer image](/static/images/buzzer.jpg)
 
-
 ## Step 2 @fullscreen
-In this demo, we only want the song to play once. To do this we'll remove the ``||loops:forever||`` block and replace it with the ``||loops:on Start||`` block.
-
-![Remove Forever block](/static/images/swapForeverBlockwithOnstart.gif)
+We only want the song to play once. To do this we remove the ``||loops:forever||`` block and replace it with an ``||loops:on Start||`` block. It's located under the ``||loops:LOOPS||`` menu. You can DRAG the ``||loops:forever||`` block towards the side MENU to delete it. 
+```blocks
+loops.forever(function () {
+    
+})
+```
 
 ## Step 3 @fullscreen
 
 Next we will need to drag our first note into the ``||loops:on Start||`` block. You'll find it under the ``||music:music||`` tab. 
 
-```block
-music.playTone(262, music.beat(BeatFraction.Half))
+```blocks
+music.playTone(0, music.beat(BeatFraction.Half))
 ```
 
-## Step 4 @fullscreen
-Now, we will change the value of first note in our song. Do this by clicking on the 'Middle C' parameter inside the block. We will change the value to 392 (Middle G) and the beat to 1 whole beat. 
+## Step 4 @fullscreen 
+Change the parameters of the note, by clicking on the value inside the ``||music:play tone at||`` block. Change, by entering a new value or playing a note on the virtual keyboard that appears. We will change the value to 392(Middle G) and the beat to 1.
 
-![Changing a note](/static/images/changeNote.gif)
+```blocks
+music.playTone(392, music.beat(BeatFraction.Whole))
+```
 
 ## Step 5 @fullscreen
-Now let's add more notes and play a song. Drag another ``||music:play tone||`` block into the ``||loops:on Start||`` block. This 2nd note in our song we'll set to 440 (Middle A) and the beat to 1 whole beat
-
-![Adding notes](/static/images/addingNotes.gif)
-
-## Step 6 @fullscreen 
-Drag in three more ``||music:play tone||`` blocks, just below our last block. We will change each note in the new blocks. Change to 349(Middle F), 175(Low F) and 262(Middle C), in that order. Set the beat to 1 on all except 262(Middle C) the last note in our song, set this to 2 beats.
+Now let's add more notes to our song. Drag another ``||music:play tone at||`` block into the ``||loops:on Start||`` block. This 2nd note in our song we'll set to 440(Middle A) and the beat to 1.
  
-```block
+```blocks
 music.playTone(392, music.beat(BeatFraction.Whole))
 music.playTone(440, music.beat(BeatFraction.Whole))
-music.playTone(262, music.beat(BeatFraction.Half))
-music.playTone(262, music.beat(BeatFraction.Half))
-music.playTone(262, music.beat(BeatFraction.Half))
+```
+
+## Step 6 @fullscreen 
+It's still not quite a melody, we need to add more notes. Just below the last ``||music:play tone at||`` block, drag another ``||music:play tone at||`` block in. This one we'll set to 349(Middle F) and the beat to 1/2 this time.
+
+```blocks
+music.playTone(392, music.beat(BeatFraction.Whole))
+music.playTone(440, music.beat(BeatFraction.Whole))
+music.playTone(349, music.beat(BeatFraction.Half))
 ```
 
 ## Step 7 @fullscreen 
-Your final project should look like this and play the melody once. If you wanted to continuiuosly play the song, you could put all the notes inside a ``||loops:forever||`` block.
+We still have more notes to add drag another ``||music:play tone at||`` block in. Set it to 175(Low F), set the beat to 1/2 too.
 
-![Adding notes](/static/images/finalSong.jpg)
+```blocks
+music.playTone(392, music.beat(BeatFraction.Whole))
+music.playTone(440, music.beat(BeatFraction.Whole))
+music.playTone(349, music.beat(BeatFraction.Half))
+music.playTone(175, music.beat(BeatFraction.Half))
+```
+
+## Step 8 @fullscreen 
+Finally we will add one last note to our song. Drag one more ``||music:play tone at||`` block in. Set it to 262(Middle C), set the beat to 2. See if you can find someone that recognizes the melody, like a parent or teacher.
+
+```blocks
+music.playTone(392, music.beat(BeatFraction.Whole))
+music.playTone(440, music.beat(BeatFraction.Whole))
+music.playTone(349, music.beat(BeatFraction.Half))
+music.playTone(175, music.beat(BeatFraction.Half))
+music.playTone(262, music.beat(BeatFraction.Double))
+```
