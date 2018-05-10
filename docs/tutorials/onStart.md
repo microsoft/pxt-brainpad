@@ -1,6 +1,6 @@
 # On Start vs Forever Blocks
 
-## Step 1 @fullscreen
+## Step 1 @unplugged
 In this tutorial we explain the difference between the ``||loops:on start||`` and ``||loops:forever||`` blocks. We will also demonstrate how each works. 
 
 ![on Start and forever blocks](/static/images/onstartCard.jpg)

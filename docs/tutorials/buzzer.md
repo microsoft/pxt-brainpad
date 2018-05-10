@@ -1,7 +1,6 @@
 # Buzzer Song
 
-## Step 1 @fullscreen
-
+## Step 1 @unplugged
 The BrainPad is equipped with a buzzer that is capable of playing many different notes. It can even be programmed to play a song. We will use it make a simple 5 note melody, that's out of this world. 
  
 ![BrainPad buzzer image](/static/images/buzzer.jpg)
