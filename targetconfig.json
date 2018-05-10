@@ -12,7 +12,9 @@
     ],
   "galleries": {
 
-    "Tutorials": "tutorials"
+    "Tutorials": "tutorials",
+    "Coding": "coding",
+    "Projects": "projects"
 
   }
 }
