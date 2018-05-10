@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\docs",
-    "\\docs\\static",
-    "\\docs\\static\\images",
-    "\\docs\\tutorials"
+    "\\docs"
   ],
-  "SelectedNode": "\\docs\\static\\images\\forever.jpg",
+  "SelectedNode": "\\docs\\projects.md",
   "PreviewInSolutionExplorer": false
 }

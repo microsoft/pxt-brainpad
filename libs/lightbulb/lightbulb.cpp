@@ -8,6 +8,7 @@ namespace lightbulb {
      * @param blue the blue color
      */
      //% 
+     
     void __setRGBLed(int r, int g, int b) {
         auto rp = lookupPin(PC_9);
         auto gp = lookupPin(PC_8);
