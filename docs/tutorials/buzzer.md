@@ -14,7 +14,6 @@ loops.forever(function () {
 ```
 
 ## Step 3 @fullscreen
-
 Next we will need to drag our first note into the ``||loops:on Start||`` block. You'll find it under the ``||music:music||`` tab. 
 
 ```blocks
@@ -64,4 +63,6 @@ music.playTone(440, music.beat(BeatFraction.Whole))
 music.playTone(349, music.beat(BeatFraction.Half))
 music.playTone(175, music.beat(BeatFraction.Half))
 music.playTone(262, music.beat(BeatFraction.Double))
+```
+=======
 ```
