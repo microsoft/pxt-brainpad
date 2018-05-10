@@ -3,7 +3,7 @@
 
 ## ~
 
-![Elenco Snap Circuits SC300 kit](/static/cp/projects/snapCircuits/kit.jpg)
+![Elenco Snap Circuits SC300 kit](/static/cp/projects/snap-circuits/kit.jpg)
 
 ## Duration: ~20 minutes
 
@@ -52,7 +52,7 @@ Now we will connect our first 5-Snap Wire (#6SC05) labelled '5' to our circuit. 
 
 Next, we will connect a 4-Snap Wire (#6SC04) labelled '4' to our circuit. First place another 1-Snap spacer on the right side of our Motor module - M1. Next snap the 4-Snap Wire onto the spacer we just added to the M1 module. Connect the other end to the 5-Snap Wire we placed in the previous step. Connecting the the two Snap Wires together.  
 
-![Step 7](/static/cp/projects/snapCircuits/step7.jpg)
+![Step 7](/static/cp/projects/snap-circuits/step7.jpg)
 
 ## Step 8: Connect Battery Holders
 
@@ -64,7 +64,7 @@ Now we will use a 2-Snap Wire (#6SC02) labelled '2' and connect both Battery Hol
 
 Next we will place the NPN Transistor Q2 (#6SCQ2) We can place it in the 4th row and 3rd column. Place in the direction shown in image below.   
 
-![Step 9](/static/cp/projects/snapCircuits/step9.jpg)
+![Step 9](/static/cp/projects/snap-circuits/step9.jpg)
 
 ## Step 10: Connect 2-Snap Wire
 
@@ -76,7 +76,7 @@ Snap in a 2-Snap Wire (#6SC02) labelled '2' to left side of the 'M1' Motor Modul
 
 Next we will connect a 3-Snap Wire (#6SC03) labelled '3' to the 2-Snap Wire we just placed, then connect a 1-Snap spacer to the other end of the 3-Snap Wire. Connect it to the top of the Transistor Module 'Q2'.
 
-![Step 11](/static/cp/projects/snapCircuits/step11.jpg)
+![Step 11](/static/cp/projects/snap-circuits/step11.jpg)
 
 ## Step 12: Connect the Resistor Module
 
