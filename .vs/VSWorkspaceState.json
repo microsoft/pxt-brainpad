@@ -3,9 +3,9 @@
     "",
     "\\docs",
     "\\docs\\static",
-    "\\docs\\static\\cp\\projects",
-    "\\libs\\display"
+    "\\docs\\static\\images",
+    "\\docs\\tutorials"
   ],
-  "SelectedNode": "\\docs\\static\\filelogo.svg",
+  "SelectedNode": "\\docs\\static\\images\\forever.jpg",
   "PreviewInSolutionExplorer": false
 }
