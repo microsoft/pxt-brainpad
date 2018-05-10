@@ -19,7 +19,7 @@ loops.forever(function () {
 Next we will need to drag our first note into the ``||loops:on Start||`` block. You'll find it under the ``||music:music||`` tab. 
 
 ```blocks
-music.playTone(0, music.beat(BeatFraction.Half))
+music.playTone(262, music.beat(BeatFraction.Half))
 ```
 
 ## Step 4 @fullscreen 
