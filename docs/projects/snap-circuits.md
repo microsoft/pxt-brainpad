@@ -17,10 +17,10 @@ Activities, approx 20 min
 
 ## Activities
 
-* [Make](/projects/snapCircuits/make)  
-* [Code](/projects/snapCircuits/code)  
+* [Make](/projects/snap-circuits/make)  
+* [Code](/projects/snap-circuits/code)  
 
-### ~button /projects/snapCircuits/make
+### ~button /projects/snap-circuits/make
 
 Let's get started!
 
