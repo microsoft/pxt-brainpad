@@ -1,7 +1,6 @@
 # Buzzer Song
 
-## Step 1 @fullscreen
-
+## Step 1 @unplugged
 The BrainPad is equipped with a buzzer that is capable of playing many different notes. It can even be programmed to play a song. We will use it make a simple 5 note melody, that's out of this world. 
  
 ![BrainPad buzzer image](/static/images/buzzer.jpg)
@@ -15,11 +14,10 @@ loops.forever(function () {
 ```
 
 ## Step 3 @fullscreen
-
 Next we will need to drag our first note into the ``||loops:on Start||`` block. You'll find it under the ``||music:music||`` tab. 
 
 ```blocks
-music.playTone(0, music.beat(BeatFraction.Half))
+music.playTone(262, music.beat(BeatFraction.Half))
 ```
 
 ## Step 4 @fullscreen 
@@ -30,7 +28,7 @@ music.playTone(392, music.beat(BeatFraction.Whole))
 ```
 
 ## Step 5 @fullscreen
-Now let's add more notes to our song. Drag another ``||music:play tone at||`` block into the ``||loops:on Start||`` block. This 2nd note in our song we'll set to 440(Middle A) and the beat to 1.
+Now let's add more notes to our song. Drag another ``||music:play tone at||`` block into the ``||loops:on start||`` block. This 2nd note in our song we'll set to 440(Middle A) and the beat to 1.
  
 ```blocks
 music.playTone(392, music.beat(BeatFraction.Whole))
@@ -66,3 +64,4 @@ music.playTone(349, music.beat(BeatFraction.Half))
 music.playTone(175, music.beat(BeatFraction.Half))
 music.playTone(262, music.beat(BeatFraction.Double))
 ```
+

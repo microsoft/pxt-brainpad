@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\docs",
-    "\\docs\\static",
-    "\\docs\\static\\cp\\projects",
-    "\\libs\\display"
+    "\\docs"
   ],
-  "SelectedNode": "\\docs\\static\\filelogo.svg",
+  "SelectedNode": "\\docs\\projects.md",
   "PreviewInSolutionExplorer": false
 }

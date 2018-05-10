@@ -1,6 +1,6 @@
 # Temperature
 
-## Step 1 @fullscreen
+## Step 1 @unplugged
 The BrainPad is equipped with an onboard temperature sensor. We can use this sensor to trigger an action when the temperature reaches a certain level. We will use the ``||input:on temperature||`` block in our program to achieve this.
 
 ![BrainPad Temperature Sensor image](/static/images/temperature.jpg)

@@ -1,15 +1,15 @@
-# Tutorials
+# Components
 
-## Tutorials
+## Components
 
 Step by step guide to coding your @boardname@.
 
 ```codecard
 [{
-  "name": "Light Bulb",
+  "name": "New? Try This First!",
   "description": "First we will turn on the Light Bulb, then flash it!",
   "cardType": "tutorial",
-  "label": "New? Try This First!",
+  "label": "Light Bulb",
   "labelClass": "pink ribbon large",
   "url":"/tutorials/lightBulb",
   "imageUrl":"/static/cp/projects/thumb/lightbulb.jpg"
@@ -17,21 +17,10 @@ Step by step guide to coding your @boardname@.
 } 
 ,
 {
-  "name": "On Start vs Forever Block",
-  "description": "In this tutorial, we will explain the different uses for both blocks",
-  "cardType": "tutorial",
-  "label": "Starting Blocks",
-  "labelClass": "pink ribbon large",
-  "url":"/tutorials/onStart",
-  "imageUrl":"/static/cp/projects/thumb/onStart.jpg"
-  
-} 
-,
-{
-  "name": "Buzzer",
+  "name": "Play a Song",
   "description": "In this tutorial, we will use the BrainPad's buzzer to create different sounds",
   "cardType": "tutorial",
-  "label": "Play a Song",
+  "label": "Buzzer",
   "labelClass": "pink ribbon large",
   "url":"/tutorials/buzzer",
   "imageUrl":"/static/cp/projects/thumb/buzzer.jpg"
