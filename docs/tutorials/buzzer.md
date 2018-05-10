@@ -30,7 +30,7 @@ music.playTone(392, music.beat(BeatFraction.Whole))
 ```
 
 ## Step 5 @fullscreen
-Now let's add more notes to our song. Drag another ``||music:play tone at||`` block into the ``||loops:on Start||`` block. This 2nd note in our song we'll set to 440(Middle A) and the beat to 1.
+Now let's add more notes to our song. Drag another ``||music:play tone at||`` block into the ``||loops:on start||`` block. This 2nd note in our song we'll set to 440(Middle A) and the beat to 1.
  
 ```blocks
 music.playTone(392, music.beat(BeatFraction.Whole))
