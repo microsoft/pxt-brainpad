@@ -51,4 +51,12 @@ namespace images {
     export const trex = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=display.showImage
     export const triceratop = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=display.showImage
+    export const walker1 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=display.showImage
+    export const walker2 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=display.showImage
+    export const walker3 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=display.showImage
+    export const walker4 = image.ofBuffer(hex``);
 }
