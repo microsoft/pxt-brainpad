@@ -48,6 +48,17 @@ Step by step guide to coding your @boardname@.
   "imageUrl":"/static/cp/projects/thumb/light.jpg"
   
 }  
-
+,
+{
+  "name": "BrainPad Motion",
+  "description": "Using the BrainPad's built in Accelerometer",
+  "cardType": "tutorial",
+  "label": "Accelerometer",
+  "labelClass": "pink ribbon large",
+  "url":"/tutorials/accelerometer",
+  "imageUrl":"/static/cp/projects/thumb/accelerometer.jpg"
+  
+}
+ 
 ]
 ```
