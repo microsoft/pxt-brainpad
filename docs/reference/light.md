@@ -62,5 +62,6 @@ light.createStrip(null,0,0)
 [fade](/reference/light/fade), [create strip](/reference/light/create-strip)
 
 ```package
-circuit-playground
+brainpad
+light
 ```
