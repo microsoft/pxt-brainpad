@@ -263,6 +263,7 @@
         "simAnimationEnter": "fly right in",
         "simAnimationExit": "fly right out",
         "highContrast": true,
+        "greenScreen": true,
         "hasAudio": true,
         "usbHelp": [],
         "extendEditor": true,
