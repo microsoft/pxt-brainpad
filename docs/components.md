@@ -59,6 +59,17 @@ Step by step guide to coding your @boardname@.
   "imageUrl":"/static/cp/projects/thumb/accelerometer.jpg"
   
 }
- 
+,
+{
+  "name": "Musical Buttons",
+  "description": "Using the Buttons to play to song",
+  "cardType": "tutorial",
+  "label": "Buttons",
+  "labelClass": "pink ribbon large",
+  "url":"/tutorials/buttons",
+  "imageUrl":"/static/cp/projects/thumb/buttons.jpg"
+  
+} 
 ]
+
 ```
