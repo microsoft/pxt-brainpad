@@ -61,6 +61,18 @@ cd libs/core
 pxt deploy
 ```
 
+## Updating CODAL dependency
+
+* Update the tag number in ``pxtarget.json`` at https://github.com/Microsoft/pxt-brainpad/blob/master/pxtarget.json#L203 
+* clean the build
+```
+pxt clean
+```
+* build again
+```
+pxt buildtarget
+```
+
 ## License
 MIT
 
