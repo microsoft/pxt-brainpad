@@ -73,6 +73,14 @@ pxt clean
 pxt buildtarget
 ```
 
+## Releasing the editor
+
+The version served under ``/`` is controlled by ``/docs/index-ref.json``. Change the version in that file and push to immediately update the version.
+
+Each time you bump (using ``pxt bump``) and the build passes, the ``/beta`` will point to that release. ``/beta`` can be used to test new features before pushing down the release to all users. The update is handled automatically by MakeCode afterwards.
+
+Be careful when updating the version number of the editor, as MakeCode follows ``semver``. In particular, do not change the major version unless you are releasing a completely new and incompatible editor.
+
 ## License
 MIT
 
