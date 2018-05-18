@@ -352,25 +352,26 @@ namespace pxsim.visuals {
 
         private initScreen() {
             let requested = false;
+            this.screenCanvas.width = this.board.screenState.width
+            this.screenCanvas.height = this.board.screenState.height
+
+            const ctx = this.screenCanvas.getContext("2d")
+            ctx.imageSmoothingEnabled = false
+            const imgdata = ctx.getImageData(0, 0, this.board.screenState.width, this.board.screenState.height)
+            const arr = new Uint32Array(imgdata.data.buffer)
+        
             this.board.screenState.onChange = () => {
-                this.screenCanvas.width = this.board.screenState.width
-                this.screenCanvas.height = this.board.screenState.height
 
-                const ctx = this.screenCanvas.getContext("2d")
-                ctx.imageSmoothingEnabled = false
-                const imgdata = ctx.getImageData(0, 0, this.board.screenState.width, this.board.screenState.height)
-                const arr = new Uint32Array(imgdata.data.buffer)
-
-                let flush = () => {
+                const flush = () => {
                     requested = false
                     ctx.putImageData(imgdata, 0, 0)
+                    this.lcd.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", this.screenCanvas.toDataURL());
                 }
 
                 // after we did one-time setup, redefine ourselves to be quicker
                 this.board.screenState.onChange = () => {
                     arr.set(this.board.screenState.screen)
                     // paint rect
-                    this.lcd.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", this.screenCanvas.toDataURL());
                     runtime.queueDisplayUpdate();
                     if (!requested) {
                         requested = true
