@@ -12,7 +12,8 @@
     ],
   "galleries": {
 
-    "Components": "components",
+    "Output Components": "components-outputs",
+    "Input Components": "components-inputs",
     "Coding": "coding",
     "Projects": "projects"
 
