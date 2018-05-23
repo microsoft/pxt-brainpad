@@ -21,5 +21,5 @@ namespace config {
     // accelerometer and screen are on the same I2C as external
     export const PIN_ACCELEROMETER_SDA = PIN_SDA;
     export const PIN_ACCELEROMETER_SCL = PIN_SCL;
-    //export const PIN_ACCELEROMETER_INT = NC;
+    export const PIN_ACCELEROMETER_INT = DAL.PC_14;
 }
