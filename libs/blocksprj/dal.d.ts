@@ -490,7 +490,6 @@ declare const enum DAL {
     REF_TAG_IMAGE = 3,
     REF_TAG_USER = 32,
     // built/codal/pxtapp/accelerometer/axis.h
-    ACC_SYSTEM = 3,
     ACC_ROTATION = 0,
     // built/codal/pxtapp/hf2dbg.h
     HF2DBG_H = 1,
