@@ -18,7 +18,10 @@
     "libs/lightbulb",
     "libs/screen",
     "libs/display",
-    "libs/brainpad"
+    "libs/brainpad",
+    "libs/gamepad",
+    "libs/keyboard",
+    "libs/mouse"
   ],
     "serial": {
         "useHF2": true,
