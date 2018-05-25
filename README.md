@@ -81,6 +81,12 @@ Each time you bump (using ``pxt bump``) and the build passes, the ``/beta`` will
 
 Be careful when updating the version number of the editor, as MakeCode follows ``semver``. In particular, do not change the major version unless you are releasing a completely new and incompatible editor.
 
+* run ``pxt udpdate`` to pick any updates to the PXT engine
+* run ``pxt bump`` to create a new release (say ``vX.Y.Z``)
+* wait for build to finish, typically 10 minutes
+* test new build in ``/beta``. You can check the version number in the bottom of the home screen is ``vX.Y.Z``. Remember that it will update the background and load after a dozen of seconds or so.
+* when ready and tested, run ``pxt tag index vX.Y.Z``, and commit ``/docs/index-ref.json`` if successfull. This command does some routine checks to make sure everything is ok.
+
 ## License
 MIT
 
