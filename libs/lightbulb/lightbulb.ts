@@ -13,11 +13,11 @@ namespace lightbulb {
      */
     //% blockId="rgb_set_color" block="set light bulb to %rgb=colorNumberPicker"
     //% weight=90
+    //% blockGap=8
     export function setColor(rgb: number) {
         _color = rgb;
         update();
     }
-
 
     /**
      * Turns off the lightbuld
