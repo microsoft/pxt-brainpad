@@ -12,10 +12,20 @@ namespace lightbulb {
      * @param rgb RGB color of the LED
      */
     //% blockId="rgb_set_color" block="set light bulb to %rgb=colorNumberPicker"
-    //% weight=90 help="rgb/set-color"
+    //% weight=90
     export function setColor(rgb: number) {
         _color = rgb;
         update();
+    }
+
+
+    /**
+     * Turns off the lightbuld
+     */
+    //% blockId=rgb_set_off block="light bulb off"
+    //% weight=89
+    export function off() {
+        lightbulb.setColor(0);
     }
 
     function update() {

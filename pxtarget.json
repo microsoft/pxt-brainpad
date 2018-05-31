@@ -18,6 +18,7 @@
     "libs/lightbulb",
     "libs/screen",
     "libs/display",
+    "libs/servo",
     "libs/brainpad"
   ],
     "serial": {
