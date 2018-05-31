@@ -19,7 +19,8 @@
     "screen": "file:../screen",
     "thermometer": "file:../thermometer",
     "lightbulb": "file:../lightbulb",
-    "display": "file:../display"
+    "display": "file:../display",
+    "servo": "file:../servo"
   },
   "palette": [
     "#000000",
