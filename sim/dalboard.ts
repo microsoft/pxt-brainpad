@@ -3,27 +3,29 @@
 /// <reference path="../built/common-sim.d.ts"/>
 
 namespace pxsim {
-    export module CPlayPinName {
-        export let A0 = -1;
-        export let A1 = -1;
-        export let A2 = -1;
-        export let A3 = -1;
-        export let A4 = -1;
-        export let A5 = -1;
-        export let A6 = -1;
-        export let A7 = -1;
-        export let A8 = -1;
-        export let A9 = -1;
-        export let D4 = -1;
-        export let D5 = -1;
-        export let D6 = -1;
-        export let D7 = -1;
-        export let D8 = -1;
-        export let D13 = -1;
-        export let BUTTON_LEFT = -1;
+    export module PinName {
+        export let LIGHT = -1; // adc
+        export let TEMPERATURE = -1; // adc
+    
+        export let SCL = -1; // pwm
+        export let SDA = -1; // pwm
+        export let RX = -1; // pwm
+        export let TX = -1; // pwm
+    
+        export let SCK = -1; //
+        export let MISO = -1; //
+        export let MOSI = -1; // 
+        
+        // accelerometer and screen are on the same I2C as external
+        export let ACCELEROMETER_SDA = -1;
+        export let ACCELEROMETER_SCL = -1;
+        export let ACCELEROMETER_INT = -1;
 
-        export function init() {
-            let v = CPlayPinName as any
+        export let SERVO_1 = -1;
+        export let SERVO_2 = -1;
+        
+        export function initPins() {
+            let v = PinName as any;
             for (let k of Object.keys(v)) {
                 let key = getConfigKey("PIN_" + k)
                 if (key != null) {
@@ -69,7 +71,7 @@ namespace pxsim {
         constructor() {
             super()
 
-            CPlayPinName.init()
+            PinName.initPins()
 
             this._neopixelState = {};
             this.bus.setNotify(DAL.DEVICE_ID_NOTIFY, DAL.DEVICE_ID_NOTIFY_ONE);
@@ -92,22 +94,8 @@ namespace pxsim {
             this.builtinParts["accelerometer"] = this.accelerometerState = new AccelerometerState(runtime);
             this.builtinParts["edgeconnector"] = this.edgeConnectorState = new EdgeConnectorState({
                 pins: [
-                    pxsim.CPlayPinName.A0,
-                    pxsim.CPlayPinName.A1,
-                    pxsim.CPlayPinName.A2,
-                    pxsim.CPlayPinName.A3,
-                    pxsim.CPlayPinName.A4,
-                    pxsim.CPlayPinName.A5,
-                    pxsim.CPlayPinName.A6,
-                    pxsim.CPlayPinName.A7,
-                    pxsim.CPlayPinName.A8,
-                    pxsim.CPlayPinName.A9,
-                    pxsim.CPlayPinName.D4,
-                    pxsim.CPlayPinName.D5,
-                    pxsim.CPlayPinName.D6,
-                    pxsim.CPlayPinName.D7,
-                    pxsim.CPlayPinName.D8,
-                    pxsim.CPlayPinName.D13
+                    pxsim.PinName.SERVO_1,
+                    pxsim.PinName.SERVO_2
                 ]
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;
@@ -177,12 +165,12 @@ namespace pxsim {
             return state;
         }
 
-        defaultNeopixelPin() {
-            return this.edgeConnectorState.getPin(CPlayPinName.D8);
+        defaultNeopixelPin(): Pin {
+            return undefined;
         }
 
-        getDefaultPitchPin() {
-            return this.edgeConnectorState.getPin(CPlayPinName.D6);
+        getDefaultPitchPin(): Pin {
+            return undefined;
         }
     }
 
