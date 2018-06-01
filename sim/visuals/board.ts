@@ -216,21 +216,6 @@ namespace pxsim.visuals {
     `;
 
     const pinNames: { 'name': string, 'touch': number, 'text': any, 'id'?: number, tooltip?: string }[] = [
-        { 'name': "PIN_A0", 'touch': 0, 'text': null, tooltip: "A0 - Speaker" },
-        { 'name': "PIN_A1", 'touch': 1, 'text': null, tooltip: "~A1" },
-        { 'name': "PIN_A2", 'touch': 1, 'text': null, tooltip: "~A2" },
-        { 'name': "PIN_A3", 'touch': 1, 'text': null, tooltip: "~A3" },
-        { 'name': "PIN_A4", 'touch': 1, 'text': null, tooltip: "A4 - SCL" },
-        { 'name': "PIN_A5", 'touch': 1, 'text': null, tooltip: "A5 - SDA" },
-        { 'name': "PIN_A6", 'touch': 1, 'text': null, tooltip: "A6 - RX" },
-        { 'name': "PIN_A7", 'touch': 1, 'text': null, tooltip: "A7 - TX" },
-        { 'name': "GND_0", 'touch': 0, 'text': null, tooltip: "Ground" },
-        { 'name': "GND_1", 'touch': 0, 'text': null, tooltip: "Ground" },
-        { 'name': "GND_2", 'touch': 0, 'text': null, tooltip: "Ground" },
-        { 'name': "VBATT", 'touch': 0, 'text': null, tooltip: "Battery power" },
-        { 'name': "PWR_0", 'touch': 0, 'text': null, tooltip: "+3.3V" },
-        { 'name': "PWR_1", 'touch': 0, 'text': null, tooltip: "+3.3V" },
-        { 'name': "PWR_2", 'touch': 0, 'text': null, tooltip: "+3.3V" }
     ];
     const MB_WIDTH = 1795.6;
     const MB_HEIGHT = 1027.79999;

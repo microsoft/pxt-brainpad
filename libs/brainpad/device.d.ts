@@ -19,9 +19,9 @@ declare namespace pins {
     //% fixedInstance shim=pxt::getPin(PA_2)
     const INT: PwmPin;
 
-    //% fixedInstance shim=pxt::getPin(PA_3)
+    //% fixedInstance shim=pxt::getPin(PIN_SERVO_1)
     const SERVO1: PwmPin;
-    //% fixedInstance shim=pxt::getPin(PA_0)
+    //% fixedInstance shim=pxt::getPin(PIN_SERVO_2)
     const SERVO2: PwmPin;
 }
 
