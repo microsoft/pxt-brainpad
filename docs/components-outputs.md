@@ -5,7 +5,8 @@
 Step by step guide to coding your @boardname@.
 
 ```codecard
-[{
+[
+{
   "name": "New? Try This First!",
   "description": "First we will turn on the Light Bulb, then flash it!",
   "cardType": "tutorial",
@@ -34,6 +35,15 @@ Step by step guide to coding your @boardname@.
   "url":"/tutorials/display",
   "imageUrl":"/static/cp/projects/thumb/display.jpg"
 } 
+,
+{
+  "name": "Using Motors",
+  "description": "In this tutorial, we will show how the BrainPad's buttons can be used to control servo motors",
+  "cardType": "tutorial",
+  "label": "Servos",
+  "labelClass": "pink ribbon large",
+  "url":"/tutorials/servos",
+  "imageUrl":"/static/cp/projects/thumb/servos.jpg"
+} 
 ]
-
 ```
