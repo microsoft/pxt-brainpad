@@ -1,4 +1,4 @@
-# Using Motors
+# Using Servos
 
 ## Step 1 @unplugged
 Since the BrainPad has two servo ports we will demonstrate how to use both in Microsoft MakeCode. We will show how to use two different kinds of servos.  
@@ -36,29 +36,29 @@ Next, let's connect the positional servo to the 2nd servo port on the BrainPad.
 ![Connecting to servo port two](/static/images/servo_port_two.jpg)
 
 ## Step 8 @fullscreen
-Now let's start coding. Under loops, drag in an ``||loops:on start||`` block. Inside this block add a ``||motors:continuous servo||`` block from the side menu. We can keep the default settings. This will start the motor on port 1 at 50%.
+Now let's start coding. Under loops, drag in an ``||loops:on start||`` block. Inside this block add a ``||servos:continuous servo||`` block from the side menu. We can keep the default settings. This will start the motor on port 1 at 50%.
 
 ```blocks
-    motors.servo1.run(50)
+    servos.servo1.run(50)
 ```
 
 ## Step 9 @fullscreen
-Next, we'll program our positional servo.  Add a ``||motors:set servo||`` block to the ``||loops:forever||`` block. Change the default value of the port from 1 to 2, and angle to 0. This will make the servo, plugged in the 2nd servo port, start at 0 degrees.
+Next, we'll program our positional servo.  Add a ``||servos:set servo||`` block to the ``||loops:forever||`` block. Change the default value of the port from 1 to 2, and angle to 0. This will make the servo, plugged in the 2nd servo port, start at 0 degrees.
 
 ```blocks
 forever(function () {
-    motors.servo2.setAngle(0)
+    servos.servo2.setAngle(0)
 })
 ```
 
 ## Step 10 @fullscreen
-To move the positional servo let's add another ``||motors:set servo||`` block, but we also need to a ``||loops:pause||`` block add inbetween and after the new block. Set both ``||loops:pause||`` blocks to 1000 ms(1 second). Change the port to 2, this time change set the angle to 90. This makes the servo move from the RIGHT position to the UP position and back again. 
+To move the positional servo let's add another ``||servos:set servo||`` block, but we also need to a ``||loops:pause||`` block add inbetween and after the new block. Set both ``||loops:pause||`` blocks to 1000 ms(1 second). Change the port to 2, this time change set the angle to 90. This makes the servo move from the RIGHT position to the UP position and back again. 
 
 ```blocks
 forever(function () {
-    motors.servo2.setAngle(0)
+    servos.servo2.setAngle(0)
     pause(1000)
-    motors.servo2.setAngle(90)
+    servos.servo2.setAngle(90)
     pause(1000)
 })
 ```
@@ -68,11 +68,11 @@ Let's add a final angle to our code, this will make the servo move from 0 degree
 
 ```blocks
 forever(function () {
-    motors.servo2.setAngle(0)
+    servos.servo2.setAngle(0)
     pause(1000)
-    motors.servo2.setAngle(90)
+    servos.servo2.setAngle(90)
     pause(1000)
-    motors.servo2.setAngle(180)
+    servos.servo2.setAngle(180)
     pause(1000)
 })
 ```
