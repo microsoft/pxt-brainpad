@@ -8,7 +8,7 @@
     "ns.ts",
     "images.ts",
     "images.jres",
-    "motors.ts"
+    "servos.ts"
   ],
   "dependencies": {
     "base": "file:../base",
