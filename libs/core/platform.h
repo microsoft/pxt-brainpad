@@ -5,6 +5,7 @@
 #include "MbedTimer.h"
 #include "MbedI2C.h"
 #include "MbedPin.h"
+#include "MbedSPI.h"
 #include "MultiButton.h"
 #include "BrainPadPin.h"
 
@@ -27,6 +28,7 @@
 //#define PlatformDMAC SAMD21DMAC
 
 #define CODAL_MBED codal::_mbed
+#define CODAL_SPI codal::MbedSPI
 #define CODAL_PIN codal::BrainPadPin
 #define CODAL_ACCELEROMETER_HEADER "MMA8453.h"
 #define CODAL_ACCELEROMETER codal::MMA8453
