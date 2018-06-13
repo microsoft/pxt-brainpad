@@ -48,9 +48,6 @@
  * sensing in C vs Kelvin).
  */
 
-#define CODAL_TEMPERATURE_SENSOR_HEADER "BrainPadTemperatureSensor.h"
-#define CODAL_TEMPERATURE_SENSOR codal::BrainPadTemperatureSensor
-
 #define ANALOG_THRESHOLD_LOW 0
 #define ANALOG_THRESHOLD_HIGH 100
 
