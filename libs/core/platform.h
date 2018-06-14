@@ -5,6 +5,7 @@
 #include "MbedTimer.h"
 #include "MbedI2C.h"
 #include "MbedPin.h"
+#include "MbedSPI.h"
 #include "MultiButton.h"
 #include "BrainPadPin.h"
 
@@ -27,6 +28,7 @@
 //#define PlatformDMAC SAMD21DMAC
 
 #define CODAL_MBED codal::_mbed
+#define CODAL_SPI codal::MbedSPI
 #define CODAL_PIN codal::BrainPadPin
 #define CODAL_ACCELEROMETER_HEADER "MMA8453.h"
 #define CODAL_ACCELEROMETER codal::MMA8453
@@ -48,15 +50,17 @@
  * sensing in C vs Kelvin).
  */
 
-#define TEMPERATURE_NOMINAL_VALUE 25
-#define TEMPERATURE_NOMINAL_READING 10000
-#define TEMPERATURE_BETA 3380
-#define TEMPERATURE_SERIES_RESISTOR 10000
-#define TEMPERATURE_ZERO_OFFSET 273.5
+#define ANALOG_THRESHOLD_LOW 0
+#define ANALOG_THRESHOLD_HIGH 100
+
+
+// #define TEMPERATURE_NOMINAL_VALUE 25
+// #define TEMPERATURE_NOMINAL_READING 10000
+// #define TEMPERATURE_SERIES_RESISTOR 10000
+// #define TEMPERATURE_ZERO_OFFSET 273.5
 
 #define CODAL_LIGHT_SENSOR_HEADER "BrainPadLightSensor.h"
 #define CODAL_LIGHT_SENSOR codal::BrainPadLightSensor
-
 #define LIGHTSENSOR_SENSITIVITY 868 // codal has 912 now
 #define LIGHTSENSOR_LOW_THRESHOLD 128
 #define LIGHTSENSOR_HIGH_THRESHOLD 896
