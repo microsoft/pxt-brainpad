@@ -19,6 +19,7 @@
     "libs/screen",
     "libs/display",
     "libs/servo",
+    "libs/serial",
     "libs/brainpad"
   ],
     "serial": {
