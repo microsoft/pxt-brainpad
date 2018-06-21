@@ -27,5 +27,5 @@ namespace config {
     export const PIN_BTN_LEFT = DAL.PA_15;
     export const PIN_BTN_RIGHT = DAL.PC_13;
     export const PIN_BTN_UP = DAL.PA_5;
-    export const PIN_BTN_DOWN = DAL.PC_13;
+    export const PIN_BTN_DOWN = DAL.PB_10;
 }
