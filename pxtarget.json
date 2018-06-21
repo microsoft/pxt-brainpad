@@ -20,6 +20,8 @@
     "libs/display",
     "libs/servo",
     "libs/serial",
+    "libs/controller",
+    "libs/game",
     "libs/brainpad"
   ],
     "serial": {

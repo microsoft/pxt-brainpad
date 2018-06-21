@@ -32,27 +32,10 @@
 #define CODAL_PIN codal::BrainPadPin
 #define CODAL_ACCELEROMETER_HEADER "MMA8453.h"
 #define CODAL_ACCELEROMETER codal::MMA8453
-#define ACC_SYSTEM SIMPLE_CARTESIAN
 
 #define IMAGE_BITS 1
 #define LCD_WIDTH 128
 #define LCD_HEIGHT 64
-
-
-// The parameters below needs tuning!
-
-/*
- * @param nominalValue The value (in SI units) of a nominal position.
- * @param nominalReading The raw reading from the sensor at the nominal position.
- * @param beta The Steinhart-Hart Beta constant for the device
- * @param seriesResistor The value (in ohms) of the resistor in series with the sensor.
- * @param zeroOffset Optional zero offset applied to all SI units (e.g. 273.15 for temperature
- * sensing in C vs Kelvin).
- */
-
-#define ANALOG_THRESHOLD_LOW 0
-#define ANALOG_THRESHOLD_HIGH 100
-
 
 // #define TEMPERATURE_NOMINAL_VALUE 25
 // #define TEMPERATURE_NOMINAL_READING 10000
