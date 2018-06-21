@@ -3,6 +3,6 @@
     "dependencies": {
         "screen": "file:../screen",
         "music": "file:../music",
-        "keys": "file:../keys"
+        "controller": "file:../controller"
     }
 }
