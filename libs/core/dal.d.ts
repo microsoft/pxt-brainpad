@@ -183,6 +183,8 @@ declare const enum DAL {
     // built/codal/libraries/codal-core/inc/driver-models/Timer.h
     CODAL_TIMER_DEFAULT_EVENT_LIST_SIZE = 10,
     // built/codal/libraries/codal-core/inc/drivers/AnalogSensor.h
+    ANALOG_THRESHOLD_LOW = 1,
+    ANALOG_THRESHOLD_HIGH = 2,
     ANALOG_SENSOR_UPDATE_NEEDED = 3,
     ANALOG_SENSOR_INITIALISED = 1,
     ANALOG_SENSOR_HIGH_THRESHOLD_PASSED = 2,
