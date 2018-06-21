@@ -25,7 +25,7 @@ namespace image {
     * Gets the screen image
     */
     //% blockNamespace="images" group="Create"
-    //% blockId=imagescreen block="screen"
+    //% blockId=imagescreen block="screen image"
     export function screenImage(): Image {
         return screen;
     }
