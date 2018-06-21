@@ -14,7 +14,7 @@ We use buttons every day to communicate with electronic devices all around us. E
 First we need to grab an ``||input:on button||`` event block from the side menu under  ``||input:INPUT||``. 
 
 ```blocks
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
 	
 })
 ```
@@ -23,7 +23,7 @@ input.buttonL.onEvent(ButtonEvent.Click, function () {
 Since ``||input:Left||`` is the default parameter of our ``||input:on button||`` event block, we will start programming it. Drag in a ``||music:play tone at||`` block, found under the ``||music:MUSIC||`` tab. Change the default parameter of the block to 440(Middle A) note.  
  
 ```blocks
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     music.playTone(440, music.beat(BeatFraction.Half))
 })
 ```
@@ -32,10 +32,10 @@ input.buttonL.onEvent(ButtonEvent.Click, function () {
 Each Button has it's own ``||input:on button||`` event block, so let's drag the next ``||input:on button||`` event in to our program. We need to set the parameter for this event to use the ``||input:Up||`` button. 
 
 ```blocks
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     music.playTone(440,  music.beat(BeatFraction.Half))
 })
-input.buttonU.onEvent(ButtonEvent.Click, function () {
+input.buttonUp.onEvent(ButtonEvent.Click, function () {
 	
 })
 ```
@@ -44,10 +44,10 @@ input.buttonU.onEvent(ButtonEvent.Click, function () {
 Next add a ``||music:play tone at||`` block to this ``||input:on button||`` event block. Set the paramater of this block to 392(Middle G) note.
 
 ```blocks
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     music.playTone(440,  music.beat(BeatFraction.Half))
 })
-input.buttonU.onEvent(ButtonEvent.Click, function () {
+input.buttonUp.onEvent(ButtonEvent.Click, function () {
     music.playTone(392,  music.beat(BeatFraction.Half))
 })
 ```
@@ -56,13 +56,13 @@ input.buttonU.onEvent(ButtonEvent.Click, function () {
 Let's add another ``||input:on button||`` event block to our program, set this blocks parameter to use the ``||input:Right||`` button. 
 
 ```blocks
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     music.playTone(440,  music.beat(BeatFraction.Half))
 })
-input.buttonU.onEvent(ButtonEvent.Click, function () {
+input.buttonUp.onEvent(ButtonEvent.Click, function () {
     music.playTone(392, music.beat(BeatFraction.Half))
 })
-input.buttonR.onEvent(ButtonEvent.Click, function () {
+input.buttonRight.onEvent(ButtonEvent.Click, function () {
 	
 })
 ```
@@ -71,13 +71,13 @@ input.buttonR.onEvent(ButtonEvent.Click, function () {
 Add a ``||music:play tone at||`` block to this ``||input:on button||`` event block. Set the note to 349(Middle F) note.
 
 ```blocks
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     music.playTone(440, music.beat(BeatFraction.Half))
 })
-input.buttonU.onEvent(ButtonEvent.Click, function () {
+input.buttonUp.onEvent(ButtonEvent.Click, function () {
     music.playTone(392,  music.beat(BeatFraction.Half))
 })
-input.buttonR.onEvent(ButtonEvent.Click, function () {
+input.buttonRight.onEvent(ButtonEvent.Click, function () {
     music.playTone(349,  music.beat(BeatFraction.Half))
 })
 ```
@@ -86,16 +86,16 @@ input.buttonR.onEvent(ButtonEvent.Click, function () {
 Add the last ``||input:on button||`` event block to our program, set this blocks parameter to use the ``||input:Down||`` button. 
 
 ```blocks
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     music.playTone(440, music.beat(BeatFraction.Half))
 })
-input.buttonU.onEvent(ButtonEvent.Click, function () {
+input.buttonUp.onEvent(ButtonEvent.Click, function () {
     music.playTone(392,  music.beat(BeatFraction.Half))
 })
-input.buttonR.onEvent(ButtonEvent.Click, function () {
+input.buttonRight.onEvent(ButtonEvent.Click, function () {
     music.playTone(349, music.beat(BeatFraction.Half))
 })
-input.buttonD.onEvent(ButtonEvent.Click, function () {
+input.buttonDown.onEvent(ButtonEvent.Click, function () {
 	
 })
 ```
@@ -104,7 +104,7 @@ input.buttonD.onEvent(ButtonEvent.Click, function () {
 Finally add a ``||music:play tone at||`` block to the last ``||input:on button||`` event block. Set this note to 523(High C) note.
 
 ```blocks
-input.buttonD.onEvent(ButtonEvent.Click, function () {
+input.buttonDown.onEvent(ButtonEvent.Click, function () {
     music.playTone(523,  music.beat(BeatFraction.Half))
 })
 ```
@@ -113,16 +113,16 @@ input.buttonD.onEvent(ButtonEvent.Click, function () {
 Your final program should look like this. Let's play a song using those four buttons.  
 
 ```blocks
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     music.playTone(440,  music.beat(BeatFraction.Half))
 })
-input.buttonU.onEvent(ButtonEvent.Click, function () {
+input.buttonUp.onEvent(ButtonEvent.Click, function () {
     music.playTone(392, music.beat(BeatFraction.Half))
 })
-input.buttonR.onEvent(ButtonEvent.Click, function () {
+input.buttonRight.onEvent(ButtonEvent.Click, function () {
     music.playTone(349,  music.beat(BeatFraction.Half))
 })
-input.buttonD.onEvent(ButtonEvent.Click, function () {
+input.buttonDown.onEvent(ButtonEvent.Click, function () {
     music.playTone(523,  music.beat(BeatFraction.Half))
 })
 ```

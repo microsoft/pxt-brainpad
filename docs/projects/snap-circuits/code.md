@@ -8,7 +8,7 @@ Open @homeurl@ in your web browser.
 We will use a button to start our program, first drag a ``||input: on button||`` event block into code block area. 
 
 ```blocks
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
 	
 })
 ```
@@ -18,7 +18,7 @@ First we need to create a ``||variable: variable||``. We'll name it count and se
 
 ```blocks
 let count = 0
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     count = 10
 })
 ```
@@ -28,7 +28,7 @@ Next, we will need to add a ``||loops: while loop||`` to handle our countdown.
 
 ```blocks
 let count = 0
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     count = 10
     while (true) {
     	
@@ -41,7 +41,7 @@ By default the ``||loops: while loop||`` start with it's parameter set to ``||lo
 
 ```blocks
 let count = 0
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     count = 10
     while (0 > 0) {
     	
@@ -55,7 +55,7 @@ Inside the ``||logic: Comparision||``block we need to drag in our ``||variable: 
 
 ```blocks
 let count = 0
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     count = 10
     while (count >= 0) {
     	
@@ -68,7 +68,7 @@ Right now our ``||loops: while loop||`` will just continue to loop because we do
 
 ```blocks
 let count = 0
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     count = 10
     while (count >= 0) {
         count += -1
@@ -81,7 +81,7 @@ Our ``||loops: while loop||`` works but it doesn't do anything. We need to add s
 
 ```blocks
 let count = 0
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     count = 10
     while (count >= 0) {
         display.showNumber(0, 1)
@@ -95,7 +95,7 @@ The code within our ``||loops: while loop||`` executes very quickly, so quickly 
 
 ```blocks
 let count = 0
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     count = 10
     while (count >= 0) {
         display.showNumber(0, 1)
@@ -110,7 +110,7 @@ To get our SnapCircuit Helicopter motor to actually work, we need to set the AN 
 
 ```blocks
 let count = 0
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     pins.SCL.digitalWrite(true)
     count = 10
     while (count >= 0) {
@@ -127,7 +127,7 @@ To launch the Helicopter we have to set our ``||pins: AN||`` pin low after our `
 
 ```blocks
 let count = 0
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     pins.SCL.digitalWrite(true)
     count = 10
     while (count >= 0) {
@@ -143,7 +143,7 @@ Finally lets add a couple sound effects to make our project more interesting. Ad
 
 ```blocks
 let count = 0
-input.buttonL.onEvent(ButtonEvent.Click, function () {
+input.buttonLeft.onEvent(ButtonEvent.Click, function () {
     music.playSound(music.sounds(Sounds.JumpUp))
     pins.SCL.digitalWrite(true)
     count = 10
