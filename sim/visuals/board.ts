@@ -283,14 +283,12 @@ namespace pxsim.visuals {
 
         private buttons: SVGElement[];
         private buttonsOuter: SVGElement[];
-        private buttonABText: SVGTextElement;
         private pins: SVGElement[];
         private pinControls: { [index: number]: AnalogPinControl };
         private rgbLed: SVGCircleElement;
         private systemLed: SVGElement;
         private redLED: SVGRectElement;
         private lcd: SVGImageElement;
-        private slideSwitch: SVGGElement;
         private lightLevelButton: SVGCircleElement;
         private lightLevelGradient: SVGLinearGradientElement;
         private lightLevelText: SVGTextElement;
@@ -300,7 +298,6 @@ namespace pxsim.visuals {
         private thermometerGradient: SVGLinearGradientElement;
         private thermometer: SVGRectElement;
         private thermometerText: SVGTextElement;
-        private antenna: SVGPolylineElement;
         private shakeButtonGroup: SVGElement;
         private shakeText: SVGTextElement;
         private screenCanvas: HTMLCanvasElement;

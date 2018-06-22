@@ -25,7 +25,11 @@
   },
   "palette": [
     "#000000",
-    "#ffffff"
+    "#00ffff"
   ],
+  "screenSize": {
+    "width": 128,
+    "height": 64
+  },
   "public": true
 }
