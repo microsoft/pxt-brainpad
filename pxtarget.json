@@ -220,82 +220,113 @@
     "gittag": "master",
     "serviceId": "brainpad"
   },
-    "appTheme": {
-        "accentColor": "#0089BF",
-        "logoUrl": "https://www.brainpad.com/",
-        "logo": "./static/logo.png",
-        "docsLogo": "./static/logo.square.png",
-        "portraitLogo": "./static/logo.square.png",
-        "footerLogo": "./static/logo.square.png",
-        "organization": "Microsoft MakeCode",
-        "organizationUrl": "https://makecode.com/",
-        "organizationLogo": "./static/Microsoft-logo_rgb_c-gray-square.png",
-        "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
-        "homeUrl": "https://makecode.brainpad.com/",
-        "embedUrl": "https://makecode.brainpad.com/",
-        "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
-        "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
-        "githubUrl": "https://github.com/Microsoft/pxt-brainpad",
-        "betaUrl": "https://makecode.com",
-        "crowdinProject": "kindscript",
-        "boardName": "BrainPad",
-        "driveDisplayName": "BRAINPAD",
-        "docMenu": [
-            {
-                "name": "Blocks",
-                "path": "/blocks"
-            },
-            {
-                "name": "JavaScript",
-                "path": "/javascript"
-            },
-            {
-                "name": "Reference",
-                "path": "/reference"
-            },
-            {
-                "name": "Buy",
-                "path": "https://www.brainpad.com/buy"
-            }
-        ],
-        "showHomeScreen": true,
-        "homeScreenHero": "./static/hero.png",
-        "invertedMenu": true,
-        "invertedToolbox": false,
-        "invertedMonaco": false,
-        "monacoToolbox": true,
-        "selectLanguage": true,
-        "simAnimationEnter": "fly right in",
-        "simAnimationExit": "fly right out",
-        "highContrast": true,
-        "greenScreen": true,
-        "hasAudio": true,
-        "usbHelp": [],
-        "extendEditor": true,
-        "disableBlockIcons": true,
-        "socialOptions": {
-            "twitterHandle": "ghielectronics",
-            "orgTwitterHandle": "MSMakeCode",
-            "hashtags": "MakeCode"
-        },
-        "blocklyOptions": {
-            "grid": {
-            }
-        },
-        "blocklyColors": {
-            "insertionMarker": "#000000",
-            "insertionMarkerOpacity": 0.5
-        },
-        "blockColors": {
-            "loops": "#40bf4a",
-            "logic": "#4cbfe6",
-            "math": "#9966ff",
-            "variables": "#FF6680",
-            "text": "#ffab19",
-            "advanced": "#00272B",
-            "functions": "#005a9e",
-            "arrays": "#8A1C7C"
-        },
-        "allowPackageExtensions": true
-    }
+  "appTheme": {
+    "accentColor": "#0089BF",
+    "logoUrl": "https://www.brainpad.com/",
+    "logo": "./static/logo.png",
+    "docsLogo": "./static/logo.square.png",
+    "portraitLogo": "./static/logo.square.png",
+    "footerLogo": "./static/logo.square.png",
+    "organization": "Microsoft MakeCode",
+    "organizationUrl": "https://makecode.com/",
+    "organizationLogo": "./static/Microsoft-logo_rgb_c-gray-square.png",
+    "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
+    "homeUrl": "https://makecode.brainpad.com/",
+    "embedUrl": "https://makecode.brainpad.com/",
+    "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
+    "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
+    "githubUrl": "https://github.com/Microsoft/pxt-brainpad",
+    "betaUrl": "https://makecode.com",
+    "crowdinProject": "kindscript",
+    "boardName": "BrainPad",
+    "driveDisplayName": "BRAINPAD",
+    "docMenu": [
+      {
+        "name": "Blocks",
+        "path": "/blocks"
+      },
+      {
+        "name": "JavaScript",
+        "path": "/javascript"
+      },
+      {
+        "name": "Reference",
+        "path": "/reference"
+      },
+      {
+        "name": "Buy",
+        "path": "https://www.brainpad.com/buy"
+      }
+    ],
+    "showHomeScreen": true,
+    "homeScreenHero": "./static/hero.png",
+    "invertedMenu": true,
+    "invertedToolbox": false,
+    "invertedMonaco": false,
+    "monacoToolbox": true,
+    "selectLanguage": true,
+    "simAnimationEnter": "fly right in",
+    "simAnimationExit": "fly right out",
+    "highContrast": true,
+    "greenScreen": true,
+    "hasAudio": true,
+    "usbHelp": [],
+    "extendEditor": true,
+    "disableBlockIcons": true,
+    "socialOptions": {
+      "twitterHandle": "ghielectronics",
+      "orgTwitterHandle": "MSMakeCode",
+      "hashtags": "MakeCode"
+    },
+    "blocklyOptions": {
+      "grid": {
+      }
+    },
+    "blocklyColors": {
+      "insertionMarker": "#000000",
+      "insertionMarkerOpacity": 0.5
+    },
+    "blockColors": {
+      "loops": "#40bf4a",
+      "logic": "#4cbfe6",
+      "math": "#9966ff",
+      "variables": "#FF6680",
+      "text": "#ffab19",
+      "advanced": "#00272B",
+      "functions": "#005a9e",
+      "arrays": "#8A1C7C"
+    },
+
+    
+    "availableLocales": [
+      "en",
+      "ar",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "es-ES",
+      "fi",
+      "fr",
+      "hu",
+      "is",
+      "it",
+      "ja",
+      "ko",
+      "nl",
+      "no",
+      "pt-BR",
+      "pt-PT",
+      "ru",
+      "si-LK",
+      "sk",
+      "sv-SE",
+      "tr",
+      "uk",
+      "zh-CN",
+      "zh-TW"
+    ],
+
+    "allowPackageExtensions": true
+  }
 }
