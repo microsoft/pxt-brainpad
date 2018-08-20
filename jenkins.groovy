@@ -32,7 +32,8 @@ def projectName = "pxt-brainpad"
 
     Utilities.setMachineAffinity(newJob, "Ubuntu", "20161020")
     InternalUtilities.standardJobSetup(newJob, project, isPR, "*/*")
-    InternalUtilities.addPrivatePermissions(newJob, ["greg-norris"])    
+    InternalUtilities.addPrivatePermissions(newJob, ["greg-norris"])
+    InternalUtilities.addPrivatePermissions(newJob, ["john-brochue"])
 
     if (isPR) {
         Utilities.addGithubPRTrigger(newJob, "Default Testing")
