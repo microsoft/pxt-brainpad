@@ -3,7 +3,6 @@
 ## Step 1 @unplugged
 A ``||variables:variable||`` is a value that can change depending on conditions or information in our code. In this tutorial, we will create and manipulate the data inside a ``||variables:variable||``.
 
-
 ## Step 2 @fullscreen
 Under menu, select ``||variables:VARIABLES||``. Then select ``||variables:Make a Variable...||``
 We try to give ``||variables:variables||`` meaningful names that will make the code easier to read. Let's name ours ``||variables:count||``.  
