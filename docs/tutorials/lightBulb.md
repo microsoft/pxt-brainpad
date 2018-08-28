@@ -19,7 +19,6 @@ Let's drag a new block into the ``||loops:forever||`` block. In our block menu u
 forever(function () {
     lightbulb.setColor(0xFF0000)
 })
-
 ```
 
 ## Step 4 @fullscreen
@@ -29,7 +28,6 @@ If you look in the simulator, you'll see that our Light Bulb is now RED. Click o
 forever(function () {
     lightbulb.setColor(0xFF0000)
 })
-
 ```
 
 ## Step 5 @fullscreen
@@ -60,14 +58,12 @@ forever(function () {
     pause(1000)
     lightbulb.setBrightness(15)
 })
-
 ```
 
 ## Step 8 @fullscreen
 But Our Light Bulb still doesn't blink properly. That's because we never tell the BrainPad how long to leave the Light Bulb off. So right after ``||lightbulb:set brightness||`` block. We need to add another ``||loops:pause||`` block
 
 ```blocks
- 
 forever(function () {
     lightbulb.setColor(lightbulb.rgb(255, 255, 255))
     pause(1000)
@@ -80,7 +76,6 @@ forever(function () {
 We still need to turn the brightness back up. So we'll add another ``||lightbulb:set brightness||`` block to complete the task, and set it all the way up to 255 (100%). The Light Bulb on the simulator should be blinking, whatever color we created. 
 
 ```blocks
- 
 forever(function () {
     lightbulb.setColor(lightbulb.rgb(255, 255, 255))
     pause(1000)
