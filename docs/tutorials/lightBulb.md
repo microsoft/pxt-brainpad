@@ -31,7 +31,7 @@ forever(function () {
     lightbulb.setColor(lightbulb.rgb(255, 255, 255))
 })
 ```
-## Step 6  @fullscreen
+## Step 6 @fullscreen
 Let's suppose we wanted to make our LED blink every second. To do this we will need to add a ``||loops:pause||`` inside our ``||loops:forever||`` block. We'll also need to change the parameters value inside the block to 1000 ms, but the Light Bulb still won't blink. Can you guess why?
 ```blocks
 forever(function () {
@@ -58,7 +58,7 @@ forever(function () {
     pause(1000)
 })
 ```
-## Step 8 @fullscreen
+## Step 9 @fullscreen
 We still need to turn the brightness back up. So we'll add another ``||lightbulb:set brightness||`` block to complete the task, and set it all the way up to 255 (100%). The Light Bulb on the simulator should be blinking, whatever color we created. 
 ```blocks
 forever(function () {
