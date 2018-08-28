@@ -5,17 +5,17 @@ A ``||variables:variable||`` is a value that can change depending on conditions 
 
 ## Step 2 @fullscreen
 Under menu, select ``||variables:VARIABLES||``. Then select ``||variables:Make a Variable...||``
-We try to give ``||variables:variables||`` meaningful names that will make the code easier to read. Let's name ours ``||variables:count||``.  
+We try to give ``||variables:variables||`` meaningful names that will make the code easier to read. Let's name ours count.  
 
 ![on Start and forever blocks](/static/images/variable_menu.jpg)
 
 ## Step 3 @fullscreen
-After naming our ``||variables:count||`` variable. We now see NEW blocks inside the ``||variables:VARIABLES||`` menu that contain our newly created ``||variables:count||`` variable.
+After naming our count variable. We now see NEW blocks inside the ``||variables:VARIABLES||`` menu that contain our newly created count variable.
 
 ![drag in on start block](/static/images/variable_count.jpg)
  
 ## Step 4 @fullscreen
-We need to set the our new ``||variables:count||`` variable. Drag the ``||variables:set count to||`` block into the ``||loops:onstart||`` block. We can leave the parameter at zero. 
+We need to set the our new count variable. Drag the ``||variables:set count to||`` block into the ``||loops:onstart||`` block. We can leave the parameter at zero. 
 
 ```blocks
 let count = 0
@@ -23,7 +23,7 @@ count = 0
 ```
 
 ## Step 5 @fullscreen
-Next, let's add 1 to our ``||variables:count||`` variable, by dragging in the ``||variables:change count by||`` block. We can leave it's parameter set to 1 
+Next, let's add 1 to our count variable, by dragging in the ``||variables:change count by||`` block. We can leave it's parameter set to 1 
  
 ```blocks
 let count = 0
@@ -32,7 +32,7 @@ count += 1
 ```
 
 ## Step 6 @fullscreen
-1 has now been added to our ``||variables:count||`` variable, but we can't see it anywhere. Let's display it on screen by dragging in a ``||display:show number at line||``block. 
+1 has now been added to our count variable, but we can't see it anywhere. Let's display it on screen by dragging in a ``||display:show number at line||``block. 
 
 ```blocks
 let count = 0
@@ -73,7 +73,7 @@ forever(function () {
 ```
 
 ## Step 10 @fullscreen
-As you can see the ``||variables:count||`` increased by 1 and continues to count up on the ``||display:display||``. This is because the ``||variables: change count by||`` block is now inside the ``||loops:forever||`` block. Finally try changing the ``||variables:change count by||`` 5. What happens now?
+As you can see the count increased by 1 and continues to count up on the ``||display:display||``. This is because the ``||variables: change count by||`` block is now inside the ``||loops:forever||`` block. Finally try changing the ``||variables:change count by||`` 5. What happens now?
 
 ```blocks
 let count = 0
