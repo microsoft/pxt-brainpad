@@ -26,31 +26,31 @@ forever(function () {
 ```
 ## Step 5 @fullscreen
 But what if the exact color you want isn't on the pallette? We can add parameters to change values, and create our own color. To accomplish this we need to drag a ``||lightbulb:red green blue||`` block inside of the  ``||lightbulb:set light bulb to||``.
- ```blocks
+```blocks
 forever(function () {
     lightbulb.setColor(lightbulb.rgb(255, 255, 255))
 })
 ```
- ## Step 6  @fullscreen
+## Step 6  @fullscreen
 Let's suppose we wanted to make our LED blink every second. To do this we will need to add a ``||loops:pause||`` inside our ``||loops:forever||`` block. We'll also need to change the parameters value inside the block to 1000 ms, but the Light Bulb still won't blink. Can you guess why?
- ```blocks
+```blocks
 forever(function () {
     lightbulb.setColor(lightbulb.rgb(255, 255, 255))
     pause(1000)
 })
 ```
- ## Step 7 @fullscreen
+## Step 7 @fullscreen
 Our Light Bulb doesn't blink because we never turn off the Light Bulb anywhere in our ``||loops:forever||`` block. We can accomplish this by adding a ``||lightbulb:set brightness||`` block right after our ``||loops:pause||`` block. It defauts to a value of 15, we need to change this to 0. This will turn off the Light Bulb.
- ```blocks
+```blocks
 forever(function () {
     lightbulb.setColor(lightbulb.rgb(255, 255, 255))
     pause(1000)
     lightbulb.setBrightness(15)
 })
 ```
- ## Step 8 @fullscreen
+## Step 8 @fullscreen
 But Our Light Bulb still doesn't blink properly. That's because we never tell the BrainPad how long to leave the Light Bulb off. So right after ``||lightbulb:set brightness||`` block. We need to add another ``||loops:pause||`` block
- ```blocks
+```blocks
 forever(function () {
     lightbulb.setColor(lightbulb.rgb(255, 255, 255))
     pause(1000)
@@ -58,9 +58,9 @@ forever(function () {
     pause(1000)
 })
 ```
- ## Step 8 @fullscreen
+## Step 8 @fullscreen
 We still need to turn the brightness back up. So we'll add another ``||lightbulb:set brightness||`` block to complete the task, and set it all the way up to 255 (100%). The Light Bulb on the simulator should be blinking, whatever color we created. 
- ```blocks
+```blocks
 forever(function () {
     lightbulb.setColor(lightbulb.rgb(255, 255, 255))
     pause(1000)
