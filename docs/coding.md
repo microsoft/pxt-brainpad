@@ -13,8 +13,17 @@ Step by step guide to coding your @boardname@.
   "label": "Starting Blocks",
   "labelClass": "pink ribbon large",
   "url":"/tutorials/onStart",
-  "imageUrl":"/static/cp/projects/thumb/onStart.jpg"
-  
+  "imageUrl":"/static/cp/projects/thumb/onStart.jpg" 
+} 
+,
+{
+  "name": "Variables ",
+  "description": "In this tutorial, we show how to create and use variables",
+  "cardType": "tutorial",
+  "label": "Using Variables",
+  "labelClass": "pink ribbon large",
+  "url":"/tutorials/variables",
+  "imageUrl":"/static/cp/projects/thumb/variable.jpg"  
 } 
 ]
 ```
