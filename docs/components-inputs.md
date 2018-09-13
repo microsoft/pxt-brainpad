@@ -7,16 +7,6 @@ Step by step guide to coding your @boardname@.
 ```codecard
 [
 {
-  "name": "New? Try This First!",
-  "description": "First we will turn on the Light Bulb, then flash it!",
-  "cardType": "tutorial",
-  "label": "Light Bulb",
-  "labelClass": "pink ribbon large",
-  "url":"/tutorials/lightbulb",
-  "imageUrl":"/static/cp/projects/thumb/lightbulb.jpg"  
-} 
-,
-{
   "name": "Sensing Temperatures",
   "description": "Using the Temp Sensor to Change Light Bulb Color",
   "cardType": "tutorial",
