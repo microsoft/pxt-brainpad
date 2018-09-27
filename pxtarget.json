@@ -46,7 +46,6 @@
         "streams": false,
         "aspectRatio": 1.8,
         "parts": false,
-        "debugger": true,
         "boardDefinition": {
             "visual": "brainpad",
             "gpioPinBlocks": [
@@ -247,6 +246,7 @@
         "boardName": "BrainPad",
         "driveDisplayName": "BRAINPAD",
         "print": true,
+        "debugger": true,
         "docMenu": [
             {
                 "name": "Blocks",
