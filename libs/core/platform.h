@@ -48,6 +48,7 @@
 #define LIGHTSENSOR_LOW_THRESHOLD 128
 #define LIGHTSENSOR_HIGH_THRESHOLD 896
 
+#define target_wait_us wait_us
 
 #ifdef JUST_FOR_DAL_D_TS_CPP_WILL_IGNORE
 #define PA_0 0x00
