@@ -3,14 +3,14 @@
 ## Step 1 @unplugged
 Let's start by doing something simple. Let's light up the Light Bulb on the BrainPad.
  
-## Step 2  @fullscreen
+## Step 2 @fullscreen
 You'll notice the project begins with a ``||loops:forever||`` block. Anything we place inside this block will keep running forever in the program.
  ```blocks
 loops.forever(function () {
    
 })
 ```
-## Step 3  @fullscreen
+## Step 3 @fullscreen
 Let's drag a new block into the ``||loops:forever||`` block. In our block menu under Light Bulb, grab the ``||lightbulb:set light bulb to||`` block and drag it into the ``||loops:forever||`` block.
  ```blocks
 forever(function () {
