@@ -1,8 +1,7 @@
-# GHI Electronics Brain Pad target for PXT
+# GHI Electronics Brain Pad target for MakeCode
 
-## Build and hosted editor
-Hosted website: https://5ecba313-4436-4d40-809e-0a7e8abc99de.pxt.io</br>
-Jenkins build: https://ci2.dot.net/job/Private/job/pxt_project_blue/job/master/
+[![Build Status](https://travis-ci.org/Microsoft/pxt-brainpad.svg?branch=master)](https://travis-ci.org/Microsoft/pxt-brainpad)
+[![Community Discord](https://img.shields.io/discord/448979533891371018.svg)](https://aka.ms/makecodecommunity)
 
 ## Local Dev setup
 
@@ -47,8 +46,7 @@ cd pxt-brainpad
 pxt serve --cloud
 ```
 
-If you are editing C++, we strongly recommend to [setup your machine for building CODAL](https://github.com/lancaster-university/codal)
-and use the following command line
+If you are editing C++, install [docker.com] and make sure your drive is shared.
 
 ```
 pxt serve
