@@ -7,16 +7,6 @@ Step by step guide to coding your @boardname@.
 ```codecard
 [
 {
-  "name": "New? Try This First!",
-  "description": "First we will turn on the Light Bulb, then flash it!",
-  "cardType": "tutorial",
-  "label": "Light Bulb",
-  "labelClass": "pink ribbon large",
-  "url":"/tutorials/lightbulb",
-  "imageUrl":"/static/cp/projects/thumb/lightbulb.jpg"  
-} 
-,
-{
   "name": "Play a Song",
   "description": "In this tutorial, we will use the BrainPad's buzzer to create different sounds",
   "cardType": "tutorial",
@@ -44,6 +34,16 @@ Step by step guide to coding your @boardname@.
   "labelClass": "pink ribbon large",
   "url":"/tutorials/servos",
   "imageUrl":"/static/cp/projects/thumb/servos.jpg"
+} 
+,
+{
+  "name": "New? Try This First!",
+  "description": "First we will turn on the Light Bulb, then flash it!",
+  "cardType": "tutorial",
+  "label": "Light Bulb",
+  "labelClass": "pink ribbon large",
+  "url":"/tutorials/lightbulb",
+  "imageUrl":"/static/cp/projects/thumb/lightbulb.jpg"  
 } 
 ]
 ```
