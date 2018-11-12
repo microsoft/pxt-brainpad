@@ -1,67 +1,94 @@
-# Buzzer Song
+# Light Bulb
 
-## Step 1 @unplugged
-The BrainPad is equipped with a buzzer that is capable of playing many different notes. It can even be programmed to play a song. We will use it make a simple 5 note melody, that's out of this world. 
+Let's start by doing something simple. Let's light up the Light Bulb on the BrainPad.
  
-![BrainPad buzzer image](/static/images/buzzer.jpg)
-
 ## Step 2 @fullscreen
-We only want the song to play once. To do this we remove the ``||loops:forever||`` block and replace it with an ``||loops:on Start||`` block. It's located under the ``||loops:LOOPS||`` menu. You can DRAG the ``||loops:forever||`` block towards the side MENU to delete it. 
-```blocks
+
+You'll notice the project begins with a ``||loops:forever||`` block. Anything we place inside this block will keep running forever in the program.
+
+ ```blocks
 loops.forever(function () {
-    
+   
 })
 ```
 
 ## Step 3 @fullscreen
-Next we will need to drag our first note into the ``||loops:on Start||`` block. You'll find it under the ``||music:music||`` tab. 
 
-```blocks
-music.playTone(262, music.beat(BeatFraction.Half))
+Let's drag a new block into the ``||loops:forever||`` block. In our block menu under Light Bulb, grab the ``||lightbulb:set light bulb to||`` block and drag it into the ``||loops:forever||`` block.
+
+ ```blocks
+forever(function () {
+    lightbulb.setColor(0xFF0000)
+})
 ```
 
-## Step 4 @fullscreen 
-Change the parameters of the note, by clicking on the value inside the ``||music:play tone at||`` block. Change, by entering a new value or playing a note on the virtual keyboard that appears. We will change the value to 392(Middle G) and the beat to 1.
+## Step 4 @fullscreen
+
+If you look in the simulator, you'll see that our Light Bulb is now RED. Click on the RED bubble inside the block we just added. Here you'll be able to change the color of the Light Bulb to any of the colors available on the color pallette. 
 
 ```blocks
-music.playTone(392, music.beat(BeatFraction.Whole))
+forever(function () {
+    lightbulb.setColor(0xFF0000)
+})
 ```
 
 ## Step 5 @fullscreen
-Now let's add more notes to our song. Drag another ``||music:play tone at||`` block into the ``||loops:on start||`` block. This 2nd note in our song we'll set to 440(Middle A) and the beat to 1.
- 
+
+But what if the exact color you want isn't on the pallette? We can add parameters to change values, and create our own color. To accomplish this we need to drag a ``||lightbulb:red green blue||`` block inside of the  ``||lightbulb:set light bulb to||``.
+
 ```blocks
-music.playTone(392, music.beat(BeatFraction.Whole))
-music.playTone(440, music.beat(BeatFraction.Whole))
+forever(function () {
+    lightbulb.setColor(lightbulb.rgb(255, 255, 255))
+})
 ```
 
-## Step 6 @fullscreen 
-It's still not quite a melody, we need to add more notes. Just below the last ``||music:play tone at||`` block, drag another ``||music:play tone at||`` block in. This one we'll set to 349(Middle F) and the beat to 1/2 this time.
+## Step 6 @fullscreen
+
+Let's suppose we wanted to make our LED blink every second. To do this we will need to add a ``||loops:pause||`` inside our ``||loops:forever||`` block. We'll also need to change the parameters value inside the block to 1000 ms, but the Light Bulb still won't blink. Can you guess why?
 
 ```blocks
-music.playTone(392, music.beat(BeatFraction.Whole))
-music.playTone(440, music.beat(BeatFraction.Whole))
-music.playTone(349, music.beat(BeatFraction.Half))
+forever(function () {
+    lightbulb.setColor(lightbulb.rgb(255, 255, 255))
+    pause(1000)
+})
 ```
 
-## Step 7 @fullscreen 
-We still have more notes to add drag another ``||music:play tone at||`` block in. Set it to 175(Low F), set the beat to 1/2 too.
+## Step 7 @fullscreen
+
+Our Light Bulb doesn't blink because we never turn off the Light Bulb anywhere in our ``||loops:forever||`` block. We can accomplish this by adding a ``||lightbulb:set brightness||`` block right after our ``||loops:pause||`` block. It defauts to a value of 15, we need to change this to 0. This will turn off the Light Bulb.
 
 ```blocks
-music.playTone(392, music.beat(BeatFraction.Whole))
-music.playTone(440, music.beat(BeatFraction.Whole))
-music.playTone(349, music.beat(BeatFraction.Half))
-music.playTone(175, music.beat(BeatFraction.Half))
+forever(function () {
+    lightbulb.setColor(lightbulb.rgb(255, 255, 255))
+    pause(1000)
+    lightbulb.setBrightness(15)
+})
 ```
 
-## Step 8 @fullscreen 
-Finally we will add one last note to our song. Drag one more ``||music:play tone at||`` block in. Set it to 262(Middle C), set the beat to 2. See if you can find someone that recognizes the melody, like a parent or teacher.
+## Step 8 @fullscreen
+
+But Our Light Bulb still doesn't blink properly. That's because we never tell the BrainPad how long to leave the Light Bulb off. So right after ``||lightbulb:set brightness||`` block. We need to add another ``||loops:pause||`` block
 
 ```blocks
-music.playTone(392, music.beat(BeatFraction.Whole))
-music.playTone(440, music.beat(BeatFraction.Whole))
-music.playTone(349, music.beat(BeatFraction.Half))
-music.playTone(175, music.beat(BeatFraction.Half))
-music.playTone(262, music.beat(BeatFraction.Double))
+forever(function () {
+    lightbulb.setColor(lightbulb.rgb(255, 255, 255))
+    pause(1000)
+    lightbulb.setBrightness(0)
+    pause(1000)
+})
+```
+
+## Step 9 @fullscreen
+
+We still need to turn the brightness back up. So we'll add another ``||lightbulb:set brightness||`` block to complete the task, and set it all the way up to 255 (100%). The Light Bulb on the simulator should be blinking, whatever color we created. 
+
+```blocks
+forever(function () {
+    lightbulb.setColor(lightbulb.rgb(255, 255, 255))
+    pause(1000)
+    lightbulb.setBrightness(0)
+    pause(1000)
+    lightbulb.setBrightness(100)
+})
 ```
 
