@@ -10,9 +10,9 @@ Step by step guide to coding your @boardname@.
   "name": "New? Try This First!",
   "description": "First we will turn on the Light Bulb, then flash it!",
   "cardType": "tutorial",
-  "label": "Light Bulb",
+  "label": "Light",
   "labelClass": "pink ribbon large",
-  "url":"/tutorials/light",
+  "url":"/tutorials/led",
   "imageUrl":"/static/cp/projects/thumb/lightbulb.jpg"  
 } 
 ,
