@@ -1,6 +1,6 @@
-# LightBulb 
+# Light
 
 ## Step 1 @unplugged
+The BrainPad is equipped with an onboard light sensor. We can use this sensor to trigger an action when the light reaches a certain level. 
 
-Let's start by doing something simple. Let's light up the Light Bulb on the BrainPad.
- 
+![BrainPad Temperature Sensor image](/static/images/light.jpg)
