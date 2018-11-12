@@ -9,6 +9,7 @@ The BrainPad is equipped with a buzzer that is capable of playing many different
 ## Step 2 @fullscreen
 
 We only want the song to play once. To do this we remove the ``||loops:forever||`` block and replace it with an ``||loops:on Start||`` block. It's located under the ``||loops:LOOPS||`` menu. You can DRAG the ``||loops:forever||`` block towards the side MENU to delete it. 
+
 ```blocks
 loops.forever(function () {
     
