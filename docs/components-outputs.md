@@ -12,7 +12,7 @@ Step by step guide to coding your @boardname@.
   "cardType": "tutorial",
   "label": "Light Bulb",
   "labelClass": "pink ribbon large",
-  "url":"/tutorials/lightbulb",
+  "url":"/tutorials/light",
   "imageUrl":"/static/cp/projects/thumb/lightbulb.jpg"  
 } 
 ,
