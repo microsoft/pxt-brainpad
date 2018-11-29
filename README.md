@@ -7,7 +7,8 @@
 
 These instructions assume familiarity with dev tools and languages.
 
-* install Node.js 6+
+* install Node.js 8+
+* Install [Docker](https://www.docker.com/get-started) if you plan to build ``.cpp`` files.
 * (optional) install [Visual Studio Code](https://code.visualstudio.com/)
 
 In a common folder,
