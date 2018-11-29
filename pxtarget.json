@@ -149,6 +149,7 @@
         "isNative": true,
         "useUF2": true,
         "hasHex": true,
+        "gc": true,
         "deployDrives": ".*",
         "deployFileMarker": "INFO.TXT",
         "driveName": "BrainPad2",
@@ -211,7 +212,10 @@
             "name": "codal-brainpad",
             "url": "https://github.com/ghi-electronics/codal-brainpad",
             "branch": "v0.1.0",
-            "type": "git"
+            "type": "git",
+            "branches": {
+                "https://github.com/lancaster-university/codal-core": "d1dc4ad04860a0b02fd6c9437d77a05e9d26b898"
+            }
         },
         "codalBinary": "BRAINPAD",
         "yottaConfig": {
@@ -222,8 +226,10 @@
             }
         },
         "githubCorePackage": "lancaster-university/codal",
-        "gittag": "master",
-        "serviceId": "brainpad"
+        "gittag": "v0.6.1",
+        "serviceId": "brainpad",
+        "dockerImage": "pext/yotta:latest"
+
     },
     "appTheme": {
         "accentColor": "#0089BF",
@@ -280,6 +286,7 @@
         "usbHelp": [],
         "extendEditor": true,
         "disableBlockIcons": true,
+        "scriptManager": true,
         "socialOptions": {
             "twitterHandle": "ghielectronics",
             "orgTwitterHandle": "MSMakeCode",
