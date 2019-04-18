@@ -1,6 +1,7 @@
 
 //% color="#d65cd6"
 namespace input {
+    
 }
 
 //% color="#0078d7"
@@ -37,3 +38,7 @@ namespace console {
 namespace loops {
 
 }
+
+forever(function () {
+    input.acceleration(Dimension.X);
+})
