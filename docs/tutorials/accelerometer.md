@@ -50,7 +50,7 @@ forever(function () {
 })
 ```
 
-## Step 7 @unplugged
+## Step 7 @fullscreen
 
 Next we'll need to add a comparison block to our ``||logic:if-then||`` block
 
@@ -62,7 +62,7 @@ forever(function () {
 })
 ```
 
-## Step 8 @unplugged
+## Step 8 @fullscreen
 
 Now let's read the value from the accelerometer's X value see if it's less than 500. Select X in the menu of the block we just added. 
 
@@ -74,7 +74,7 @@ forever(function () {
 })
 ```
 
-## Step 9 @unplugged
+## Step 9 @fullscreen
 
 Let's add an image and change it based on how we tilt the BrainPad. First drag one of the images looking to the right. We'll use the CAT looking LEFT.
 
@@ -86,7 +86,7 @@ forever(function () {
 })
 ```
 
-## Step 10 @unplugged
+## Step 10 @fullscreen
 
 Finally click on the + sign inside the our ``||logic:if-then||`` block, here we'll add the image looking the other way. 
 
