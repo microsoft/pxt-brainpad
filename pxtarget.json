@@ -266,7 +266,7 @@
             }
         ],
         "showHomeScreen": true,
-        "homeScreenHero": "./static/hero.png",
+        "homeScreenHero": "./static/hero.jpg",
         "invertedMenu": true,
         "invertedToolbox": false,
         "invertedMonaco": false,
