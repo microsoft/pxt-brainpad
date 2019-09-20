@@ -538,10 +538,13 @@ declare const enum DAL {
     CFG_DISPLAY_CFG3 = 42,
     CFG_PIN_DISPLAY_RST = 43,
     CFG_PIN_DISPLAY_BL = 44,
-    CFG_PIN_AN = 50,
-    CFG_PIN_RST = 51,
-    CFG_PIN_CS = 52,
-    CFG_PIN_INT = 54,
+
+    CFG_PIN_AN = 60,
+    CFG_PIN_RST = 61,
+    CFG_PIN_CS = 62,
+    CFG_PIN_PWM = 63,
+    CFG_PIN_INT = 64,
+
     CFG_PIN_A0 = 100,
     CFG_PIN_A1 = 101,
     CFG_PIN_A2 = 102,
