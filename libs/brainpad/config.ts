@@ -12,6 +12,13 @@ namespace config {
     export const PIN_RX = DAL.PA_10; // pwm
     export const PIN_TX = DAL.PA_9; // pwm
 
+    export const PIN_AN = DAL.PA_7; // adc
+    export const PIN_RST = DAL.PA_6; // adc
+    export const PIN_CS = DAL.PC_3; // adc
+    export const PIN_PWM = DAL.PA_3; // pwm
+    export const PIN_INT = DAL.PA_2; // adc
+
+
     export const PIN_SCK = DAL.PB_3; //
     export const PIN_MISO = DAL.PB_4; //
     export const PIN_MOSI = DAL.PB_5; // 

@@ -12,11 +12,11 @@ namespace pxsim {
         export let RX = -1; // pwm
         export let TX = -1; // pwm
 
-        export let AN = -1;
-        export let RST = -1;
-        export let CS = -1;
-        export let PWM = -1;
-        export let INT = -1;
+        export let AN = -1; // analog
+        export let RST = -1; // analog
+        export let CS = -1; // analog
+        export let PWM = -1; // pwm
+        export let INT = -1; // pwm
 
     
         export let SCK = -1; //
