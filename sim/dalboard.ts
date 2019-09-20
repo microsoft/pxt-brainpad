@@ -11,6 +11,13 @@ namespace pxsim {
         export let SDA = -1; // pwm
         export let RX = -1; // pwm
         export let TX = -1; // pwm
+
+        export let AN = -1;
+        export let RST = -1;
+        export let CS = -1;
+        export let PWM = -1;
+        export let INT = -1;
+
     
         export let SCK = -1; //
         export let MISO = -1; //
@@ -96,7 +103,16 @@ namespace pxsim {
                 pins: [
                     pxsim.PinName.SERVO_1,
                     pxsim.PinName.SERVO_2,
-                    pxsim.PinName.SCL
+                    pxsim.PinName.SCL,
+                    pxsim.PinName.SDA,
+                    pxsim.PinName.RX,
+                    pxsim.PinName.TX,
+                    pxsim.PinName.AN,
+                    pxsim.PinName.RST,
+                    pxsim.PinName.CS,
+                    pxsim.PinName.PWM,
+                    pxsim.PinName.INT
+
                 ]
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;
