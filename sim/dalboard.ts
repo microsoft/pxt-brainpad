@@ -95,7 +95,8 @@ namespace pxsim {
             this.builtinParts["edgeconnector"] = this.edgeConnectorState = new EdgeConnectorState({
                 pins: [
                     pxsim.PinName.SERVO_1,
-                    pxsim.PinName.SERVO_2
+                    pxsim.PinName.SERVO_2,
+                    pxsim.PinName.SCL
                 ]
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;
