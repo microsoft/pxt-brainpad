@@ -4,13 +4,13 @@
 
 The accelerometer is an input device that measures the force of acceleration in three axes (x, y, and z). Commonly know as g-force. 
 
-![BrainPad Accelerometer Image](/static/images/accelerometer.jpg)
+![BrainPad Accelerometer Image](../static/images/accelerometer.jpg)
 
 ## Step 2 @unplugged
 
 If the BrainPad is laying flat on a the table as shown, the x-axis runs horizontally left and right, the y-axis goes horizontally toward you and away from you, and the z-axis extends vertically straight up and down.
 
-![BrainPad Accelerometer Image](/static/images/axis.jpg)
+![BrainPad Accelerometer Image](../static/images/axis.jpg)
 
 ## Step 3 @fullscreen
 
@@ -36,7 +36,7 @@ forever(function () {
 
 Now you'll notice in the simulator we can move the BrainPad around with our mouse. Try tilting the BrainPad Up and watch the values on the graph change.
 
-![BrainPad Accelerometer Image](/static/images/accel_sim_demo.gif)
+![BrainPad Accelerometer Image](../static/images/accel_sim_demo.gif)
 
 ## Step 6 @fullscreen
 
@@ -104,10 +104,10 @@ forever(function () {
 
 Now when you tilt the BrainPad in either direction the image will change. You can fine tune the values as you see fit.  
 
-![BrainPad Accelerometer Image](/static/images/cats_eyes_accel.gif)
+![BrainPad Accelerometer Image](../static/images/cats_eyes_accel.gif)
 
 ## Step 12 @fullscreen
 
 Now that you know how to use the accelerometer trying playing around with the other parameters and see what the results are. When you're done deploy your program and see how it acts on the actual BrainPad. 
 
-![BrainPad Accelerometer Image](/static/images/accelerometer.jpg)
+![BrainPad Accelerometer Image](../static/images/accelerometer.jpg)

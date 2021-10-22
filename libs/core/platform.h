@@ -32,8 +32,8 @@ using namespace codal;
 #define CODAL_MBED codal::_mbed
 #define CODAL_SPI codal::MbedSPI
 #define CODAL_PIN codal::BrainPadPin
-#define CODAL_ACCELEROMETER_HEADER "MMA8453.h"
-#define CODAL_ACCELEROMETER codal::MMA8453
+#define CODAL_ACCELEROMETER_HEADER "MC3216.h"
+#define CODAL_ACCELEROMETER codal::MC3216
 
 #define IMAGE_BITS 1
 #define LCD_WIDTH 128
@@ -104,5 +104,16 @@ using namespace codal;
 #define PH_0 0x70
 #define PH_1 0x71
 #endif
+
+typedef uint32_t ImageLiteral_;
+
+static inline ImageData *imageBytes(ImageLiteral_ lit) {
+    return (ImageData *)lit;
+}
+
+
+namespace pxt {
+	bool IsPulse();
+}
 
 #endif

@@ -1,0 +1,4 @@
+
+//% block="Game"
+namespace game {
+}
