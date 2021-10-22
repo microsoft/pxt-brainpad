@@ -14,14 +14,16 @@
     "base": "file:../base",
     "core": "file:../core",
     "buttons": "file:../buttons",
-    "music": "file:../music",
-    "lightsensor": "file:../lightsensor",
+    "music": "file:../music",    
     "accelerometer": "file:../accelerometer",
+	"thermometer": "file:../thermometer",
     "screen": "file:../screen",
-    "thermometer": "file:../thermometer",
-    "lightbulb": "file:../lightbulb",
     "display": "file:../display",
-    "servo": "file:../servo"
+	"led": "file:../led",
+	"game": "file:../game",		
+	"controller": "file:../controller",	
+	"animation": "file:../animation"
+
   },
   "palette": [
     "#000000",

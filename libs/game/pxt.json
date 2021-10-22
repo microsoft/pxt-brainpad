@@ -1,8 +1,35 @@
 {
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/game",
+    "name": "game",
+    "description": "The game and sprite library - alpha",
+    "files": [
+        "controller.ts",
+        "hitbox.ts",
+        "sprites.ts",
+        "sprite.ts",
+        "spritemap.ts",
+        "spriteevents.ts",
+        "metrics.ts",
+        "obstacle.ts",
+        "physics.ts",
+        "info.ts",
+        "background.ts",
+        "tilemap.ts",
+        "camera.ts",
+        "scene.ts",
+        "scenes.ts",
+        "textDialogs.ts",
+        "game.ts",
+        "prompt.ts",
+        "ask.ts",
+        "targetoverrides.cpp",
+        "targetoverrides.ts",
+        "mathUtil.ts",
+        "ns.ts"
+
+    ],
+    "public": true,
     "dependencies": {
-        "screen": "file:../screen",
-        "music": "file:../music",
-        "controller": "file:../controller"
+        "controller": "file:../controller",
+        "screen": "file:../screen"
     }
 }

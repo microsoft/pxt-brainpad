@@ -1,3 +1,69 @@
 {
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/core"
+    "name": "core",
+    "description": "The core library for Codal-based targets",
+    "files": [
+        "README.md",
+        "dal.d.ts",
+        "codal.cpp",
+        "usb.cpp",
+        "pxt.h",
+        "platform.h",
+        "platform.cpp",
+        "pxtcore.h",
+        "pins.h",
+        "pins.cpp",
+        "pinsAnalog.cpp",
+        "pinsDigital.cpp",
+        "pinsPWM.cpp",
+        "pins.ts",
+        "pinscompat.ts",
+        "control.cpp",
+        "i2c.cpp",
+        "i2c.ts",
+        "spi.cpp",
+        "shims.d.ts",
+        "enums.d.ts",
+        "hf2.cpp",
+        "hf2.h",
+        "hf2dbg.h",
+        "uf2format.h",
+        "uf2hid.h",
+        "ns.ts",
+        "dmac.cpp",
+        "dmac.h",
+        "timer.ts",
+        "pxtparts.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "yotta": {
+        "config": {
+            "codal": {
+                "component_count": 64,
+                "dmesg_buffer_size": 1024,
+                "tag": 1
+            }
+        }
+    },
+    "public": true,
+    "dalDTS": {
+        "includeDirs": [
+            "libraries/codal-core/inc",
+            "pxtapp"
+        ],
+        "excludePrefix": [
+            "USB_",
+            "REQUEST_",
+            "LIS3DH_",
+            "FXOS8700_",
+            "HF2_",
+            "PXT_REF_TAG_",
+            "MS_",
+            "SCSI_"
+        ]
+    },
+    "dependencies": {
+        "base": "file:../base"
+    }
 }

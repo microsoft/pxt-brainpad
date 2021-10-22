@@ -5,25 +5,25 @@
 @importGoogleFonts: false;
 @fontName  : 'Open Sans';
 
-@primaryColor: @blue;
-@secondaryColor: @blue;
+@primaryColor: @orange;
+@secondaryColor: @grey;
 
 
 @red:#E81123;
 @yellow:#FFB900;
-@green:#10FC10;
+@green:#1AA71A;
 @violet:#B4009E;
 @purple:#5C2D91;
 @pink:#E2008C;
 @teal:#00979C;
-@orange: #F47A20;
+@orange: #F08000;
 @brown: #BCAC99;
 
 /* GHI Electronics colors */
-@grey: #6E6E6E;
+@grey: #555555;
 @blue: #3486BA;
 
-@pageBackground: #fff;
+@pageBackground: #555555;
 
 /*******************************
          PXT Overrides
@@ -38,7 +38,7 @@
 
 @mainMenuBlocksJsToggleColor: @black;
 
-@tutorialSelectedMenuColor: @blue;
+@tutorialSelectedMenuColor: @orange;
 
 /*-------------------
    Layout

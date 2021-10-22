@@ -9,13 +9,13 @@ A ``||variables:variable||`` is a value that can change depending on conditions 
 Under menu, select ``||variables:VARIABLES||``. Then select ``||variables:Make a Variable...||``
 We try to give ``||variables:variables||`` meaningful names that will make the code easier to read. Let's name ours count.  
 
-![on Start and forever blocks](/static/images/variable_menu.jpg)
+![on Start and forever blocks](../static/images/variable_menu.jpg)
 
 ## Step 3 @fullscreen
 
 After naming our count variable. We now see NEW blocks inside the ``||variables:VARIABLES||`` menu that contain our newly created count variable.
 
-![drag in on start block](/static/images/variable_count.jpg)
+![drag in on start block](../static/images/count.jpg)
  
 ## Step 4 @fullscreen
 

@@ -289,6 +289,8 @@ namespace pxsim.visuals {
         private systemLed: SVGElement;
         private redLED: SVGRectElement;
         private lcd: SVGImageElement;
+        private lcdLed1: SVGImageElement;
+        private lcdRectLed1: SVGRectElement;
         private lightLevelButton: SVGCircleElement;
         private lightLevelGradient: SVGLinearGradientElement;
         private lightLevelText: SVGTextElement;
@@ -305,16 +307,22 @@ namespace pxsim.visuals {
         public board: pxsim.DalBoard;
         private pinNmToCoord: Map<Coord> = {
         };
+		
+		private led:SVGCircleElement;
+		private counter: number = 0;
 
         constructor(public props: IBoardProps) {
-            this.fixPinIds();
+            
+			
+			this.fixPinIds();
             this.buildDom();
+			
             if (props && props.wireframe)
                 svg.addClass(this.element, "sim-wireframe");
-
+			
             if (props && props.theme)
                 this.updateTheme();
-
+			
             if (props && props.runtime) {
                 this.board = this.props.runtime.board as pxsim.DalBoard;
                 this.board.updateSubscribers.push(() => this.updateState());
@@ -322,32 +330,58 @@ namespace pxsim.visuals {
                 this.attachEvents();
                 this.initScreen();
             }
+			//getResume();
         }
 
         private fixPinIds() {
+			/* GHI changed
             for (let pn of pinNames) {
                 let key = getConfigKey(pn.name);
                 if (key != null)
                     pn.id = getConfig(key);
             }
+			*/
         }
 
-        private initScreen() {
-            let requested = false;
+		private flush() {
+			
+		}
+		
+        private initScreen() {			
+           
+			let requested = false;
             this.screenCanvas.width = this.board.screenState.width
             this.screenCanvas.height = this.board.screenState.height
 
             const ctx = this.screenCanvas.getContext("2d")
             ctx.imageSmoothingEnabled = false
             const imgdata = ctx.getImageData(0, 0, this.board.screenState.width, this.board.screenState.height)
+					
             const arr = new Uint32Array(imgdata.data.buffer)
-        
-            this.board.screenState.onChange = () => {
+											
+			// this.board.screenState.onChange = () => {
+							
+				// arr.set(this.board.screenState.screen)
+
+				// runtime.queueDisplayUpdate();
+				// ctx.putImageData(imgdata, 0, 0)
+
+				// this.lcd.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", this.screenCanvas.toDataURL());
+								
+				// window.requestAnimationFrame(this.flush)
+															
+			// }
+			
+			
+            
+			
+			this.board.screenState.onChange = () => {
 
                 const flush = () => {
                     requested = false
                     ctx.putImageData(imgdata, 0, 0)
                     this.lcd.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", this.screenCanvas.toDataURL());
+										
                 }
 
                 // after we did one-time setup, redefine ourselves to be quicker
@@ -356,17 +390,24 @@ namespace pxsim.visuals {
                     // paint rect
                     runtime.queueDisplayUpdate();
                     if (!requested) {
-                        requested = true
-                        window.requestAnimationFrame(flush)
+						requested = true
+                        ctx.putImageData(imgdata, 0, 0)
+						this.lcd.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", this.screenCanvas.toDataURL());
+						window.requestAnimationFrame(flush)
                     }
                 }
                 // and finally call the redefined self
                 this.board.screenState.onChange()
-            }                        
+            } 
+			
+			
+			
+			
         }
 
         public getView(): SVGAndSize<SVGSVGElement> {
-            return {
+            
+			return {
                 el: this.element,
                 y: 0,
                 x: 0,
@@ -376,7 +417,11 @@ namespace pxsim.visuals {
         }
 
         public getCoord(pinNm: string): Coord {
-            return this.pinNmToCoord[pinNm];
+            /* GHI changed
+			return this.pinNmToCoord[pinNm];
+			*/
+			
+			return null;
         }
 
         public highlightPin(pinNm: string): void {
@@ -388,6 +433,7 @@ namespace pxsim.visuals {
         }
 
         private recordPinCoords() {
+			/* GHI changed
             pinNames.forEach((pin, i) => {
                 const nm = pin.name;
                 const p = this.pins[i];
@@ -395,16 +441,16 @@ namespace pxsim.visuals {
                 this.pinNmToCoord[nm] = [r.left + r.width / 2, r.top + r.height / 2];
             });
             console.log(JSON.stringify(this.pinNmToCoord, null, 2))
+			*/
         }
 
-        private updateTheme() {
+        private updateTheme() {			
             let theme = this.props.theme;
 
-            svg.fills(this.buttonsOuter, theme.buttonOuter);
+            // GHI changed svg.fills(this.buttonsOuter, theme.buttonOuter);
             svg.fill(this.buttons[0], theme.buttonUps[0]);
             svg.fill(this.buttons[1], theme.buttonUps[1]);
-            svg.fill(this.buttons[2], theme.buttonUps[2]);
-            svg.fill(this.buttons[3], theme.buttonUps[3]);
+            			
 
             // if (this.shakeButtonGroup) {
             //     svg.fill(this.shakeButtonGroup, this.props.theme.gestureButtonOff);
@@ -418,21 +464,24 @@ namespace pxsim.visuals {
             // for (const id in this.pinControls) {
             //     this.pinControls[id].updateTheme();
             // }
+			
         }
 
         public updateState() {
+			
             let state = this.board;
             if (!state) return;
+						
             let theme = this.props.theme;
 
             let bpState = state.buttonState;
             let buttons = bpState.buttons;
             svg.fill(this.buttons[0], buttons[0].pressed ? theme.buttonDown : theme.buttonUps[0]);
             svg.fill(this.buttons[1], buttons[1].pressed ? theme.buttonDown : theme.buttonUps[1]);
-            svg.fill(this.buttons[2], buttons[2].pressed ? theme.buttonDown : theme.buttonUps[1]);
-            svg.fill(this.buttons[3], buttons[3].pressed ? theme.buttonDown : theme.buttonUps[1]);
-
+           
+			/* GHI changed	
             this.updateRgbLed();
+			
             this.updateGestures();
 
             this.updateSound();
@@ -441,10 +490,16 @@ namespace pxsim.visuals {
 
             if (!runtime || runtime.dead) svg.addClass(this.element, "grayscale");
             else svg.removeClass(this.element, "grayscale");
+			*/
+			this.updateSound();
+			this.updateLed();
+			//this.UpdateScreen();
+			
         }
 
         private lastFlashTime: number = 0;
         private flashSystemLed() {
+			/* GHI changed
             if (!this.systemLed)
                 this.systemLed = this.element.getElementById("LED_PWR-2") as SVGElement;
             let now = Date.now();
@@ -452,60 +507,161 @@ namespace pxsim.visuals {
                 this.lastFlashTime = now;
                 svg.animate(this.systemLed, "sim-flash")
             }
+			*/
         }
 
-        private updateRgbLed() {
-            let state = this.board;
+        private updateLed() {			
+			let state = this.board;
+            if (!state) return;
+			
+			const on = state.ledState.getState();
+			
+			if (this.led) 
+			{
+				if (on) {
+					svg.fill(this.led, `#f08000`);
+					this.led.style.strokeWidth = "0.28349999";
+                    this.led.style.stroke = "#f08000";
+				}
+				else {
+					svg.fill(this.led, `#ffffff`);
+					this.led.style.strokeWidth = "0.28349999";
+					this.led.style.stroke = "#0000ff";
+				}
+			}						
+		}
+		
+		private UpdateScreen() {
+			// let state = this.board;
+			// if (!state) return;
+				
+			// const ledMatrix = state.matrixLedState;
+			
+			// if (ledMatrix) { 
+
+				// if (!pxsim.basic.getMatrixLedUpdateState()) {
+					// return;
+				// }
+				
+				// pxsim.basic.setMatrixLedUpdateState(false);
+				
+				// const on = ledMatrix[0].getState();
+							
+				// update led matrix screen
+				// this.screenCanvas.width = this.board.screenState.width
+				// this.screenCanvas.height = this.board.screenState.height
+
+				// const ctx = this.screenCanvas.getContext("2d")
+				// ctx.imageSmoothingEnabled = false
+				// const imgdata = ctx.getImageData(0, 0, this.board.screenState.width, this.board.screenState.height)
+
+
+				// const arr = new Uint32Array(imgdata.data.buffer)
+				
+				// let ledWidth = (this.board.screenState.width / 5) | 0;
+				// let ledHeight = (this.board.screenState.height / 5) | 0;
+				
+				
+				// for (let i = 0; i < this.board.screenState.screen.length; i++) {
+					// this.board.screenState.screen[i] = 0xFF000000;
+				// }
+				
+				// for (let led = 0; led < ledMatrix.length; led++) {
+					// let xSrc = (led % 5) | 0;
+					// let ySrc = (led / 5) | 0;
+					
+					// let xDest = xSrc * ledWidth;
+					// let yDest = ySrc * ledHeight;
+					
+					// for (let y = yDest+1; y < yDest + ledHeight-2; y++) {
+							// for (let x = xDest+1; x < xDest + ledWidth-2; x++) {
+								// let arrId = (y * this.board.screenState.width + x) | 0;
+								
+								// if (ledMatrix[led].getState() == true) {
+									// this.board.screenState.screen[arrId] = 0xFFFFFF00;
+								// }
+								
+							// }
+						// }										
+				// }
+				
+			
+			
+				// arr.set(this.board.screenState.screen)
+
+				// runtime.queueDisplayUpdate();
+				// ctx.putImageData(imgdata, 0, 0)
+
+				// this.lcd.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", this.screenCanvas.toDataURL());				
+				
+				// window.requestAnimationFrame(this.flush)
+			// }
+				
+				
+			
+		}
+		
+		private updateRgbLed() {
+            /* GHI changed
+			let state = this.board;
             if (!state) return;
            
             const rgb = state.lightBulbState.getColor();
 
-            if (this.rgbLed) {
-                if (!rgb || (rgb.length >= 3 && rgb[0] === 0 && rgb[1] === 0 && rgb[2] === 0)) {
-                    // Clear the pixel
-                    svg.fill(this.rgbLed, `#feffe9`);
-                    svg.filter(this.rgbLed, null);
-                    this.rgbLed.style.strokeWidth = "0.28349999";
-                    this.rgbLed.style.stroke = "#58595b";
-                } else {
-                    let hsl = visuals.rgbToHsl(rgb);
-                    let [h, s, l] = hsl;
-                    let lx = Math.max(l * 1.3, 85);
-                    // at least 10% luminosity
-                    l = l * 90 / 100 + 10;
-                    this.rgbLed.style.stroke = `hsl(${h}, ${s}%, ${Math.min(l * 3, 75)}%)`
-                    this.rgbLed.style.strokeWidth = "1.5";
-                    svg.fill(this.rgbLed, `hsl(${h}, ${s}%, ${lx}%)`)
-                    svg.filter(this.rgbLed, `url(#neopixelglow)`);
-                    
-                    // let transform = l / 100 * 0.5;
-                    // this.rgbLed.style.transform = `scale(${0.9 + transform})`;
-                    // this.rgbLed.style.transformOrigin = "211.30725px 43.049255px";
-                }
-            }
+            if (!this.led) {
+				if (this.rgbLed) {
+					if (!rgb || (rgb.length >= 3 && rgb[0] === 0 && rgb[1] === 0 && rgb[2] === 0)) {
+						// Clear the pixel
+						svg.fill(this.rgbLed, `#feffe9`);
+						svg.filter(this.rgbLed, null);
+						this.rgbLed.style.strokeWidth = "0.28349999";
+						this.rgbLed.style.stroke = "#58595b";
+					} else {
+						let hsl = visuals.rgbToHsl(rgb);
+						let [h, s, l] = hsl;
+						let lx = Math.max(l * 1.3, 85);
+						// at least 10% luminosity
+						l = l * 90 / 100 + 10;
+						this.rgbLed.style.stroke = `hsl(${h}, ${s}%, ${Math.min(l * 3, 75)}%)`
+						this.rgbLed.style.strokeWidth = "1.5";
+						svg.fill(this.rgbLed, `hsl(${h}, ${s}%, ${lx}%)`)
+						svg.filter(this.rgbLed, `url(#neopixelglow)`);
+						
+						// let transform = l / 100 * 0.5;
+						// this.rgbLed.style.transform = `scale(${0.9 + transform})`;
+						// this.rgbLed.style.transformOrigin = "211.30725px 43.049255px";
+					}
+				}
+			}
+			*/
         }
 
         private updateSound() {
+			/* GHI changed
             let state = this.board;
             if (!state || !state.audioState) return;
             let audioState = state.audioState;
 
-            let soundBoard = this.element.getElementById('BUZZER-2') as SVGGElement;
+            let soundBoard = this.element.getElementById('BUZZER-1002') as SVGGElement;
             if (audioState.isPlaying()) {
                 svg.addClass(soundBoard, "sim-sound-stroke");
             } else {
                 svg.removeClass(soundBoard, "sim-sound-stroke");
             }
+			*/
         }
 
         private updatePins() {
-            let state = this.board;
+            /* GHI changed
+			let state = this.board;
             if (!state || !state.edgeConnectorState) return;
             state.edgeConnectorState.pins.forEach((pin, i) => this.updatePin(pin, i));
+			*/
         }
 
         private updatePin(pin: Pin, index: number) {
-            if (!pin || !this.pins[index]) return;
+            /*
+			if (!pin || !this.pins[index]) return;
 
             if ((pin as pins.CommonPin).used) {
                 if (this.pinControls[pin.id] === undefined) {
@@ -523,10 +679,12 @@ namespace pxsim.visuals {
                     this.pinControls[pin.id].updateValue();
                 }
             }
+			*/
         }
 
         private updateLightLevel() {
-            let state = this.board;
+            /*
+			let state = this.board;
             if (!state || !state.lightSensorState.sensorUsed) return;
 
             if (!this.lightLevelButton) {
@@ -587,18 +745,22 @@ namespace pxsim.visuals {
 
             svg.setGradientValue(this.lightLevelGradient, Math.min(100, Math.max(0, Math.floor(state.lightSensorState.getLevel() * 100 / 255))) + '%')
             this.lightLevelText.textContent = state.lightSensorState.getLevel().toString();
+			*/
         }
 
         private applyLightLevel() {
-            let lv = this.board.lightSensorState.getLevel();
+            /*
+			let lv = this.board.lightSensorState.getLevel();
             svg.setGradientValue(this.lightLevelGradient, Math.min(100, Math.max(0, Math.floor(lv * 100 / 255))) + '%')
             this.lightLevelText.textContent = lv.toString();
             this.lightLevelButton.setAttribute("aria-valuenow", lv.toString());
             accessibility.setLiveContent(lv.toString());
+			*/
         }
 
         private updateTemperature() {
-            let state = this.board;
+            /* GHI changed
+			let state = this.board;
             if (!state || !state.thermometerState || !state.thermometerState.sensorUsed) return;
 
             // Celsius
@@ -672,10 +834,12 @@ namespace pxsim.visuals {
             this.thermometer.setAttribute("aria-valuenow", t.toString());
             this.thermometer.setAttribute("aria-valuetext", t + unit);
             accessibility.setLiveContent(t + unit);
+			*/
         }
 
         private updateGestures() {
-            let state = this.board;
+            /* GHI changed
+			let state = this.board;
             if (state.accelerometerState.useShake && !this.shakeButtonGroup) {
                 const btnr = 2;
                 const width = 22;
@@ -710,11 +874,14 @@ namespace pxsim.visuals {
                 });
                 accessibility.setAria(this.shakeButtonGroup, "button", "Shake the board");
             }
+			*/
         }
 
-        private buildDom() {
-            this.element = new DOMParser().parseFromString(BOARD_SVG, "image/svg+xml").querySelector("svg") as SVGSVGElement;
-            svg.hydrate(this.element, {
+        private buildDom() {      
+				
+			this.element = new DOMParser().parseFromString(BOARD_SVG, "image/svg+xml").querySelector("svg") as SVGSVGElement;
+            /* GHI changed	
+			svg.hydrate(this.element, {
                 "version": "1.0",
                 "viewBox": `0 0 ${MB_WIDTH} ${MB_HEIGHT}`,
                 "class": "sim",
@@ -725,11 +892,11 @@ namespace pxsim.visuals {
             });
             this.style = <SVGStyleElement>svg.child(this.element, "style", {});
             this.style.textContent = MB_STYLE;
-
+			
             this.defs = <SVGDefsElement>svg.child(this.element, "defs", {});
             this.g = <SVGGElement>svg.elt("g");
             this.element.appendChild(this.g);
-
+			
             // filters
             let glow = svg.child(this.defs, "filter", { id: "filterglow", x: "-5%", y: "-5%", width: "120%", height: "120%" });
             svg.child(glow, "feGaussianBlur", { stdDeviation: "5", result: "glow" });
@@ -743,23 +910,45 @@ namespace pxsim.visuals {
             svg.child(neopixelmerge, "feMergeNode", { in: "coloredBlur" })
             svg.child(neopixelmerge, "feMergeNode", { in: "SourceGraphic" })
 
+			
             this.rgbLed = this.element.getElementById("LIGHTBULB_LED") as SVGCircleElement;
             const lcdRect = this.element.getElementById("DISPLAY_SCREEN") as SVGRectElement;
             this.lcd = <SVGImageElement>svg.child(lcdRect.parentElement, "image", { x : lcdRect.x.baseVal.value, y : lcdRect.y.baseVal.value, width: lcdRect.width.baseVal.value, height: lcdRect.height.baseVal.value })
-
+			
             const btnids = ["BTN_L", "BTN_R", "BTN_U", "BTN_D"];
             const btnlabels = ["Left", "Right", "Up", "Down"];
+			
             this.buttonsOuter = btnids.map((n, i) => {
                 let btn = this.element.getElementById(n + "_OUTER") as SVGElement;
                 accessibility.makeFocusable(btn);
                 accessibility.setAria(btn, "button", btnlabels[i]);
                 return btn;
             });
-            this.buttonsOuter.forEach(b => svg.addClass(b, "sim-button-outer"));
+            
+			this.buttonsOuter.forEach(b => svg.addClass(b, "sim-button-outer"));
             this.buttons = btnids.map(n => this.element.getElementById(n + "_INNER") as SVGElement);
             this.buttons.forEach(b => svg.addClass(b, "sim-button"));
-
-            this.screenCanvas = document.createElement("canvas");
+			
+            
+			
+			
+			
+			this.screenCanvas = document.createElement("canvas");
+			*/
+			
+			this.screenCanvas = document.createElement("canvas");
+			
+			const lcdRect = this.element.getElementById("DISPLAY_SCREEN") as SVGRectElement;
+            this.lcd = <SVGImageElement>svg.child(lcdRect.parentElement, "image", { x : lcdRect.x.baseVal.value, y : lcdRect.y.baseVal.value, width: lcdRect.width.baseVal.value, height: lcdRect.height.baseVal.value })
+			
+			//this.lcdRectLed1 = this.element.getElementById("DISPLAY_SCREEN_LED1") as SVGRectElement;
+			//this.lcdLed1 = <SVGImageElement>svg.child(this.lcdRectLed1.parentElement, "rect", { x : this.lcdRectLed1.x.baseVal.value, y : this.lcdRectLed1.y.baseVal.value, width: this.lcdRectLed1.width.baseVal.value, height: this.lcdRectLed1.height.baseVal.value })
+			
+			const btnids = ["A", "B"];
+			this.buttons = btnids.map(n => this.element.getElementById("BUTTON_" + n) as SVGElement);
+			this.buttons.forEach(b => svg.addClass(b, "sim-button-outer"));
+			
+			this.led = this.element.getElementById("LED") as SVGCircleElement;
         }
 
         private mkBtn(left: number, top: number, label: string): { outer: SVGElement, inner: SVGElement } {
@@ -790,10 +979,10 @@ namespace pxsim.visuals {
                     case "serial": this.flashSystemLed(); break;
                 }
             }
-
+			
             let bpState = this.board.buttonState;
             let stateButtons = bpState.buttons;
-            this.buttonsOuter.forEach((btn, index) => {
+            this.buttons.forEach((btn, index) => {
                 let button = stateButtons[index];
 
                 pointerEvents.down.forEach(evid => btn.addEventListener(evid, ev => {
@@ -819,6 +1008,7 @@ namespace pxsim.visuals {
                     }
                 );
             })
+			
         }
     }
 }

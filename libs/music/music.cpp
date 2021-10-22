@@ -11,9 +11,17 @@ enum class SoundOutputDestination {
   Speaker = 0,
 };
 
+static int Scale(double value, int originalMin, int originalMax, int scaleMin, int scaleMax) {
+	auto scale = (double)(scaleMax - scaleMin) / (originalMax - originalMin);
+	auto ret = (int)(scaleMin + ((value - originalMin) * scale));
+
+	return ret > scaleMax ? scaleMax : (ret < scaleMin ? scaleMin : ret);
+}
+
 namespace music {
 
 SoundOutputDestination soundOutputDestination = SoundOutputDestination::Speaker;
+int vol = 127;
 
 /**
  * Turn the on-board speaker on or off.
@@ -31,21 +39,24 @@ void setOutput(SoundOutputDestination out) {
 /**
 * Play a tone through the speaker for some amount of time.
 * @param frequency pitch of the tone to play in Hertz (Hz), eg: Note.C
-* @param ms tone duration in milliseconds (ms), eg: BeatFraction.Half
+* @param ms tone duration in milliseconds (ms), eg: BeatFraction.Whole
 */
 //% help=music/play-tone
-//% blockId=music_play_note block="play tone|at %note=device_note|for %duration=device_beat"
+//% blockId=music_play_note block="play|tone %note=device_note|for %duration=device_beat"
 //% parts="headphone" async
 //% blockNamespace=music
 //% weight=76 blockGap=8
+//% group="Tone"
 void playTone(int frequency, int ms) {
   auto pitchPin = lookupPin(
-      soundOutputDestination == SoundOutputDestination::Speaker ? PB_8 : PA_8);
+      soundOutputDestination == SoundOutputDestination::Speaker ? PB_8 : PA_5);
 
   if (frequency <= 0) {
     pitchPin->setAnalogValue(0);
   } else {
-    pitchPin->setAnalogValue(512);
+    //pitchPin->setAnalogValue(512);
+	auto v = Scale(vol, 0, 255, 0, 1024);
+	pitchPin->setAnalogValue(v);
     pitchPin->setAnalogPeriodUs(1000000 / frequency);
     if (ms > 0) {
       int d = max(1, ms - NOTE_PAUSE); // allow for short rest
@@ -57,4 +68,37 @@ void playTone(int frequency, int ms) {
   }
 }
 
-} // namespace music
+/**
+ * Set the default output volume of the sound synthesizer.
+ * @param volume the volume 0...255
+ */
+//% blockId=synth_set_volume block="set volume %volume"
+//% volume.min=0 volume.max=255
+//% volume.defl=127
+//% help=music/set-volume
+//% weight=70
+//% group="Volume"
+//% blockGap=8
+void setVolume(int volume) {
+	auto pitchPin = lookupPin(soundOutputDestination == SoundOutputDestination::Speaker ? PB_8 : PA_5);
+	
+	auto v = Scale(volume, 0, 255, 0, 512);
+	pitchPin->setAnalogValue(v);
+	
+	vol = volume;
+
+} 
+
+/**
+ * Returns the current output volume of the sound synthesizer.
+ */
+//% blockId=synth_get_volume block="volume"
+//% help=music/volume
+//% weight=69
+//% group="Volume"
+//% blockGap=8
+int volume() {
+	return vol;
+}
+
+}

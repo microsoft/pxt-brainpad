@@ -1,3 +1,13 @@
 {
-  "additionalFilePath": "../../node_modules/pxt-common-packages/libs/animation"
+    "name": "animation",
+    "description": "An animation library for sprite",
+    "files": [
+        "README.md",
+        "animation.ts",
+        "targetoverrides.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "game": "file:../game"        
+    }
 }

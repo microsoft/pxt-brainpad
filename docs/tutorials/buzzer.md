@@ -4,11 +4,11 @@
 
 The BrainPad is equipped with a buzzer that is capable of playing many different notes. It can even be programmed to play a song. We will use it make a simple 5 note melody, that's out of this world. 
  
-![BrainPad buzzer image](/static/images/buzzer.jpg)
+![BrainPad buzzer image](../static/images/buzzer.jpg)
 
 ## Step 2 @fullscreen
 
-We only want the song to play once. To do this we remove the ``||loops:forever||`` block and replace it with an ``||loops:on Start||`` block. It's located under the ``||loops:LOOPS||`` menu. You can DRAG the ``||loops:forever||`` block towards the side MENU to delete it. 
+We only want the song to play once. To do this we remove the ``||loops:forever||`` block and use the ``||loops:on Start||`` block. You can DRAG the ``||loops:forever||`` block towards the side MENU to delete it. 
 
 ```blocks
 loops.forever(function () {

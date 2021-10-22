@@ -4,6 +4,7 @@
 
 namespace pxsim {
     export module PinName {
+		/* GHI Changed
         export let LIGHT = -1; // adc
         export let TEMPERATURE = -1; // adc
     
@@ -29,8 +30,29 @@ namespace pxsim {
         export let ACCELEROMETER_INT = -1;
 
         export let SERVO_1 = -1;
-        export let SERVO_2 = -1;
-        
+        export let SERVO_2 = -1;		
+		*/
+		
+        export let P0 = -1;
+        export let P1 = -1;
+        export let P2 = -1;
+        export let P3 = -1;
+        export let P4 = -1;
+        export let P5 = -1;
+        export let P6 = -1;
+        export let P7 = -1;
+        export let P8 = -1;
+        export let P9 = -1;
+        export let P10 = -1;
+        export let P11 = -1;
+        export let P12 = -1;
+        export let P13 = -1;
+        export let P14 = -1;
+        export let P15 = -1;
+        export let P16 = -1;
+        export let SCL = -1;
+        export let SDA = -1;
+		
         export function initPins() {
             let v = PinName as any;
             for (let k of Object.keys(v)) {
@@ -67,9 +89,11 @@ namespace pxsim {
         edgeConnectorState: EdgeConnectorState;
         accelerometerState: AccelerometerState;
         audioState: AudioState;
-        lightBulbState: LightBulbState;
+        //lightBulbState: LightBulbState;
         accelState: AccelState;
         screenState: ScreenState;
+		ledState: LedState;
+		// matrixLedState: LedState[];
 
         invertAccelerometerYAxis = true;
 
@@ -85,12 +109,10 @@ namespace pxsim {
 
             // IDs do matter!
             this.buttonState = new CommonButtonState([
-                new CommonButton(15), // left
-                new CommonButton(45), // right
-                new CommonButton(5), // up
-                new CommonButton(26) // down
+                new CommonButton(45), // A
+                new CommonButton(23), // B
             ]);
-            this.builtinParts["lightbulb"] = this.lightBulbState = new LightBulbState();
+            //this.builtinParts["lightbulb"] = this.lightBulbState = new LightBulbState();
             this.builtinParts["accelerometer"] = this.accelState = new AccelState();
             this.builtinParts["switch"] = this.slideSwitchState = new SlideSwitchState();
             this.builtinParts["audio"] = this.audioState = new AudioState();
@@ -101,6 +123,7 @@ namespace pxsim {
             this.builtinParts["accelerometer"] = this.accelerometerState = new AccelerometerState(runtime);
             this.builtinParts["edgeconnector"] = this.edgeConnectorState = new EdgeConnectorState({
                 pins: [
+				/* GHI changed
                     pxsim.PinName.SERVO_1,
                     pxsim.PinName.SERVO_2,
                     pxsim.PinName.SCL,
@@ -111,13 +134,42 @@ namespace pxsim {
                     pxsim.PinName.RST,
                     pxsim.PinName.CS,
                     pxsim.PinName.PWM,
-                    pxsim.PinName.INT
+                    pxsim.PinName.INT,                    
+				*/	
+					pxsim.PinName.P0,
+					pxsim.PinName.P1,
+					pxsim.PinName.P2,
+					pxsim.PinName.P3,
+					pxsim.PinName.P4,
+					pxsim.PinName.P5,
+					pxsim.PinName.P6,
+					pxsim.PinName.P7,
+					pxsim.PinName.P8,
+					pxsim.PinName.P9,
+					pxsim.PinName.P10,
+					pxsim.PinName.P11,
+					pxsim.PinName.P12,
+					pxsim.PinName.P13,
+					pxsim.PinName.P14,
+					pxsim.PinName.P15,
+					pxsim.PinName.P16,
+					pxsim.PinName.SCL,
+					pxsim.PinName.SDA,
 
                 ]
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;
             this.builtinVisuals["microservo"] = () => new visuals.MicroServoView();
             this.builtinPartVisuals["microservo"] = (xy: visuals.Coord) => visuals.mkMicroServoPart(xy);
+			this.builtinParts["led"] = this.ledState = new LedState(runtime);
+			
+			// this.matrixLedState = new Array(25)
+			
+			// for (let i = 0; i < 25; i++) {
+				// this.matrixLedState[i] = new LedState(runtime);
+			// }
+			
+			// this.builtinParts["matrixLedState"] = this.matrixLedState;
         }
 
         receiveMessage(msg: SimulatorMessage) {
