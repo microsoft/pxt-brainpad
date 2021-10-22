@@ -1,0 +1,15 @@
+{
+    "name": "led",
+    "description": "Led driver",
+    "files": [
+        "README.md",
+        "led.ts",
+        "led.cpp",
+        "shims.d.ts",
+        "ns.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
+}

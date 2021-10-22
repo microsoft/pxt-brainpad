@@ -1,0 +1,16 @@
+{
+    "name": "leds",
+    "description": "Led Matrix driver",
+    "files": [
+        "README.md",
+        "leds.ts",
+        "leds.cpp",
+        "shims.d.ts",
+        "ns.ts",
+        "enums.d.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
+}

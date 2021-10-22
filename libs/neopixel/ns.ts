@@ -1,0 +1,4 @@
+
+//% block="Neopixel"
+namespace neopixel {
+}
