@@ -2,28 +2,30 @@
     "id": "brainpad",
     "platformid": "codal",
     "nickname": "brainpad",
-    "name": "GHI Brain Pad",
-    "title": "GHI Brain Pad - Blocks / Javascript editor",
-    "description": "A Blocks / JavaScript code editor for the GHI Brain Pad.",
+    "name": "BrainPad",
+    "title": "BrainPad - Blocks / Javascript editor",
+    "description": "A Blocks / JavaScript code editor for the BrainPad.",
     "corepkg": "brainpad",
     "ignoreDocsErrors": true,
     "bundleddirs": [
         "libs/animation",
         "libs/base",
         "libs/core",
-        "libs/lightsensor",
         "libs/accelerometer",
-        "libs/music",
-        "libs/thermometer",
-        "libs/buttons",
-        "libs/lightbulb",
+		"libs/thermometer",
+        "libs/music",        
+        "libs/buttons",       
         "libs/screen",
-        "libs/display",
-        "libs/servo",
-        "libs/serial",
+        "libs/display",        
         "libs/controller",
         "libs/game",
-        "libs/brainpad"
+        "libs/brainpad",
+        "libs/led",
+		"libs/neopixel",
+		"libs/sonar",
+		"libs/brainbot",
+		"libs/braingamer",
+		"libs/infrared"
     ],
     "serial": {
         "useHF2": true,
@@ -209,8 +211,8 @@
         "buildEngine": "codal",
         "codalTarget": {
             "name": "codal-brainpad",
-            "url": "https://github.com/ghi-electronics/codal-brainpad",
-            "branch": "v0.1.0",
+            "url": "https://github.com/brainpad-board/codal-brainpad",
+            "branch": "master",
             "type": "git"
         },
         "codalBinary": "BRAINPAD",
@@ -226,7 +228,7 @@
         "serviceId": "brainpad"
     },
     "appTheme": {
-        "accentColor": "#0089BF",
+        "accentColor": "#F08000",
         "logoUrl": "https://www.brainpad.com/",
         "logo": "./static/logo.png",
         "docsLogo": "./static/logo.square.png",
@@ -235,7 +237,7 @@
         "organization": "Microsoft MakeCode",
         "organizationUrl": "https://makecode.com/",
         "organizationLogo": "./static/Microsoft-logo_rgb_c-gray-square.png",
-        "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
+        "organizationWideLogo": "./static/Microsoft-logo_rgb_c-gray.png",
         "homeUrl": "https://makecode.brainpad.com/",
         "embedUrl": "https://makecode.brainpad.com/",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
@@ -262,12 +264,12 @@
             },
             {
                 "name": "Buy",
-                "path": "https://www.brainpad.com/buy"
+                "path": "https://www.brainpad.com"
             }
         ],
         "showHomeScreen": true,
         "homeScreenHero": "./static/hero.jpg",
-        "invertedMenu": true,
+        "invertedMenu": false,
         "invertedToolbox": false,
         "invertedMonaco": false,
         "monacoToolbox": true,
