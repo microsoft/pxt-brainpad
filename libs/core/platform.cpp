@@ -2,6 +2,8 @@
 
 namespace pxt {
 
+static bool initIsPulse = false;
+static bool isPulse = false;
 static void initRandomSeed() {
     int seed = 0xC0DA1;
     /*
@@ -27,6 +29,22 @@ void platform_init() {
 */
 
 }
+
+
+bool IsPulse() {
+	if (!initIsPulse) {		
+		auto pin = lookupPin(PB_15);
+
+		pin->setPull(PullMode::Down);	
+
+		isPulse = pin->getDigitalValue();
+
+		initIsPulse = true;		
+	}
+	
+	return isPulse;
+}
+
 
 }
 

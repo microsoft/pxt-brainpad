@@ -12,7 +12,7 @@ declare namespace input {
     //% gesture.fieldEditor="gridpicker"
     //% gesture.fieldOptions.width=220
     //% gesture.fieldOptions.columns=3
-    //% weight=92 blockGap=12 shim=input::onGesture
+    //% weight=98 blockGap=12 shim=input::onGesture
     function onGesture(gesture: Gesture, body: () => void): void;
 
     /**
@@ -33,21 +33,14 @@ declare namespace input {
      * The pitch or roll of the device, rotation along the ``x-axis`` or ``y-axis``, in degrees.
      * @param kind TODO
      */
-    //% help=input/rotation
-    //% blockId=device_get_rotation block="rotation (°)|%NAME"
-    //% parts="accelerometer"
-    //% group="More" weight=38 shim=input::rotation
+    //% shim=input::rotation
     function rotation(kind: Rotation): int32;
 
     /**
      * Sets the accelerometer sample range in gravities.
      * @param range a value describe the maximum strengh of acceleration measured
      */
-    //% help=input/set-accelerometer-range
-    //% blockId=device_set_accelerometer_range block="set accelerometer|range %range"
-    //% weight=5
-    //% parts="accelerometer"
-    //% group="More" weight=15 blockGap=8 shim=input::setAccelerometerRange
+    //% shim=input::setAccelerometerRange
     function setAccelerometerRange(range: AcceleratorRange): void;
 }
 

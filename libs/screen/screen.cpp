@@ -7,7 +7,7 @@ namespace pxt {
     public:
         BrainPadDisplay lcd;
         WDisplay()
-            : i2c(*LOOKUP_PIN(SDA), *LOOKUP_PIN(SCL))
+            : i2c(*LOOKUP_PIN(ACCELEROMETER_SDA), *LOOKUP_PIN(ACCELEROMETER_SCL))
             , lcd(i2c)
         {}
     };

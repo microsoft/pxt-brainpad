@@ -1,3 +1,17 @@
 {
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/display"
+    "name": "display",
+    "description": "Basic display functionalitites",
+    "files": [
+        "display.ts",
+        "displayImage.ts",
+        "graph.ts",
+        "targetoverrides.ts",
+		"leds.ts",
+		"leds.cpp",
+		"shims.d.ts"
+    ],
+    "dependencies": {
+        "screen": "file:../screen"
+    },
+    "public": true
 }

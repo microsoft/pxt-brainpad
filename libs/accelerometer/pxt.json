@@ -1,4 +1,21 @@
 {
-  "additionalFilePath": "../../node_modules/pxt-common-packages/libs/accelerometer"
-
+    "name": "accelerometer",
+    "description": "The accelerometer library",
+    "files": [
+        "README.md",
+        "accelerometer.cpp",
+        "axis.h",
+        "shims.d.ts",
+        "enums.d.ts",
+        "ns.ts",
+        "pxtparts.json",
+        "lis3dh.svg"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
 }

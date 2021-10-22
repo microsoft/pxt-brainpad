@@ -1,0 +1,14 @@
+{
+    "name": "brainbot",
+    "description": "A MakeCode package to use BrainBot", 
+	"icon": "docs/static/libs/brainbot.png",	
+    "files": [
+        "brainbot.ts"
+    ],
+    "dependencies": {
+        "core": "file:../core",
+		"neopixel": "file:../neopixel",
+		"sonar": "file:../sonar",
+		"infrared": "file:../infrared"
+    }
+}

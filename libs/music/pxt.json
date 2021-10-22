@@ -1,3 +1,23 @@
 {
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/music"
+    "name": "music",
+    "description": "The music library",
+    "files": [
+        "README.md",
+        "music.cpp",
+        "enums.d.ts",
+        "shims.d.ts",
+        "melodies.ts",
+        "music.ts",
+        "piano.ts",
+        "ns.ts",
+        "speaker.svg",
+        "pxtparts.json"        
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
 }

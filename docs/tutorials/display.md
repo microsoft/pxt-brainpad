@@ -4,7 +4,7 @@
 
 The BrainPad has an onboard display capable of displaying images, shapes, and text. In this tutorial, we will display several images in a simple animation of a character walking. 
 
-![BrainPad buzzer image](/static/images/display.jpg)
+![BrainPad buzzer image](../static/images/display.jpg)
 
 ## Step 2 @unplugged
 
@@ -29,13 +29,13 @@ forever(function () {
 
 To make our character animate, we have to select the first image frame of the animation. Click on the Butterfly image and change it to the 'walker1' image.
 
-![BrainPad buzzer image](/static/images/selectframe1.jpg)
+![BrainPad buzzer image](../static/images/selectframe1.jpg)
 
 ## Step 5 @fullscreen
 
 Next, let's add the 2nd frame of our animation. Drag in a second ``||display:show image||`` block. Change this one's image to the 'walker2' image. 
 
-![BrainPad buzzer image](/static/images/selectframe2.jpg)
+![BrainPad buzzer image](../static/images/selectframe2.jpg)
 
 ## Step 6 @fullscreen
 
@@ -43,7 +43,7 @@ Drag in a third ``||display:show image||`` block. Change this one's image to the
 
 When we add the third frame of our animation. You'll notice in the simulator, our character is starting to move more naturally 
 
-![BrainPad buzzer image](/static/images/animation.gif)
+![BrainPad buzzer image](../static/images/animation.gif)
 
 ## Step 7 @fullscreen
 

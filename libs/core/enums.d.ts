@@ -10,13 +10,15 @@
 
 
     declare const enum PinEvent {
+    /*
     //% block="pulse high"
     PulseHigh = 4,  // DEVICE_PIN_EVT_PULSE_HI
     //% block="pulse low"
     PulseLow = 5,  // DEVICE_PIN_EVT_PULSE_LO
-    //% block="rise"
+     */
+    //% block="high"
     Rise = 2,  // DEVICE_PIN_EVT_RISE
-    //% block="fall"
+    //% block="low"
     Fall = 3,  // DEVICE_PIN_EVT_FALL
     }
 

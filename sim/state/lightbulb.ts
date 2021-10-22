@@ -1,3 +1,4 @@
+/*
 namespace pxsim {
 
     export class LightBulbState {
@@ -24,3 +25,4 @@ namespace pxsim.lightbulb {
         runtime.queueDisplayUpdate();
     }
 }
+*/

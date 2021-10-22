@@ -1,15 +1,39 @@
+//% color="#0000ff"
+namespace infrared {
 
-//% color="#d65cd6"
+}
+
+//% color="#311557"
+namespace sonar {
+
+}
+
+//% color="#40bf4a"
+namespace animation {
+
+}
+
+//% color="#40bf4a"
+namespace game {
+
+}
+
+//% color="#40bf4a"
+namespace neopixel {
+
+}
+
+//% color="#40bf4a"
+namespace led {
+
+}
+
+//% color="#D400D4"
 namespace input {
     
 }
 
-//% color="#0078d7"
-namespace lightbulb {
-
-}
-
-//% color="#F55D3E"
+//% color="#E63022"
 namespace music {
 
 }
@@ -26,11 +50,6 @@ namespace pins {
 
 //% color="#006E90"
 namespace serial {
-
-}
-
-//% color="#006E90"
-namespace console {
 
 }
 

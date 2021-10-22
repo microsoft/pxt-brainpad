@@ -47,12 +47,13 @@ declare interface AnalogOutPin {
     //% parts="analogled" trackArgs=0
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
-    //% name.fieldOptions.columns=4 shim=AnalogOutPinMethods::analogWrite
+    //% name.fieldOptions.columns=4
+    //% value.min=0 value.max=1023 shim=AnalogOutPinMethods::analogWrite
     analogWrite(value: int32): void;
 }
 
 
-declare interface DigitalPin {
+declare interface DigitalInOutPin {
     /**
      * Read a pin or connector as either 0 or 1
      * @param name pin to read from
@@ -63,8 +64,8 @@ declare interface DigitalPin {
     //% blockNamespace=pins
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
-    //% name.fieldOptions.columns=4 shim=DigitalPinMethods::digitalRead
-    digitalRead(): boolean;
+    //% name.fieldOptions.columns=4 shim=DigitalInOutPinMethods::digitalRead
+    digitalRead(): int32;
 
     /**
      * Set a pin or connector value to either 0 or 1.
@@ -77,7 +78,7 @@ declare interface DigitalPin {
     //% blockNamespace=pins
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
-    //% name.fieldOptions.columns=4 shim=DigitalPinMethods::digitalWrite
+    //% name.fieldOptions.columns=4 shim=DigitalInOutPinMethods::digitalWrite
     digitalWrite(value: boolean): void;
 
     /**
@@ -91,19 +92,19 @@ declare interface DigitalPin {
     //% pin.fieldOptions.width=220
     //% pin.fieldOptions.columns=4
     //% parts="slideswitch" trackArgs=0
-    //% deprecated=1 hidden=1 shim=DigitalPinMethods::onPulsed
+    //% deprecated=1 hidden=1 shim=DigitalInOutPinMethods::onPulsed
     onPulsed(pulse: PulseValue, body: () => void): void;
 
     /**
      * Register code to run when a pin event occurs. 
      */
     //% help=pins/on-event weight=20 blockGap=8
-    //% blockId=pinsonevent block="on|pin %pin|%event"
+    //% blockId=pinsonevent block="on|pin %pin|pulsed %event"
     //% blockNamespace=pins
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.width=220
     //% pin.fieldOptions.columns=4
-    //% parts="slideswitch" trackArgs=0 shim=DigitalPinMethods::onEvent
+    //% parts="slideswitch" trackArgs=0 shim=DigitalInOutPinMethods::onEvent
     onEvent(event: PinEvent, body: () => void): void;
 
     /**
@@ -118,7 +119,7 @@ declare interface DigitalPin {
     //% blockNamespace=pins
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.width=220
-    //% pin.fieldOptions.columns=4 maxDuration.defl=2000000 shim=DigitalPinMethods::pulseIn
+    //% pin.fieldOptions.columns=4 maxDuration.defl=2000000 shim=DigitalInOutPinMethods::pulseIn
     pulseIn(value: PulseValue, maxDuration?: int32): int32;
 
     /**
@@ -131,7 +132,7 @@ declare interface DigitalPin {
     //% blockNamespace=pins
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
-    //% name.fieldOptions.columns=4 shim=DigitalPinMethods::setPull
+    //% name.fieldOptions.columns=4 shim=DigitalInOutPinMethods::setPull
     setPull(pull: PinPullMode): void;
 }
 
@@ -241,31 +242,27 @@ declare namespace pins {
      * Write to the SPI slave and return the response
      * @param value Data to be sent to the SPI slave
      */
-    //% help=pins/spi-write weight=5 advanced=true
-    //% blockId=spi_write block="spi write %value" shim=pins::spiWrite
+    //% shim=pins::spiWrite
     function spiWrite(value: int32): int32;
 
     /**
      * Writes a given command to SPI bus, and afterwards reads the response.
      */
-    //% help=pins/spi-transfer weight=4 advanced=true
-    //% blockId=spi_transfer block="spi transfer %command into %response" shim=pins::spiTransfer
+    //% shim=pins::spiTransfer
     function spiTransfer(command: Buffer, response: Buffer): void;
 
     /**
      * Sets the SPI frequency
      * @param frequency the clock frequency, eg: 1000000
      */
-    //% help=pins/spi-frequency weight=4 advanced=true
-    //% blockId=spi_frequency block="spi frequency %frequency" shim=pins::spiFrequency
+    //% shim=pins::spiFrequency
     function spiFrequency(frequency: int32): void;
 
     /**
      * Sets the SPI mode and bits
      * @param mode the mode, eg: 3
      */
-    //% help=pins/spi-mode weight=3 advanced=true
-    //% blockId=spi_mode block="spi mode %mode" shim=pins::spiMode
+    //% shim=pins::spiMode
     function spiMode(mode: int32): void;
 }
 

@@ -1,3 +1,14 @@
 {
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/controller"
+    "name": "controller",
+    "description": "Game controller",
+    "files": [
+        "enums.ts",
+        "controller.ts",
+        "targetoverrides.ts",
+		"ns.ts"
+    ],
+    "dependencies": {
+        "core": "file:../core"                
+    },
+    "public": true
 }

@@ -1,0 +1,17 @@
+{
+    "name": "neopixel",
+    "description": "A MakeCode package to use Neopixel",
+	"icon": "docs/static/libs/neopixel.png",
+    "files": [
+        "README.md",
+        "neopixel.ts",
+        "neopixel.cpp",
+        "shims.d.ts",
+        "ns.ts",
+        "enums.d.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
+}

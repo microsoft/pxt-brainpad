@@ -1,0 +1,19 @@
+{
+    "name": "infrared",    
+    "description": "A MakeCode package to use Infrared (NEC) receiver",
+	"icon": "docs/static/libs/infrared.png",		
+    "files": [
+        "infrared.ts",        
+        "infrared.cpp",
+        "receiverir.cpp",
+        "receiverir.h",
+        "remoteir.h",
+		"shims.d.ts",
+        "enums.d.ts",
+        "ns.ts"
+    ],
+	"dependencies": {
+        "core": "file:../core"
+    },
+    "public": true   
+}
