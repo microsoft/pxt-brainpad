@@ -1,7 +1,7 @@
 {
     "name": "sonar",
     "description": "A MakeCode package to use sonar sensors",
-	"icon": "docs/static/libs/sonar.png",
+	"icon": "static/libs/sonar.png",
 	 "files": [
         "README.md",
         "sonar.ts",

@@ -1,7 +1,7 @@
 {
     "name": "braingamer",
     "description": "A MakeCode package to use BrainGamer", 
-	"icon": "docs/static/libs/braingamer.png",	
+	"icon": "static/libs/braingamer.png",	
     "files": [
         "braingamer.ts"
     ],

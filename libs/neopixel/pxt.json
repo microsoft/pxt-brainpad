@@ -1,7 +1,7 @@
 {
     "name": "neopixel",
     "description": "A MakeCode package to use Neopixel",
-	"icon": "docs/static/libs/neopixel.png",
+	"icon": "static/libs/neopixel.png",
     "files": [
         "README.md",
         "neopixel.ts",
