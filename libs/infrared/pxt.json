@@ -1,7 +1,7 @@
 {
     "name": "infrared",    
     "description": "A MakeCode package to use Infrared (NEC) receiver",
-	"icon": "docs/static/libs/infrared.png",		
+	"icon": "static/libs/infrared.png",		
     "files": [
         "infrared.ts",        
         "infrared.cpp",
