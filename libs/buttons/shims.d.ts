@@ -20,7 +20,7 @@ declare interface Button {
      * @param body code to run when the event is raised	
      */
     //% help=input/button/on-event	
-    //% blockId=buttonEvent block="on %button pressed"	
+    //% blockId=buttonEvent block="on %button|%event"	
     //% parts="buttons"	
     //% blockNamespace=input	
     //% button.fieldEditor="gridpicker"	
@@ -28,7 +28,7 @@ declare interface Button {
     //% button.fieldOptions.columns=3	
     //% weight=99 blockGap=12	
     //% trackArgs=0 shim=ButtonMethods::onEvent
-    onEvent(body: () => void): void;
+    onEvent(ev: ButtonEvent, body: () => void): void;
 
     /**
      * Check if a button is pressed or not.

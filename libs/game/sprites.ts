@@ -13,7 +13,7 @@ Frame handlers:
  * Sprites on screen
  */
 //% weight=49 color="#4B7BEC" icon="\uf1d8"
-//% groups='["Create", "Properties", "Overlaps", "Collisions", "Lifecycle"]'
+//% groups='["Create", "Controller", "Properties", "Overlaps", "Collisions", "Lifecycle"]'
 //% advanced=true
 namespace sprites {
 
@@ -41,6 +41,58 @@ namespace sprites {
 
         return sprite
     }
+	
+	 /**
+     * Control a sprite using the direction buttons from the controller. Note that this
+     * control will take over the vx and vy of the sprite and overwrite any changes
+     * made unless a 0 is passed.
+     *
+     * @param sprite The Sprite to control
+     * @param vx The velocity used for horizontal movement when left/right is pressed
+     * @param vy The velocity used for vertical movement when up/down is pressed
+     */
+	//% group="Controller"
+	//% blockId="sprite_control_sprite" block="control sprite $sprite=variables_get(mySprite) with vx $vx vy $vy"
+    //% weight=100
+    //% vx.defl=100 vy.defl=100
+    //% help=controller/control-sprite
+    export function controlSprite(sprite: Sprite, vx: number, vy: number) {
+		controller.controlSprite(sprite, vx, vy);
+	}
+	
+	/**
+     * Get the horizontal movement, given the step and state of buttons
+     * @param step the distance, eg: 100
+     */
+    //% weight=50 blockGap=8 help=controller/dx
+    //% blockId=sprite_keysdx block="dx (left-right buttons)||scaled by %step"
+    //% step.defl=100
+	//% group="Controller"
+    export function dx(step: number = 100) {
+        return controller.dx(step)
+    }
+	
+	/**
+     * Get the vertical movement, given the step and state of buttons
+     * @param step the distance, eg: 100
+     */
+    //% weight=49 help=keys/dy
+    //% blockId=sprite_keysdy block="dy (up-down buttons)||scaled by %step"
+    //% step.defl=100
+	//% group="Controller"
+    export function dy(step: number = 100) {
+        return controller.dy(step)
+    }
+	
+	/**
+     * Pause the program until a button is pressed
+     */
+    //% weight=10
+	//% group="Controller"
+    export function pauseUntilAnyButtonIsPressed() {
+        controller.pauseUntilAnyButtonIsPressed()
+    }
+
 
     /**
      * Return an array of all sprites of the given kind.

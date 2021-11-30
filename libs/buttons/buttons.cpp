@@ -15,15 +15,12 @@ These button events need CODAL work.
 /**
 * User interaction on buttons
 */
-enum class ButtonEvent {
-    //% block="click"
-    Click = DEVICE_BUTTON_EVT_CLICK,
-    //% block="long click"
-    LongClick = DEVICE_BUTTON_EVT_LONG_CLICK,
-    //% block="up"
-    Up = DEVICE_BUTTON_EVT_UP,
-    //% block="down"
-    Down = DEVICE_BUTTON_EVT_DOWN
+enum class ButtonEvent {    
+    //% block="pressed"
+    Down = DEVICE_BUTTON_EVT_DOWN,
+	//% block="released"
+    Up = DEVICE_BUTTON_EVT_UP
+    
 };
 
 namespace pxt {
@@ -117,7 +114,7 @@ namespace ButtonMethods {
  * @param body code to run when the event is raised	
  */	
 //% help=input/button/on-event	
-//% blockId=buttonEvent block="on %button pressed"	
+//% blockId=buttonEvent block="on %button|%event"	
 //% parts="buttons"	
 //% blockNamespace=input	
 //% button.fieldEditor="gridpicker"	
@@ -125,9 +122,9 @@ namespace ButtonMethods {
 //% button.fieldOptions.columns=3	
 //% weight=99 blockGap=12	
 //% trackArgs=0	
-void onEvent(Button_ button, Action body) {		
-    registerWithDal(button->id, (int)DEVICE_BUTTON_EVT_DOWN, body);	
-}    
+void onEvent(Button_ button, ButtonEvent ev, Action body) {	
+    registerWithDal(button->id, (int)ev, body);	
+}   
 
 /**
  * Check if a button is pressed or not.

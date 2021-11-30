@@ -4,7 +4,7 @@
 
 namespace pxsim {
     export module PinName {
-		/* GHI Changed
+        /* GHI Changed
         export let LIGHT = -1; // adc
         export let TEMPERATURE = -1; // adc
     
@@ -31,8 +31,8 @@ namespace pxsim {
 
         export let SERVO_1 = -1;
         export let SERVO_2 = -1;		
-		*/
-		
+        */
+
         export let P0 = -1;
         export let P1 = -1;
         export let P2 = -1;
@@ -52,7 +52,7 @@ namespace pxsim {
         export let P16 = -1;
         export let SCL = -1;
         export let SDA = -1;
-		
+
         export function initPins() {
             let v = PinName as any;
             for (let k of Object.keys(v)) {
@@ -66,7 +66,21 @@ namespace pxsim {
 
     const paletteSrc = [
         "#000000", // black
-        "#00FFFF", // teal
+        "#FFFFFF", // white
+		"#FF2121",
+		"#FF93C4",
+		"#FF8135",
+		"#FFF609",
+		"#249CA3",
+		"#78DC52",
+		"#003FAD",
+		"#87F2FF",
+		"#8E2EC4",
+		"#A4839F",
+		"#5c406c",
+		"#E5CDC4",
+		"#4B7BEC",
+		"#000000"
     ];
 
     export class DalBoard extends CoreBoard implements
@@ -92,8 +106,8 @@ namespace pxsim {
         //lightBulbState: LightBulbState;
         accelState: AccelState;
         screenState: ScreenState;
-		ledState: LedState;
-		// matrixLedState: LedState[];
+        ledState: LedState;
+        matrixLedState: LedState[];
 
         invertAccelerometerYAxis = true;
 
@@ -123,53 +137,53 @@ namespace pxsim {
             this.builtinParts["accelerometer"] = this.accelerometerState = new AccelerometerState(runtime);
             this.builtinParts["edgeconnector"] = this.edgeConnectorState = new EdgeConnectorState({
                 pins: [
-				/* GHI changed
-                    pxsim.PinName.SERVO_1,
-                    pxsim.PinName.SERVO_2,
+                    /* GHI changed
+                        pxsim.PinName.SERVO_1,
+                        pxsim.PinName.SERVO_2,
+                        pxsim.PinName.SCL,
+                        pxsim.PinName.SDA,
+                        pxsim.PinName.RX,
+                        pxsim.PinName.TX,
+                        pxsim.PinName.AN,
+                        pxsim.PinName.RST,
+                        pxsim.PinName.CS,
+                        pxsim.PinName.PWM,
+                        pxsim.PinName.INT,                    
+                    */
+                    pxsim.PinName.P0,
+                    pxsim.PinName.P1,
+                    pxsim.PinName.P2,
+                    pxsim.PinName.P3,
+                    pxsim.PinName.P4,
+                    pxsim.PinName.P5,
+                    pxsim.PinName.P6,
+                    pxsim.PinName.P7,
+                    pxsim.PinName.P8,
+                    pxsim.PinName.P9,
+                    pxsim.PinName.P10,
+                    pxsim.PinName.P11,
+                    pxsim.PinName.P12,
+                    pxsim.PinName.P13,
+                    pxsim.PinName.P14,
+                    pxsim.PinName.P15,
+                    pxsim.PinName.P16,
                     pxsim.PinName.SCL,
                     pxsim.PinName.SDA,
-                    pxsim.PinName.RX,
-                    pxsim.PinName.TX,
-                    pxsim.PinName.AN,
-                    pxsim.PinName.RST,
-                    pxsim.PinName.CS,
-                    pxsim.PinName.PWM,
-                    pxsim.PinName.INT,                    
-				*/	
-					pxsim.PinName.P0,
-					pxsim.PinName.P1,
-					pxsim.PinName.P2,
-					pxsim.PinName.P3,
-					pxsim.PinName.P4,
-					pxsim.PinName.P5,
-					pxsim.PinName.P6,
-					pxsim.PinName.P7,
-					pxsim.PinName.P8,
-					pxsim.PinName.P9,
-					pxsim.PinName.P10,
-					pxsim.PinName.P11,
-					pxsim.PinName.P12,
-					pxsim.PinName.P13,
-					pxsim.PinName.P14,
-					pxsim.PinName.P15,
-					pxsim.PinName.P16,
-					pxsim.PinName.SCL,
-					pxsim.PinName.SDA,
 
                 ]
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;
             this.builtinVisuals["microservo"] = () => new visuals.MicroServoView();
             this.builtinPartVisuals["microservo"] = (xy: visuals.Coord) => visuals.mkMicroServoPart(xy);
-			this.builtinParts["led"] = this.ledState = new LedState(runtime);
-			
-			// this.matrixLedState = new Array(25)
-			
-			// for (let i = 0; i < 25; i++) {
-				// this.matrixLedState[i] = new LedState(runtime);
-			// }
-			
-			// this.builtinParts["matrixLedState"] = this.matrixLedState;
+            this.builtinParts["led"] = this.ledState = new LedState(runtime);
+
+            this.matrixLedState = new Array(25)
+
+            for (let i = 0; i < 25; i++) {
+				this.matrixLedState[i] = new LedState(runtime);
+            }
+
+            this.builtinParts["matrixLedState"] = this.matrixLedState;
         }
 
         receiveMessage(msg: SimulatorMessage) {
@@ -209,7 +223,9 @@ namespace pxsim {
                 maxHeight: "100%",
             };
             const viewHost = new visuals.BoardHost(pxsim.visuals.mkBoardView({
-                visual: boardDef.visual
+                visual: boardDef.visual,
+                boardDef: boardDef,
+                highContrast: msg.highContrast
             }), opts);
 
             document.body.innerHTML = ""; // clear children

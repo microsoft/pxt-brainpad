@@ -1,89 +1,55 @@
-# GHI Electronics Brain Pad target for MakeCode
+# Still under development!
+# Only for testing purpose!
 
-[![Build Status](https://travis-ci.org/Microsoft/pxt-brainpad.svg?branch=master)](https://travis-ci.org/Microsoft/pxt-brainpad)
-[![Community Discord](https://img.shields.io/discord/448979533891371018.svg)](https://aka.ms/makecodecommunity)
 
-## Local Dev setup
+## Tools:
 
-These instructions assume familiarity with dev tools and languages.
+- Install Node.js (https://nodejs.org/en/download/). Keep setup configuration as default,  except check on box "Automatically install the nececsary tools..." when asked.
+- Install GCC compiler. Version 8 or higher. https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads.
+  Change default location to "C:\GCC" when asked. Some scripts are not happy with space in path. Make sure add "C:\gcc\bin" to PATH.
+- Download ninja tool. Execute binary file (window version) can be downloaded from: https://github.com/ninja-build/ninja/releases. 
+  Create a folder called ninja from. Let say C:\ninja.
+  Put ninja.exe to C:\ninja. We will have "C:\ninja\ninja.exe".
+  Add "C:\ninja" to PATH in setting enveronment.
+  
+## Clone Github:
 
-* install Node.js 6+
-* (optional) install [Visual Studio Code](https://code.visualstudio.com/)
+- Create a folder called "MakeCode". Assume this folder is on root C:\
+- clone https://github.com/microsoft/pxt.git
+- clone https://github.com/microsoft/pxt-common-packages.git
+- clone https://github.com/brainpad-board/brainpad-pulse.git
+        
+Put all of them inside MakeCode folder.
 
-In a common folder,
+## Build:
 
-* clone https://github.com/Microsoft/pxt to ``pxt`` folder
-* clone https://github.com/Microsoft/pxt-common-packages to ``pxt-common-packages`` folder
-* clone https://github.com/Microsoft/pxt-brainpad to ``pxt-brainpad`` folder
-* go to ``pxt`` and run
+These instructions assume Window 10 - 64bit
 
-```
-npm install
-jake
-```
+- Open Command Prompt.
 
-* go to ``pxt-common-packages`` and run
+### Build pxt
+- run "cd C:\MakeCode\pxt". 
+- run "npm install"
+- run "npm install -g jake"
+- run "jake"
 
-```
-npm install
-npm link ../pxt
-```
+### Build common package
+- run "cd C:\MakeCode\pxt-common-packages"
+- run "npm install"
 
-* go to ``pxt-brainpad`` and run
+### Build Brainpad pulse
+- run "cd C:\MakeCode\brainpad-pulse"
+- run "npm install"
+- run "npm install -g pxt"
+- run "pxt link ../pxt"
+- run "pxt link ../pxt-common-packages"
 
-```
-npm install
-npm link ../pxt
-npm link ../pxt-common-packages
-```
+### Run local
+- run "doRun". For the first run or after clean build, building process might take long time when clone and install "codal-mbedos" steps.
 
-## to run the local server
-
-From root github folder,
-
-```
-cd pxt-brainpad
-pxt serve --cloud
-```
-
-If you are editing C++, install [docker.com] and make sure your drive is shared.
-
-```
-pxt serve
-``` 
-
-## to build and deploy a single package via command line
-
-```
-cd libs/core
-pxt deploy
-```
-
-## Updating CODAL dependency
-
-* Update the tag number in ``pxtarget.json`` at https://github.com/Microsoft/pxt-brainpad/blob/master/pxtarget.json#L203 
-* clean the build
-```
-pxt clean
-```
-* build again
-```
-pxt buildtarget
-```
-
-## Releasing the editor
-
-The version served under ``/`` is controlled by ``/docs/index-ref.json``. Change the version in that file and push to immediately update the version.
-
-Each time you bump (using ``pxt bump``) and the build passes, the ``/beta`` will point to that release. ``/beta`` can be used to test new features before pushing down the release to all users. The update is handled automatically by MakeCode afterwards.
-
-Be careful when updating the version number of the editor, as MakeCode follows ``semver``. In particular, do not change the major version unless you are releasing a completely new and incompatible editor.
-
-* run ``pxt udpdate`` to pick any updates to the PXT engine
-* run ``pxt bump`` to create a new release (say ``vX.Y.Z``)
-* wait for build to finish, typically 10 minutes
-* test new build in ``/beta``. You can check the version number in the bottom of the home screen is ``vX.Y.Z``. Remember that it will update the background and load after a dozen of seconds or so.
-* when ready and tested, run ``pxt tag index vX.Y.Z``, and commit ``/docs/index-ref.json`` if successfull. This command does some routine checks to make sure everything is ok.
+### Clean:
+- Run "doClean"
+- Once the build is clean, need to back to step "Build Brainpad pulse" above before run "doRun" again.
 
 ## License
 MIT

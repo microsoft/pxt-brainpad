@@ -1,4 +1,4 @@
 
-//% block="infrared"
+//% block="Infrared"
 namespace infrared {
 }

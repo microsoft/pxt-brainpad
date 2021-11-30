@@ -8,7 +8,12 @@ namespace led {
      //% 
      
     void __setLed(bool on) {
-        auto rp = lookupPin(PA_8);     
-        rp->setDigitalValue(on ? 1 : 0);
+        auto rp = lookupPin(PA_8);   
+		volatile int onn = 0;
+		
+		if (on)
+			onn = 2;
+		
+        rp->setDigitalValue(onn > 0 ? 1 : 0);
     }
 }

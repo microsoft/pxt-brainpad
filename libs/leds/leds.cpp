@@ -68,7 +68,7 @@ namespace leds {
 		if (leds < 0)
 			return;
 		
-		if (leds > 66)
+		if (leds > 1000) // this is nothing, just makesure it cache is rebuild as well.
 			return;
 
 		pixel[leds]->setDigitalValue(value);

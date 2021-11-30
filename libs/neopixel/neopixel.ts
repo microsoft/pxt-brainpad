@@ -60,11 +60,77 @@ namespace neopixel {
          */
         //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors"
         //% strip.defl=strip
-        //% weight=85 blockGap=8
+        //% weight=90 blockGap=8
         //% parts="neopixel"
         showColor(rgb: number) {
             rgb = rgb >> 0;
             this.setAllRGB(rgb);
+            this.show();
+        }
+		
+		 /**
+         * Shows a rainbow pattern on all LEDs.
+         * @param startHue the start hue value for the rainbow, eg: 1
+         * @param endHue the end hue value for the rainbow, eg: 360
+         */
+        //% blockId="neopixel_set_strip_rainbow" block="%strip|show rainbow from %startHue|to %endHue"
+        //% strip.defl=strip
+        //% weight=88 blockGap=8
+        //% parts="neopixel"
+        showRainbow(startHue: number = 1, endHue: number = 360) {
+            if (this._length <= 0) return;
+
+            startHue = startHue >> 0;
+            endHue = endHue >> 0;
+            const saturation = 100;
+            const luminance = 50;
+            const steps = this._length;
+            const direction = HueInterpolationDirection.Clockwise;
+
+            //hue
+            const h1 = startHue;
+            const h2 = endHue;
+            const hDistCW = ((h2 + 360) - h1) % 360;
+            const hStepCW = Math.idiv((hDistCW * 100), steps);
+            const hDistCCW = ((h1 + 360) - h2) % 360;
+            const hStepCCW = Math.idiv(-(hDistCCW * 100), steps);
+            let hStep: number;
+            if (direction === HueInterpolationDirection.Clockwise) {
+                hStep = hStepCW;
+            } else if (direction === HueInterpolationDirection.CounterClockwise) {
+                hStep = hStepCCW;
+            } else {
+                hStep = hDistCW < hDistCCW ? hStepCW : hStepCCW;
+            }
+            const h1_100 = h1 * 100; //we multiply by 100 so we keep more accurate results while doing interpolation
+
+            //sat
+            const s1 = saturation;
+            const s2 = saturation;
+            const sDist = s2 - s1;
+            const sStep = Math.idiv(sDist, steps);
+            const s1_100 = s1 * 100;
+
+            //lum
+            const l1 = luminance;
+            const l2 = luminance;
+            const lDist = l2 - l1;
+            const lStep = Math.idiv(lDist, steps);
+            const l1_100 = l1 * 100
+
+            //interpolate
+            if (steps === 1) {
+                this.setPixelColor(0, hsl(h1 + hStep, s1 + sStep, l1 + lStep))
+            } else {
+                this.setPixelColor(0, hsl(startHue, saturation, luminance));
+                for (let i = 1; i < steps - 1; i++) {
+                    const h = Math.idiv((h1_100 + i * hStep), 100) + 360;
+                    const s = Math.idiv((s1_100 + i * sStep), 100);
+                    const l = Math.idiv((l1_100 + i * lStep), 100);
+                    this.setPixelColor(i, hsl(h, s, l));
+                }
+                this.setPixelColor(steps - 1, hsl(endHue, saturation, luminance));
+            }
             this.show();
         }
         
@@ -77,7 +143,7 @@ namespace neopixel {
         //% blockId="neopixel_set_pixel_color" block="%strip|set pixel color at %pixeloffset|to %rgb=neopixel_colors"
         //% strip.defl=strip
         //% blockGap=8
-        //% weight=80
+        //% weight=89
         //% parts="neopixel"
         setPixelColor(pixeloffset: number, rgb: number): void {
             this.setPixelRGB(pixeloffset >> 0, rgb >> 0);
@@ -90,7 +156,7 @@ namespace neopixel {
          */
         //% blockId="neopixel_show" block="%strip|show" blockGap=8
         //% strip.defl=strip
-        //% weight=79
+        //% weight=87
         //% parts="neopixel"
         show() {
             // only supported in beta
@@ -109,7 +175,7 @@ namespace neopixel {
          */
         //% blockId="neopixel_clear" block="%strip|clear"
         //% strip.defl=strip
-        //% weight=76
+        //% weight=86
         //% parts="neopixel"
         clear(): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
@@ -265,6 +331,49 @@ namespace neopixel {
         return b;
     }
 
+	/**
+     * Converts a hue saturation luminosity value into a RGB color
+     * @param h hue from 0 to 360
+     * @param s saturation from 0 to 99
+     * @param l luminosity from 0 to 99
+     */
+    //% blockId=neopixelHSL block="hue %h|saturation %s|luminosity %l"
+    export function hsl(h: number, s: number, l: number): number {
+        h = Math.round(h);
+        s = Math.round(s);
+        l = Math.round(l);
+
+        h = h % 360;
+        s = Math.clamp(0, 99, s);
+        l = Math.clamp(0, 99, l);
+        let c = Math.idiv((((100 - Math.abs(2 * l - 100)) * s) << 8), 10000); //chroma, [0,255]
+        let h1 = Math.idiv(h, 60);//[0,6]
+        let h2 = Math.idiv((h - h1 * 60) * 256, 60);//[0,255]
+        let temp = Math.abs((((h1 % 2) << 8) + h2) - 256);
+        let x = (c * (256 - (temp))) >> 8;//[0,255], second largest component of this color
+        let r$: number;
+        let g$: number;
+        let b$: number;
+        if (h1 == 0) {
+            r$ = c; g$ = x; b$ = 0;
+        } else if (h1 == 1) {
+            r$ = x; g$ = c; b$ = 0;
+        } else if (h1 == 2) {
+            r$ = 0; g$ = c; b$ = x;
+        } else if (h1 == 3) {
+            r$ = 0; g$ = x; b$ = c;
+        } else if (h1 == 4) {
+            r$ = x; g$ = 0; b$ = c;
+        } else if (h1 == 5) {
+            r$ = c; g$ = 0; b$ = x;
+        }
+        let m = Math.idiv((Math.idiv((l * 2 << 8), 100) - c), 2);
+        let r = r$ + m;
+        let g = g$ + m;
+        let b = b$ + m;
+        return packRGB(r, g, b);
+    }
+	
     export enum HueInterpolationDirection {
         Clockwise,
         CounterClockwise,

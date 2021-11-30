@@ -6,8 +6,8 @@ A ``||variables:variable||`` is a value that can change depending on conditions 
 
 ## Step 2 @fullscreen
 
-Under menu, select ``||variables:VARIABLES||``. Then select ``||variables:Make a Variable...||``
-We try to give ``||variables:variables||`` meaningful names that will make the code easier to read. Let's name ours count.  
+Under menu, select ``||variables:VARIABLES||``. Then click on ``||variables:Make a Variable...||``
+We try to give variables meaningful names that will make the code easier to read. Let's name ours count.  
 
 ![on Start and forever blocks](../static/images/variable_menu.jpg)
 
@@ -48,7 +48,7 @@ display.showNumber(0, 1)
 ```
 ## Step 7 @fullscreen
 
-Our ``||variables:variable||`` won't show on screen until we add it to our ``||display:show number at line||``block. Under the ``||variables:VARIABLES||`` menu select the oval holding our ``||variables:count variable||`` and drag it into ``||display:show number at line||`` block where the first parameter is.
+Our ``||variables:variable||`` won't show on screen until we add it to our ``||display:show number at line||``block. Under the ``||variables:VARIABLES||`` menu select the oval holding our ``||variables:count variable||`` and drag it into ``||display:show number at line||`` block where the first parameter currently zero.
 
 ```blocks
 let count = 0

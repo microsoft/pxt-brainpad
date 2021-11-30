@@ -6,14 +6,11 @@
      */
 
     declare const enum ButtonEvent {
-    //% block="click"
-    Click = 3,  // DEVICE_BUTTON_EVT_CLICK
-    //% block="long click"
-    LongClick = 4,  // DEVICE_BUTTON_EVT_LONG_CLICK
-    //% block="up"
-    Up = 2,  // DEVICE_BUTTON_EVT_UP
-    //% block="down"
+    //% block="pressed"
     Down = 1,  // DEVICE_BUTTON_EVT_DOWN
+    //% block="released"
+    Up = 2,  // DEVICE_BUTTON_EVT_UP
+
     }
 
 // Auto-generated. Do not edit. Really.

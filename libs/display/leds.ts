@@ -11,7 +11,7 @@ namespace display {
 	//% async
 	//% color=#1E90FF	
 	//% blockHidden=true
-    export function __setMatrixLeds(leds: string, interval:number = 400): void {		
+    export function __setMatrixLedsOldNoUsed(leds: string, interval:number = 400): void {		
 		let ledMatrix: string = "";
 		
 		// for (let i = 0; i < 50; i++) {
@@ -64,13 +64,12 @@ namespace display {
 	//* blockId=led_clear_matrix 
     //% block="Clear leds"
 	//% blockHidden=true    
-    export function __ClearMatrixLeds(): void {
+    export function __ClearMatrixLedsOldNoUsed(): void {
 		screen.fill(0);
 		
 		for (let led = 0; led < MATRIX_LED_NUM; led++) {
 			setMatrixLeds(led, false);	
 		}
 	}
-
 	
 }

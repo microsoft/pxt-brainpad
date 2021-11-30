@@ -1,8 +1,12 @@
 {
-    "blockIdentity": "display.showImage",
+    "width": 128,
+    "height": 64,
+	"blockIdentity": "images.showImage",
     "creator": "image.ofBuffer",
+	"basename": "images",
     "star": {
         "namespace": "images",
-        "mimeType": "image/x-mkcd-f1"
-    }
+        "mimeType": "image/x-mkcd-f4"
+    },
+	"tags": "images"
 }

@@ -13,6 +13,8 @@
 
 using namespace codal;
 
+#define STM32L4
+
 #define PAGE_SIZE 256 // doesn't really apply
 
 // 3 ports times 16 pins in each; there are bigger packages with 4 or 5 ports
@@ -35,7 +37,7 @@ using namespace codal;
 #define CODAL_ACCELEROMETER_HEADER "MC3216.h"
 #define CODAL_ACCELEROMETER codal::MC3216
 
-#define IMAGE_BITS 1
+#define IMAGE_BITS 4
 #define LCD_WIDTH 128
 #define LCD_HEIGHT 64
 

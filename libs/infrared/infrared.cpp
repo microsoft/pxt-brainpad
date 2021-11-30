@@ -63,6 +63,7 @@ namespace infrared {
   uint32_t now;
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
+  uint8_t dataReady;
 
   
   void cA(vA runner){
@@ -72,27 +73,40 @@ namespace infrared {
 		} 
 	}
 
-  void onReceivable(){
-    rx->getData(buf);
-    
-    now = tsb.read_ms();
-    
-	if(now - lastact[(RemoteButton)buf[0]] < 100) 
-		return;
-    
-	lastact[(RemoteButton)buf[0]] = now;
-    
-	cA(actions[(RemoteButton)buf[0]]); 
+  void onReceivable(){	
+	dataReady = 1;
 	
 	
   }
  
+  void monitorIR(){
+    while(1){
 
+	  if (dataReady == 0) {
+		sleep_ms(50);
+	  }
+	  else {
+		dataReady = 0;
+		  
+		rx->getData(buf);
+
+		now = tsb.read_ms();
+
+		if(now - lastact[(RemoteButton)buf[0]] > 50) {			
+			lastact[(RemoteButton)buf[0]] = now;
+			cA(actions[(RemoteButton)buf[0]]); 
+		}
+	  }
+    }
+  }
+  
   //%
   void init(Pins pin){
+	dataReady = 0;
     rx = new ReceiverIR((PinName)pin);
 	rx->onReceived = &onReceivable;
     tsb.start(); //interrupt timer for debounce
+	create_fiber(monitorIR);
 	buf[0] = 100;
 	
   }
