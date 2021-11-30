@@ -36,6 +36,7 @@ namespace info {
      * Color of the HUD display
      */
     let color = 1;
+	let isMonoColorInfo = true;
 
     function initHUD() {
         if (_hud) return;
@@ -51,9 +52,9 @@ namespace info {
         1 . . . 1
         `;
 
-        _bgColor = screen.isMono ? 0 : 1;
-        _borderColor = screen.isMono ? 1 : 3;
-        _fontColor = screen.isMono ? 1 : 3;
+        _bgColor = isMonoColorInfo ? 0 : 1;
+        _borderColor = isMonoColorInfo ? 1 : 3;
+        _fontColor = isMonoColorInfo ? 1 : 3;
         game.eventContext().registerFrameHandler(95, () => {
             // show score
             if (_score !== null && _visibilityFlag & Visibility.Score) {
@@ -93,7 +94,7 @@ namespace info {
     }
 
     function defaultHeartImage() {
-        return screen.isMono ?
+        return isMonoColorInfo ?
         img`
         . 1 1 . 1 1 . .
         1 . . 1 . . 1 .
@@ -378,7 +379,7 @@ namespace info {
         let color1 = _fontColor;
         let color2 = _bgColor;
 
-        if (seconds < 10 && (seconds & 1) && !screen.isMono) {
+        if (seconds < 10 && (seconds & 1) && !isMonoColorInfo) {
             const temp = color1;
             color1 = color2;
             color2 = temp;

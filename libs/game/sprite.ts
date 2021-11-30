@@ -305,7 +305,7 @@ class Sprite implements SpriteLike {
     //% blockId=spritesay block="%sprite(mySprite) say %text||for %millis ms"
     //% inlineInputMode=inline
     //% help=sprites/sprite/say
-    say(text: string, timeOnScreen?: number, textColor = 15, textBoxColor = 1) {
+    say(text: string, timeOnScreen?: number, textColor = 1, textBoxColor = 0) {
 
         if (!text) {
             this.updateSay = undefined;

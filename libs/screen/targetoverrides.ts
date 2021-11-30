@@ -21,12 +21,15 @@ namespace _screen_internal {
 }
 
 namespace image {    
+    // TQD_TODO
     /**
     * Gets the screen image
-    */
+    
     //% blockNamespace="images" group="Create"
     //% blockId=imagescreen block="screen image"
+	//% blockHidden=true
     export function screenImage(): Image {
         return screen;
     }
+	*/
 }

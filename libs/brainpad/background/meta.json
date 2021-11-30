@@ -1,0 +1,12 @@
+{
+    "width": 128,
+    "height": 64,
+	"blockIdentity": "background.showImage",
+    "creator": "image.ofBuffer",
+	"basename": "background",
+    "star": {
+        "namespace": "background",
+        "mimeType": "image/x-mkcd-f4"
+    },
+	"tags": "background"
+}

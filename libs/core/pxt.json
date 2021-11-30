@@ -40,6 +40,8 @@
     "yotta": {
         "config": {
             "codal": {
+				"fiber_user_data": 1,
+                "pxt": 1,
                 "component_count": 64,
                 "dmesg_buffer_size": 1024,
                 "tag": 1

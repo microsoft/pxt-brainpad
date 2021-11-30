@@ -59,6 +59,9 @@ extern Event lastEvent;
 extern CODAL_TIMER devTimer;
 extern MessageBus devMessageBus;
 extern codal::CodalDevice device;
+extern void NativeClearImageBuffer();
+extern void NativeFlushImageBuffer();
+extern void NativeSetPixelToBuffer(int x, int y, int color);
 }
 
 #define DEVICE_ID_BUTTON_SLIDE  3000

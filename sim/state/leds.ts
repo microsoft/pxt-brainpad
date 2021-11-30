@@ -81,26 +81,53 @@ namespace pxsim.display {
 	}
 	
 	export function __setMatrixLeds(leds: Image, interval: number): void {
-		// const ledMatrix = (board() as DalBoard).matrixLedState;
+		const ledMatrix = (board() as DalBoard).matrixLedState;
 
-		// for (let y = 0; y < leds.height; y++) 
-		// {
-			// for (let x = 0; x < leds.width; x++) {
-				// if (leds.get(x, y) != 0)
-				// {
-					// ledMatrix[y * leds.width + x].setState(true);
-				// }
-				// else {
-					// ledMatrix[y * leds.width + x].setState(false);
-				// }
-			// }
-		// }
+		for (let y = 0; y < leds.height; y++) 
+		{
+			for (let x = 0; x < leds.width; x++) {
+				if (leds.get(x, y) != 0)
+				{
+					ledMatrix[y * leds.width + x].setState(true);
+				}
+				else {
+					ledMatrix[y * leds.width + x].setState(false);
+				}
+			}
+		}
 				
 		
+		let cb = getResume();
+        let first = true;
+		interval = 400;
+		ledMatrix[0].animationQ.enqueue({
+            interval,
+            frame: () => {
+                if (first) {
+					setMatrixLedUpdateState(true);                    
+                    first = false;
+                    return true;
+                }
+                return false;
+            },
+		whenDone: cb
+        })
+
+    }
+	
+	export function __ClearMatrixLeds(): void {
+		const ledMatrix = (board() as DalBoard).matrixLedState;
+
+		for (let i = 0; i < 25; i++) 
+		{
+			ledMatrix[i].setState(false);
+		}
+				
+		setMatrixLedUpdateState(true);  
 		// let cb = getResume();
         // let first = true;
-		// interval = 400;
-		// ledMatrix[0].animationQ.enqueue({
+		// let interval = 400;
+		// ledMatrix[1].animationQ.enqueue({
             // interval,
             // frame: () => {
                 // if (first) {
@@ -113,9 +140,8 @@ namespace pxsim.display {
 		// whenDone: cb
         // })
 		
-		
-		
-    }
+		//getResume()
+	}
 	
 	export function setMatrixLeds(leds: number, interval: boolean): void {
 		

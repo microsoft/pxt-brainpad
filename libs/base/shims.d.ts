@@ -5,6 +5,24 @@
     //% indexerGet=BufferMethods::getByte indexerSet=BufferMethods::setByte
 declare interface Buffer {
     /**
+     * Reads an unsigned byte at a particular location
+     */
+    //% shim=BufferMethods::getUint8
+    getUint8(off: int32): int32;
+
+    /**
+     * Returns false when the buffer can be written to.
+     */
+    //% shim=BufferMethods::isReadOnly
+    isReadOnly(): boolean;
+
+    /**
+     * Writes an unsigned byte at a particular location
+     */
+    //% shim=BufferMethods::setUint8
+    setUint8(off: int32, v: int32): void;
+
+    /**
      * Write a number in specified format in the buffer.
      */
     //% shim=BufferMethods::setNumber
@@ -43,6 +61,12 @@ declare interface Buffer {
     shift(offset: int32, start?: int32, length?: int32): void;
 
     /**
+     * Convert a buffer to string assuming UTF8 encoding
+     */
+    //% shim=BufferMethods::toString
+    toString(): string;
+
+    /**
      * Convert a buffer to its hexadecimal representation.
      */
     //% shim=BufferMethods::toHex
@@ -63,6 +87,12 @@ declare interface Buffer {
      */
     //% shim=BufferMethods::write
     write(dstOffset: int32, src: Buffer): void;
+
+    /**
+     * Compute k-bit FNV-1 non-cryptographic hash of the buffer.
+     */
+    //% shim=BufferMethods::hash
+    hash(bits: int32): uint32;
 }
 declare namespace control {
 
@@ -70,8 +100,15 @@ declare namespace control {
      * Create a new zero-initialized buffer.
      * @param size number of bytes in the buffer
      */
-    //% shim=control::createBuffer
+    //% deprecated=1 shim=control::createBuffer
     function createBuffer(size: int32): Buffer;
+
+    /**
+     * Create a new buffer with UTF8-encoded string
+     * @param str the string to put in the buffer
+     */
+    //% deprecated=1 shim=control::createBufferFromUTF8
+    function createBufferFromUTF8(str: string): Buffer;
 }
 declare namespace loops {
 
@@ -100,6 +137,12 @@ declare namespace control {
     //% help=control/millis weight=50
     //% blockId=control_running_time block="millis (ms)" shim=control::millis
     function millis(): int32;
+
+    /**
+     * Gets current time in microseconds. Overflows every ~18 minutes.
+     */
+    //% shim=control::micros
+    function micros(): int32;
 
     /**
      * Used internally
@@ -144,10 +187,55 @@ declare namespace control {
     function deviceSerialNumber(): int32;
 
     /**
+     * Derive a unique, consistent 64-bit serial number of this device from internal data.
+     */
+    //% blockId="control_device_long_serial_number" block="device long serial number" weight=9
+    //% help=control/device-long-serial-number shim=control::deviceLongSerialNumber
+    function deviceLongSerialNumber(): Buffer;
+
+    /**
      *
      */
     //% shim=control::__log
-    function __log(text: string): void;
+    function __log(prority: int32, text: string): void;
+
+    /**
+     * Dump internal information about a value.
+     */
+    //% shim=control::dmesgValue
+    function dmesgValue(v: any): void;
+}
+declare namespace control {
+
+    /**
+     * Force GC and dump basic information about heap.
+     */
+    //% shim=control::gc
+    function gc(): void;
+
+    /**
+     * Force GC and halt waiting for debugger to do a full heap dump.
+     */
+    //% shim=control::heapDump
+    function heapDump(): void;
+
+    /**
+     * Set flags used when connecting an external debugger.
+     */
+    //% shim=control::setDebugFlags
+    function setDebugFlags(flags: int32): void;
+
+    /**
+     * Record a heap snapshot to debug memory leaks.
+     */
+    //% shim=control::heapSnapshot
+    function heapSnapshot(): void;
+
+    /**
+     * Return true if profiling is enabled in the current build.
+     */
+    //% shim=control::profilingEnabled
+    function profilingEnabled(): boolean;
 }
 
 // Auto-generated. Do not edit. Really.

@@ -98,22 +98,7 @@ enum class Gesture {
      * Raised when the board is falling!
      */
     //% block="free fall"
-    FreeFall = ACCELEROMETER_EVT_FREEFALL,
-    /**
-    * Raised when a 3G shock is detected
-    */
-    //% block="3g"
-    ThreeG = ACCELEROMETER_EVT_3G,
-    /**
-    * Raised when a 6G shock is detected
-    */
-    //% block="6g"
-    SixG = ACCELEROMETER_EVT_6G,
-    /**
-    * Raised when a 8G shock is detected
-    */
-    //% block="8g"
-    EightG = ACCELEROMETER_EVT_8G
+    FreeFall = ACCELEROMETER_EVT_FREEFALL,	    
 };
 
 namespace pxt {

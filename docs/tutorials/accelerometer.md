@@ -14,7 +14,7 @@ If the BrainPad is laying flat on a the table as shown, the x-axis runs horizont
 
 ## Step 3 @fullscreen
 
-Let's use a GRAPH to chart the values from the accelerometer. First, we need to grab the ``||display:graph||`` block and put it inside our ``||loops:forever||`` block
+Let's use a GRAPH to chart the values from the accelerometer. First, we need to grab the ``||display:graph||`` block, it's found under DISPLAY, and put it inside our ``||loops:forever||`` block
 
 ```blocks
 forever(function () {
@@ -24,7 +24,7 @@ forever(function () {
 
 ## Step 4 @fullscreen
 
-Next, we need to grab the block that will read the values from our accelerometer and graph them onto the display. We can find this under the INPUT tab. You can also change which value the accelerometer is reading . 
+Next, we need to grab the ``||input:acceleration||``block that will read the values from our accelerometer and graph them onto the display. We can find this under the INPUT tab. You can also change which value the accelerometer is reading. The default value is X
 
 ```blocks
 forever(function () {
@@ -52,7 +52,7 @@ forever(function () {
 
 ## Step 7 @fullscreen
 
-Next we'll need to add a comparison block to our ``||logic:if-then||`` block
+Next we'll need to add a comparison block to our ``||logic:if-then||`` block. It's found under LOGIC and says "0 = 0". Drag this into our ``||logic:if-then||`` block where we it currently says TRUE.
 
 ```blocks
 forever(function () {
@@ -64,7 +64,7 @@ forever(function () {
 
 ## Step 8 @fullscreen
 
-Now let's read the value from the accelerometer's X value see if it's less than 500. Select X in the menu of the block we just added. 
+Now let's read the X value from the accelerometer's to see if it's less than 500. Grab the ``||input:acceleration||``block found under INPUT. Drag it into the first parameter of the comparison block we just added. Change the 2nd parameter to 500. We need to change = to < inside the comparison block too. 
 
 ```blocks
 forever(function () {
@@ -88,7 +88,7 @@ forever(function () {
 
 ## Step 10 @fullscreen
 
-Finally click on the + sign inside the our ``||logic:if-then||`` block, here we'll add the image looking the other way. 
+Finally click on the + sign at the bottom of the ``||logic:if-then||`` block. This expands the block to add an 'else' condition, here we'll add the image looking the other way. 
 
 ```blocks
 forever(function () {

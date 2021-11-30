@@ -2,7 +2,7 @@
 /**
  * Outputs.
  */
-//% color="#00FF00" weight=98 icon="\uf205"
+//% color="#00FF00" weight=96 icon="\uf205"
 namespace led {	
 	let led_state: boolean = false
 	/**
@@ -23,8 +23,9 @@ namespace led {
 	//% blockId=led_toggle block="led toggle"
     //% weight=89
     export function toggle() {		
-		__setLed(led_state)
 		led_state = !led_state
+		__setLed(led_state)
+		
     }
 
     function update() {

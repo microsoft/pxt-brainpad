@@ -16,34 +16,38 @@ namespace controller {
      * @param vx The velocity used for horizontal movement when left/right is pressed
      * @param vy The velocity used for vertical movement when up/down is pressed
      */
-    //%
+	//% blockId="game_control_sprite" block="control sprite $sprite=variables_get(mySprite) with vx $vx vy $vy"
+    //% weight=100
+    //% vx.defl=100 vy.defl=100
+    //% help=controller/control-sprite
+	//% blockHidden=true
     export function controlSprite(sprite: Sprite, vx: number, vy: number) {
         if (!sprite) return;
         if (!controlledSprites) {
             controlledSprites = [];
             game.currentScene().eventContext.registerFrameHandler(19, () => {
                 controlledSprites.forEach(controlled => {
-                    // if (controlled.vx) {
-                        // controlled.s.vx = 0;
+                    if (controlled.vx) {
+                        controlled.s.vx = 0;
 
-                        // if (controller.right.isPressed()) {
-                            // controlled.s.vx = controlled.vx;
-                        // }
-                        // if (controller.left.isPressed()) {
-                            // controlled.s.vx = -controlled.vx;
-                        // }
-                    // }
+                        if (controller.right.isPressed() || controller.B.isPressed()) {
+                            controlled.s.vx = controlled.vx;
+                        }
+                        if (controller.left.isPressed() || controller.A.isPressed()) {
+                            controlled.s.vx = -controlled.vx;
+                        }
+                    }
 
-                    // if (controlled.vy) {
-                        // controlled.s.vy = 0;
+                    if (controlled.vy) {
+                        controlled.s.vy = 0;
 
-                        // if (controller.down.isPressed()) {
-                            // controlled.s.vy = controlled.vy;
-                        // }
-                        // if (controller.up.isPressed()) {
-                            // controlled.s.vy = -controlled.vy;
-                        // }
-                    // }
+                        if (controller.down.isPressed()) {
+                            controlled.s.vy = controlled.vy;
+                        }
+                        if (controller.up.isPressed()) {
+                            controlled.s.vy = -controlled.vy;
+                        }
+                    }
                 });
             });
         }

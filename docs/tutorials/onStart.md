@@ -15,10 +15,10 @@ The ``||loops:on start||`` block runs when the BrainPad is first powered up. Any
 
 ## Step 3 @fullscreen
 
-To demonstrate how the ``||loops:on start||`` block works. Start by dragging in the ``||led:led on||`` block into the ``||loops:on Start||`` block
+To demonstrate how the ``||loops:on start||`` block works. Start by dragging in the ``||led:set led to||`` block into the ``||loops:on Start||`` block select ON
 
  ```blocks
-led.on()
+led.setled(true)
 ```
 
 ## Step 4 @fullscreen
@@ -26,9 +26,9 @@ led.on()
 Next we will add the ``||loops:pause||`` block found under LOOPS. Follow this with  an ``||led:led off||`` block into the ``||loops:on start||`` block. Just below the first ``||led:led on||`` block we just added. Change the pause duration to 500 ms/half a second. 
  
  ```blocks
-led.on()
+led.setled(true)
 pause(500)
-led.off()
+led.setled(false)
 ```
 
 ## Step 5 @fullscreen
@@ -48,9 +48,9 @@ Next will put the exact same blocks inside the ``||loops:forever||`` block. We w
 
  ```blocks
 forever(function () {
-    led.on()
+    led.setled(true)
     pause(500)
-    led.off()
+    led.setled(false)
     pause(500)
 })
 ``` 

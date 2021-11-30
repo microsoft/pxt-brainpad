@@ -1,337 +1,294 @@
 {
-    "id": "brainpad",
-    "platformid": "codal",
-    "nickname": "brainpad",
-    "name": "BrainPad",
-    "title": "BrainPad - Blocks / Javascript editor",
-    "description": "A Blocks / JavaScript code editor for the BrainPad.",
-    "corepkg": "brainpad",
-    "ignoreDocsErrors": true,
-    "bundleddirs": [
-        "libs/animation",
-        "libs/base",
-        "libs/core",
-        "libs/accelerometer",
-		"libs/thermometer",
-        "libs/music",        
-        "libs/buttons",       
-        "libs/screen",
-        "libs/display",        
-        "libs/controller",
-        "libs/game",
-        "libs/brainpad",
-        "libs/led",
-		"libs/neopixel",
-		"libs/sonar",
-		"libs/brainbot",
-		"libs/braingamer",
-		"libs/infrared"
-    ],
-    "serial": {
-        "useHF2": true,
-        "useEditor": true,
-        "log": true,
-        "noDeploy": true,
-        "editorTheme": {
-            "graphBackground": "#d9d9d9",
-            "lineColors": [
-                "#009DDC",
-                "#FB48C7",
-                "#40bf4a",
-                "#8073E5",
-                "#d25b33"
-            ]
-        }
-    },
-    "simulator": {
-        "autoRun": true,
-        "streams": false,
-        "aspectRatio": 1.8,
-        "parts": false,
-        "boardDefinition": {
-            "visual": "brainpad",
-            "gpioPinBlocks": [
-                [
-                    "P0"
-                ],
-                [
-                    "P1"
-                ],
-                [
-                    "P2"
-                ],
-                [
-                    "P3"
-                ],
-                [
-                    "P4",
-                    "P5",
-                    "P6",
-                    "P7"
-                ],
-                [
-                    "P8",
-                    "P9",
-                    "P10",
-                    "P11",
-                    "P12"
-                ],
-                [
-                    "P16"
-                ]
-            ],
-            "gpioPinMap": {
-                "P0": "P0",
-                "P1": "P1",
-                "P2": "P2",
-                "P3": "P3",
-                "P4": "P4",
-                "P5": "P5",
-                "P6": "P6",
-                "P7": "P7",
-                "P8": "P8",
-                "P9": "P9",
-                "P10": "P10",
-                "P11": "P11",
-                "P12": "P12",
-                "P13": "P13",
-                "P14": "P14",
-                "P15": "P15",
-                "P16": "P16",
-                "P19": "P19",
-                "P20": "P20"
-            },
-            "i2cPins": {
-                "SDA": "P2",
-                "SCL": "P3"
-            },
-            "analogInPins": [
-                "A0",
-                "A4",
-                "A5"
-            ],
-            "groundPins": [
-                "GND_0",
-                "GND_1",
-                "GND_2"
-            ],
-            "threeVoltPins": [
-                "PWR_0",
-                "PWR_2"
-            ],
-            "attachPowerOnRight": true,
-            "onboardComponents": [
-                "accelerometer",
-                "buttonpair",
-                "speaker",
-                "thermometer",
-                "rgbsensor",
-                "lightsensor",
-                "microphone"
-            ],
-            "useCrocClips": true,
-            "marginWhenBreadboarding": [
-                0,
-                0,
-                80,
-                0
-            ]
-        }
-    },
-    "cloud": {
-        "workspace": false,
-        "packages": true,
-        "sharing": true,
-        "publishing": true,
-        "importing": false,
-        "preferredPackages": [],
-        "githubPackages": true
-    },
-    "compile": {
-        "isNative": true,
-        "useUF2": true,
-        "hasHex": true,
-        "deployDrives": ".*",
-        "deployFileMarker": "INFO.TXT",
-        "driveName": "BrainPad2",
-        "openocdScript": "source [find interface/cmsis-dap.cfg]; source [find target/stm32f4x.cfg]",
-        "flashCodeAlign": 256,
-        "floatingPoint": true,
-        "taggedInts": true,
-        "upgrades": [
-            {
-                "type": "package",
-                "map": {}
-            },
-            {
-                "type": "api",
-                "map": {}
-            }
-        ],
-        "hidSelectors": [
-            {
-                "usagePage": "0xFF97",
-                "usageId": "0x0001",
-                "vid": "0x239A",
-                "pid": "0x0018"
-            },
-            {
-                "usagePage": "0xFF00",
-                "usageId": "0x0001",
-                "vid": "0x239A",
-                "pid": "0x0018"
-            },
-            {
-                "usagePage": "0xFF00",
-                "usageId": "0x0001",
-                "vid": "0x239A",
-                "pid": "0x0019"
-            },
-            {
-                "usagePage": "0xFF97",
-                "usageId": "0x0001",
-                "vid": "0x03EB",
-                "pid": "0x2402"
-            }
-        ]
-    },
-    "runtime": {
-        "mathBlocks": true,
-        "loopsBlocks": true,
-        "logicBlocks": true,
-        "variablesBlocks": true,
-        "textBlocks": true,
-        "listsBlocks": true,
-        "functionBlocks": true,
-        "onStartNamespace": "loops",
-        "onStartColor": "#40bf4a",
-        "onStartWeight": 100
-    },
-    "compileService": {
-        "buildEngine": "codal",
-        "codalTarget": {
-            "name": "codal-brainpad",
-            "url": "https://github.com/brainpad-board/codal-brainpad",
-            "branch": "master",
-            "type": "git"
-        },
-        "codalBinary": "BRAINPAD",
-        "yottaConfig": {
-            "pxt": {
-                "board": {
-                    "id": "BOARD_ID_CPLAY"
-                }
-            }
-        },
-        "githubCorePackage": "lancaster-university/codal",
-        "gittag": "master",
-        "serviceId": "brainpad"
-    },
-    "appTheme": {
-        "accentColor": "#F08000",
-        "logoUrl": "https://www.brainpad.com/",
-        "logo": "./static/logo.png",
-        "docsLogo": "./static/logo.square.png",
-        "portraitLogo": "./static/logo.square.png",
-        "footerLogo": "./static/logo.square.png",
-        "organization": "Microsoft MakeCode",
-        "organizationUrl": "https://makecode.com/",
-        "organizationLogo": "./static/Microsoft-logo_rgb_c-gray-square.png",
-        "organizationWideLogo": "./static/Microsoft-logo_rgb_c-gray.png",
-        "homeUrl": "https://makecode.brainpad.com/",
-        "embedUrl": "https://makecode.brainpad.com/",
-        "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
-        "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
-        "githubUrl": "https://github.com/Microsoft/pxt-brainpad",
-        "betaUrl": "https://makecode.com",
-        "crowdinProject": "kindscript",
-        "boardName": "BrainPad",
-        "driveDisplayName": "BRAINPAD",
-        "print": true,
-        "debugger": true,
-        "docMenu": [
-            {
-                "name": "Blocks",
-                "path": "/blocks"
-            },
-            {
-                "name": "JavaScript",
-                "path": "/javascript"
-            },
-            {
-                "name": "Reference",
-                "path": "/reference"
-            },
-            {
-                "name": "Buy",
-                "path": "https://www.brainpad.com"
-            }
-        ],
-        "showHomeScreen": true,
-        "homeScreenHero": "./static/hero.jpg",
-        "invertedMenu": false,
-        "invertedToolbox": false,
-        "invertedMonaco": false,
-        "monacoToolbox": true,
-        "selectLanguage": true,
-        "simAnimationEnter": "fly right in",
-        "simAnimationExit": "fly right out",
-        "highContrast": true,
-        "greenScreen": true,
-        "hasAudio": true,
-        "usbHelp": [],
-        "extendEditor": true,
-        "disableBlockIcons": true,
-        "socialOptions": {
-            "twitterHandle": "ghielectronics",
-            "orgTwitterHandle": "MSMakeCode",
-            "hashtags": "MakeCode"
-        },
-        "blocklyOptions": {
-            "grid": {}
-        },
-        "blocklyColors": {
-            "insertionMarker": "#000000",
-            "insertionMarkerOpacity": 0.5
-        },
-        "blockColors": {
-            "loops": "#40bf4a",
-            "logic": "#4cbfe6",
-            "math": "#9966ff",
-            "variables": "#FF6680",
-            "text": "#ffab19",
-            "advanced": "#00272B",
-            "functions": "#005a9e",
-            "arrays": "#8A1C7C"
-        },
-        "availableLocales": [
-            "en",
-            "ar",
-            "cs",
-            "da",
-            "de",
-            "el",
-            "es-ES",
-            "fi",
-            "fr",
-            "hu",
-            "is",
-            "it",
-            "ja",
-            "ko",
-            "nl",
-            "no",
-            "pt-BR",
-            "pt-PT",
-            "ru",
-            "si-LK",
-            "sk",
-            "sv-SE",
-            "tr",
-            "uk",
-            "zh-CN",
-            "zh-TW"
-        ],
-        "allowPackageExtensions": true
+  "id": "brainpad",
+  "platformid": "codal",
+  "nickname": "brainpad",
+  "name": "BrainPad",
+  "title": "BrainPad - Blocks / Javascript editor",
+  "description": "A Blocks / JavaScript code editor for the BrainPad.",
+  "corepkg": "brainpad",
+  "ignoreDocsErrors": true,
+  "bundleddirs": [
+    "libs/animation",
+    "libs/base",
+    "libs/core",
+    "libs/accelerometer",
+    "libs/thermometer",
+    "libs/music",
+    "libs/buttons",
+    "libs/screen",
+    "libs/display",
+    "libs/controller",
+    "libs/game",
+    "libs/brainpad",
+    "libs/led",
+    "libs/neopixel",
+    "libs/sonar",
+    "libs/brainbot",
+    "libs/braingamer",
+    "libs/infrared",
+    "libs/settings"
+  ],
+  "serial": {
+    "useHF2": true,
+    "useEditor": true,
+    "log": true,
+    "noDeploy": true,
+    "editorTheme": {
+      "graphBackground": "#d9d9d9",
+      "lineColors": ["#009DDC", "#FB48C7", "#40bf4a", "#8073E5", "#d25b33"]
     }
+  },
+  "simulator": {
+    "autoRun": true,
+    "streams": false,
+    "aspectRatio": 1.8,
+    "parts": false,
+    "boardDefinition": {
+      "visual": "brainpad",
+      "gpioPinBlocks": [
+        ["P0"],
+        ["P1"],
+        ["P2"],
+        ["P3"],
+        ["P4", "P5", "P6", "P7"],
+        ["P8", "P9", "P10", "P11", "P12"],
+        ["P16"]
+      ],
+      "gpioPinMap": {
+        "P0": "P0",
+        "P1": "P1",
+        "P2": "P2",
+        "P3": "P3",
+        "P4": "P4",
+        "P5": "P5",
+        "P6": "P6",
+        "P7": "P7",
+        "P8": "P8",
+        "P9": "P9",
+        "P10": "P10",
+        "P11": "P11",
+        "P12": "P12",
+        "P13": "P13",
+        "P14": "P14",
+        "P15": "P15",
+        "P16": "P16",
+        "P19": "P19",
+        "P20": "P20"
+      },
+      "i2cPins": {
+        "SDA": "P2",
+        "SCL": "P3"
+      },
+      "analogInPins": ["A0", "A4", "A5"],
+      "groundPins": ["GND_0", "GND_1", "GND_2"],
+      "threeVoltPins": ["PWR_0", "PWR_2"],
+      "attachPowerOnRight": true,
+      "onboardComponents": [
+        "accelerometer",
+        "buttonpair",
+        "speaker",
+        "thermometer",
+        "rgbsensor",
+        "lightsensor",
+        "microphone"
+      ],
+      "useCrocClips": true,
+      "marginWhenBreadboarding": [0, 0, 80, 0]
+    }
+  },
+  "cloud": {
+    "apiRoot": "https://makecode.com/api/",
+    "workspace": false,
+    "packages": true,
+    "sharing": false,
+    "publishing": true,
+    "importing": false,
+    "preferredPackages": [],
+    "githubPackages": true
+  },
+  "compile": {
+    "isNative": true,
+    "useUF2": true,
+    "hasHex": true,
+    "deployDrives": ".*",
+    "deployFileMarker": "INFO.TXT",
+    "driveName": "BrainPad",
+    "openocdScript": "source [find interface/cmsis-dap.cfg]; source [find target/stm32f4x.cfg]",
+    "flashCodeAlign": 256,
+    "floatingPoint": true,
+    "taggedInts": true,
+    "upgrades": [
+      {
+        "type": "package",
+        "map": {}
+      },
+      {
+        "type": "api",
+        "map": {}
+      }
+    ],
+    "hidSelectors": [
+      {
+        "usagePage": "0xFF97",
+        "usageId": "0x0001",
+        "vid": "0x239A",
+        "pid": "0x0018"
+      },
+      {
+        "usagePage": "0xFF00",
+        "usageId": "0x0001",
+        "vid": "0x239A",
+        "pid": "0x0018"
+      },
+      {
+        "usagePage": "0xFF00",
+        "usageId": "0x0001",
+        "vid": "0x239A",
+        "pid": "0x0019"
+      },
+      {
+        "usagePage": "0xFF97",
+        "usageId": "0x0001",
+        "vid": "0x03EB",
+        "pid": "0x2402"
+      }
+    ]
+  },
+  "runtime": {
+    "mathBlocks": true,
+    "loopsBlocks": true,
+    "logicBlocks": true,
+    "variablesBlocks": true,
+    "textBlocks": true,
+    "listsBlocks": true,
+    "functionBlocks": true,
+    "onStartNamespace": "loops",
+    "onStartColor": "#40bf4a",
+    "onStartWeight": 100
+  },
+  "compileService": {
+    "buildEngine": "codal",
+    "codalTarget": {
+      "name": "codal-brainpad",
+      "url": "https://github.com/brainpad-board/codal-brainpad",
+      "branch": "master",
+      "type": "git"
+    },
+    "codalBinary": "BRAINPAD",
+    "yottaConfig": {
+      "pxt": {
+        "board": {
+          "id": "BOARD_ID_CPLAY"
+        }
+      }
+    },
+    "githubCorePackage": "lancaster-university/codal",
+    "gittag": "master",
+    "serviceId": "brainpad"
+  },
+  "appTheme": {
+    "accentColor": "#F08000",
+    "logoUrl": "https://www.brainpad.com/",
+    "logo": "./static/logo.png",
+    "docsLogo": "./static/logo.square.png",
+    "portraitLogo": "./static/logo.square.png",
+    "footerLogo": "./static/logo.square.png",
+    "organization": "GHI Electronics",
+    "organizationUrl": "https://www.ghielectronics.com/",
+    "organizationLogo": "./static/ghi-logo.png",
+    "organizationWideLogo": "./static/ghi-logo.png",
+    "homeUrl": "https://pulse.brainpad.com/",
+    "privacyUrl": "https://www.ghielectronics.com/policies/",
+    "termsOfUseUrl": "https://www.ghielectronics.com/policies/",
+    "githubUrl": "https://github.com/brainpad-board/brainpad-pulse",
+    "boardName": "BrainPad",
+    "driveDisplayName": "BRAINPAD",
+    "print": true,
+    "debugger": true,
+    "docMenu": [
+      {
+        "name": "Blocks",
+        "path": "/blocks"
+      },
+      {
+        "name": "JavaScript",
+        "path": "/javascript"
+      },
+      {
+        "name": "Reference",
+        "path": "/reference"
+      },
+      {
+        "name": "Buy",
+        "path": "https://www.brainpad.com"
+      }
+    ],
+    "showHomeScreen": true,
+    "homeScreenHero": "./static/hero.jpg",
+    "invertedMenu": true,
+    "invertedToolbox": false,
+    "invertedMonaco": false,
+    "monacoToolbox": true,
+    "selectLanguage": true,
+    "simAnimationEnter": "fly right in",
+    "simAnimationExit": "fly right out",
+    "highContrast": true,
+    "greenScreen": true,
+    "hasAudio": true,
+    "usbHelp": [],
+    "extendEditor": true,
+    "disableBlockIcons": true,
+    "socialOptions": {
+      "twitterHandle": "ghielectronics",
+      "orgTwitterHandle": "MSMakeCode",
+      "hashtags": "MakeCode"
+    },
+    "blocklyOptions": {
+      "grid": {}
+    },
+    "blocklyColors": {
+      "insertionMarker": "#000000",
+      "insertionMarkerOpacity": 0.5
+    },
+    "blockColors": {
+      "loops": "#40bf4a",
+      "logic": "#4cbfe6",
+      "math": "#9966ff",
+      "variables": "#FF6680",
+      "text": "#ffab19",
+      "advanced": "#00272B",
+      "functions": "#005a9e",
+      "arrays": "#8A1C7C"
+    },
+    "availableLocales": [
+      "en",
+      "ar",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "es-ES",
+      "fi",
+      "fr",
+      "hu",
+      "is",
+      "it",
+      "ja",
+      "ko",
+      "nl",
+      "no",
+      "pt-BR",
+      "pt-PT",
+      "ru",
+      "si-LK",
+      "sk",
+      "sv-SE",
+      "tr",
+      "uk",
+      "zh-CN",
+      "zh-TW"
+    ],
+    "python": true,
+    "allowPackageExtensions": true
+  }
 }

@@ -10,6 +10,7 @@ namespace game {
      */
     export let debug = false;
     export let gameOverSound: () => void = undefined;
+	let isMonoColorGame = true;
 
     let _scene: scene.Scene;
     let _sceneStack: scene.Scene[];
@@ -77,9 +78,9 @@ namespace game {
         h += 8;
         const top = showDialogBackground(h, 9)
         if (title)
-            screen.print(title, 8, top + 8, screen.isMono ? 1 : 7, font);
+            screen.print(title, 8, top + 8, isMonoColorGame ? 1 : 7, font);
         if (subtitle)
-            screen.print(subtitle, 8, top + 8 + font.charHeight + 2, screen.isMono ? 1 : 6, font);
+            screen.print(subtitle, 8, top + 8 + font.charHeight + 2, isMonoColorGame ? 1 : 6, font);
         if (footer) {
             screen.print(
                 footer,
@@ -122,14 +123,14 @@ namespace game {
             if (gameOverSound) gameOverSound();
             meltScreen();
             let top = showDialogBackground(44, 4)
-            screen.printCenter(win ? "YOU WIN!" : "GAME OVER!", top + 8, screen.isMono ? 1 : 5, image.font8)
+            screen.printCenter(win ? "YOU WIN!" : "GAME OVER!", top + 8, isMonoColorGame ? 1 : 5, image.font8)
             if (info.hasScore()) {
-                screen.printCenter("Score:" + info.score(), top + 23, screen.isMono ? 1 : 2, image.font8)
+                screen.printCenter("Score:" + info.score(), top + 23, isMonoColorGame ? 1 : 2, image.font8)
                 if (info.score() > info.highScore()) {
                     info.saveHighScore();
-                    screen.printCenter("New High Score!", top + 34, screen.isMono ? 1 : 2, image.font5);
+                    screen.printCenter("New High Score!", top + 34, isMonoColorGame ? 1 : 2, image.font5);
                 } else {
-                    screen.printCenter("HI" + info.highScore(), top + 34, screen.isMono ? 1 : 2, image.font8);
+                    screen.printCenter("HI" + info.highScore(), top + 34, isMonoColorGame ? 1 : 2, image.font8);
                 }
             }
             pause(2000) // wait for users to stop pressing keys

@@ -6,6 +6,7 @@
         "braingamer.ts"
     ],
     "dependencies": {
-        "core": "file:../core"
+        "core": "file:../core",
+        "core": "file:../controller"
     }
 }

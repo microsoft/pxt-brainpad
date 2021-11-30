@@ -36,11 +36,12 @@
   ],
   "galleries": {
 
-    "Basics": "basics",
+    "Block Basics": "blocks",
+    "On Board Components": "basics",
     "Display": "display",
+    "Robots": "brainbot",
     "Games": "games",
-    "BrainBot": "brainbot",
-    "Circuits": "circuits",
-    "Blocks": "blocks"   
+    "Circuits": "circuits"
+
   }
 }

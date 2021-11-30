@@ -27,17 +27,25 @@ void platform_init() {
         globals[0] = (TValue)1;
     }
 */
-
+	IsPulse();
 }
 
 
 bool IsPulse() {
 	if (!initIsPulse) {		
 		auto pin = lookupPin(PB_15);
+		
+		pin->getDigitalValue();
 
 		pin->setPull(PullMode::Down);	
 
-		isPulse = pin->getDigitalValue();
+		volatile int i = 0;
+		
+		while (i < 0x64) {
+			i++;
+		}
+		
+		isPulse = pin->getDigitalValue() != 0 ? true : false;
 
 		initIsPulse = true;		
 	}

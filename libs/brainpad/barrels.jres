@@ -1,0 +1,11 @@
+{
+    "*": {
+        "namespace": "sprites.enemy",
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64"
+    },
+    "barrelsBarrel1": "hwQIAAgAAAAA4O4AAA4ADuAADuDgAADg4ODu4AAOAA4A4O4AAAAAAA==",
+    "barrelsBarrel2": "hwQIAAgAAAAA4O4AAA4ADuAA4ODg4ODg4ADg4AAOAA4A4O4AAAAAAA==",
+    "barrelsBarrel3": "hwQIAAgAAAAA4O4AAA4ADuDg7uDgAADg4AAO4AAOAA4A4O4AAAAAAA==",
+    "barrelsBarrel4": "hwQIAAgAAAAA4O4AAA4ADuDgAODg4ODg4OAA4AAOAA4A4O4AAAAAAA=="
+}

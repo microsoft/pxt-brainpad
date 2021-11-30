@@ -100,7 +100,8 @@ namespace display.text {
     function init() {
         if (!lines) {
             lines = [];
-            console.addListener(log);
+            // TQD_TODO
+            //console.addListener(log);
             screenLines = display.lineCount();
         }
     }

@@ -10,6 +10,7 @@ namespace infrared {
   //% blockId=ir_init
   //% block="connect ir receiver to %pin"
   //% shim=infrared::init
+  //% weight=50
   export function init(pin: Pins): void {
     return
   }
@@ -36,6 +37,7 @@ namespace infrared {
   //% blockId=ir_received_event
   //% block="on |%btn| button pressed"
   //% shim=infrared::onPressEvent
+  //% weight=49
   export function onPressEvent(btn: RemoteButton, body:Action): void {
     return
   }

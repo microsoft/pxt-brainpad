@@ -7,56 +7,35 @@ Step by step guide to coding your @boardname@.
 ```codecard
 [
 {
-  "name": "Controlling Your Sprites",
-  "description": "In this tutorial, we'll cover moving your sprites",
+  "name": "Creating Sprites",
+  "description": "In this tutorial, we'll cover how to create sprites",
   "cardType": "tutorial",
-  "label": "Moving Sprites",
+  "label": "Creating Sprites",
   "labelClass": "orange ribbon large",
-  "url":"/tutorials/led",
-  "imageUrl":"/static/cp/projects/thumb/comingSoon.jpg"
+  "url":"/tutorials/sprites",
+  "imageUrl":"/static/cp/projects/thumb/sprites.jpg"
 } 
 ,
 {
-  "name": "Detecting Sprite Collision",
-  "description": "In this tutorial, we show you how to detect collision between Sprites",
+  "name": "Animating",
+  "description": "In this tutorial, we'll cover how to animate sprites",
   "cardType": "tutorial",
-  "label": "Collision",
+  "label": "Animating Sprites",
   "labelClass": "orange ribbon large",
-  "url":"/tutorials/buzzer",
-  "imageUrl":"/static/cp/projects/thumb/comingSoon.jpg"
+  "url":"/tutorials/animate",
+  "imageUrl":"/static/cp/projects/thumb/animatingSprites.jpg"
 } 
 ,
 {
-  "name": "Adding Scoring & Lives",
-  "description": "In this tutorial, we show you how to add scoring and lives to game",
+  "name": "Moving Sprites",
+  "description": "In this tutorial, we'll explain how to move the sprites we create",
   "cardType": "tutorial",
-  "label": "Scoring",
+  "label": "Moving",
   "labelClass": "orange ribbon large",
-  "url":"/tutorials/display",
-  "imageUrl":"/static/cp/projects/thumb/comingSoon.jpg"
+  "url":"/tutorials/comingSoon",
+  "imageUrl":"/static/cp/projects/thumb/moving.jpg"
 }
-, 
-{
-  "name": "Creating Game World",
-  "description": "Creating scrollable tilemaps for your games",
-  "cardType": "tutorial",
-  "label": "Tile Maps",
-  "labelClass": "orange ribbon large",
-  "url":"/tutorials/accelerometer",
-  "imageUrl":"/static/cp/projects/thumb/comingSoon.jpg"
-  
-}
-,
-{
-  "name": "Using the BrainGamer",
-  "description": "Using the BrainGamer to control your game",
-  "cardType": "tutorial",
-  "label": "BrainGamer",
-  "labelClass": "orange ribbon large",
-  "url":"/tutorials/a_b_buttons",
-  "imageUrl":"/static/cp/projects/thumb/comingSoon.jpg"
 
-}
 ]
 
 ```
