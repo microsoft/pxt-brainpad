@@ -1,0 +1,12 @@
+{
+    "width": 8,
+    "height": 8,
+    "blockIdentity": "images._image",
+    "creator": "image.ofBuffer",
+    "basename": "barrels",
+    "star": {
+        "namespace": "sprites.enemy",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "tags": "enemy"
+}

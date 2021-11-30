@@ -1,0 +1,12 @@
+{
+    "width": 16,
+    "height": 32,
+    "blockIdentity": "images._image",
+    "creator": "image.ofBuffer",
+    "basename": "obstacles",
+    "star": {
+        "namespace": "sprites.enemy",
+        "mimeType": "image/x-mkcd-f4"
+    },
+    "tags": "enemy"
+}
