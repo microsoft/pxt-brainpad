@@ -1,6 +1,6 @@
 {
   "name": "pxt-brainpad",
-  "version": "0.22.12",
+  "version": "0.22.13",
   "description": "GHI Electronics Brain Pad for Microsoft MakeCode",
   "keywords": [
     "JavaScript",
@@ -30,7 +30,7 @@
     "docs/*.md",
     "docs/*/*.md",
     "docs/*/*/*.md",
-	"docs/static/icons/favicon.ico"
+    "docs/static/icons/favicon.ico"
   ],
   "devDependencies": {
     "less": "3.13.1",
