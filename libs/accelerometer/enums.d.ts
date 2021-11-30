@@ -86,21 +86,6 @@
      */
     //% block="free fall"
     FreeFall = 7,  // ACCELEROMETER_EVT_FREEFALL
-    /**
-     * Raised when a 3G shock is detected
-     */
-    //% block="3g"
-    ThreeG = 8,  // ACCELEROMETER_EVT_3G
-    /**
-     * Raised when a 6G shock is detected
-     */
-    //% block="6g"
-    SixG = 9,  // ACCELEROMETER_EVT_6G
-    /**
-     * Raised when a 8G shock is detected
-     */
-    //% block="8g"
-    EightG = 10,  // ACCELEROMETER_EVT_8G
     }
 
 // Auto-generated. Do not edit. Really.
